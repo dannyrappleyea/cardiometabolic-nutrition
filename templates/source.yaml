@@ -1,0 +1,33 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+# IDs are stable slugs: <org-or-first-author>-<short-title>-<year>. Never rename or reuse.
+
+id: org-short-title-2026
+title: Full title as published
+authors: []                       # people, "Last FM" form; or leave empty and use organization
+organization: null                # issuing body for guidelines, statements, labels, databases
+year: 2026
+publication: null                 # journal, publisher or website
+type: guideline                   # guideline | systematic-review | meta-analysis | scientific-statement | umbrella-review | rct | cohort | mendelian-randomization | mechanistic | regulatory | drug-label | database | expert-explainer | manufacturer
+tier: "1"                         # "1"-"6" | "R" | "M"  (METHODS §2)
+jurisdiction: international       # us-federal | us-professional | canada | uk | eu | australia-nz | who | international | other
+authority: null                   # ID from references/authorities.yaml, if issued by one
+identifiers:
+  doi: null
+  pmid: null
+  url: null
+status: background                # decisive | background | superseded
+superseded_by: null               # source ID, when status is superseded
+topics: []                        # topic IDs that cite this source
+funding_conflicts: null           # short note: industry funding, author conflicts, or "none declared"
+verified:
+  date: YYYY-MM-DD
+  method: fetched-full-text       # fetched-full-text | fetched-abstract | resolved-doi | fetched-landing-page
+  by: null                        # agent/model name, or "human"
+findings:                         # paraphrased; never copied passages
+  - claim: What the source found or recommends, in your own words
+    locator: Section, table, figure or page
+    population: Who it applies to (if narrower than the source overall)
+    grade: null                   # the source's own grade or class, if it gives one
+limitations: null
+reviewer_read: false              # set only by the human reviewer (read in depth)
+notes: null

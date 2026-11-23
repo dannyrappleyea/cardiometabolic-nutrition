@@ -1,0 +1,50 @@
+# Controlled vocabulary of profile fields.
+# Topics' personalization hooks may only reference keys defined here.
+# To add a field: add it here AND to templates/personal/profile.md in the same PR.
+# Values in personal profiles follow the person's privacy settings (bands by default).
+
+version: 1
+fields:
+  # --- About the person ---
+  sex:            {section: about, values: [male, female, other, unknown]}
+  age_band:       {section: about, values: "5-year band, e.g. 55-59"}
+  height_cm:      {section: about, values: number}
+  weight_kg:      {section: about, values: number}
+  waist_cm:       {section: about, values: "number or unknown"}
+  activity_level: {section: about, values: [sedentary, lightly-active, moderately-active, very-active]}
+
+  # --- Conditions and labs (baseline and current) ---
+  bp_category:    {section: labs, values: [normal, elevated, stage-1, stage-2, unknown]}
+  bp_at_goal:     {section: status, values: [yes, no, unknown]}
+  glycemia_category: {section: labs, values: [normal, prediabetes, type-2-diabetes, unknown]}
+  a1c_band:       {section: labs, values: "0.5-point band, e.g. 6.5-6.9"}
+  ldl_band:       {section: labs, values: "10 mg/dL band"}
+  non_hdl_band:   {section: labs, values: "20 mg/dL band"}
+  hdl_band:       {section: labs, values: "10 mg/dL band"}
+  tg_band:        {section: labs, values: "50 mg/dL band below 200; 100 at 200+"}
+  lipids_at_goal: {section: status, values: "per-measure yes/no/unknown"}
+  egfr_category:  {section: labs, values: [">=90", "60-89", "45-59", "30-44", "<30", unknown]}
+  uacr_category:  {section: labs, values: ["<30", "30-300", ">300", unknown]}
+  other_labs:     {section: labs, values: "free text, categories only (e.g. ApoB, Lp(a), liver enzymes)"}
+  cvd_history:    {section: conditions, values: [none, established, unknown]}
+  other_conditions: {section: conditions, values: "list (SCOPE §4-5 flags and anything else relevant)"}
+
+  # --- Medications ---
+  medications:    {section: medications, values: "list of {generic_name, class, status: started|titrating|stable|stopped}"}
+
+  # --- Status that rules may depend on ---
+  months_since_start: {section: status, values: "integer (months since starting the current plan or medications)"}
+  weight_trend:   {section: status, values: [losing, stable, gaining, unknown]}
+
+  # --- Constraints and preferences (applied only in personal guides) ---
+  allergies_intolerances: {section: constraints, values: list}
+  dietary_rules:  {section: constraints, values: "list: religious, cultural or ethical rules"}
+  food_stance:    {section: preferences, values: "free text"}
+  likes_dislikes: {section: preferences, values: "free text"}
+  routines:       {section: preferences, values: "free text"}
+  goals_choices:  {section: preferences, values: "free text"}
+  tracking_app:   {section: preferences, values: "name or none"}
+
+  # --- Set by setup ---
+  scope_zone:     {section: setup, values: [core, adjacent, out-of-scope]}
+  scope_flags:    {section: setup, values: "list of SCOPE §4/§5 items that apply"}

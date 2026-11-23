@@ -1,0 +1,20 @@
+name: check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml jsonschema
+      - name: Validate sources, topics and topic map
+        run: python tools/check.py --mode upstream
+      - name: Index is up to date
+        run: |
+          python tools/check.py --mode upstream --write-index > /dev/null
+          git diff --exit-code research/INDEX.md || (echo "Run: python tools/check.py --write-index" && exit 1)

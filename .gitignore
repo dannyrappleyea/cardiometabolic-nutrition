@@ -1,0 +1,7 @@
+# Personal data never goes upstream. In a PRIVATE copy you may track it:
+# run `python tools/setup_personal.py --track`, which removes the next two lines.
+/personal/
+/CLAUDE.local.md
+
+__pycache__/
+.DS_Store

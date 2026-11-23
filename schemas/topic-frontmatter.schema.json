@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Topic front matter",
+  "type": "object",
+  "required": ["id", "title", "description", "status", "version", "confidence", "reviewed", "next_check", "human_review", "depends_on", "personalization_inputs", "sources_decisive", "sources_background"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z]+(-[a-z0-9]+)+$"},
+    "title": {"type": "string"},
+    "description": {"type": "string", "maxLength": 160},
+    "status": {"enum": ["draft", "reviewed", "stale"]},
+    "version": {"type": "integer", "minimum": 1},
+    "confidence": {"enum": ["high", "moderate", "low", "very-low"]},
+    "reviewed": {"type": "string", "pattern": "^\\d{4}-\\d{2}$"},
+    "next_check": {"type": "string", "pattern": "^\\d{4}-\\d{2}$"},
+    "human_review": {"type": "string", "pattern": "^(not-yet|\\d{4}-\\d{2})$"},
+    "depends_on": {"type": "array", "items": {"type": "string"}},
+    "personalization_inputs": {"type": "array", "items": {"type": "string"}},
+    "sources_decisive": {"type": "array", "maxItems": 15, "items": {"type": "string"}},
+    "sources_background": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
