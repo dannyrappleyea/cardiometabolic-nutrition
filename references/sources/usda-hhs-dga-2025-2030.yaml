@@ -1,0 +1,38 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: usda-hhs-dga-2025-2030
+title: Dietary Guidelines for Americans, 2025-2030 (10th edition)
+authors: []
+organization: U.S. Department of Health and Human Services and U.S. Department of Agriculture
+year: 2026
+publication: RealFood.gov / DietaryGuidelines.gov
+type: guideline
+tier: '1'
+jurisdiction: us-federal
+authority: usda-hhs
+identifiers:
+  doi: null
+  pmid: null
+  url: https://odphp.health.gov/our-work/nutrition-physical-activity/dietary-guidelines/current-dietary-guidelines
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: The 10th edition (January 2026), jointly issued by HHS and USDA, has the key message 'Eat Real Food', prioritizing
+    whole nutrient-dense foods and reducing highly processed foods high in refined carbohydrate, added sugars, sodium,
+    unhealthy fats or additives.
+  locator: ODPHP Current Dietary Guidelines page
+  population: General population
+  grade: null
+limitations: The full document (cdn.realfood.gov/DGA.pdf) could not be fetched (robots.txt unreachable). Numeric
+  points (protein 1.2-1.6 g/kg/day; saturated fat under 10% of energy; added sugar under 10 g per meal; sodium under
+  2,300 mg/day; no numeric alcohol limit) come from the Harvard commentary and search snippets and must be verified
+  in the full text.
+reviewer_read: false
+notes: 'Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it. US
+  federal source: corroboration rule (METHODS §3) requires a non-federal authority for any rule.'

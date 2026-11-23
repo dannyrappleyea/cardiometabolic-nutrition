@@ -1,0 +1,41 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: dailymed-lisinopril-label-2021
+title: Lisinopril tablets prescribing information
+authors: []
+organization: Generic manufacturer (FDA-approved labeling on DailyMed)
+year: 2021
+publication: DailyMed
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+identifiers:
+  doi: null
+  pmid: null
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d0caa63-9ea2-4a97-a23b-900a7c514bc6
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Kidney impairment, diabetes and use of potassium-sparing diuretics, potassium supplements or potassium-containing
+    salt substitutes are risk factors for hyperkalemia.
+  locator: Section 5.5; section 7.1
+  population: null
+  grade: null
+- claim: Patients should not use potassium-containing salt substitutes without consulting their physician.
+  locator: Section 17
+  population: null
+  grade: null
+- claim: Food does not alter lisinopril bioavailability.
+  locator: Section 12.3
+  population: null
+  grade: null
+limitations: Label revised 7/2021 (DailyMed record updated 2026).
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

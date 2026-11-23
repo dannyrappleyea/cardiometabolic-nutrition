@@ -1,0 +1,48 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: ccsa-guidance-alcohol-health-2023
+title: 'Canada''s Guidance on Alcohol and Health: Final Report'
+authors: []
+organization: Canadian Centre on Substance Use and Addiction
+year: 2023
+publication: CCSA
+type: guideline
+tier: '1'
+jurisdiction: canada
+authority: ccsa
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.ccsa.ca/sites/default/files/2023-01/Canada%27s%20Guidance%20on%20Alcohol%20and%20Health%20Final%20Report.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: 'Risk is described as a continuum: 2 or fewer standard drinks a week is low risk, 3-6 moderate, and 7 or
+    more increasingly high, with each additional drink adding risk.'
+  locator: pp. 6, 8, 30
+  population: null
+  grade: null
+- claim: The belief that moderate drinking protects against coronary disease is described as more uncertain than
+    previously thought, and the report advises against promoting alcohol for health.
+  locator: pp. 10-11, 24, 30
+  population: null
+  grade: null
+- claim: Alcohol is identified as a risk factor for hypertension, atrial fibrillation, heart failure and hemorrhagic
+    stroke, with hypertension risk rising at every level of intake.
+  locator: pp. 10-11, 24-26
+  population: null
+  grade: null
+- claim: A Canadian standard drink is 13.45 g of pure alcohol (for example 341 mL of 5% beer or 142 mL of 12% wine).
+  locator: p. 4
+  population: null
+  grade: null
+limitations: Population guidance based on modelling; a CMAJ commentary found by search questioned estimates at low
+  intakes. Fetch covered ~100,000 of ~268,000 characters.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

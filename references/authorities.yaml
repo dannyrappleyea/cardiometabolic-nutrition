@@ -1,11 +1,163 @@
 # Authorities whose guidance is weighed (METHODS §3). Discovered by playbooks/01-discover.md, not preset.
-# Empty on purpose: this repository starts clean-room.
-authorities: []
-# Entry shape:
-# - id: short-slug
-#   name: Full name
-#   jurisdiction: us-federal | us-professional | canada | uk | eu | australia-nz | who | international | other
-#   type: professional-society | government-agency | intergovernmental | independent-review-body | other
-#   domains: [blood-pressure, glycemia, lipids, weight, kidney, general-nutrition, food-safety, medicines]
-#   key_documents: [source-ids]
-#   notes: e.g., funding, relationship to other bodies (for the independence test)
+# First populated by the discovery run of 2026-11-23 (see research/_plan/discovery-log.md).
+#
+# Independence notes for the corroboration rule:
+# - ACC and AHA write their guidelines jointly, so they are one body ("acc-aha") for corroboration.
+# - ESC hypertension guidelines and ESC/EAS dyslipidaemia guidelines share ESC; count once ("esc").
+# - EASD authors its own nutrition recommendations (DNSG) and co-authors the EASL-EASD-EASO MASLD
+#   guideline; a rule supported only by those two documents does not have two independent authorities.
+# - US federal agencies: usda-hhs, fda, nhlbi.
+# Entries with key_documents: [] were identified in this run but none of their documents was opened yet.
+
+authorities:
+  - id: acc-aha
+    name: American College of Cardiology / American Heart Association (joint guideline family)
+    jurisdiction: us-professional
+    type: professional-society
+    domains: [blood-pressure, lipids, general-nutrition]
+    key_documents: [aha-acc-high-blood-pressure-guideline-2025, acc-aha-dyslipidemia-guideline-2026]
+    notes: Joint guidelines co-signed by 9-11 other US societies (including ADA and NLA for lipids). AHA also issues its own scientific statements and patient material (for example a 2025 science advisory on ultraprocessed foods, seen in search only).
+
+  - id: ada
+    name: American Diabetes Association
+    jurisdiction: us-professional
+    type: professional-society
+    domains: [glycemia, weight, general-nutrition, kidney]
+    key_documents: [ada-standards-diagnosis-classification-2026, ada-standards-health-behaviors-2026]
+    notes: Standards of Care updated every December. ADA co-signed the 2026 ACC/AHA dyslipidemia guideline, so ADA plus acc-aha on a lipid rule is not fully independent.
+
+  - id: esc
+    name: European Society of Cardiology (with European Atherosclerosis Society for lipids)
+    jurisdiction: eu
+    type: professional-society
+    domains: [blood-pressure, lipids]
+    key_documents: [esc-elevated-bp-hypertension-guideline-2024, esc-eas-dyslipidaemia-focused-update-2025]
+    notes: ESC reserves rights over AI use of its guidelines; paraphrase only.
+
+  - id: easd
+    name: European Association for the Study of Diabetes (Diabetes and Nutrition Study Group)
+    jurisdiction: eu
+    type: professional-society
+    domains: [glycemia, weight, general-nutrition]
+    key_documents: [easd-dnsg-dietary-management-diabetes-2023]
+    notes: Co-author of the EASL-EASD-EASO MASLD guideline.
+
+  - id: easl
+    name: European Association for the Study of the Liver (joint guideline with EASD and EASO)
+    jurisdiction: eu
+    type: professional-society
+    domains: [weight, general-nutrition]
+    key_documents: [easl-easd-easo-masld-guideline-2024]
+    notes: Relevant to the fatty-liver adjacent flag.
+
+  - id: nice
+    name: National Institute for Health and Care Excellence
+    jurisdiction: uk
+    type: government-agency
+    domains: [blood-pressure, weight, lipids, glycemia]
+    key_documents: [nice-hypertension-ng136-2019, nice-obesity-management-ng246-2025]
+    notes: Non-departmental public body in England. NICE NG238 (lipids/CVD risk) and NG28 (type 2 diabetes) not yet opened.
+
+  - id: hypertension-canada
+    name: Hypertension Canada
+    jurisdiction: canada
+    type: professional-society
+    domains: [blood-pressure]
+    key_documents: [hypertension-canada-health-behaviour-2020]
+    notes: Published a 2025 primary-care guideline (CMAJ; Can Fam Physician 2025;71:467-482) and plans a comprehensive guideline in 2026-2028.
+
+  - id: diabetes-canada
+    name: Diabetes Canada
+    jurisdiction: canada
+    type: professional-society
+    domains: [glycemia, general-nutrition]
+    key_documents: [diabetes-canada-nutrition-therapy-2018]
+    notes: Nutrition chapter dates from 2018; pharmacologic chapter updated 2024.
+
+  - id: ccsa
+    name: Canadian Centre on Substance Use and Addiction
+    jurisdiction: canada
+    type: government-agency
+    domains: [general-nutrition]
+    key_documents: [ccsa-guidance-alcohol-health-2023]
+    notes: Arms-length national agency funded by Health Canada; alcohol guidance only.
+
+  - id: heart-foundation-au
+    name: National Heart Foundation of Australia
+    jurisdiction: australia-nz
+    type: professional-society
+    domains: [blood-pressure, lipids, general-nutrition]
+    key_documents: [heart-foundation-heart-healthy-eating-pattern-2026]
+    notes: Charity that issues nutrition position statements (eating patterns, fats, meat, dairy, eggs) backed by commissioned reviews; these were found but not yet opened.
+
+  - id: kdigo
+    name: Kidney Disease Improving Global Outcomes
+    jurisdiction: international
+    type: independent-review-body
+    domains: [kidney, blood-pressure, general-nutrition]
+    key_documents: [kdigo-ckd-guideline-2024]
+    notes: Defines CKD categories used in SCOPE §3-5.
+
+  - id: who
+    name: World Health Organization
+    jurisdiction: who
+    type: intergovernmental
+    domains: [blood-pressure, general-nutrition, weight]
+    key_documents: [who-sodium-reduction-fact-sheet-2026, who-lower-sodium-salt-substitutes-2025, who-non-sugar-sweeteners-2023]
+    notes: NUGAG guidelines on fats and carbohydrates (2023) and on BMI cut-offs for Asian populations (2004 expert consultation) were seen in search but not opened.
+
+  - id: usda-hhs
+    name: US Department of Agriculture and Department of Health and Human Services (Dietary Guidelines for Americans)
+    jurisdiction: us-federal
+    type: government-agency
+    domains: [general-nutrition]
+    key_documents: [usda-hhs-dga-2025-2030]
+    notes: US federal. The 2025-2030 edition departs from its advisory committee's report on several points; follow professional-society or international consensus where they differ (METHODS §3).
+
+  - id: fda
+    name: US Food and Drug Administration
+    jurisdiction: us-federal
+    type: government-agency
+    domains: [medicines, food-safety]
+    key_documents: [fda-label-zocor-simvastatin-2019, lupin-metformin-er-label-2025, fda-label-jardiance-empagliflozin-2023, fda-label-wegovy-semaglutide-2026, dailymed-lisinopril-label-2021, fda-label-xenical-orlistat-2012]
+    notes: Drug labels are authoritative for label warnings (tier R), not for dietary rules.
+
+  - id: health-canada
+    name: Health Canada
+    jurisdiction: canada
+    type: government-agency
+    domains: [medicines, general-nutrition]
+    key_documents: [health-canada-plendil-felodipine-monograph-2023]
+    notes: Product monographs (tier R). Canada's Food Guide not yet opened.
+
+  - id: efsa
+    name: European Food Safety Authority
+    jurisdiction: eu
+    type: government-agency
+    domains: [food-safety]
+    key_documents: []
+    notes: Opinions on monacolins in red yeast rice (2018; 2025) seen in search only.
+
+  - id: acr
+    name: American College of Rheumatology
+    jurisdiction: us-professional
+    type: professional-society
+    domains: [general-nutrition]
+    key_documents: []
+    notes: 2020 gout guideline lifestyle recommendations (alcohol, purines, high-fructose corn syrup, weight loss; against vitamin C) seen in search only.
+
+  - id: nasem
+    name: National Academies of Sciences, Engineering, and Medicine (Food and Nutrition Board)
+    jurisdiction: us-professional
+    type: independent-review-body
+    domains: [general-nutrition]
+    key_documents: []
+    notes: Sets Dietary Reference Intakes for the US and Canada (2019 sodium and potassium DRIs, sodium CDRR 2,300 mg/day) — seen in search only. Not a federal agency, though commissioned by federal agencies.
+
+  - id: nhlbi
+    name: National Heart, Lung, and Blood Institute
+    jurisdiction: us-federal
+    type: government-agency
+    domains: [blood-pressure, general-nutrition]
+    key_documents: []
+    notes: DASH and eating-out patient materials seen in search only.

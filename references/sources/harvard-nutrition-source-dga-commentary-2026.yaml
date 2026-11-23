@@ -1,0 +1,39 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: harvard-nutrition-source-dga-commentary-2026
+title: 'Dietary Guidelines for Americans 2025-2030: Progress on added sugar, protein hype, saturated fat contradictions'
+authors: []
+organization: Harvard T.H. Chan School of Public Health, The Nutrition Source
+year: 2026
+publication: The Nutrition Source (9 January 2026)
+type: expert-explainer
+tier: '6'
+jurisdiction: other
+authority: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nutritionsource.hsph.harvard.edu/2026/01/09/dietary-guidelines-for-americans-2025-2030-progress-on-added-sugar-protein-hype-saturated-fat-contradictions/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: According to this commentary, the 2025-2030 DGA advise protein of 1.2-1.6 g/kg/day, keep saturated fat
+    under 10% of calories, set an added-sugar limit of 10 g per meal, recommend no amount of added sugar or non-nutritive
+    sweetener, and give no numeric alcohol limit.
+  locator: Sections on protein, saturated fat, added sugar, alcohol
+  population: null
+  grade: null
+- claim: Harvard faculty flag mixed messages on red meat, butter, beef tallow and full-fat dairy that could raise
+    saturated fat and LDL-C, and process concerns about authorship and rejection of the advisory committee report.
+  locator: Contradictions section
+  population: null
+  grade: null
+limitations: Commentary, not the guideline; used only to locate questions and disagreements.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

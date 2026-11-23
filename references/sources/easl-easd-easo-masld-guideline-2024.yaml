@@ -1,0 +1,55 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: easl-easd-easo-masld-guideline-2024
+title: 'EASL-EASD-EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic
+  liver disease (MASLD): Executive Summary'
+authors: []
+organization: European Association for the Study of the Liver, European Association for the Study of Diabetes, European
+  Association for the Study of Obesity
+year: 2024
+publication: Diabetologia 2024;67:2375-2392 (also J Hepatol, Obes Facts)
+type: guideline
+tier: '1'
+jurisdiction: eu
+authority: easl
+identifiers:
+  doi: 10.1007/s00125-024-06196-3
+  pmid: null
+  url: https://link.springer.com/doi/10.1007/s00125-024-06196-3
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: MASLD is steatotic liver disease with at least one cardiometabolic risk factor and without harmful alcohol
+    intake.
+  locator: Abstract; Introduction
+  population: null
+  grade: null
+- claim: Sustained weight loss of at least 5% reduces liver fat, 7-10% improves inflammation and at least 10% improves
+    fibrosis.
+  locator: Non-pharmacological therapy
+  population: MASLD with overweight
+  grade: LoE 2, strong
+- claim: A Mediterranean-like diet, limiting ultra-processed foods high in sugar and saturated fat and avoiding
+    sugar-sweetened beverages is recommended.
+  locator: Diet quality recommendation
+  population: null
+  grade: LoE 2, strong
+- claim: Alcohol should be discouraged, and stopped completely in advanced fibrosis or cirrhosis; evidence does
+    not support a protective effect of light-to-moderate drinking.
+  locator: Alcohol recommendations
+  population: null
+  grade: LoE 3, strong
+- claim: Coffee intake is associated with less liver damage in observational studies (a statement, not a recommendation);
+    nutraceuticals cannot be recommended.
+  locator: Nutraceuticals statements
+  population: null
+  grade: LoE 4; LoE 2
+limitations: Executive summary; MetALD alcohol thresholds were in supplementary tables not opened.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

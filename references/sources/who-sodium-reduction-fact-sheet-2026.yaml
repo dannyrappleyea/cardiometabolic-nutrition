@@ -1,0 +1,36 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: who-sodium-reduction-fact-sheet-2026
+title: Sodium reduction (WHO fact sheet)
+authors: []
+organization: World Health Organization
+year: 2026
+publication: who.int
+type: expert-explainer
+tier: '6'
+jurisdiction: who
+authority: who
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.who.int/news-room/fact-sheets/detail/salt-reduction
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: WHO recommends adults consume less than 2,000 mg sodium per day (under 5 g salt).
+  locator: Key facts
+  population: Adults
+  grade: null
+- claim: If table salt is used, WHO suggests replacing it with lower-sodium salt substitutes that contain potassium.
+  locator: Key facts
+  population: null
+  grade: null
+limitations: Fact sheet dated 11 May 2026; it does not state who should avoid potassium salt substitutes.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

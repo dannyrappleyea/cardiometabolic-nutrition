@@ -1,0 +1,49 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: diabetes-canada-nutrition-therapy-2018
+title: 'Diabetes Canada 2018 Clinical Practice Guidelines, Chapter 11: Nutrition Therapy'
+authors: []
+organization: Diabetes Canada Clinical Practice Guidelines Expert Committee
+year: 2018
+publication: Canadian Journal of Diabetes 2018;42(Suppl 1)
+type: guideline
+tier: '1'
+jurisdiction: canada
+authority: diabetes-canada
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.diabetes.ca/for-professionals/full-guidelines/chapter-11
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Nutrition therapy can lower A1C by 1.0-2.0%; people with diabetes should get counselling from a registered
+    dietitian.
+  locator: Key messages
+  population: null
+  grade: null
+- claim: Mediterranean, vegetarian, DASH and Portfolio patterns are discussed as improving glycemia, blood pressure
+    or lipids; low-carbohydrate diets were not consistently better for A1C, and very-low-carbohydrate diets raise
+    ketoacidosis concerns with insulin or SGLT2 inhibitors.
+  locator: Dietary patterns and macronutrient text
+  population: null
+  grade: null
+- claim: Replacing high-GI with low-GI carbohydrate, viscous soluble fibre, dietary pulses and nuts are associated
+    with glycemic or lipid benefits.
+  locator: Carbohydrate and food text
+  population: null
+  grade: null
+- claim: Usual protein of 1-1.5 g/kg/day need not change; people with CKD should not exceed 0.8 g/kg/day.
+  locator: Protein text
+  population: null
+  grade: null
+limitations: Graded recommendations were on a separate tab and not captured; fetch covered ~100,000 of ~241,000
+  characters.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

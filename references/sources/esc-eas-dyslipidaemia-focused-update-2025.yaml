@@ -1,0 +1,45 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: esc-eas-dyslipidaemia-focused-update-2025
+title: 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias
+authors:
+- Mach F
+- Koskinas KC
+- Roeters van Lennep JE
+organization: European Society of Cardiology and European Atherosclerosis Society
+year: 2025
+publication: European Heart Journal 2025
+type: guideline
+tier: '1'
+jurisdiction: eu
+authority: esc
+identifiers:
+  doi: 10.1093/eurheartj/ehaf190
+  pmid: null
+  url: https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/what-is-new-in-the-2025-focused-update-of-the-2019-esc-eas-guidelines-for-the-m/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: Dietary supplements or vitamins are not indicated to reduce LDL-C or ASCVD risk.
+  locator: Section on dietary supplements; Table 2
+  population: null
+  grade: Class III, LOE B
+- claim: In high- or very-high-risk patients with fasting triglycerides 135-499 mg/dL despite statins, high-dose
+    icosapent ethyl (2 g twice daily) should be considered with a statin.
+  locator: Lp(a) and hypertriglyceridaemia section
+  population: High/very-high risk on statin
+  grade: IIa, B
+- claim: LDL-C goals per risk category are unchanged from 2019; SCORE2 and SCORE2-OP define risk categories.
+  locator: LDL-C section; Table 1
+  population: null
+  grade: null
+limitations: Read via the ESC Council for Cardiology Practice summary page. A press release found by search said
+  the update reviewed red yeast rice and noted EU limits on monacolin dose.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

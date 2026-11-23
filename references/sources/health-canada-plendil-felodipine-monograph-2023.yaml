@@ -1,0 +1,42 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: health-canada-plendil-felodipine-monograph-2023
+title: PLENDIL (felodipine extended-release tablets) product monograph
+authors: []
+organization: Health Canada Drug Product Database (product monograph)
+year: 2023
+publication: Health Canada DPD
+type: regulatory
+tier: R
+jurisdiction: canada
+authority: health-canada
+identifiers:
+  doi: null
+  pmid: null
+  url: https://pdf.hres.ca/dpd_pm/00072939.PDF
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Grapefruit juice roughly doubled to tripled felodipine exposure and the effect persisted when juice was
+    taken up to 24 hours before; grapefruit and its juice should be avoided.
+  locator: Actions and Clinical Pharmacology p. 3; Precautions pp. 7-8; Consumer Information p. 31
+  population: null
+  grade: null
+- claim: A high-fat or high-carbohydrate meal raised peak level 1.5-2 times and may drop blood pressure too much;
+    the drug is taken without food or with a light meal.
+  locator: pp. 3, 10, 14
+  population: null
+  grade: null
+- claim: Alcohol can add to felodipine's blood-pressure-lowering effect and dizziness.
+  locator: Table 1 p. 9; consumer section p. 32
+  population: null
+  grade: null
+limitations: Revision date 17 October 2023.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

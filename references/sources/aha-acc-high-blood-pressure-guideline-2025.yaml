@@ -1,0 +1,59 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: aha-acc-high-blood-pressure-guideline-2025
+title: 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection,
+  Evaluation, and Management of High Blood Pressure in Adults
+authors: []
+organization: American Heart Association and American College of Cardiology, with 11 partner societies
+year: 2025
+publication: Circulation; Hypertension; JACC
+type: guideline
+tier: '1'
+jurisdiction: us-professional
+authority: acc-aha
+identifiers:
+  doi: null
+  pmid: null
+  url: https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: 'Blood pressure categories are unchanged from 2017: normal below 120/80; elevated 120-129 systolic with
+    diastolic below 80; stage 1 hypertension 130-139 systolic or 80-89 diastolic; stage 2 at 140 systolic or 90
+    diastolic and above.'
+  locator: Top Things to Know, BP classification item
+  population: null
+  grade: null
+- claim: Severe hypertension is BP above 180/120 mm Hg without acute target-organ damage; it is evaluated and treated
+    in the outpatient setting with oral medication.
+  locator: Top Things to Know, severe hypertension item
+  population: null
+  grade: null
+- claim: The general treatment goal for adults is below 130/80 mm Hg, with exceptions for limited life expectancy,
+    institutional care and pregnancy.
+  locator: Top Things to Know, BP goal item
+  population: null
+  grade: null
+- claim: Healthy weight, a heart-healthy eating pattern such as DASH, lower sodium, higher dietary potassium, regular
+    moderate activity, stress management and reducing or eliminating alcohol are strongly recommended to prevent
+    or treat elevated BP and hypertension. The summary page gives no numeric amounts.
+  locator: Top Things to Know, lifestyle item
+  population: null
+  grade: strongly recommended
+- claim: Medication is started at an average BP of 140/90 or higher, and at 130/80 or higher for adults with clinical
+    CVD, prior stroke, diabetes, CKD or a PREVENT 10-year risk of 7.5% or more.
+  locator: Top Things to Know, treatment thresholds
+  population: null
+  grade: null
+limitations: Only the official summary page could be opened; the full guideline (ahajournals.org) returned a site
+  error. Numeric lifestyle targets (sodium toward 1,500 mg/day, potassium 3,500-5,000 mg/day, alcohol limits) were
+  seen only in secondary search snippets and must be verified in the full text.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it. DOI
+  10.1161/CIR.0000000000001356 was reported by a secondary source and has not been resolved.

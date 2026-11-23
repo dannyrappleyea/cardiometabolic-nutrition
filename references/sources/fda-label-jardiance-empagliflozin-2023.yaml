@@ -1,0 +1,47 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: fda-label-jardiance-empagliflozin-2023
+title: JARDIANCE (empagliflozin) tablets prescribing information
+authors: []
+organization: Boehringer Ingelheim (FDA-approved labeling)
+year: 2023
+publication: Drugs@FDA
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/204629s041lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Reduced caloric intake, a ketogenic diet and alcohol abuse are listed among conditions that can precipitate
+    ketoacidosis on empagliflozin; it should be withheld at least 3 days before procedures with prolonged fasting
+    where possible.
+  locator: Sections 5.1, 2.4
+  population: null
+  grade: null
+- claim: Empagliflozin can cause volume depletion; status should be assessed and corrected before starting, and
+    diuretics add to the risk.
+  locator: Sections 5.2, 7
+  population: null
+  grade: null
+- claim: Urine glucose tests will be positive and should not be used to monitor glycemic control.
+  locator: Section 7
+  population: null
+  grade: null
+- claim: It is taken with or without food.
+  locator: Section 2.2
+  population: null
+  grade: null
+limitations: Revised 9/2023.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

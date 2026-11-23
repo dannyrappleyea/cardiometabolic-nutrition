@@ -1,0 +1,46 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: nice-obesity-management-ng246-2025
+title: Overweight and obesity management (NICE guideline NG246)
+authors: []
+organization: National Institute for Health and Care Excellence
+year: 2025
+publication: NICE
+type: guideline
+tier: '1'
+jurisdiction: uk
+authority: nice
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.nice.org.uk/guidance/NG246/chapter/physical-activity-and-diet
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Dietary approaches should create an energy deficit, which can be achieved through low-fat, low-carbohydrate
+    or other approaches, delivered with professional support and follow-up.
+  locator: Recommendations 1.16.3, 1.16.5
+  population: Adults
+  grade: null
+- claim: Better diet should be encouraged even without weight loss because of lipid and diabetes/CVD risk benefits.
+  locator: Recommendation 1.16.2
+  population: null
+  grade: null
+- claim: Low-energy (800-1,200 kcal/day) and very-low-energy (under 800 kcal/day) diets are for specialist or long-term-condition
+    services only, nutritionally complete, up to 12 weeks, not a long-term strategy.
+  locator: Recommendations 1.16.8-1.16.11
+  population: null
+  grade: null
+- claim: Nutritionally unbalanced restrictive diets are advised against.
+  locator: Recommendation 1.16.7
+  population: null
+  grade: null
+limitations: Published January 2025, last updated January 2026.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

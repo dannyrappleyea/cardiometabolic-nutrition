@@ -1,0 +1,58 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: hypertension-canada-health-behaviour-2020
+title: 'Hypertension Canada guidelines: Health behaviour management (revised recommendations for 2020)'
+authors: []
+organization: Hypertension Canada
+year: 2020
+publication: hypertension.ca
+type: guideline
+tier: '1'
+jurisdiction: canada
+authority: hypertension-canada
+identifiers:
+  doi: null
+  pmid: null
+  url: https://hypertension.ca/guidelines/prevention-treatment/health-behaviour-management
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Consider reducing sodium toward 2,000 mg/day (about 5 g salt) to prevent hypertension and lower BP.
+  locator: Sodium intake
+  population: null
+  grade: Grade A
+- claim: In people not at risk of hyperkalemia, increasing dietary potassium is recommended to lower BP; the page
+    refers to a separate table of hyperkalemia risk.
+  locator: Potassium intake
+  population: null
+  grade: Grade A
+- claim: A DASH-style diet (fruits, vegetables, low-fat dairy, high-fibre whole grains, plant protein, reduced saturated
+    fat and cholesterol) is recommended.
+  locator: Diet
+  population: null
+  grade: Grade B
+- claim: Healthy adults should abstain or limit alcohol to 2 drinks/day or fewer; people with hypertension drinking
+    more than that should reduce.
+  locator: Alcohol
+  population: null
+  grade: Grade A-B
+- claim: Maintaining BMI 18.5-24.9 and waist below 102 cm (men) or 88 cm (women) is recommended to prevent hypertension;
+    overweight people with hypertension should be advised to lose weight.
+  locator: Weight
+  population: null
+  grade: Grade B-C
+- claim: Calcium and magnesium supplements are not recommended to prevent or treat hypertension.
+  locator: Calcium and magnesium
+  population: null
+  grade: Grade B
+limitations: Page is labelled 2020 revised recommendations. Hypertension Canada published a 2025 primary-care guideline
+  (CMAJ/Can Fam Physician) and has a comprehensive guideline forthcoming; a search snippet of the 2025 guideline
+  page cites WHO advice of more than 3.5 g potassium/day and potassium monitoring with ACEi/ARB/MRA or CKD.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

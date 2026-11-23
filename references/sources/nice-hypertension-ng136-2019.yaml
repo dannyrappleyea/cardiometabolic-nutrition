@@ -1,0 +1,53 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: nice-hypertension-ng136-2019
+title: 'Hypertension in adults: diagnosis and management (NICE guideline NG136)'
+authors: []
+organization: National Institute for Health and Care Excellence
+year: 2019
+publication: NICE
+type: guideline
+tier: '1'
+jurisdiction: uk
+authority: nice
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.nice.org.uk/guidance/NG136/chapter/Recommendations
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Clinicians should ask about diet and exercise and give lifestyle guidance; excessive coffee and other caffeine-rich
+    products are discouraged; low sodium intake is encouraged by reducing or substituting sodium salt.
+  locator: Section 1.3 lifestyle interventions
+  population: null
+  grade: 2004 recommendations
+- claim: Potassium-based salt substitutes should not be used by older people, people with diabetes, pregnant women,
+    people with kidney disease or people taking some antihypertensives such as ACE inhibitors and ARBs; salt reduction
+    is advised instead.
+  locator: Section 1.3, salt substitute recommendation [2004, amended 2019]
+  population: null
+  grade: null
+- claim: Calcium, magnesium or potassium supplements should not be offered to lower blood pressure.
+  locator: Section 1.3
+  population: null
+  grade: null
+- claim: Stage 1 hypertension is clinic BP 140/90-159/99 (home or ambulatory 135/85-149/94); stage 2 is clinic BP
+    160/100 to below 180/120; severe hypertension is clinic systolic 180 or diastolic 120 or higher.
+  locator: Terms used in this guideline
+  population: null
+  grade: null
+- claim: Resistant hypertension corresponds to BP uncontrolled on optimal tolerated doses of an ACE inhibitor or
+    ARB plus a calcium-channel blocker and a thiazide-like diuretic.
+  locator: Step 4 treatment recommendations
+  population: null
+  grade: null
+limitations: Recommendation numbers were not visible in the fetched extract. Last updated November 2023.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

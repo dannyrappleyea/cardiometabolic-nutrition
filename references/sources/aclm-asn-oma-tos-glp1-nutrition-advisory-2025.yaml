@@ -1,0 +1,54 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: aclm-asn-oma-tos-glp1-nutrition-advisory-2025
+title: 'Nutritional priorities to support GLP-1 therapy for obesity: a joint Advisory from the American College
+  of Lifestyle Medicine, the American Society for Nutrition, the Obesity Medicine Association, and The Obesity Society'
+authors: []
+organization: ACLM, ASN, OMA, The Obesity Society
+year: 2025
+publication: Obesity 2025;33(8):1475-1503 (also AJCN, AJLM, Obesity Pillars)
+type: scientific-statement
+tier: '2'
+jurisdiction: us-professional
+authority: null
+identifiers:
+  doi: 10.1002/oby.24336
+  pmid: null
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12304835/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not visible in fetched portion; to be checked
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Higher protein targets of 1.2-1.6 g/kg/day (or about 80-120 g/day) have been proposed during active weight
+    loss on GLP-1 therapy; prolonged intakes of 2 g/kg/day or more should be avoided.
+  locator: Preservation of muscle and bone mass
+  population: Adults with obesity on GLP-1 medicines
+  grade: null
+- claim: Iron, calcium, magnesium, zinc and vitamins A, D, E, K, B1, B12 and C are at risk of inadequate intake,
+    especially below about 1,200 kcal/day (women) or 1,800 kcal/day (men).
+  locator: Nutritional deficiencies
+  population: null
+  grade: null
+- claim: Small frequent meals, avoiding large or very fatty meals early, gradual fibre, adequate fluids and minimal
+    alcohol help manage gastrointestinal side effects; dehydration can cause acute kidney injury.
+  locator: Management of GI side effects; Table 6
+  population: null
+  grade: null
+- claim: Resistance training at least three times weekly plus 150 minutes of aerobic activity is advised to preserve
+    lean mass.
+  locator: Preservation of muscle and bone mass
+  population: null
+  grade: null
+- claim: Up to two-thirds of lost weight may return within a year of stopping.
+  locator: Overview of efficacy
+  population: null
+  grade: null
+limitations: Consensus advisory based on expert appraisal, not a graded guideline; fetch covered ~100,000 of ~357,000
+  characters.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

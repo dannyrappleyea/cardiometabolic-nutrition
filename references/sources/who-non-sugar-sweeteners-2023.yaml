@@ -1,0 +1,33 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: who-non-sugar-sweeteners-2023
+title: 'Use of non-sugar sweeteners: WHO guideline'
+authors: []
+organization: World Health Organization
+year: 2023
+publication: WHO (15 May 2023)
+type: guideline
+tier: '1'
+jurisdiction: who
+authority: who
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.who.int/publications/i/item/9789240073616
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: WHO advises against using non-sugar sweeteners for weight control; the guideline addresses unhealthy weight
+    gain and diet-related noncommunicable diseases and is not a safety assessment of individual sweeteners.
+  locator: Publication landing page, overview and news headline
+  population: Adults and children
+  grade: null
+limitations: Landing page only; strength and applicability to people with diabetes not stated on the page.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

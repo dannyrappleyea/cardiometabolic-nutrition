@@ -1,0 +1,67 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: easd-dnsg-dietary-management-diabetes-2023
+title: Evidence-based European recommendations for the dietary management of diabetes
+authors: []
+organization: Diabetes and Nutrition Study Group of the European Association for the Study of Diabetes
+year: 2023
+publication: Diabetologia 2023;66:965-985
+type: guideline
+tier: '1'
+jurisdiction: eu
+authority: easd
+identifiers:
+  doi: 10.1007/s00125-023-05894-8
+  pmid: null
+  url: https://link.springer.com/content/pdf/10.1007/s00125-023-05894-8.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: People with overweight or obesity should aim for at least 5% weight loss; remission (HbA1c below 6.5% off
+    glucose-lowering drugs) can follow sustained weight loss, and a supervised total diet replacement of about 840
+    kcal/day for 12-20 weeks targets 10-15% loss.
+  locator: Prevention; Energy balance and weight management
+  population: null
+  grade: High (target); none shown for TDR
+- claim: A wide range of carbohydrate intakes is acceptable if fibre, sugar, saturated fat and protein recommendations
+    are met; very-low-carbohydrate/ketogenic diets are not recommended.
+  locator: Carbohydrate intakes
+  population: null
+  grade: Moderate
+- claim: Fibre at least 35 g/day from minimally processed whole grains, vegetables, legumes, nuts, seeds and whole
+    fruit; free sugars below 10% of energy; low-GI diets may be used.
+  locator: Carbohydrate intakes
+  population: null
+  grade: Moderate
+- claim: Non-nutritive sweeteners can replace sugars in foods and drinks.
+  locator: Carbohydrate intakes
+  population: null
+  grade: Moderate
+- claim: Saturated fat below 10% and trans fat below 1% of energy, replaced mainly with plant polyunsaturated and
+    monounsaturated fats.
+  locator: Dietary fat
+  population: null
+  grade: Low
+- claim: Protein 10-20% of energy (15-20% at age 65+), up to 23-32% short term during weight loss with eGFR above
+    60, and 10-15% at eGFR 45-60.
+  locator: Protein intakes
+  population: null
+  grade: Low
+- claim: Mediterranean, Nordic and vegetarian patterns improve cardiometabolic risk factors; red and processed meat,
+    sugar-sweetened beverages and refined grains should be minimized.
+  locator: Traditional dietary patterns; Food-based approaches
+  population: null
+  grade: Low to High
+- claim: The authors do not recommend alcohol at any level.
+  locator: Prevention commentary
+  population: null
+  grade: Not graded
+limitations: Fetch covered ~100,000 of ~144,000 characters. Coffee, tea and intermittent fasting not covered.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

@@ -1,0 +1,52 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: fda-label-wegovy-semaglutide-2026
+title: WEGOVY (semaglutide) injection and tablets prescribing information
+authors: []
+organization: Novo Nordisk (FDA-approved labeling)
+year: 2026
+publication: Drugs@FDA
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/218316s007lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: All indications (cardiovascular risk reduction, weight reduction, noncirrhotic MASH) are as an adjunct
+    to a reduced-calorie diet and increased physical activity.
+  locator: Section 1
+  population: null
+  grade: null
+- claim: Nausea, diarrhea, vomiting and constipation are the most common reactions, mostly during dose escalation;
+    dehydration from them has caused acute kidney injury.
+  locator: Sections 5.5, 5.6, 6.1
+  population: null
+  grade: null
+- claim: Gallbladder disease occurred more often than with placebo; pancreatitis should prompt discontinuation.
+  locator: Sections 5.2, 5.3
+  population: null
+  grade: null
+- claim: Delayed gastric emptying is linked to pulmonary aspiration during anesthesia and can change absorption
+    of oral drugs.
+  locator: Sections 5.10, 7.2
+  population: null
+  grade: null
+- claim: Tablets are taken in the morning on an empty stomach with up to 4 oz of water, waiting at least 30 minutes
+    before food, drink or other medicines.
+  locator: Section 2.1
+  population: null
+  grade: null
+limitations: Revised 06/2026; patient counselling section not in the fetched portion.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

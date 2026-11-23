@@ -1,0 +1,46 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: esc-elevated-bp-hypertension-guideline-2024
+title: 2024 ESC Guidelines for the management of elevated blood pressure and hypertension
+authors:
+- McEvoy JW
+- McCarthy CP
+- Bruno RM
+organization: European Society of Cardiology
+year: 2024
+publication: European Heart Journal 2024
+type: guideline
+tier: '1'
+jurisdiction: eu
+authority: esc
+identifiers:
+  doi: 10.1093/eurheartj/ehae178
+  pmid: null
+  url: https://escardio.org/static-file/Escardio/Guidelines/Products/Essential%20Messages/2024%20EM/Essential%20Messages_2024%20HTN.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: Elevated BP is office systolic 120-139 or diastolic 70-89 mm Hg; hypertension remains office BP of 140/90
+    or higher; the guideline does not grade hypertension into stages.
+  locator: Essential Messages, key messages
+  population: null
+  grade: null
+- claim: The on-treatment target for most adults is 120-129/70-79 mm Hg if well tolerated, with individualized exceptions.
+  locator: Essential Messages, BP targets
+  population: null
+  grade: null
+- claim: Sodium reduction and potassium intake are listed among areas needing further research; the summary gives
+    no numeric lifestyle targets.
+  locator: Essential Messages, gaps in evidence
+  population: null
+  grade: null
+limitations: The ESC 'Essential Messages' summary was opened, not the full guideline. Search snippets indicate the
+  full guideline adds lifestyle recommendations including potassium supplementation and exercise.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

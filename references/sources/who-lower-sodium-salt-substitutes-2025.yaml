@@ -1,0 +1,36 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: who-lower-sodium-salt-substitutes-2025
+title: 'Use of lower-sodium salt substitutes: WHO guideline'
+authors: []
+organization: World Health Organization
+year: 2025
+publication: WHO
+type: guideline
+tier: '1'
+jurisdiction: who
+authority: who
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.who.int/publications/i/item/9789240105591
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: WHO issued a guideline on lower-sodium salt substitutes on 27 January 2025 to support sodium reduction
+    and lower hypertension risk; it is to be used alongside other WHO healthy-diet guidance.
+  locator: Publication landing page overview
+  population: null
+  grade: null
+limitations: Landing page only; recommendation wording, strength and excluded groups were not on the page. A search-result
+  letter (Cappuccio, Lancet Public Health 2025) states the recommendation is conditional, follows a strong recommendation
+  to reduce sodium, and excludes people with kidney impairment or impaired potassium excretion, children and pregnant
+  women; verify in the full guideline.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

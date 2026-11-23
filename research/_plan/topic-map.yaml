@@ -1,19 +1,420 @@
 # Topic map — produced by playbooks/01-discover.md, approved by a human reviewer.
-# Schema: schemas/topic-map.schema.json. Empty on purpose: this repository starts clean-room.
-version: 0
-generated: null          # YYYY-MM-DD
-generated_by: null       # agent/model
+# Schema: schemas/topic-map.schema.json. Log IDs (D1, D2, …) refer to research/_plan/discovery-log.md.
+version: 1
+generated: 2026-11-23
+generated_by: claude-opus-5-5 (discovery run, branch discover/2026-11-23)
 approved: null           # YYYY-MM-DD, set by the reviewer
-calendar: []             # - {source_or_authority: <id>, next_edition: YYYY-MM, note: ...}
-topics: []
-# Entry shape:
-# - id: area-subject
-#   title: Plain-language title
-#   kind: pattern | food-group | food | nutrient | beverage | additive | supplement | medication-interaction | targets | behavior | situation | other
-#   priority: 1              # 1 foundational · 2 important · 3 useful
-#   status: proposed         # proposed | approved | in-progress | published | rejected
-#   questions: [...]         # 3-8 concrete questions
-#   rationale: Why it matters for the cohort, citing discovery-log entries
-#   discovered_via: [D1, D4]
-#   depends_on: []
-#   watch: false             # true for fast-moving or contested areas
+calendar:
+  - {source_or_authority: ada, next_edition: 2026-12, note: "Standards of Care in Diabetes—2027 expected each December; re-check ada-standards-* sources"}
+  - {source_or_authority: hypertension-canada, next_edition: 2027-12, note: "Comprehensive guideline announced for 2026-2028 after the 2025 primary-care guideline; date approximate"}
+  - {source_or_authority: esc, next_edition: 2027-08, note: "Full ESC/EAS dyslipidaemia guideline expected after the 2025 focused update; date approximate"}
+  - {source_or_authority: who, next_edition: null, note: "WHO NUGAG guidelines on dietary patterns and related topics in development (seen in search, D19)"}
+  - {source_or_authority: usda-hhs, next_edition: 2030-12, note: "Next Dietary Guidelines for Americans edition"}
+topics:
+  # ---------------- Priority 1: foundational ----------------
+  - id: targets-clinical-goals
+    title: The numbers diet is trying to move, and how far diet can move them
+    kind: targets
+    priority: 1
+    status: proposed
+    questions:
+      - Which blood pressure, glucose (A1C, fasting glucose) and lipid (LDL-C, non-HDL-C, triglycerides, apoB, Lp(a)) thresholds and goals apply to the core cohort, and how do US, European and UK classifications differ?
+      - What weight-loss amounts (percent of body weight) are linked to meaningful changes in each measure?
+      - Roughly how much can diet changes alone lower blood pressure, LDL-C, triglycerides and A1C, in absolute units?
+      - Which measures does diet barely change (for example Lp(a)), so the reader is not misled?
+      - What daily reference intakes (sodium, potassium, fiber, protein) do national bodies set for adults in this age range?
+      - How often should someone changing their diet expect to re-measure, and over what time frame do changes appear?
+    rationale: Every rule in other topics is judged by its effect on these numbers. Discovery found the guidelines that define them (D1, D3, D6, D8, D9) and differing classification systems across the US, Europe and UK (D9, D16), plus reference intakes and weight-loss thresholds that recur across documents (D4, D20, D39, D42). SCOPE §3 thresholds also need a canonical home for verification.
+    discovered_via: [D1, D3, D5, D6, D8, D9, D10, D16, D20, D39, D42]
+    depends_on: []
+    watch: false
+
+  - id: pattern-heart-healthy-eating
+    title: Overall eating patterns for the cardiometabolic cluster (Mediterranean, DASH, plant-forward, Nordic, Portfolio)
+    kind: pattern
+    priority: 1
+    status: proposed
+    questions:
+      - Which named eating patterns have trial evidence for lowering blood pressure, LDL-C, triglycerides and glucose together, and in whom?
+      - Do patterns differ in hard outcomes (heart attack, stroke, diabetes) versus risk-factor changes?
+      - What do the patterns have in common, and which differences matter for this cohort?
+      - How much flexibility is there in carbohydrate and fat proportions within a heart-healthy pattern?
+      - How do the patterns perform with and without weight loss?
+      - How should a pattern be adapted across cultures and cuisines while keeping its effect?
+    rationale: Every guideline opened recommends a whole-diet pattern before single nutrients — DASH for BP (D1, D14), Mediterranean, vegetarian and Nordic for diabetes and CVD (D4, D15, D20), a plant-forward pattern in CKD (D8), and a heart-healthy pattern for the public (D23). Most other topics refine this one.
+    discovered_via: [D1, D4, D14, D15, D20, D23]
+    depends_on: []
+    watch: false
+
+  - id: nutrient-sodium-potassium
+    title: Sodium, potassium and salt substitutes
+    kind: nutrient
+    priority: 1
+    status: proposed
+    questions:
+      - What sodium intake targets do authorities set for adults with raised blood pressure (2,300, 2,000, 1,500 mg/day), and what evidence underlies each?
+      - How much does lowering sodium or raising dietary potassium lower blood pressure, and does that translate to fewer cardiovascular events?
+      - Where does sodium come from in typical diets, and which changes cut it most?
+      - What is the evidence for potassium-enriched (lower-sodium) salt substitutes, and why do WHO and NICE advise differently?
+      - Which people should not use potassium salt substitutes or raise potassium (kidney function, ACE inhibitors, ARBs, MRAs, finerenone, potassium-sparing diuretics)?
+      - Is there a lower limit below which sodium restriction is not advised for this cohort?
+    rationale: Sodium and potassium appear in every BP guideline opened, with different numeric targets (D1, D2, D4, D14, D18, D42), and potassium-enriched salt is a live disagreement — WHO now suggests it (D17, D18) while NICE cautions against it in older people, diabetes, kidney disease and ACEi/ARB users (D16), which describes much of this cohort. Drug labels confirm the hyperkalemia interaction (D30).
+    discovered_via: [D1, D2, D4, D8, D14, D16, D17, D18, D30, D42]
+    depends_on: [targets-clinical-goals]
+    watch: true
+
+  - id: nutrient-dietary-fat
+    title: Dietary fat quality — saturated, unsaturated and trans fats, and cooking fats
+    kind: nutrient
+    priority: 1
+    status: proposed
+    questions:
+      - What saturated and trans fat limits do authorities set, and what should replace saturated fat (polyunsaturated, monounsaturated, whole-grain carbohydrate)?
+      - How much does replacing saturated fat change LDL-C and cardiovascular events?
+      - What does the evidence say about specific cooking fats (olive oil, canola/soybean and other vegetable "seed" oils, butter, tallow, coconut and palm oil)?
+      - Does total fat amount matter for weight or lipids when fat quality is held constant?
+      - How do fat recommendations change for high triglycerides?
+      - Where do the 2025–2030 US Dietary Guidelines depart from professional-society advice on fats, and why?
+    rationale: Saturated-fat limits and replacement appear in ADA, EASD, WHO and the 2026 lipid guideline (D4, D7, D19, D20). The 2025–2030 US guidelines keep the 10% limit but promote butter and tallow, which experts flag as a contradiction (D11, D12), so fat sources are a decision readers face daily.
+    discovered_via: [D4, D7, D11, D12, D19, D20, D22]
+    depends_on: [targets-clinical-goals]
+    watch: true
+
+  - id: behavior-weight-loss
+    title: Losing weight and keeping it off by diet
+    kind: behavior
+    priority: 1
+    status: proposed
+    questions:
+      - How much weight loss is needed for meaningful change in BP, glucose, triglycerides, LDL-C and liver fat?
+      - Do diets of different composition (low-fat, low-carbohydrate, Mediterranean, high-protein) differ in weight loss when calories are matched?
+      - When are meal replacements, total diet replacement and low- or very-low-energy diets appropriate, and with what supervision?
+      - Is remission of type 2 diabetes realistic through diet, and for whom?
+      - What predicts keeping weight off, and what does maintenance require?
+      - What safety issues apply to rapid or large weight loss (gallstones, muscle loss, nutrient gaps, medicines needing adjustment)?
+    rationale: Weight loss targets appear in ADA (5–7%), EASD (≥5%, remission at 10–15%), MASLD (5/7–10/≥10%) and BP guidance (D1, D4, D20, D39); NICE 2025 sets rules for energy-deficit diets and LED/VLEDs (D40). Labels note gallstone risk with substantial weight loss (D27, D34).
+    discovered_via: [D1, D4, D14, D20, D27, D28, D34, D39, D40]
+    depends_on: [targets-clinical-goals]
+    watch: false
+
+  - id: beverage-alcohol
+    title: Alcohol
+    kind: beverage
+    priority: 1
+    status: proposed
+    questions:
+      - How does alcohol intake affect blood pressure, triglycerides, glucose and weight, in absolute terms, at different weekly amounts?
+      - Is there a cardiovascular benefit from light drinking, given recent evidence?
+      - What limits do authorities set (US, Canada, UK, Europe, WHO), and where do they disagree?
+      - How do alcohol and common medicines in the cohort interact (metformin, SGLT2 inhibitors, statins, calcium-channel blockers, GLP-1 medicines)?
+      - What does a "standard drink" mean in different countries?
+      - How do the answers change with fatty liver disease, gout or high triglycerides?
+    rationale: Alcohol is in every BP guideline (reduce or eliminate; D1, D14) and diabetes guideline (D4, D20), labels name alcohol interactions (D24, D25, D26, D32), and national limits now diverge sharply — Canada's risk continuum (D36), WHO's no-safe-level message, and a US guideline without a number (D11, D12, D35).
+    discovered_via: [D1, D4, D11, D12, D14, D20, D24, D26, D32, D35, D36, D39]
+    depends_on: [targets-clinical-goals]
+    watch: true
+
+  - id: medication-lipid-lowering
+    title: Food and supplement interactions with lipid-lowering medicines
+    kind: medication-interaction
+    priority: 1
+    status: proposed
+    questions:
+      - Which statins interact with grapefruit, how large is the effect, and how much grapefruit matters, according to their labels?
+      - What do labels say about alcohol, niacin and other dietary factors with statins?
+      - Do ezetimibe, bempedoic acid, PCSK9 medicines, inclisiran, fibrates or icosapent ethyl have food, alcohol or nutrient interactions or eating-related effects (for example uric acid and gout with bempedoic acid)?
+      - Which supplements duplicate or interfere with lipid medicines (red yeast rice, high-dose niacin, fish oil)?
+      - Does diet still add benefit once someone is on a statin, and by how much?
+    rationale: Statins are the foundation of lipid treatment (D6, D21), the simvastatin label requires avoiding grapefruit and cautions on alcohol (D24), bempedoic acid raises uric acid (D33), and red yeast rice contains a statin-identical compound (D45). Labels for atorvastatin, lovastatin, ezetimibe, fibrates and icosapent ethyl were not yet opened.
+    discovered_via: [D6, D21, D24, D33, D45, D46]
+    depends_on: []
+    watch: false
+
+  - id: medication-blood-pressure
+    title: Food interactions with blood-pressure medicines (potassium, grapefruit, alcohol, licorice)
+    kind: medication-interaction
+    priority: 1
+    status: proposed
+    questions:
+      - How do ACE inhibitors, ARBs, MRAs (spironolactone, eplerenone, finerenone) and potassium-sparing diuretics change the safety of potassium-rich foods, potassium supplements and potassium salt substitutes?
+      - Which calcium-channel blockers interact with grapefruit or high-fat meals, according to labels?
+      - What do thiazide-type diuretic labels say about potassium, sodium, uric acid and alcohol?
+      - How does alcohol interact with BP medicines?
+      - Are there other foods or supplements with label-level BP-medicine interactions (for example licorice, NSAIDs taken for pain, decongestants)?
+    rationale: Lisinopril's label lists potassium salt substitutes and supplements as hyperkalemia risks (D30); finerenone's label says avoid grapefruit (D31); felodipine's monograph documents grapefruit and high-fat-meal effects (D32); NICE cautions against salt substitutes with ACEi/ARBs (D16). Thiazide and MRA labels were not yet opened.
+    discovered_via: [D16, D17, D30, D31, D32]
+    depends_on: [nutrient-sodium-potassium]
+    watch: false
+
+  - id: medication-glucose-lowering
+    title: Eating with glucose-lowering medicines (metformin, SGLT2 inhibitors, DPP-4 inhibitors, pioglitazone)
+    kind: medication-interaction
+    priority: 1
+    status: proposed
+    questions:
+      - What do metformin labels say about meals, alcohol, gastrointestinal effects and vitamin B12, and how should B12 status be handled?
+      - What dietary situations raise ketoacidosis risk on SGLT2 inhibitors (low-carbohydrate or ketogenic eating, calorie restriction, fasting, alcohol), and what do labels and guidelines advise?
+      - How do SGLT2 inhibitors affect fluid needs and volume status?
+      - Do DPP-4 inhibitors or pioglitazone have eating-related effects (for example fluid retention or weight gain)?
+      - How does the advice change if a medicine that can cause hypoglycemia is added (outside core scope)?
+    rationale: Metformin and SGLT2 labels name B12, alcohol, ketogenic diet, reduced caloric intake and fasting (D25, D26); ADA discourages ketogenic eating on SGLT2 inhibitors and advises B12 checks (D4); Diabetes Canada flags the same SGLT2 concern (D15).
+    discovered_via: [D4, D15, D25, D26]
+    depends_on: []
+    watch: false
+
+  - id: medication-incretin-weight-loss
+    title: Eating well on GLP-1/GIP medicines and other weight-loss medicines
+    kind: medication-interaction
+    priority: 1
+    status: proposed
+    questions:
+      - Which eating strategies reduce nausea, vomiting, constipation and reflux on GLP-1 or GLP-1/GIP medicines?
+      - How much protein, and which micronutrients, need attention when appetite and intake fall sharply?
+      - What hydration advice follows from label warnings on volume depletion and kidney injury?
+      - What do labels say about oral semaglutide timing with food and water, and about gastric emptying, procedures and other oral medicines?
+      - How should diet support muscle and bone during rapid weight loss, and what happens to weight after stopping?
+      - What do orlistat labels require on dietary fat, vitamins and kidney-stone risk?
+    rationale: GLP-1 medicines are now common in this cohort and are named in the 2025 BP guideline (D2). Labels warn about GI effects, dehydration, gallbladder disease, gastric emptying and oral-tablet fasting (D27, D29), and a 2025 multi-society advisory sets nutrition priorities (D28). Orlistat's label carries dietary-fat and vitamin requirements (D34). The area is changing fast.
+    discovered_via: [D2, D27, D28, D29, D34]
+    depends_on: [behavior-weight-loss]
+    watch: true
+
+  # ---------------- Priority 2: important ----------------
+  - id: nutrient-carbohydrate-amount
+    title: How much carbohydrate, including low-carbohydrate and ketogenic diets
+    kind: nutrient
+    priority: 2
+    status: proposed
+    questions:
+      - Does the amount of carbohydrate (as percent of energy) matter for A1C, triglycerides, LDL-C and weight in prediabetes and type 2 diabetes?
+      - What are the short- and long-term results of low- and very-low-carbohydrate (ketogenic) diets, and why do ADA and EASD differ on them?
+      - Which people and medicines make very-low-carbohydrate eating unsafe (SGLT2 inhibitors, kidney disease)?
+      - How do carbohydrate changes affect LDL-C, depending on what replaces the carbohydrate?
+      - What role do glycemic index and glycemic load play?
+    rationale: ADA allows carbohydrate reduction for some adults (D4), EASD accepts a wide range but advises against ketogenic diets (D20), Diabetes Canada finds low-carb not consistently better (D15), and SGLT2 labels list ketogenic diets as a ketoacidosis precipitant (D25). The 2026 lipid guideline targets refined carbohydrate for high triglycerides (D7).
+    discovered_via: [D4, D7, D15, D19, D20, D25]
+    depends_on: [pattern-heart-healthy-eating]
+    watch: false
+
+  - id: nutrient-fiber-whole-grains
+    title: Fiber, whole grains and legumes
+    kind: nutrient
+    priority: 2
+    status: proposed
+    questions:
+      - What fiber targets do authorities set (absolute grams or grams per 1,000 kcal), and how far are typical intakes from them?
+      - Which fiber types (viscous/soluble versus insoluble) lower LDL-C and improve glucose, and by how much?
+      - What counts as a whole grain, and how do whole and refined grains compare for the cohort's measures?
+      - What do legumes (pulses) add for glucose and LDL-C?
+      - When are fiber supplements (for example psyllium) a reasonable addition?
+    rationale: Fiber has numeric targets in ADA (≥14 g/1,000 kcal) and EASD (≥35 g/day) (D4, D20), viscous fiber and pulses improve glucose and lipids per Diabetes Canada (D15), and the 2026 lipid guideline's LDL-C diet emphasizes fiber, legumes and whole grains (D7).
+    discovered_via: [D4, D7, D15, D20]
+    depends_on: []
+    watch: false
+
+  - id: nutrient-sugars-sweeteners
+    title: Added sugars, sugary drinks and sweeteners (non-nutritive sweeteners and sugar alcohols)
+    kind: nutrient
+    priority: 2
+    status: proposed
+    questions:
+      - What limits on added or free sugars do authorities set, and how do they compare (percent of energy versus grams per meal)?
+      - How do sugar-sweetened beverages and fruit juice affect weight, glucose and triglycerides?
+      - What does the evidence show for non-nutritive sweeteners in people with prediabetes or diabetes, and why do WHO, ADA, EASD and the US guidelines disagree?
+      - What is known about sugar alcohols such as erythritol and xylitol and cardiovascular risk, and how strong is that evidence?
+      - What should people drink instead?
+    rationale: Sugars and drinks appear in ADA, EASD, the lipid guideline (TG) and MASLD guidance (D4, D7, D20, D39). Sweeteners are contested — WHO advises against them for weight control (D19), ADA and EASD allow them to replace sugar (D4, D20), the US guidelines say no amount is recommended (D12) — and a recent cardiovascular signal for sugar alcohols is unresolved (D44).
+    discovered_via: [D4, D7, D11, D12, D19, D20, D39, D44]
+    depends_on: []
+    watch: true
+
+  - id: nutrient-protein-amount
+    title: How much protein
+    kind: nutrient
+    priority: 2
+    status: proposed
+    questions:
+      - What protein intakes (g/kg/day or percent of energy) do authorities recommend for adults 40–75, and where do they disagree?
+      - Does higher protein help weight loss, preserve muscle or improve glucose, and at what cost?
+      - How should protein targets change with reduced kidney function, older age or GLP-1 medicines?
+      - Is there an upper limit of concern for this cohort?
+      - Does the source of protein (plant versus animal) change the answer?
+    rationale: Protein guidance spans 0.8 g/kg (KDIGO in CKD, the long-standing RDA) to 0.8–1.5 (ADA), age- and kidney-specific percentages (EASD), and 1.2–1.6 g/kg (US guidelines 2025–2030 and the GLP-1 advisory) (D4, D8, D12, D13, D15, D20, D28). The divergence affects kidney safety and weight-loss advice.
+    discovered_via: [D4, D8, D12, D13, D15, D20, D28]
+    depends_on: []
+    watch: true
+
+  - id: foodgroup-protein-foods
+    title: Protein foods — red and processed meat, poultry, fish, eggs, legumes and nuts
+    kind: food-group
+    priority: 2
+    status: proposed
+    questions:
+      - How do red meat, processed meat, poultry, fish and plant proteins compare for cardiovascular and diabetes outcomes and risk factors?
+      - How often should fish be eaten, and does the type of fish matter?
+      - What is the evidence on eggs and dietary cholesterol for people with high LDL-C or diabetes, and why do some authorities set limits for them?
+      - What do nuts and seeds add, and in what amounts?
+      - How should protein foods be prepared to fit the rest of the evidence (for example processing, sodium, cooking method)?
+    rationale: Authorities give food-level protein advice — minimize red and processed meat (D4, D20), red meat 1–3 times and fish 2–3 times a week, eggs limited to 7 a week for people with high LDL or type 2 diabetes (D23), nuts and pulses for glucose and lipids (D15, D20) — while the US guidelines encourage animal protein including red meat (D11, D12).
+    discovered_via: [D4, D11, D12, D15, D20, D22, D23]
+    depends_on: [nutrient-dietary-fat]
+    watch: false
+
+  - id: foodgroup-dairy
+    title: Dairy — full-fat versus reduced-fat, cheese, yogurt and milk alternatives
+    kind: food-group
+    priority: 2
+    status: proposed
+    questions:
+      - How do full-fat and reduced-fat dairy compare for LDL-C, blood pressure, glucose and cardiovascular outcomes?
+      - Do fermented dairy foods (yogurt, cheese) behave differently from milk and butter?
+      - Why do some authorities advise reduced-fat dairy for people with high cholesterol while others now favor full-fat options?
+      - How do plant-based milk alternatives compare nutritionally?
+      - How does dairy fit within sodium and saturated-fat limits?
+    rationale: Australia's Heart Foundation advises reduced-fat dairy for people with high cholesterol or heart disease (D23), DASH and diabetes guidance use low-fat dairy (D4, D14), and the 2025–2030 US guidelines highlight whole milk and full-fat dairy (D11, D12) — a direct disagreement on a daily choice.
+    discovered_via: [D4, D11, D12, D14, D22, D23]
+    depends_on: [nutrient-dietary-fat]
+    watch: true
+
+  - id: foodgroup-ultra-processed
+    title: Ultra-processed and highly processed foods
+    kind: food-group
+    priority: 2
+    status: proposed
+    questions:
+      - How are ultra-processed foods defined (Nova and others), and how reliable are the definitions?
+      - What is the strength of evidence linking ultra-processed food intake to type 2 diabetes, hypertension, obesity, dyslipidemia and cardiovascular events?
+      - Is the risk explained by known nutrients (sodium, sugar, saturated fat, low fiber) or by processing itself?
+      - Which processed foods are reasonable choices (for example canned legumes, frozen vegetables, whole-grain bread)?
+      - How do authorities phrase advice on processed foods, and how can a reader apply it while shopping?
+    rationale: Limiting ultra- or highly processed foods now appears in ADA, KDIGO, MASLD, Heart Foundation and US guidance (D4, D8, D13, D23, D39), the 2025 Lancet series and an AHA advisory raised its profile (D37), and an umbrella review shows mostly observational, mixed-certainty evidence (D38).
+    discovered_via: [D4, D8, D11, D13, D23, D37, D38, D39]
+    depends_on: [pattern-heart-healthy-eating]
+    watch: true
+
+  - id: behavior-meal-timing
+    title: Meal timing, intermittent fasting and time-restricted eating
+    kind: behavior
+    priority: 2
+    status: proposed
+    questions:
+      - Do intermittent fasting or time-restricted eating improve weight, glucose, BP or lipids more than continuous calorie restriction?
+      - Do any benefits last after people stop?
+      - Which medicines in the cohort make fasting riskier (SGLT2 inhibitors; insulin or sulfonylureas are out of scope), and what do labels advise?
+      - Does meal timing (early versus late eating, breakfast, late-night eating) matter independent of total intake?
+      - What do authorities advise for religious or cultural fasting periods?
+    rationale: ADA reports intermittent fasting gives weight loss similar to continuous restriction and gives religious-fasting recommendations (D4); SGLT2 labels address fasting (D25); recent meta-analyses compare fasting strategies and find benefits fade after stopping (D43).
+    discovered_via: [D4, D25, D43]
+    depends_on: [behavior-weight-loss]
+    watch: true
+
+  - id: supplement-lipid-lowering
+    title: Supplements and functional foods marketed for cholesterol or triglycerides (plant sterols, fiber supplements, red yeast rice, fish oil, others)
+    kind: supplement
+    priority: 2
+    status: proposed
+    questions:
+      - Which products lower LDL-C or triglycerides meaningfully (plant sterols/stanols, psyllium, red yeast rice, fish oil, others), and by how much?
+      - What safety concerns exist (red yeast rice monacolin and contamination, fish oil and atrial fibrillation or bleeding)?
+      - Why do European guidelines say supplements are not indicated for LDL-C, and does anyone disagree?
+      - How do over-the-counter fish oils differ from prescription omega-3 medicines?
+      - Which supplements duplicate or interact with prescribed lipid medicines?
+    rationale: ESC/EAS 2025 states supplements are not indicated for LDL-C (D21) while prescription icosapent ethyl has a role (D21); red yeast rice has EU dose limits and serious adverse-event reports (D45); omega-3 supplements carry an atrial fibrillation signal (D46).
+    discovered_via: [D21, D45, D46]
+    depends_on: [medication-lipid-lowering]
+    watch: true
+
+  - id: supplement-vitamins-minerals-herbals
+    title: Vitamins, minerals and herbal products for blood pressure and glucose, and nutrients medicines can deplete
+    kind: supplement
+    priority: 2
+    status: proposed
+    questions:
+      - Do any vitamins, minerals or herbs (for example magnesium, chromium, cinnamon, vitamin D, calcium, potassium pills) improve glucose or blood pressure enough to recommend?
+      - Which supplements carry harm signals for this cohort (for example beta-carotene)?
+      - Which nutrients are depleted by common medicines (vitamin B12 with metformin; fat-soluble vitamins with orlistat) and how should that be checked?
+      - When is a multivitamin reasonable during calorie restriction or on weight-loss medicines?
+      - How should readers judge supplement quality and claims?
+    rationale: ADA does not recommend magnesium, chromium or cinnamon for glucose and advises against beta-carotene (D4); NICE and Hypertension Canada advise against calcium, magnesium and potassium supplements for BP (D14, D16); metformin and orlistat labels address B12 and fat-soluble vitamins (D26, D34); the GLP-1 advisory lists micronutrients at risk (D28).
+    discovered_via: [D4, D14, D16, D26, D28, D34]
+    depends_on: []
+    watch: false
+
+  - id: situation-reduced-kidney-function
+    title: Eating when kidney function is mildly reduced or albumin is in the urine (eGFR 45–59 or UACR 30–300)
+    kind: situation
+    priority: 2
+    status: proposed
+    questions:
+      - Which general rules in this research change when eGFR is 45–59 or UACR 30–300 mg/g?
+      - What protein and sodium intakes do kidney guidelines recommend at these stages?
+      - When does potassium (food, supplements, salt substitutes) become a concern, especially with RAS inhibitors, MRAs or SGLT2 inhibitors?
+      - Do plant-forward patterns help or harm at these stages?
+      - Which results should a person know before applying the general advice?
+    rationale: SCOPE puts eGFR 45–59 and UACR 30–300 in the adjacent zone. KDIGO sets protein (~0.8 g/kg), sodium (<2 g) and potassium practice points for CKD (D8); EASD and Diabetes Canada lower protein in reduced kidney function (D15, D20); NICE and drug labels flag potassium (D16, D30).
+    discovered_via: [D8, D15, D16, D20, D30]
+    depends_on: [nutrient-sodium-potassium, nutrient-protein-amount]
+    watch: false
+
+  - id: situation-eating-out-shopping
+    title: Shopping, food labels and eating out
+    kind: situation
+    priority: 2
+    status: proposed
+    questions:
+      - Which numbers on a food label matter most for this cohort (sodium, saturated fat, added sugars, fiber), and what thresholds help a quick decision?
+      - How much sodium do restaurant and packaged foods contribute, and which ordering choices reduce it most?
+      - What do authorities' patient materials advise for restaurants, takeout and fast food?
+      - How can the heart-healthy pattern be kept during holidays, travel and social events?
+      - How can a heart-healthy diet be affordable?
+    rationale: Guidelines locate most sodium in processed and restaurant foods (D4, D14, D47), patient materials from AHA, NHLBI and the Heart Foundation give practical eating-out and shopping advice (D23, D47), and SCOPE §6 puts eating out in scope.
+    discovered_via: [D4, D14, D23, D47]
+    depends_on: [nutrient-sodium-potassium, nutrient-sugars-sweeteners, nutrient-dietary-fat]
+    watch: false
+
+  # ---------------- Priority 3: useful ----------------
+  - id: beverage-coffee-tea
+    title: Coffee, tea and caffeine
+    kind: beverage
+    priority: 3
+    status: proposed
+    questions:
+      - How do coffee and tea affect blood pressure, glucose and lipids (including unfiltered coffee and LDL-C)?
+      - What does the evidence say about coffee and cardiovascular or liver outcomes?
+      - Why does NICE discourage excessive caffeine in hypertension, and what counts as excessive?
+      - What about energy drinks and caffeinated soft drinks?
+    rationale: NICE discourages excessive caffeine in hypertension (D16), MASLD guidance notes observational liver benefit of coffee (D39), and coffee and tea are among the most common daily drinks; EASD does not cover them (D20).
+    discovered_via: [D16, D20, D39]
+    depends_on: []
+    watch: false
+
+  - id: situation-fatty-liver
+    title: Eating with fatty liver disease (MASLD) without cirrhosis
+    kind: situation
+    priority: 3
+    status: proposed
+    questions:
+      - How much weight loss improves liver fat, inflammation and fibrosis?
+      - Which dietary pattern and specific limits (sugary drinks, ultra-processed foods) do liver guidelines recommend?
+      - How should alcohol advice change with fatty liver disease, and what is MetALD?
+      - What is known about coffee and liver outcomes?
+      - When do the general rules in this research need a clinician's adjustment?
+    rationale: Fatty liver without cirrhosis is a SCOPE §4 adjacent flag. The EASL-EASD-EASO guideline gives specific weight-loss thresholds, diet quality, sugary-drink, alcohol and coffee statements (D39).
+    discovered_via: [D39]
+    depends_on: [behavior-weight-loss, beverage-alcohol]
+    watch: false
+
+  - id: situation-gout-kidney-stones
+    title: Eating with gout or a history of kidney stones
+    kind: situation
+    priority: 3
+    status: proposed
+    questions:
+      - Which dietary factors do gout guidelines address (alcohol, purine-rich foods, fructose and high-fructose corn syrup, weight loss, vitamin C), and how strong is the evidence?
+      - Which general cardiometabolic rules conflict with gout or kidney-stone prevention (for example high-protein diets, sugary drinks, sodium, calcium, oxalate)?
+      - Which medicines in the cohort raise uric acid or stone risk (bempedoic acid, thiazides, orlistat)?
+      - What do kidney-stone guidelines say about fluids, sodium, calcium and oxalate?
+    rationale: Gout and kidney stones are SCOPE §4 adjacent flags. The ACR 2020 gout guideline makes dietary recommendations (D41); bempedoic acid raises uric acid and gout (D33); orlistat raises urinary oxalate and stone risk (D34). No kidney-stone guideline was opened in this run.
+    discovered_via: [D33, D34, D41]
+    depends_on: [beverage-alcohol, nutrient-sugars-sweeteners]
+    watch: false

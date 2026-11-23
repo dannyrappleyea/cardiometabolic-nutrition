@@ -1,0 +1,45 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: lupin-metformin-er-label-2025
+title: Metformin hydrochloride extended-release tablets prescribing information
+authors: []
+organization: Lupin Pharmaceuticals (FDA-approved labeling)
+year: 2025
+publication: Manufacturer-hosted FDA label
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+identifiers:
+  doi: null
+  pmid: null
+  url: https://lupin.com/US/wp-content/uploads/2025/01/pi-metformin-hci-er-tabs-eq-glumetza-1-2025.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Metformin may lower vitamin B12; hematologic parameters should be measured yearly and B12 every 2-3 years.
+  locator: Section 5.2
+  population: null
+  grade: null
+- claim: Alcohol potentiates metformin's effect on lactate metabolism, so patients should be warned against excessive
+    intake.
+  locator: Section 5.1
+  population: null
+  grade: null
+- claim: This extended-release product is taken once daily with the evening meal; food increased exposure.
+  locator: Dosage; section 12.3
+  population: null
+  grade: null
+- claim: Diarrhea and nausea are the most common adverse effects.
+  locator: Section 6.1
+  population: null
+  grade: null
+limitations: Generic label for one ER product (revised January 2025); immediate-release labels differ in food instructions.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

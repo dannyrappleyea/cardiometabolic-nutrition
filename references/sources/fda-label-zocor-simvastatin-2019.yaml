@@ -1,0 +1,41 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: fda-label-zocor-simvastatin-2019
+title: ZOCOR (simvastatin) tablets prescribing information
+authors: []
+organization: Merck Sharp & Dohme (FDA-approved labeling)
+year: 2019
+publication: Drugs@FDA
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/019766s100lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: The label says to avoid grapefruit juice because it raises simvastatin exposure and myopathy risk; large
+    amounts of double-strength juice raised exposure about 16-fold, one glass of regular juice about 1.9-fold.
+  locator: Highlights; sections 5.1, 12.3 (Table 3), 17.1
+  population: null
+  grade: null
+- claim: Simvastatin should be used with caution in people who drink substantial quantities of alcohol.
+  locator: Section 5.2
+  population: null
+  grade: null
+- claim: Lipid-modifying doses of niacin (1 g/day or more) with simvastatin are not recommended in Chinese patients.
+  locator: Sections 7.4, 8.8
+  population: null
+  grade: null
+limitations: Revised 10/2019; may not be the newest version.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

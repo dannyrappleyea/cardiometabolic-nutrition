@@ -1,0 +1,47 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: fda-label-xenical-orlistat-2012
+title: XENICAL (orlistat) capsules prescribing information
+authors: []
+organization: FDA-approved labeling (Drugs@FDA)
+year: 2012
+publication: Drugs@FDA
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020766s029lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Orlistat is used with a reduced-calorie diet with about 30% of calories from fat spread over three meals;
+    gastrointestinal effects increase with higher-fat diets or meals.
+  locator: Sections 2.1, 5.5
+  population: null
+  grade: null
+- claim: A daily multivitamin with vitamins A, D, E, K and beta-carotene is advised, taken at least 2 hours apart
+    from orlistat.
+  locator: Sections 2.1, 5.1, 7.2
+  population: null
+  grade: null
+- claim: Orlistat may raise urinary oxalate; oxalate kidney stones and nephropathy have been reported.
+  locator: Sections 5.3, 6.2
+  population: null
+  grade: null
+- claim: Levothyroxine should be separated by at least 4 hours; warfarin users need closer monitoring because vitamin
+    K absorption may fall.
+  locator: Sections 7.3, 7.4
+  population: null
+  grade: null
+limitations: Revised 01/2012; may not be the newest version.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

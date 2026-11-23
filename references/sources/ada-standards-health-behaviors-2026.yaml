@@ -1,0 +1,87 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: ada-standards-health-behaviors-2026
+title: '5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in
+  Diabetes-2026'
+authors: []
+organization: American Diabetes Association Professional Practice Committee
+year: 2025
+publication: Diabetes Care 2026;49(Suppl 1):S89-S131
+type: guideline
+tier: '1'
+jurisdiction: us-professional
+authority: ada
+identifiers:
+  doi: 10.2337/dc26-S005
+  pmid: null
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12690188/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-full-text
+  by: claude-opus-5-5
+findings:
+- claim: Eating patterns should emphasize nonstarchy vegetables, whole fruits, legumes, lean proteins, whole grains,
+    nuts and seeds and low-fat or nondairy options, and minimize red meat, sugar-sweetened beverages, sweets, refined
+    grains and processed or ultraprocessed foods.
+  locator: Recommendation 5.14
+  population: Prediabetes and diabetes
+  grade: B
+- claim: Reducing overall carbohydrate intake, mainly by limiting processed foods, can be considered for some adults
+    to improve glycemia; very-low-carbohydrate plans improved A1C short term but the advantage faded beyond a year.
+  locator: Recommendation 5.15; carbohydrate text
+  population: null
+  grade: B
+- claim: Carbohydrate should come mostly from minimally processed, high-fiber foods, with at least 14 g fiber per
+    1,000 kcal.
+  locator: Recommendation 5.24
+  population: null
+  grade: B
+- claim: Sodium should be limited to under 2,300 mg/day when clinically appropriate, mainly by cutting processed
+    foods.
+  locator: Recommendation 5.20
+  population: null
+  grade: B
+- claim: People with overweight or obesity should get a nutrition, activity and behavior plan targeting at least
+    5-7% weight loss; protein sufficiency and micronutrient status should be monitored during intentional weight
+    loss.
+  locator: Recommendations 5.12, 5.23
+  population: null
+  grade: A; E
+- claim: Non-nutritive sweeteners may replace sugar in moderation and short term; water is preferred over other
+    beverages; sugar-sweetened beverages including juice should be replaced.
+  locator: Recommendations 5.21, 5.22, 5.25
+  population: null
+  grade: A; B; B
+- claim: People at risk of ketoacidosis on SGLT2 inhibitors should be educated, given ketone testing tools and discouraged
+    from ketogenic eating.
+  locator: Recommendation 5.26
+  population: null
+  grade: E
+- claim: Micronutrient and herbal supplements such as magnesium, chromium and cinnamon are not recommended for glycemic
+    benefit; beta-carotene supplements are advised against; vitamin B12 should be checked periodically on metformin.
+  locator: Recommendations 5.16, 5.17; metformin text
+  population: null
+  grade: C; B
+- claim: Adults who drink should stay within recommended daily limits (text cites up to 2 drinks/day for men and
+    1 for women) and non-drinkers should not start.
+  locator: Recommendation 5.18; alcohol text
+  population: null
+  grade: B
+- claim: Plant-based proteins and a Mediterranean-style pattern are favored to reduce cardiovascular risk, and foods
+    high in saturated fat should be limited. Protein intake is individualized at about 0.8-1.5 g/kg/day.
+  locator: Recommendations 5.29-5.31; protein text
+  population: null
+  grade: B; A/B; B
+- claim: Intermittent fasting and time-restricted eating gave weight loss similar to continuous calorie restriction;
+    religious fasting should be risk-assessed with the IDF-DAR score.
+  locator: Meal timing text; Recommendations 5.32-5.33
+  population: null
+  grade: null
+limitations: Fetch returned the first ~100,000 of ~644,000 characters; GLP-1-specific nutrition guidance, coffee
+  and food insecurity were not in the visible text.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.

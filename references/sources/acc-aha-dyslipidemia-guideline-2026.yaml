@@ -1,0 +1,64 @@
+# references/sources/<id>.yaml — one file per source. Schema: schemas/source.schema.json
+id: acc-aha-dyslipidemia-guideline-2026
+title: 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia
+authors:
+- Blumenthal RS
+- Morris PB
+- Gaudino M
+organization: American College of Cardiology and American Heart Association, with 9 partner societies
+year: 2026
+publication: JACC (also Circulation)
+type: guideline
+tier: '1'
+jurisdiction: us-professional
+authority: acc-aha
+identifiers:
+  doi: 10.1016/j.jacc.2025.11.016
+  pmid: null
+  url: https://www.acc.org/latest-in-cardiology/journal-scans/2026/03/13/15/20/acc-aha-release-new-clinical-guideline-for-managing-dyslipidemia
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: null
+verified:
+  date: '2026-11-23'
+  method: fetched-landing-page
+  by: claude-opus-5-5
+findings:
+- claim: The 2026 guideline replaces the 2018 AHA/ACC cholesterol guideline and covers high LDL-C, hypertriglyceridemia
+    and elevated Lp(a).
+  locator: ACC journal scan, introduction
+  population: null
+  grade: null
+- claim: 'LDL-C treatment goals return: below 100 mg/dL at borderline or intermediate risk, below 70 mg/dL at high
+    risk, and below 55 mg/dL for very-high-risk secondary prevention.'
+  locator: ACC journal scan, Treatment Goals Are Back
+  population: null
+  grade: null
+- claim: PREVENT-ASCVD 10-year risk of 3% to under 5% makes LDL-lowering therapy reasonable; 5% to under 10% makes
+    it recommended after discussion (adults 30-79).
+  locator: ACC journal scan, PREVENT section
+  population: Primary prevention, ages 30-79
+  grade: null
+- claim: Triglyceride-lowering therapy to prevent pancreatitis may be used at 1,000 mg/dL or higher; for persistently
+    raised triglycerides, statins remain the foundation with lifestyle as adjunct.
+  locator: ACC journal scan, triglycerides
+  population: null
+  grade: null
+- claim: Lp(a) should be measured at least once in adulthood; lifestyle changes affect it little.
+  locator: ACC journal scan, Lp(a)
+  population: null
+  grade: null
+- claim: Ezetimibe, bempedoic acid or a PCSK9 antibody can be added when lifestyle and statins do not lower LDL-C
+    enough; inclisiran outcome trials are ongoing.
+  locator: ACC journal scan, nonstatin therapies
+  population: null
+  grade: null
+limitations: Only the ACC journal-scan summary could be opened; the full text and AHA pages returned site errors.
+  Search snippets of the guideline text indicated a dietary recommendation for fasting TG 150-499 mg/dL (low added
+  sugar, refined carbohydrate and saturated fat; minimize alcohol) and a diet recommendation for LDL-C (fruits,
+  vegetables, nuts, legumes, whole grains, fiber; replace saturated and trans fat with unsaturated fat); these must
+  be verified in the full text.
+reviewer_read: false
+notes: Recorded during the 2026-11-23 discovery run (playbooks/01-discover.md) to verify SCOPE thresholds or justify
+  candidate topics. Status is background until a topic researcher re-opens the full document and promotes it.
