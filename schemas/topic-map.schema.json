@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Topic map",
+  "type": "object",
+  "required": ["version", "topics"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 0},
+    "generated": {"type": ["string", "null"]},
+    "generated_by": {"type": ["string", "null"]},
+    "approved": {"type": ["string", "null"]},
+    "calendar": {"type": "array"},
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "kind", "priority", "status", "questions", "rationale", "depends_on"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z]+(-[a-z0-9]+)+$"},
+          "title": {"type": "string"},
+          "kind": {"enum": ["pattern", "food-group", "food", "nutrient", "beverage", "additive", "supplement", "medication-interaction", "targets", "behavior", "situation", "other"]},
+          "priority": {"enum": [1, 2, 3]},
+          "status": {"enum": ["proposed", "approved", "in-progress", "published", "rejected"]},
+          "questions": {"type": "array", "minItems": 3, "maxItems": 8, "items": {"type": "string"}},
+          "rationale": {"type": "string", "minLength": 20},
+          "discovered_via": {"type": "array", "items": {"type": "string"}},
+          "depends_on": {"type": "array", "items": {"type": "string"}},
+          "watch": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

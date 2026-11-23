@@ -1,0 +1,11 @@
+# Authorities whose guidance is weighed (METHODS §3). Discovered by playbooks/01-discover.md, not preset.
+# Empty on purpose: this repository starts clean-room.
+authorities: []
+# Entry shape:
+# - id: short-slug
+#   name: Full name
+#   jurisdiction: us-federal | us-professional | canada | uk | eu | australia-nz | who | international | other
+#   type: professional-society | government-agency | intergovernmental | independent-review-body | other
+#   domains: [blood-pressure, glycemia, lipids, weight, kidney, general-nutrition, food-safety, medicines]
+#   key_documents: [source-ids]
+#   notes: e.g., funding, relationship to other bodies (for the independence test)

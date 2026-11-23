@@ -1,0 +1,19 @@
+# Topic map — produced by playbooks/01-discover.md, approved by a human reviewer.
+# Schema: schemas/topic-map.schema.json. Empty on purpose: this repository starts clean-room.
+version: 0
+generated: null          # YYYY-MM-DD
+generated_by: null       # agent/model
+approved: null           # YYYY-MM-DD, set by the reviewer
+calendar: []             # - {source_or_authority: <id>, next_edition: YYYY-MM, note: ...}
+topics: []
+# Entry shape:
+# - id: area-subject
+#   title: Plain-language title
+#   kind: pattern | food-group | food | nutrient | beverage | additive | supplement | medication-interaction | targets | behavior | situation | other
+#   priority: 1              # 1 foundational · 2 important · 3 useful
+#   status: proposed         # proposed | approved | in-progress | published | rejected
+#   questions: [...]         # 3-8 concrete questions
+#   rationale: Why it matters for the cohort, citing discovery-log entries
+#   discovered_via: [D1, D4]
+#   depends_on: []
+#   watch: false             # true for fast-moving or contested areas
