@@ -13,12 +13,19 @@
 ## Verification report
 <!-- Paste the report from playbooks/03-verify.md. -->
 
+## Second-pass review (Copilot)
+<!-- Filled in after responding with playbooks/06-respond-to-review.md. -->
+Result: <!-- PASS | PASS WITH NOTES | CHANGES NEEDED | not received -->
+Comments: <!-- N fixed · N answered with evidence · N open -->
+Sources Copilot reports opening: <!-- ids, or "none" -->
+
 ## Open questions for the reviewer
 
 ---
 
 ### Reviewer checklist (human)
-- [ ] `check` CI passes
+- [ ] `check` CI passes (including the process-file guard)
+- [ ] Copilot's second-pass comments are each fixed or answered; open disagreements are listed above
 - [ ] Bottom line is supported by the evidence sections, and confidence grades seem right
 - [ ] Spot-checked at least 3 decisive citations myself (opened the source, finding is at the locator, fairly represented)
 - [ ] Corroboration: each rule has ≥2 independent authorities, ≥1 not US federal, or says why not

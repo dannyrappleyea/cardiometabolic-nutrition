@@ -2,6 +2,10 @@
 
 > Read this file, then `SCOPE.md` and `METHODS.md`, before any task. Then open the playbook for the task (table below). These rules apply to every AI tool; Claude tools load this file through `CLAUDE.md`.
 
+## 0. Reviewing a pull request?
+
+If your task is to **review** a pull request (for example, GitHub Copilot code review), you are not a research agent. Follow `.github/instructions/review.instructions.md` and use the rest of this file, `METHODS.md` and `SCOPE.md` only as the rules the PR must meet.
+
 ## 1. Which mode are you in?
 
 | If… | Mode | You serve |
@@ -17,6 +21,7 @@ In personal mode the person may also ask for upstream-style research; treat it a
 |---|---|---|---|
 | `SCOPE.md`, `METHODS.md` | Human maintainer | Propose by PR only | Read only |
 | `AGENTS.md`, `playbooks/`, `templates/`, `schemas/`, `tools/` | Maintainer | Propose by PR | Read only |
+| `.github/` (review instructions, CI, CODEOWNERS) | Maintainer | Propose in a method-change PR only, never in a research PR | Read only |
 | `research/`, `references/` | Upstream agents, merged by a human | Write (on a branch) | **Read only**; never edit (keeps `git pull upstream` conflict-free) |
 | Topic `## Reviewer notes` sections | Human reviewer | Never edit | Never edit |
 | `personal/profile.md` | The person | **Never read** | Edit only on a stated fact or preference |
@@ -41,6 +46,7 @@ In personal mode the person may also ask for upstream-style research; treat it a
 | Research and write one topic | Upstream | `playbooks/02-research-topic.md` |
 | Verify a topic before PR (fresh agent) | Upstream | `playbooks/03-verify.md` |
 | Cross-topic consistency and index | Upstream | `playbooks/04-synthesize.md` |
+| Respond to PR review comments (Copilot or human) | Upstream | `playbooks/06-respond-to-review.md` |
 | Scheduled refresh / new guideline edition | Upstream | `playbooks/05-refresh.md` |
 | Set up a personal copy | Personal | `playbooks/10-personal-setup.md` |
 | Build or rebuild the personal guide | Personal | `playbooks/11-personal-guide.md` |
