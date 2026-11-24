@@ -1,0 +1,41 @@
+id: aafp-acr-gout-summary-2021
+title: "Management of Gout: Update from the American College of Rheumatology"
+authors: [Dakkak M, Lanney M]
+organization: American Academy of Family Physicians
+year: 2021
+publication: American Family Physician 2021;104(2):209-210
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: null
+domains: [kidney, medicines]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.aafp.org/pubs/afp/issues/2021/0800/p209.html
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole article
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Summarizes the 2020 ACR gout guideline - limited evidence that restricting alcohol, purines or high-fructose corn syrup lowers urate, vitamin C supplements ineffective, weight loss reduces flares, and dietary advice may leave patients feeling blamed.
+    locator: Lifestyle paragraph
+    population: People with gout
+    grade: null
+  - claim: Suggests switching hydrochlorothiazide to losartan where possible in people with gout and hypertension.
+    locator: Medication paragraph
+    population: null
+    grade: null
+limitations: Summary.
+reviewer_read: false
+notes: null

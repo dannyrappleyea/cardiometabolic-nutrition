@@ -1,0 +1,37 @@
+id: rtsl-who-salt-substitutes-overview-2025
+title: WHO lower-sodium salt substitute guidelines overview
+authors: []
+organization: Resolve to Save Lives (Cardiovascular Health Initiative)
+year: 2025
+publication: resolvetosavelives.org (PDF, document code 756_CVH_0125)
+type: expert-explainer
+tier: "6"
+jurisdiction: international
+authority: null
+domains: [blood-pressure]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://resolvetosavelives.org/wp-content/uploads/2025/01/RTSL_WHO-LSS-Guidelines-Overview.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Advocacy organization; funding not stated on the document
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole document
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Summarizes the WHO guideline as recommending that adults use lower-sodium, potassium-enriched salt instead of regular salt, with an advisory for people with advanced kidney disease and others harmed by extra potassium, and notes such salt should be iodized.
+    locator: Whole document
+    population: Adults
+    grade: null
+limitations: Advocacy summary; no strength or certainty stated; no mention of medicines.
+reviewer_read: false
+notes: null

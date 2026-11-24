@@ -1,0 +1,51 @@
+id: usda-hhs-dietary-guidelines-americans-2025
+title: Dietary Guidelines for Americans, 2025-2030 (10th edition)
+authors: []
+organization: US Department of Agriculture and US Department of Health and Human Services
+year: 2026
+publication: realfood.gov / odphp.health.gov (published January 2026)
+type: guideline
+tier: "1"
+jurisdiction: us-federal
+authority: usda-hhs
+domains: [general-nutrition, weight]
+edition: 2025-2030 (10th edition), published January 2026; ODPHP page last updated 2026-06-10
+edition_check:
+  date: 2026-11-24
+  searched: ODPHP "Current Dietary Guidelines" page; web search for DGA 2025-2030
+  result: current
+  newer: null
+population_limits:
+  - "General population guidance; per the AAFP summary it gives no specific guidance for people with chronic disease"
+  - "Not checked in the document itself (official PDF not opened)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://odphp.health.gov/our-work/food-nutrition/current-dietary-guidelines
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: US federal guidance; not checked
+verified:
+  date: 2026-11-24
+  method: fetched-landing-page
+  scope: summary
+  sections_read: ODPHP landing page (edition and headline messages); content via AAFP practice-guideline summary (aafp-dietary-guidelines-summary-2026) and ACC Nutrition & Lifestyle Work Group commentary (acc-dga-cardiovascular-commentary-2026). The official PDF could not be opened in this session.
+  read_via: aafp-dietary-guidelines-summary-2026
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The current edition's headline message is to eat whole, nutrient-dense foods, prioritizing protein, dairy, vegetables, fruit, healthy fats and whole grains, and to reduce highly processed foods high in refined carbohydrate, added sugar, excess sodium, unhealthy fats and additives.
+    locator: ODPHP Current Dietary Guidelines page
+    population: General population
+    grade: null
+  - claim: Reported amounts include protein of 1.2-1.6 g/kg/day, three daily servings of full-fat dairy without added sugar, three of vegetables, two of fruit and two to four of whole grains (2,000 kcal), saturated fat at or under 10% of calories, avoiding added sugars and non-nutritive sweeteners, and olive oil, butter or beef tallow as cooking fats.
+    locator: Via AAFP summary
+    population: General population
+    grade: null
+  - claim: Per the ACC work-group commentary, sodium stays under 2,300 mg a day and alcohol is to be limited without a set amount; the higher protein target was not in the 2025 advisory committee report.
+    locator: Via acc-dga-cardiovascular-commentary-2026
+    population: null
+    grade: null
+limitations: Known through summaries only. US federal source; METHODS §3 requires non-federal corroboration and notes federal guidance can shift for non-scientific reasons.
+reviewer_read: false
+notes: Read the official PDF before any topic relies on it.

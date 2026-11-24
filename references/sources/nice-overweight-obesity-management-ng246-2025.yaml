@@ -1,0 +1,61 @@
+id: nice-overweight-obesity-management-ng246-2025
+title: Overweight and obesity management (NICE guideline NG246)
+authors: []
+organization: National Institute for Health and Care Excellence (NICE)
+year: 2025
+publication: nice.org.uk (last reviewed 2026-01-08)
+type: guideline
+tier: "1"
+jurisdiction: uk
+authority: nice
+domains: [weight, general-nutrition]
+edition: NG246, adult diet recommendations tagged [2025]; amended 2026-01-08 (waist-to-height wording for children)
+edition_check:
+  date: 2026-11-24
+  searched: NICE NG246 overview page (update history) and NICE search results
+  result: current
+  newer: null
+population_limits:
+  - "Excludes pregnancy"
+  - "Lower BMI thresholds apply to people of South Asian, Chinese, other Asian, Middle Eastern, Black African or African-Caribbean family background"
+  - "Waist-to-height ratio bands given for adults with BMI under 35"
+  - "Low- and very-low-energy diets only within specialist or long-term-condition services, not for long-term management"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.nice.org.uk/guidance/NG246
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: NICE is a UK public body; committee declarations of interest are published separately (not read)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: section
+  sections_read: "Overview/update history page; chapter 'Identifying and assessing overweight, obesity and central adiposity' (recs 1.9.10-1.9.11, WHtR bands); chapter 'Physical activity and diet' (recs 1.15-1.16)"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Adult BMI classes are healthy weight 18.5-24.9, overweight 25-29.9, obesity class 1 30-34.9, class 2 35-39.9 and class 3 40 or more.
+    locator: Rec 1.9.10
+    population: Adults
+    grade: null
+  - claim: For people of South Asian, Chinese, other Asian, Middle Eastern, Black African or African-Caribbean family background, overweight is BMI 23-27.4 and obesity 27.5 or more, with higher obesity classes 2.5 units lower than standard.
+    locator: Rec 1.9.11
+    population: Listed ethnic backgrounds
+    grade: null
+  - claim: Central adiposity is classed by waist-to-height ratio (0.5-0.59 increased, 0.6 or more high), with advice to keep waist under half of height; no waist-circumference cut-offs are given.
+    locator: Identifying and assessing chapter (WHtR table)
+    population: Adults with BMI under 35
+    grade: null
+  - claim: Dietary advice for weight loss is individualized, aims at intake below energy expenditure (for example by lowering fat or carbohydrate), avoids restrictive or unbalanced diets, and favors a balanced long-term diet consistent with the Eatwell Guide, with support from a dietitian or nutritionist.
+    locator: Recs 1.16.1-1.16.6
+    population: Adults
+    grade: null
+  - claim: Low-energy (800-1,200 kcal/day) and very-low-energy (under 800 kcal/day) diets are only for specific groups in specialist or long-term-condition services, for up to 12 weeks, nutritionally complete, after reviewing medicines and screening for eating disorders, and not for long-term management.
+    locator: Recs 1.16.8-1.16.12
+    population: Adults with obesity
+    grade: null
+limitations: Medicines and surgery chapters not read. NICE does not grade recommendations by letter; strength is conveyed by wording.
+reviewer_read: false
+notes: null

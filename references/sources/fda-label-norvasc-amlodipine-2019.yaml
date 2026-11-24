@@ -1,0 +1,46 @@
+id: fda-label-norvasc-amlodipine-2019
+title: NORVASC (amlodipine besylate) tablets - US prescribing information
+authors: []
+organization: Pfizer Inc (label approved by US FDA)
+year: 2019
+publication: Pfizer labeling site (SPL version 18), NDA 019787
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [blood-pressure, medicines]
+edition: SPL version 18 (revised 2019-01; effective 2019-01-10)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for Norvasc labels (Pfizer labeling, Drugs@FDA 2005 s037, international PIs); the Pfizer SPL revised 2019-01 is the newest US label found
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug (brand) label"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://labeling.pfizer.com/showlabeling.aspx?id=562
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Highlights, §2.1, §6.1, §7.1-7.2, §12.3
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Grapefruit juice had no impact on amlodipine exposure, and food does not alter its bioavailability.
+    locator: §12.3
+    population: null
+    grade: null
+  - claim: Moderate and strong CYP3A inhibitors raise amlodipine levels; simvastatin should be limited to 20 mg a day with amlodipine; dose-related ankle swelling (edema) is the most common side effect.
+    locator: §7.1-7.2; §6.1
+    population: null
+    grade: null
+limitations: Label is from 2019; no newer US brand label surfaced in search.
+reviewer_read: false
+notes: null

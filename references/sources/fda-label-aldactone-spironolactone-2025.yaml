@@ -1,0 +1,50 @@
+id: fda-label-aldactone-spironolactone-2025
+title: ALDACTONE (spironolactone) tablets - US prescribing information
+authors: []
+organization: Pfizer Inc (label approved by US FDA)
+year: 2025
+publication: Pfizer labeling site (SPL version 25), NDA 012151
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [blood-pressure, medicines]
+edition: SPL version 25 (revised 2025-11; effective 2025-11-28)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for Aldactone labels (Drugs@FDA 2013 s071 and 2014 s072, Pfizer labeling, FDALabel); the Pfizer SPL revised 2025-11 is the newest found
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug (brand) label; hypertension use is add-on therapy"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://labeling.pfizer.com/showlabeling.aspx?id=520
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: §1, §2.1-2.5, §5.1, §7.1, §12.3, §17
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Hyperkalemia risk rises with potassium supplements, potassium-containing salt substitutes, a diet rich in potassium, kidney impairment or other potassium-raising drugs; patients are advised to avoid potassium supplements and potassium-containing salt substitutes, with potassium checked within a week of starting.
+    locator: §5.1; §7.1; §12.3; §17
+    population: null
+    grade: null
+  - claim: May be taken with or without food but consistently, because food roughly doubles bioavailability.
+    locator: §2.1; §12.3
+    population: null
+    grade: null
+  - claim: Indicated as add-on therapy for hypertension not controlled on other agents, among other uses.
+    locator: §1.2
+    population: null
+    grade: null
+limitations: Label does not address alcohol.
+reviewer_read: false
+notes: null

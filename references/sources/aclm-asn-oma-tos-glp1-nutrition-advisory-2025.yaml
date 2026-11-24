@@ -1,0 +1,43 @@
+id: aclm-asn-oma-tos-glp1-nutrition-advisory-2025
+title: "Nutritional priorities to support GLP-1 therapy for obesity: A joint Advisory from the American College of Lifestyle Medicine, the American Society for Nutrition, the Obesity Medicine Association, and The Obesity Society"
+authors: [Mozaffarian D, Agarwal M, Aggarwal M]
+organization: American College of Lifestyle Medicine; American Society for Nutrition; Obesity Medicine Association; The Obesity Society
+year: 2025
+publication: Obesity (Silver Spring) 2025
+type: scientific-statement
+tier: "2"
+jurisdiction: us-professional
+authority: null
+domains: [weight, medicines, general-nutrition]
+edition: null
+edition_check: null
+population_limits:
+  - "Adults receiving GLP-1-based therapy for obesity"
+  - "Not checked beyond the abstract"
+identifiers:
+  doi: 10.1002/oby.24336
+  pmid: null
+  url: https://hsrc.himmelfarb.gwu.edu/gwhpubs/7190
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked (disclosures are in the full text)
+verified:
+  date: 2026-11-24
+  method: fetched-abstract
+  scope: abstract
+  sections_read: Abstract via George Washington University repository record (PubMed returned a reCAPTCHA page)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Priorities for people on GLP-1 therapy include preventing nutrient deficiencies as calorie intake falls, managing gastrointestinal side effects with nutrition and medical approaches, and preserving muscle and bone with resistance training and appropriate diet.
+    locator: Abstract
+    population: Adults on GLP-1 therapy for obesity
+    grade: null
+  - claim: Suggested supports include dietitian counseling, group visits, telehealth and Food is Medicine programs, with food insecurity noted as a barrier.
+    locator: Abstract
+    population: null
+    grade: null
+limitations: Abstract only; no protein or hydration targets seen.
+reviewer_read: false
+notes: Fast-moving area; candidate watch item.

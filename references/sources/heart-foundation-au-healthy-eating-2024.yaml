@@ -1,0 +1,46 @@
+id: heart-foundation-au-healthy-eating-2024
+title: Healthy eating (heart-healthy eating pattern for the public)
+authors: []
+organization: National Heart Foundation of Australia
+year: 2024
+publication: heartfoundation.org.au (last reviewed 2024-11-19; updated 2026-07-20)
+type: expert-explainer
+tier: "6"
+jurisdiction: australia-nz
+authority: heart-foundation-au
+domains: [general-nutrition, lipids, blood-pressure]
+edition: Last reviewed 2024-11-19
+edition_check: null
+population_limits:
+  - "General public; some items differ for people with heart disease, high LDL cholesterol or type 2 diabetes (reduced-fat dairy; eggs up to 7 a week)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.heartfoundation.org.au/bundles/healthy-living-and-eating/healthy-eating
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Charity; none stated on page
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page (the professional position-statement index page was also opened but listed no statements)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The public eating pattern has five steps - vegetables, fruit and wholegrains; mainly plant protein and fish, with smaller amounts of eggs and poultry and lean red meat 1-3 times a week; unflavoured milk, yoghurt and cheese (reduced-fat for people with heart disease or high cholesterol); healthy fats and oils with fish 2-3 times a week; herbs and spices instead of salt (maximum 5 g salt a day).
+    locator: Five steps
+    population: General public
+    grade: null
+  - claim: People with heart disease, high LDL cholesterol or type 2 diabetes are advised to eat no more than 7 eggs a week; most others need not limit eggs.
+    locator: Eggs
+    population: Heart disease, high LDL or type 2 diabetes
+    grade: null
+  - claim: Water is the drink of choice, a small glass (125 ml) of juice is acceptable, sugary drinks are not recommended and alcohol is not recommended for heart health; ultra-processed foods and takeaway should be eaten only sometimes, though not all processed foods need avoiding; a plate model (half vegetables, a quarter protein, a quarter carbohydrate) and label reading are suggested.
+    locator: Drinks; ultra-processed foods; portions; tips
+    population: null
+    grade: null
+limitations: Patient-education page; points to position statements that were not opened.
+reviewer_read: false
+notes: null

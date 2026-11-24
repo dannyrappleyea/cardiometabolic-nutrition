@@ -1,0 +1,50 @@
+id: fda-label-cozaar-losartan-2026
+title: COZAAR (losartan potassium) tablets - US prescribing information
+authors: []
+organization: Organon LLC (label approved by US FDA)
+year: 2026
+publication: FDALabel (FDA), SPL set ID 9949448f-c3b9-44ee-94ed-c1aca8c90f39, NDA 020386
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [blood-pressure, kidney, medicines]
+edition: SPL version 9, effective 2026-01-20
+edition_check:
+  date: 2026-11-24
+  searched: FDALabel SPL listings for losartan surfaced by web search; this brand SPL (effective 2026-01-20) is the newest found
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug (brand) label"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/9949448f-c3b9-44ee-94ed-c1aca8c90f39/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole SPL read in two parts (§5, §7, §12.3, §17, patient information)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Serum potassium should be monitored; other drugs that raise potassium can cause hyperkalemia, and patients should not use potassium supplements or potassium-containing salt substitutes without consulting their provider.
+    locator: §5.4; §7.1; §17
+    population: null
+    grade: null
+  - claim: Can be taken with or without food; a meal slows absorption with only minor effect on overall exposure.
+    locator: §12.3; patient information
+    population: null
+    grade: null
+  - claim: Volume or salt depletion should be corrected before starting; patients should report heavy vomiting or diarrhea; NSAIDs may worsen kidney function; stop when pregnancy is detected.
+    locator: §5.2; §7.3; §5.1; patient information
+    population: null
+    grade: null
+limitations: null
+reviewer_read: false
+notes: null

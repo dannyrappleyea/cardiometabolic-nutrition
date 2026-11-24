@@ -1,0 +1,54 @@
+id: fda-label-zocor-simvastatin-2023
+title: ZOCOR (simvastatin) tablets - US prescribing information
+authors: []
+organization: Organon LLC (label approved by US FDA)
+year: 2023
+publication: Drugs@FDA, NDA 019766
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [lipids, medicines]
+edition: SUPPL-104 (revised 2023-08)
+edition_check:
+  date: 2026-11-24
+  searched: Drugs@FDA label files for NDA 019766 surfaced by web search (s100 2019, s103 and s104 2023); s104 is the latest found; DailyMed not opened
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug label"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/019766s104lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Highlights; §1, §2.1, §4, §5.1, §5.3, §7.1 Table 2, §8.1-8.2, §8.8, §12.3, §17, patient information
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Grapefruit juice should be avoided during simvastatin treatment because it raises simvastatin levels (up to about 16-fold with high intake) and the risk of myopathy and rhabdomyolysis.
+    locator: §5.1, §7.1 Table 2, §12.3 Table 4
+    population: null
+    grade: null
+  - claim: Taken once daily in the evening; a low-fat meal did not change drug levels.
+    locator: §2.1, §12.3
+    population: null
+    grade: null
+  - claim: Lipid-modifying niacin doses (1 g/day or more) raise myopathy risk and are not recommended with simvastatin in Chinese patients, who have a higher myopathy rate.
+    locator: §7.1, §8.8
+    population: Chinese patients
+    grade: null
+  - claim: Heavy alcohol use may raise risk of liver injury; patients should report drinking more than two drinks a day and any vitamins or herbal supplements.
+    locator: §5.3; patient information
+    population: null
+    grade: null
+limitations: null
+reviewer_read: false
+notes: Shows that the grapefruit caution differs in strength between statins (avoid for simvastatin; avoid more than 1.2 L/day for atorvastatin).

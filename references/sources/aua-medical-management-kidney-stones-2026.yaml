@@ -1,0 +1,42 @@
+id: aua-medical-management-kidney-stones-2026
+title: "Medical Management of Kidney Stones: AUA Guideline (2026)"
+authors: []
+organization: American Urological Association
+year: 2026
+publication: auanet.org (landing page)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: aua
+domains: [kidney]
+edition: 2026 (appears to follow the 2014 guideline, amended 2019; the page does not say what it replaces)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for AUA kidney stone guideline (older guideline pages and the 2026 landing page in results)
+  result: current
+  newer: null
+population_limits:
+  - "Not checked: full text requires an AUA login; the landing page carries a notice restricting use of its content in AI tools, so no content beyond bibliographic data is used"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.auanet.org/2026MedStoneGuideline
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked
+verified:
+  date: 2026-11-24
+  method: fetched-landing-page
+  scope: landing-page
+  sections_read: Landing page only (title and access notice)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: A 2026 AUA guideline on the medical management of kidney stones exists; its recommendations are behind a login and were not read.
+    locator: Landing page
+    population: null
+    grade: null
+limitations: Not usable as evidence in this run; a human reviewer may obtain it under AUA terms.
+reviewer_read: false
+notes: Recorded so the edition is known; content deliberately not used because of the page's AI-use notice.

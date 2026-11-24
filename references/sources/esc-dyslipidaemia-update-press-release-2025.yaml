@@ -1,0 +1,41 @@
+id: esc-dyslipidaemia-update-press-release-2025
+title: ESC releases new guidance on lipid management to reduce cardiovascular risk (press release on the 2025 Focused Update)
+authors: []
+organization: European Society of Cardiology
+year: 2025
+publication: EurekAlert!, posted 2025-09-04
+type: expert-explainer
+tier: "6"
+jurisdiction: eu
+authority: esc
+domains: [lipids]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.eurekalert.org/news-releases/1097071
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole release
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The release states that the focused update does not support dietary supplements or vitamins for lowering LDL-C, and notes that the EU restricted red yeast rice at doses able to affect LDL-C after safety reports.
+    locator: Dietary supplements paragraph
+    population: null
+    grade: null
+  - claim: SCORE2 and SCORE2-OP are recommended for 10-year risk; bempedoic acid is described as an option for people who cannot take statins.
+    locator: Body
+    population: null
+    grade: null
+limitations: Press release.
+reviewer_read: false
+notes: null

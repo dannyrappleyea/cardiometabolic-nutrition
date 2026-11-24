@@ -1,0 +1,45 @@
+id: aha-high-bp-top-10-2025
+title: Top 10 Things to Know About the AHA/ACC High Blood Pressure Guideline
+authors: []
+organization: American Heart Association
+year: 2025
+publication: heart.org (patient information page, last reviewed 2025-08-14)
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [blood-pressure]
+edition: Last reviewed 2025-08-14
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/high-bp-top-10
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated on page
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Lists adult blood pressure categories as normal (under 120 and under 80), elevated (120-129 and under 80), stage 1 (130-139 or 80-89), stage 2 (140+ or 90+), severe hypertension (over 180 and/or over 120, no symptoms) and hypertensive emergency (same numbers with symptoms such as chest pain or vision change).
+    locator: Blood pressure categories table
+    population: Non-pregnant adults
+    grade: null
+  - claim: Pregnancy uses different categories (hypertension at 140/90 or higher; severe at 160/110 or higher).
+    locator: Pregnancy categories
+    population: Pregnant people
+    grade: null
+  - claim: Lifestyle advice on the page covers sodium (aim for 2,300 mg a day or less, ideally under 1,500 mg), a DASH-style eating pattern, drinking less or no alcohol, and losing about 5% of body weight; it links to a separate potassium page without giving a number.
+    locator: Lifestyle section
+    population: Adults with or at risk of high blood pressure
+    grade: null
+limitations: Patient-facing summary; no grades; does not state the guideline year explicitly.
+reviewer_read: false
+notes: null

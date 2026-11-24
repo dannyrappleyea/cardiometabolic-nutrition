@@ -1,0 +1,48 @@
+id: who-non-sugar-sweeteners-guideline-2023
+title: "Use of non-sugar sweeteners: WHO guideline"
+authors: []
+organization: World Health Organization
+year: 2023
+publication: World Health Organization, 2023-05-15
+type: guideline
+tier: "1"
+jurisdiction: who
+authority: who
+domains: [weight, general-nutrition]
+edition: "2023"
+edition_check:
+  date: 2026-11-24
+  searched: WHO publication and news pages, PAHO pages and NCBI Bookshelf record in web search; no newer edition surfaced
+  result: current
+  newer: null
+population_limits:
+  - "Applies to everyone except people with pre-existing diabetes"
+  - "Conditional recommendation; observed disease links may be confounded"
+  - "Does not cover low-calorie sugars, sugar alcohols (polyols) or personal-care products"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: summary
+  sections_read: WHO news release announcing the guideline (the NCBI Bookshelf copy returned a reCAPTCHA page)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: WHO conditionally recommends against using non-sugar sweeteners to control body weight or reduce noncommunicable disease risk, citing no long-term benefit for body fat and possible long-term associations with type 2 diabetes, cardiovascular disease and death.
+    locator: News release
+    population: Everyone except people with pre-existing diabetes
+    grade: Conditional
+  - claim: The recommendation covers synthetic and natural non-nutritive sweeteners such as aspartame, sucralose and stevia, but not low-calorie sugars or sugar alcohols.
+    locator: News release
+    population: null
+    grade: null
+limitations: Known through WHO's own release; guideline text not read. Population limit matters - ADA and EASD (written for people with diabetes) allow sweeteners as sugar replacements, which is not a direct contradiction.
+reviewer_read: false
+notes: null

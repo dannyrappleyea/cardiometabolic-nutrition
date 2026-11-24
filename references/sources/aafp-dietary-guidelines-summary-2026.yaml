@@ -1,0 +1,41 @@
+id: aafp-dietary-guidelines-summary-2026
+title: "Dietary Guidelines for 2025-2030: Recommendations From the USDA and HHS"
+authors: [Elsayed S, Nelson M]
+organization: American Academy of Family Physicians
+year: 2026
+publication: American Family Physician 2026;114(1):98-100
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: null
+domains: [general-nutrition]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://aafp.org/afp/2026/0700/practice-guidelines-dietary-guidelines
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole article
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Summarizes the 2025-2030 Dietary Guidelines - protein at every meal (1.2-1.6 g/kg/day), three servings of full-fat dairy, three of vegetables, two of fruit, two to four of whole grains, saturated fat at or under 10% of calories, avoiding added sugars (no more than 10 g per meal if eaten) and non-nutritive sweeteners, olive oil preferred with butter or beef tallow acceptable, and replacing highly processed foods.
+    locator: Recommendations section
+    population: General population
+    grade: null
+  - claim: The summary does not report sodium or alcohol amounts, a fiber target or guidance for chronic disease.
+    locator: Whole article
+    population: null
+    grade: null
+limitations: Summary of a US federal guideline; no critique.
+reviewer_read: false
+notes: null

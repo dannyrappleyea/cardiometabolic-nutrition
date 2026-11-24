@@ -1,0 +1,41 @@
+id: acc-dga-cardiovascular-commentary-2026
+title: How Do the 2025-2030 Dietary Guidelines For Americans Measure Up For Cardiovascular Health?
+authors: [Aggarwal M, Aspry KE, Kris-Etherton PM, Freeman AM, Williams KA, Gianos E]
+organization: American College of Cardiology, Prevention of CV Disease Section, Nutrition & Lifestyle Work Group
+year: 2026
+publication: acc.org Latest in Cardiology, 2026-01-27
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [general-nutrition, lipids]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.acc.org/Latest-in-Cardiology/Articles/2026/01/27/16/22/how-Do-the-2025-2030-Dietary-Guidelines-For-Americans-Measure-up-for-cardiovascular-Health
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole article
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The authors agree with the guidelines' limits on added sugar and highly processed foods and the emphasis on vegetables, fruit and whole grains, but dispute listing butter and beef tallow as fats, the prominence of red meat, and raising protein to 1.2-1.6 g/kg/day, arguing these could push saturated fat above 10% of calories.
+    locator: Body
+    population: null
+    grade: null
+  - claim: They state the protein increase was not in the 2025 Dietary Guidelines Advisory Committee report and cite evidence that butter raises LDL-C more than olive oil.
+    locator: Protein and fats paragraphs
+    population: null
+    grade: null
+limitations: Expert opinion piece from a professional-society work group.
+reviewer_read: false
+notes: Marks a live US disagreement (fats, red meat, protein amount) for the watch list.

@@ -1,11 +1,177 @@
 # Authorities whose guidance is weighed (METHODS §3). Discovered by playbooks/01-discover.md, not preset.
-# Empty on purpose: this repository starts clean-room.
-authorities: []
-# Entry shape:
-# - id: short-slug
-#   name: Full name
-#   jurisdiction: us-federal | us-professional | canada | uk | eu | australia-nz | who | international | other
-#   type: professional-society | government-agency | intergovernmental | independent-review-body | other
-#   domains: [blood-pressure, glycemia, lipids, weight, kidney, general-nutrition, food-safety, medicines]
-#   key_documents: [source-ids]
-#   notes: e.g., funding, relationship to other bodies (for the independence test)
+# First discovery run: 2026-11-24 (branch discover/2026-11-24). Only bodies whose documents were opened or
+# surfaced in this run are listed; key_documents are source IDs in references/sources/.
+# us_federal: true marks US federal agencies (FDA, CDC, NIH, USDA, HHS) for the corroboration rule.
+authorities:
+  - id: aha-acc
+    name: American Heart Association / American College of Cardiology (Joint Committee on Clinical Practice Guidelines)
+    jurisdiction: us-professional
+    type: professional-society
+    us_federal: false
+    domains: [blood-pressure, lipids, general-nutrition]
+    key_documents:
+      - aha-acc-high-blood-pressure-guideline-2025
+      - aha-acc-dyslipidemia-guideline-2026
+      - aha-dietary-guidance-cardiovascular-health-2021
+      - aha-high-bp-top-10-2025
+      - acc-hbp-guideline-journal-scan-2025
+      - acc-dyslipidemia-guideline-journal-scan-2026
+      - aha-dyslipidemia-guideline-news-2026
+      - acc-aha-dietary-guidance-ten-points-2021
+      - acc-dga-cardiovascular-commentary-2026
+    notes: >-
+      Joint guidelines are co-issued with many US societies (the 2025 BP guideline lists 13; the 2026 dyslipidemia
+      guideline 11, including ADA and NLA), so ACC/AHA guidelines and ADA are not fully independent on lipids.
+      Full texts of the 2025 BP and 2026 dyslipidemia guidelines could not be opened (publisher refused; not open
+      access); known through abstracts and the bodies' own summaries.
+  - id: ada
+    name: American Diabetes Association (Professional Practice Committee)
+    jurisdiction: us-professional
+    type: professional-society
+    us_federal: false
+    domains: [glycemia, blood-pressure, lipids, weight, kidney]
+    key_documents:
+      - ada-standards-diagnosis-classification-2026
+      - ada-standards-positive-health-behaviors-2026
+      - ada-standards-cvd-risk-management-2026
+    notes: Standards of Care revised annually (2026 edition published December 2025). Co-endorses the 2026 ACC/AHA dyslipidemia guideline.
+  - id: esc
+    name: European Society of Cardiology (with the European Atherosclerosis Society for dyslipidaemia guidelines)
+    jurisdiction: eu
+    type: professional-society
+    us_federal: false
+    domains: [blood-pressure, lipids, weight]
+    key_documents:
+      - esc-elevated-bp-hypertension-guideline-2024
+      - esc-eas-dyslipidaemias-guideline-2019
+      - esc-eas-dyslipidaemias-focused-update-2025
+      - esc-dyslipidaemia-update-press-release-2025
+    notes: ESC/EAS dyslipidaemia guideline is joint with the European Atherosclerosis Society (treated as one family for independence). Publisher pages for ESC guidelines did not serve full text in this session; repository copies of the publisher PDFs were read.
+  - id: easd
+    name: European Association for the Study of Diabetes (Diabetes and Nutrition Study Group)
+    jurisdiction: eu
+    type: professional-society
+    us_federal: false
+    domains: [glycemia, weight, lipids, general-nutrition]
+    key_documents: [easd-dnsg-dietary-management-diabetes-2023]
+    notes: The 2023 recommendations were supported by educational grants including from pharmaceutical and food companies; many authors declare industry ties (see source file).
+  - id: easl-easd-easo
+    name: European Association for the Study of the Liver / EASD / European Association for the Study of Obesity (joint MASLD guideline)
+    jurisdiction: eu
+    type: professional-society
+    us_federal: false
+    domains: [liver, weight, glycemia]
+    key_documents: [easl-easd-easo-masld-guideline-2024]
+    notes: Joint guideline that includes EASD, so not independent of EASD on overlapping questions.
+  - id: kdigo
+    name: Kidney Disease Improving Global Outcomes
+    jurisdiction: international
+    type: independent-review-body
+    us_federal: false
+    domains: [kidney, blood-pressure, glycemia, lipids]
+    key_documents: [kdigo-ckd-guideline-2024]
+    notes: International guideline foundation; states it does not accept industry funding for specific guidelines (per source file note, not verified in text read).
+  - id: nice
+    name: National Institute for Health and Care Excellence
+    jurisdiction: uk
+    type: government-agency
+    us_federal: false
+    domains: [weight, glycemia, general-nutrition]
+    key_documents:
+      - nice-overweight-obesity-management-ng246-2025
+      - nice-type-2-diabetes-prevention-ph38-2017
+    notes: UK public body (not US federal). NICE hypertension (NG136), type 2 diabetes (NG28) and lipid (NG238) guidelines were not opened in this run.
+  - id: usda-hhs
+    name: US Department of Agriculture and US Department of Health and Human Services (Dietary Guidelines for Americans)
+    jurisdiction: us-federal
+    type: government-agency
+    us_federal: true
+    domains: [general-nutrition, weight]
+    key_documents: [usda-hhs-dietary-guidelines-americans-2025]
+    notes: US federal; METHODS §3 requires non-federal corroboration. The 2025-2030 edition departs from professional-society advice on some points (see acc-dga-cardiovascular-commentary-2026).
+  - id: fda
+    name: US Food and Drug Administration (approved drug labeling)
+    jurisdiction: us-federal
+    type: government-agency
+    us_federal: true
+    domains: [medicines]
+    key_documents:
+      - fda-label-lipitor-atorvastatin-2024
+      - fda-label-zocor-simvastatin-2023
+      - fda-label-zetia-ezetimibe-2023
+      - fda-label-nexletol-bempedoic-acid-2025
+      - fda-label-tricor-fenofibrate-2025
+      - fda-label-vascepa-icosapent-ethyl-2019
+      - fda-label-zestril-lisinopril-2025
+      - fda-label-cozaar-losartan-2026
+      - fda-label-hydrochlorothiazide-tablets-2026
+      - fda-label-norvasc-amlodipine-2019
+      - fda-label-aldactone-spironolactone-2025
+      - fda-label-kerendia-finerenone-2026
+      - fda-label-glucophage-metformin-2018
+      - fda-label-ozempic-semaglutide-2026
+      - fda-label-rybelsus-oral-semaglutide-2026
+      - fda-label-zepbound-tirzepatide-2026
+      - fda-label-jardiance-empagliflozin-2026
+      - fda-label-januvia-sitagliptin-2023
+      - fda-label-actos-pioglitazone-2025
+      - fda-label-xenical-orlistat-2012
+    notes: Labels are written by manufacturers and approved by FDA (tier R). Non-US labels (EMA SmPCs, Health Canada monographs) surfaced in searches but were not opened in this run.
+  - id: health-canada
+    name: Health Canada
+    jurisdiction: canada
+    type: government-agency
+    us_federal: false
+    domains: [general-nutrition]
+    key_documents: [health-canada-dietary-guidelines-2019]
+    notes: Canadian federal body (not US federal). Also co-sponsored the NASEM sodium/potassium DRIs and funded the CCSA alcohol guidance.
+  - id: ccsa
+    name: Canadian Centre on Substance Use and Addiction
+    jurisdiction: canada
+    type: other
+    us_federal: false
+    domains: [general-nutrition]
+    key_documents: [ccsa-canada-guidance-alcohol-health-2023]
+    notes: Funded by Health Canada for the alcohol guidance project.
+  - id: who
+    name: World Health Organization
+    jurisdiction: who
+    type: intergovernmental
+    us_federal: false
+    domains: [blood-pressure, general-nutrition, weight]
+    key_documents:
+      - who-lower-sodium-salt-substitutes-guideline-2025
+      - who-non-sugar-sweeteners-guideline-2023
+    notes: WHO sodium, potassium, sugars and fat guidelines were not opened in this run (gap).
+  - id: nasem
+    name: National Academies of Sciences, Engineering, and Medicine
+    jurisdiction: us-professional
+    type: independent-review-body
+    us_federal: false
+    domains: [general-nutrition, blood-pressure]
+    key_documents: [nasem-dri-sodium-potassium-2019]
+    notes: Independent academy (not a federal agency); its DRI reports are sponsored by US and Canadian federal bodies and underpin both countries' dietary guidelines, so treat independence from USDA/HHS and Health Canada with care.
+  - id: acr
+    name: American College of Rheumatology
+    jurisdiction: us-professional
+    type: professional-society
+    us_federal: false
+    domains: [kidney, medicines]
+    key_documents: [acr-gout-guideline-2020]
+    notes: Gout guideline known through a summary in this run.
+  - id: aua
+    name: American Urological Association
+    jurisdiction: us-professional
+    type: professional-society
+    us_federal: false
+    domains: [kidney]
+    key_documents: [aua-medical-management-kidney-stones-2026]
+    notes: 2026 stone guideline is behind a login and its landing page restricts use in AI tools; not used. The Canadian Urological Association 2022 stone guideline is named in ahs-nutrition-guideline-kidney-stones-2024 (not opened).
+  - id: heart-foundation-au
+    name: National Heart Foundation of Australia
+    jurisdiction: australia-nz
+    type: other
+    us_federal: false
+    domains: [general-nutrition, lipids, blood-pressure]
+    key_documents: [heart-foundation-au-healthy-eating-2024]
+    notes: National heart charity; only its public eating-pattern page was read. Its nutrition position statements (meat, dietary fat) surfaced as PDFs but were not opened.

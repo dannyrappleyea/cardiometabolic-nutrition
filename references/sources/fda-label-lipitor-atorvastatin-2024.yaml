@@ -1,0 +1,58 @@
+id: fda-label-lipitor-atorvastatin-2024
+title: LIPITOR (atorvastatin calcium) tablets - US prescribing information
+authors: []
+organization: Viatris Specialty LLC (label approved by US FDA)
+year: 2024
+publication: Drugs@FDA, NDA 020702
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [lipids, medicines]
+edition: SUPPL-81 (revised 2024-04)
+edition_check:
+  date: 2026-11-24
+  searched: Drugs@FDA label files for NDA 020702 surfaced by web search (s060, s062/063, s079, s081); s081 (2024) is the latest found; DailyMed not opened
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug label; generic atorvastatin labels follow it"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/020702s081lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Highlights; §1, §2.1, §4, §5.1, §5.3, §7.1 Table 2, §8.1-8.2, §8.7, §12.3, §17, patient information
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Indicated as an adjunct to diet to lower LDL-C and for hypertriglyceridemia.
+    locator: §1
+    population: Adults; HeFH from age 10
+    grade: null
+  - claim: Large quantities of grapefruit juice (more than 1.2 liters a day) should be avoided because they raise atorvastatin levels and myopathy risk.
+    locator: §5.1, §7.1 Table 2, §12.3, §17
+    population: null
+    grade: null
+  - claim: Can be taken at any time of day with or without food; food slows absorption somewhat without changing LDL-C lowering.
+    locator: §2.1, §12.3
+    population: null
+    grade: null
+  - claim: Heavy alcohol use or liver disease may raise the risk of liver injury; lipid-modifying doses of niacin (1 g/day or more) raise myopathy risk; patients should tell prescribers about vitamins and herbal supplements.
+    locator: §5.3, §7.1, §17
+    population: null
+    grade: null
+  - claim: Should be stopped when pregnancy is recognized; breastfeeding not recommended during treatment.
+    locator: §8.1-8.2
+    population: Pregnancy, lactation
+    grade: null
+limitations: null
+reviewer_read: false
+notes: null

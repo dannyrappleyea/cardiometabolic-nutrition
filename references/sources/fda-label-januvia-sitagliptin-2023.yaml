@@ -1,0 +1,48 @@
+id: fda-label-januvia-sitagliptin-2023
+title: JANUVIA (sitagliptin) tablets - US prescribing information
+authors: []
+organization: Merck Sharp & Dohme LLC (label approved by US FDA)
+year: 2023
+publication: Drugs@FDA, NDA 021995
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- glycemia
+- medicines
+edition: SUPPL-53 (revised 2023-12; posted 2024)
+edition_check:
+  date: '2026-11-24'
+  searched: Drugs@FDA label files (s019 2012, s053 2024) and DailyMed listings in web search; s053 is the newest Drugs@FDA file found
+  result: current
+  newer: null
+population_limits:
+- Type 2 diabetes only
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021995Orig1s053lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: partial
+  sections_read: 'First 100k of 125k characters: §1, §2, §5, §6.1, §7.1, §8.6, §14'
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: An adjunct to diet and exercise, taken with or without food; weight-neutral in trials.
+  locator: §1; §2.1; §14
+  population: null
+  grade: null
+- claim: Pancreatitis has been reported; the medication guide asks about alcoholism, gallstones and high triglycerides; hypoglycemia risk rises with insulin or sulfonylureas.
+  locator: §5.1; §5.4; medication guide
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: null

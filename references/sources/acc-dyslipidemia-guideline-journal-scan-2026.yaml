@@ -1,0 +1,41 @@
+id: acc-dyslipidemia-guideline-journal-scan-2026
+title: ACC, AHA Release New Clinical Guideline For Managing Dyslipidemia (journal scan)
+authors: []
+organization: American College of Cardiology
+year: 2026
+publication: acc.org Latest in Cardiology, 2026-03-13
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [lipids]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.acc.org/latest-in-cardiology/journal-scans/2026/03/13/15/20/acc-aha-release-new-clinical-guideline-for-managing-dyslipidemia
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Summarizes the 2026 dyslipidemia guideline - LDL-C goals by risk (under 100, under 70, under 55 mg/dL), PREVENT-ASCVD for ages 30-79, one-time Lp(a) testing, apoB for residual risk, statins first-line with ezetimibe, bempedoic acid or PCSK9 antibodies as add-ons, and triglyceride-lowering therapy to prevent pancreatitis especially at 1,000 mg/dL or more.
+    locator: Whole page
+    population: Adults
+    grade: null
+  - claim: Lipid-lowering therapy is started from age 40 in people with diabetes, CKD stage 3 or higher, or HIV.
+    locator: Special populations
+    population: null
+    grade: null
+limitations: News summary; no dietary detail or grades.
+reviewer_read: false
+notes: null

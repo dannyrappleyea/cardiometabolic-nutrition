@@ -1,0 +1,55 @@
+id: aha-acc-dyslipidemia-guideline-2026
+title: 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia
+authors: [Blumenthal RS, Morris PB, Gaudino M]
+organization: American College of Cardiology / American Heart Association Joint Committee on Clinical Practice Guidelines
+year: 2026
+publication: J Am Coll Cardiol 2026;87(19):2624-2757; Circulation 2026;153(17):e1154-e1276 (online 2026-03-13)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [lipids]
+edition: 2026 (replaces the 2018 AHA/ACC multisociety blood cholesterol guideline)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for ACC/AHA dyslipidemia/cholesterol guideline; Europe PMC records for PMIDs 41824590 and 41824552; ACC and AHA news pages
+  result: current
+  newer: null
+population_limits:
+  - "Not checked in the guideline text (full text not open access; publisher site refused earlier fetches of ACC/AHA guideline full texts)"
+  - "Per the AHA news release, the PREVENT-ASCVD risk equations apply to adults 30-79 without known ASCVD"
+identifiers:
+  doi: 10.1016/j.jacc.2025.11.016
+  pmid: "41824590"
+  url: https://www.acc.org/latest-in-cardiology/journal-scans/2026/03/13/15/20/acc-aha-release-new-clinical-guideline-for-managing-dyslipidemia
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked (relationships-with-industry tables are in the full text)
+verified:
+  date: 2026-11-24
+  method: fetched-abstract
+  scope: summary
+  sections_read: Europe PMC abstract record; ACC journal scan; AHA news release; an AHA PDF that served only the abstract and plain-language summary
+  read_via: acc-dyslipidemia-guideline-journal-scan-2026
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Replaces the 2018 blood cholesterol guideline and widens scope to dyslipidemias in general, including hypertriglyceridemia and elevated lipoprotein(a).
+    locator: Abstract
+    population: null
+    grade: null
+  - claim: Reinstates LDL-C and non-HDL-C goals; LDL-C goals reported as under 100 mg/dL for borderline or intermediate risk, under 70 for high risk, and under 55 for very-high-risk ASCVD; PREVENT-ASCVD replaces the pooled cohort equations for adults 30-79.
+    locator: Via ACC journal scan and AHA news release
+    population: Adults
+    grade: null
+  - claim: Lifestyle change is described as the first step, with statins first-line drug therapy and ezetimibe, bempedoic acid or PCSK9 antibodies as add-ons; triglyceride-lowering therapy is considered to prevent pancreatitis especially at triglycerides of 1,000 mg/dL or more.
+    locator: Via ACC journal scan
+    population: Adults
+    grade: null
+  - claim: Lipoprotein(a) should be measured at least once in adulthood and is little affected by lifestyle; apoB can help assess residual risk in people with diabetes, high triglycerides or cardiovascular-kidney-metabolic syndrome.
+    locator: Via ACC journal scan
+    population: null
+    grade: null
+limitations: Known only through summaries; the dietary recommendations, triglyceride categories and severe-hypercholesterolemia definitions were not seen. Cannot be decisive until the full text is read.
+reviewer_read: false
+notes: null

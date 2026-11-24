@@ -1,0 +1,43 @@
+id: aha-dietary-guidance-cardiovascular-health-2021
+title: "2021 Dietary Guidance to Improve Cardiovascular Health: A Scientific Statement From the American Heart Association"
+authors: [Lichtenstein AH, Appel LJ, Vadiveloo M]
+organization: American Heart Association
+year: 2021
+publication: Circulation 2021
+type: scientific-statement
+tier: "2"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [general-nutrition, lipids, blood-pressure, weight]
+edition: "2021"
+edition_check: null
+population_limits:
+  - "General adult population for cardiovascular health; not condition-specific"
+  - "Not checked in the statement itself (read through a summary)"
+identifiers:
+  doi: null
+  pmid: "34724806"
+  url: https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/11/23/19/45/2021-dietary-guidance-to-improve
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: summary
+  sections_read: ACC "Ten Points to Remember" summary (Webb SR, 2021-11-23) of the statement; statement full text not opened
+  read_via: acc-aha-dietary-guidance-ten-points-2021
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Ten features of a heart-healthy pattern - energy balance, plenty of varied fruit and vegetables, whole grains, healthy protein sources (legumes and nuts, fish, low-fat dairy, lean unprocessed meat if eaten), liquid plant oils instead of tropical oils and animal fats, minimally processed foods, limited added sugars and sugary drinks, little or no added salt, limiting or not starting alcohol, and applying this wherever food is prepared.
+    locator: Via ACC summary, points 1-10
+    population: General adults
+    grade: null
+  - claim: The statement notes there is no agreed definition of ultra-processed foods and that some healthy foods may fall into the category, while high intake is associated with obesity, type 2 diabetes, CVD and death.
+    locator: Via ACC summary, point 6
+    population: null
+    grade: null
+limitations: Known through a summary only.
+reviewer_read: false
+notes: null
