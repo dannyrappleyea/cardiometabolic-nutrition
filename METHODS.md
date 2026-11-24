@@ -8,6 +8,7 @@
 - An agent's prior knowledge may suggest **where to look**. It is never evidence. Every factual claim in a topic file must come from a source the agent **opened in the current session** and recorded in `references/sources/`.
 - Agents must not import content, topic lists or conclusions from other diet repositories, personal copies of this repository, or earlier drafts outside this repository. Upstream agents never read `personal/`.
 - Discovery is logged (`research/_plan/discovery-log.md`) so a reviewer can see how each topic was found.
+- **Snippets are leads, not evidence.** A search-result snippet may suggest what to open or a watch item; it never justifies a topic, a question or a claim on its own.
 
 ## 2. Evidence hierarchy
 
@@ -35,6 +36,10 @@ If only one authority addresses a question, say so, lower the confidence, and ad
 
 The authorities weighed are discovered, not preset: they are recorded in `references/authorities.yaml` with their jurisdiction and type.
 
+**Jurisdiction floor:** discovery opens at least one non-US guideline for each condition domain in SCOPE §3, and records any jurisdiction it couldn't cover as a gap.
+
+**Check who a source covers before calling it a disagreement.** A guideline that excludes a group (for example, people with diabetes) or makes only a conditional recommendation doesn't contradict a guideline written for that group. Record each source's `population_limits`.
+
 ## 4. Confidence grading
 
 Each Bottom-line rule and each topic carries one of:
@@ -55,7 +60,9 @@ Where a rule rests on a numeric range, state where the range comes from (a guide
 - Never cite from memory. If a source can't be opened, it can't be cited; put it on the watch list instead.
 - Record findings in the source file as **paraphrased notes with a locator** (section, table or page). Topic files cite those findings.
 - **Paraphrase.** At most one short direct quote (under 15 words) per source, and only when the exact wording matters.
-- Drug facts come from the current label or Tier 1 guidelines only.
+- **Record how much you read** (`verified.scope`: full, partial, section, abstract, summary or landing page; `sections_read`). Read long documents in parts rather than stopping at a truncation. If you only know a document through another one (a journal summary, a press release), record that in `read_via`. A tier-1 guideline read only as a summary or landing page can't be decisive for a reviewed topic.
+- **Check editions.** Before recording a guideline or drug label, search for a newer edition (the authority's site; Drugs@FDA or DailyMed for labels) and record `edition` and `edition_check`. If a newer edition exists, record and use it. Mark the older source `superseded`, or say which parts still stand.
+- Drug facts come from the current label or Tier 1 guidelines only. Prefer the reference listed drug's label over repackager or distributor copies.
 - Re-verify a source older than 12 months before relying on it for a changed rule, and always for fast-moving areas (new drugs, new guideline editions, regulator safety reviews of food ingredients).
 
 ## 6. Topic files

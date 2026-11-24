@@ -14,18 +14,18 @@ Branch: `topic/<id>`.
 
 Work down the hierarchy (METHODS §2):
 
-1. **Guidelines** from the authorities in `references/authorities.yaml`, current editions, at least one non-US-federal.
+1. **Guidelines** from the authorities in `references/authorities.yaml`, current editions (search for a newer one and record `edition_check`), at least one non-US-federal. Read the relevant sections, not just a summary.
 2. **Systematic reviews and meta-analyses** on each of the topic's questions, most recent first. Prefer those including people like the core cohort.
 3. **Key RCTs** those reviews rely on, when the effect size or population matters to the rule.
 4. **Cohort and Mendelian-randomization studies** only where trials are absent, labeled as such.
-5. **Drug labels** for any medication interaction the topic covers.
+5. **Drug labels** for any medication interaction the topic covers: the current version from Drugs@FDA or DailyMed, with `edition` and `edition_check` recorded.
 6. **Food-composition or regulatory databases** for any numbers (amounts per serving, contents).
 
 For each question, search for evidence **against** the emerging answer as well as for it. Note searches and what each turned up for the PR's search log.
 
 ## 3. Record sources as you read
 
-For each source you open, create `references/sources/<id>.yaml` (`templates/source.yaml`) immediately, with the verification method and date and paraphrased findings with locators. Mark `status: decisive` only for the ≤15 the bottom line depends on; everything else is `background`. If a source can't be opened, don't cite it.
+For each source you open, create `references/sources/<id>.yaml` (`templates/source.yaml`) immediately, with the verification method and date, how much you read (`verified.scope`, `sections_read`), `population_limits`, and paraphrased findings with locators. Mark `status: decisive` only for the ≤15 the bottom line depends on; everything else is `background`. If a source can't be opened, don't cite it.
 
 ## 4. Write the topic
 

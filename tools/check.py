@@ -16,6 +16,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 try:
@@ -35,6 +36,25 @@ TOPICS = ROOT / "research" / "topics"
 TOPIC_MAP = ROOT / "research" / "_plan" / "topic-map.yaml"
 INDEX = ROOT / "research" / "INDEX.md"
 PROFILE_FIELDS = ROOT / "schemas" / "profile-fields.yaml"
+SCOPE_FILE = ROOT / "SCOPE.md"
+DISCOVERY_LOG = ROOT / "research" / "_plan" / "discovery-log.md"
+SCOPE_CHECK = ROOT / "research" / "_plan" / "scope-check.yaml"
+COVERAGE = ROOT / "research" / "_plan" / "coverage.yaml"
+
+TODAY = date.today()
+STALE_DAYS = 365
+CORE_DOMAINS = ["blood-pressure", "glycemia", "lipids"]                   # SCOPE §3
+READ_SCOPES = {"full", "partial", "section"}                              # actually read
+OPENED_ACCESS = {"full", "partial", "section", "abstract", "summary", "landing-page"}
+WEAK_SCOPES = {"summary", "landing-page"}
+LIMIT_TYPES = {"guideline", "scientific-statement", "systematic-review", "meta-analysis", "umbrella-review"}
+NON_US = {"canada", "uk", "eu", "australia-nz", "who", "international", "other"}
+DUP_OVERLAP, DUP_JACCARD = 0.55, 0.27   # share of the shorter question's words; similarity
+METHOD_SCOPE = {"fetched-full-text": "full", "fetched-abstract": "abstract",
+                "fetched-landing-page": "landing-page", "resolved-doi": "landing-page"}
+STOP = set("""a an and are as at be by can do does for from has have how in is it its of on or
+should that the their them they this to what when which who whom why will with within without
+than then there these those into over under about more less most much many does did""".split())
 
 WORDS_MIN, WORDS_MAX = 1200, 3500          # METHODS §6
 MAX_DECISIVE = 15
@@ -133,6 +153,248 @@ def check_upstream_privacy(rep: Report) -> None:
             rep.error(line, "personal file is tracked in the upstream repository (AGENTS.md §3.5)")
 
 
+def days_old(d: str | None) -> int | None:
+    try:
+        return (TODAY - date.fromisoformat(str(d))).days
+    except (TypeError, ValueError):
+        return None
+
+
+def find_cycles(graph: dict[str, list[str]]) -> list[list[str]]:
+    """Return dependency cycles (each as a list of IDs) in a depends_on graph."""
+    cycles, state, stack = [], {}, []
+
+    def visit(n: str) -> None:
+        state[n] = 1
+        stack.append(n)
+        for m in graph.get(n, []):
+            if m not in graph:
+                continue
+            if state.get(m) == 1:
+                cyc = stack[stack.index(m):] + [m]
+                if sorted(cyc[:-1]) not in [sorted(c[:-1]) for c in cycles]:
+                    cycles.append(cyc)
+            elif state.get(m) is None:
+                visit(m)
+        stack.pop()
+        state[n] = 2
+
+    for node in graph:
+        if state.get(node) is None:
+            visit(node)
+    return cycles
+
+
+def question_tokens(q: str) -> set[str]:
+    return {w for w in re.findall(r"[a-z0-9]+", q.lower()) if len(w) > 2 and w not in STOP}
+
+
+def parse_discovery_log(rep: Report, sources: dict) -> dict[str, dict]:
+    """Rows keyed by log ID, each with 'opened' (bool) and 'access'."""
+    rows: dict[str, dict] = {}
+    if not DISCOVERY_LOG.exists():
+        return rows
+    header: list[str] | None = None
+    for line in DISCOVERY_LOG.read_text(encoding="utf-8").splitlines():
+        if not line.startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if cells and cells[0].lower() == "log id":
+            header = [c.lower() for c in cells]
+            continue
+        if not header or not re.fullmatch(r"D\d+[a-z]?", cells[0] or ""):
+            continue
+        row = dict(zip(header, cells))
+        lid = cells[0]
+        if lid in rows:
+            rep.error(rel(DISCOVERY_LOG), f"duplicate log ID {lid}")
+        src_cell = next((v for k, v in row.items() if k.startswith("source id")), "")
+        src_ids = [x for x in re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)+", src_cell) if x in sources]
+        access = row.get("access", "").strip("` ").lower() or None
+        if access:
+            opened = access in OPENED_ACCESS
+            if opened and not src_ids:
+                rep.warn(rel(DISCOVERY_LOG), f"{lid} has access '{access}' but no recorded source ID")
+        else:  # older logs without an Access column: opened = has a recorded source
+            opened = bool(src_ids)
+        rows[lid] = {"opened": opened, "access": access, "sources": src_ids}
+    if rows and header and "access" not in header:
+        rep.warn(rel(DISCOVERY_LOG), "no Access column; treating rows with a recorded source as opened, others as snippets")
+    return rows
+
+
+def check_sources_quality(sources: dict, rep: Report) -> None:
+    """Currency, read scope and population limits (METHODS §5)."""
+    for sid, s in sources.items():
+        where = f"references/sources/{sid}.yaml"
+        if s.get("status") == "superseded":
+            continue
+        ver = s.get("verified") or {}
+        scope = ver.get("scope")
+        if not scope:
+            rep.warn(where, "verified.scope missing: record how much was actually read")
+        if ver.get("read_via") and ver["read_via"] not in sources:
+            rep.error(where, f"verified.read_via '{ver['read_via']}' is not a recorded source")
+        stype, tier = s.get("type"), s.get("tier")
+        if tier == "1" and (scope in WEAK_SCOPES or ver.get("method") == "fetched-landing-page"):
+            rep.warn(where, "tier-1 guideline known only from a summary or landing page; read its text before relying on it")
+        if stype in ("drug-label", "guideline"):
+            ec = s.get("edition_check")
+            if stype == "drug-label" and not s.get("edition"):
+                rep.warn(where, "drug label without 'edition' (supplement number and date)")
+            if not ec:
+                rep.warn(where, f"{stype} without edition_check: search for a newer edition and record it")
+            else:
+                age = days_old(ec.get("date"))
+                if age is not None and age > STALE_DAYS:
+                    rep.warn(where, f"edition_check is {age} days old; re-check for a newer edition")
+                if ec.get("result") == "newer-not-recorded":
+                    rep.warn(where, f"a newer edition exists but is not recorded: {ec.get('newer') or '(unnamed)'}")
+                if ec.get("result") == "newer-recorded" and ec.get("newer") and ec["newer"] not in sources:
+                    rep.error(where, f"edition_check.newer '{ec['newer']}' is not a recorded source")
+        if stype in LIMIT_TYPES and s.get("population_limits") is None:
+            rep.warn(where, "population_limits not checked (who it excludes; conditional strength). Use [] if none")
+
+
+def eff_scope(s: dict) -> str | None:
+    """verified.scope, or a best guess from verified.method for sources recorded before scope existed."""
+    ver = s.get("verified") or {}
+    return ver.get("scope") or METHOD_SCOPE.get(ver.get("method"))
+
+
+def source_domains(s: dict, authorities: dict) -> set[str]:
+    if s.get("domains"):
+        return set(s["domains"])
+    a = authorities.get(s.get("authority") or "")
+    return set((a or {}).get("domains") or [])
+
+
+def check_discovery(map_ids: dict, sources: dict, authorities: dict, rep: Report) -> None:
+    """Traceability, shape and coverage checks for a discovery run (playbooks/01-discover.md)."""
+    tm = rel(TOPIC_MAP)
+    log = parse_discovery_log(rep, sources)
+
+    # depends_on cycles
+    for cyc in find_cycles({t: list(m.get("depends_on") or []) for t, m in map_ids.items()}):
+        rep.error(tm, "depends_on cycle: " + " → ".join(cyc))
+
+    dependents = {t: 0 for t in map_ids}
+    for m in map_ids.values():
+        for d in m.get("depends_on") or []:
+            if d in dependents:
+                dependents[d] += 1
+
+    for tid, m in map_ids.items():
+        if m.get("status") == "rejected":
+            continue
+        via = list(m.get("discovered_via") or [])
+        cited = set(re.findall(r"\bD\d+[a-z]?\b", m.get("rationale") or ""))
+        for d in sorted(set(via) | cited):
+            if log and d not in log:
+                rep.error(tm, f"'{tid}' refers to {d}, which is not in the discovery log")
+        for d in sorted(cited - set(via)):
+            rep.warn(tm, f"'{tid}' rationale cites {d} but discovered_via doesn't list it")
+        if log:
+            opened = [d for d in via if log.get(d, {}).get("opened")]
+            if not opened:
+                (rep.warn if m.get("watch") else rep.error)(
+                    tm, f"'{tid}' traces only to snippet rows; a topic needs at least one opened source (METHODS §1)")
+            elif len(opened) < 2:
+                rep.warn(tm, f"'{tid}' traces to only {len(opened)} opened row ({opened[0]}); aim for ≥2")
+        if m.get("priority") == 1 and not m.get("safety") and dependents.get(tid, 0) == 0:
+            rep.warn(tm, f"'{tid}' is priority 1 but no topic depends on it and safety is not set")
+
+    # near-duplicate questions across topics
+    qs = [(tid, q, question_tokens(q)) for tid, m in map_ids.items() if m.get("status") != "rejected"
+          for q in m.get("questions") or []]
+    dups = []
+    for i in range(len(qs)):
+        for j in range(i + 1, len(qs)):
+            (t1, q1, a), (t2, q2, b) = qs[i], qs[j]
+            if t1 == t2 or not a or not b:
+                continue
+            overlap, jac = len(a & b) / min(len(a), len(b)), len(a & b) / len(a | b)
+            if min(len(a), len(b)) >= 4 and overlap >= DUP_OVERLAP and jac >= DUP_JACCARD:
+                dups.append((overlap, t1, q1, t2, q2))
+    for sim, t1, q1, t2, q2 in sorted(dups, reverse=True)[:25]:
+        rep.warn(tm, f"possible overlapping questions ({sim:.0%} shared words): '{t1}': \"{q1[:70]}…\" ≈ '{t2}': \"{q2[:70]}…\"; "
+                     "give each question one canonical topic")
+
+    check_scope_thresholds(sources, rep)
+    check_coverage(map_ids, sources, rep)
+
+    # guideline floors per core domain
+    for dom in CORE_DOMAINS:
+        g = [s for s in sources.values() if s.get("tier") == "1" and s.get("status") != "superseded"
+             and dom in source_domains(s, authorities)]
+        if not any(eff_scope(s) in READ_SCOPES for s in g):
+            rep.warn(tm, f"no tier-1 guideline for '{dom}' has been read beyond a summary (verified.scope full/partial/section)")
+        if not any(s.get("jurisdiction") in NON_US and eff_scope(s) in OPENED_ACCESS for s in g):
+            rep.warn(tm, f"no non-US tier-1 guideline opened for '{dom}' (METHODS §3 jurisdiction floor)")
+
+
+def scope_numbers() -> set[str]:
+    """Numeric tokens in SCOPE.md §3–5, used to see that every threshold is enumerated."""
+    if not SCOPE_FILE.exists():
+        return set()
+    text = SCOPE_FILE.read_text(encoding="utf-8")
+    m = re.search(r"^## 3\..*?(?=^## 6\.)", text, flags=re.S | re.M)
+    body = re.sub(r"§\s*\d+(?:[–-]\d+)?", "", m.group(0) if m else "")
+    body = re.sub(r"^## \d+\..*$", "", body, flags=re.M)
+    return set(re.findall(r"\d+(?:\.\d+)?", body))
+
+
+def check_scope_thresholds(sources: dict, rep: Report) -> None:
+    where = rel(SCOPE_CHECK)
+    if not SCOPE_CHECK.exists():
+        rep.warn(where, "missing: playbooks/01-discover.md step 1 records every SCOPE threshold here")
+        return
+    data = load_yaml(SCOPE_CHECK, rep) or {}
+    schema_check(data, "scope-check.schema.json", where, rep)
+    rows = data.get("thresholds") or []
+    if not rows:
+        rep.warn(where, "no thresholds recorded (step 1)")
+        return
+    covered = " ".join(str(r.get("threshold", "")) for r in rows)
+    covered_nums = set(re.findall(r"\d+(?:\.\d+)?", covered))
+    missing = sorted(scope_numbers() - covered_nums, key=lambda x: float(x))
+    if missing:
+        rep.warn(where, "SCOPE.md numbers with no threshold row: " + ", ".join(missing))
+    unverified = [r.get("threshold") for r in rows if r.get("status") == "unverified"]
+    if unverified:
+        rep.warn(where, f"{len(unverified)} threshold(s) unverified: " + "; ".join(map(str, unverified))[:300])
+    for r in rows:
+        for sid in r.get("sources") or []:
+            if sid not in sources:
+                rep.error(where, f"'{r.get('threshold')}' cites unknown source '{sid}'")
+        if r.get("status") in ("verified", "disagrees") and not r.get("sources"):
+            rep.error(where, f"'{r.get('threshold')}' is {r.get('status')} but lists no source")
+        if r.get("status") == "disagrees" and not r.get("proposed"):
+            rep.warn(where, f"'{r.get('threshold')}' disagrees but has no proposed correction")
+
+
+def check_coverage(map_ids: dict, sources: dict, rep: Report) -> None:
+    where = rel(COVERAGE)
+    if not COVERAGE.exists():
+        rep.warn(where, "missing: playbooks/01-discover.md step 9 records coverage here")
+        return
+    data = load_yaml(COVERAGE, rep) or {}
+    schema_check(data, "coverage.schema.json", where, rep)
+    for section in ("domains", "adjacent_flags", "medication_classes", "food_groups"):
+        items = data.get(section) or []
+        if not items:
+            rep.warn(where, f"'{section}' is empty")
+        for it in items:
+            for t in it.get("topics") or []:
+                if t not in map_ids:
+                    rep.error(where, f"{section}: '{it.get('item')}' maps to unknown topic '{t}'")
+            if not it.get("topics") and not it.get("note"):
+                rep.warn(where, f"{section}: '{it.get('item')}' has no topic and no note explaining why")
+            for sid in it.get("named_in") or []:
+                if sid not in sources:
+                    rep.error(where, f"{section}: '{it.get('item')}' named_in unknown source '{sid}'")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["auto", "upstream", "personal"], default="auto")
@@ -195,6 +457,7 @@ def main() -> int:
             rep.error(rel(path), f"unknown authority '{data['authority']}' (add it to authorities.yaml)")
         if data.get("tier") == "M" and data.get("status") == "decisive":
             rep.error(rel(path), "manufacturer material may only be background (METHODS §2)")
+    check_sources_quality(sources, rep)
     for sid, s in sources.items():
         sup = s.get("superseded_by")
         if sup and sup not in sources:
@@ -278,6 +541,18 @@ def main() -> int:
             (rep.error if strict else rep.warn)(
                 where, "corroboration: needs tier 1/2/R decisive sources from ≥2 bodies, ≥1 not US federal")
 
+        # Quality of decisive sources (METHODS §5)
+        for sid in sorted(decisive & sources.keys()):
+            s = sources[sid]
+            ver = s.get("verified") or {}
+            if s.get("tier") == "1" and (ver.get("scope") in WEAK_SCOPES or ver.get("method") == "fetched-landing-page"):
+                (rep.error if strict else rep.warn)(where, f"decisive tier-1 source '{sid}' was read only as a summary or landing page")
+            ec = s.get("edition_check") or {}
+            if ec.get("result") == "newer-not-recorded":
+                rep.error(where, f"decisive source '{sid}' has a newer edition that isn't recorded")
+            if s.get("type") in ("drug-label", "guideline") and not ec:
+                (rep.error if strict else rep.warn)(where, f"decisive {s.get('type')} '{sid}' has no edition_check")
+
         # Long quotations
         for q in QUOTE_RE.findall(body):
             if len(q.split()) >= 15:
@@ -288,6 +563,13 @@ def main() -> int:
         for t in s.get("topics") or []:
             if t not in topic_meta and t not in map_ids:
                 rep.warn(f"references/sources/{sid}.yaml", f"lists unknown topic '{t}'")
+
+    # Topic-file depends_on cycles
+    for cyc in find_cycles({t: list(fm.get("depends_on") or []) for t, fm in topic_meta.items()}):
+        rep.error("research/topics", "depends_on cycle: " + " → ".join(cyc))
+
+    if any(m.get("status") != "rejected" for m in map_ids.values()):
+        check_discovery(map_ids, sources, authorities, rep)
 
     if mode == "upstream":
         check_upstream_privacy(rep)

@@ -14,6 +14,20 @@
     "tier": {"enum": ["1", "2", "3", "4", "5", "6", "R", "M"]},
     "jurisdiction": {"enum": ["us-federal", "us-professional", "canada", "uk", "eu", "australia-nz", "who", "international", "other"]},
     "authority": {"type": ["string", "null"]},
+    "domains": {"type": "array", "items": {"enum": ["blood-pressure", "glycemia", "lipids", "weight", "kidney", "liver", "general-nutrition", "food-safety", "medicines"]}},
+    "edition": {"type": ["string", "null"]},
+    "edition_check": {
+      "type": ["object", "null"],
+      "required": ["date", "searched", "result"],
+      "properties": {
+        "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+        "searched": {"type": "string", "minLength": 3},
+        "result": {"enum": ["current", "newer-recorded", "newer-not-recorded"]},
+        "newer": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "population_limits": {"type": ["array", "null"], "items": {"type": "string"}},
     "identifiers": {
       "type": "object",
       "properties": {
@@ -37,8 +51,12 @@
       "properties": {
         "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
         "method": {"enum": ["fetched-full-text", "fetched-abstract", "resolved-doi", "fetched-landing-page"]},
+        "scope": {"enum": ["full", "partial", "section", "abstract", "summary", "landing-page"]},
+        "sections_read": {"type": ["string", "null"]},
+        "read_via": {"type": ["string", "null"]},
         "by": {"type": ["string", "null"]}
-      }
+      },
+      "additionalProperties": false
     },
     "findings": {
       "type": "array",

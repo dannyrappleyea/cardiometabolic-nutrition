@@ -11,6 +11,16 @@ type: guideline                   # guideline | systematic-review | meta-analysi
 tier: "1"                         # "1"-"6" | "R" | "M"  (METHODS §2)
 jurisdiction: international       # us-federal | us-professional | canada | uk | eu | australia-nz | who | international | other
 authority: null                   # ID from references/authorities.yaml, if issued by one
+domains: []                       # blood-pressure | glycemia | lipids | weight | kidney | liver | general-nutrition | food-safety | medicines
+edition: null                     # as the publisher lists it, e.g. "2025 edition" or a drug label's "SUPPL-104 (2023-08)"
+edition_check:                    # required for guidelines and drug labels (METHODS §5)
+  date: YYYY-MM-DD
+  searched: Where you looked for a newer edition (authority site, Drugs@FDA, DailyMed, PubMed)
+  result: current                 # current | newer-recorded | newer-not-recorded
+  newer: null                     # source ID or citation of the newer edition, if any
+population_limits: null           # who the source excludes or doesn't cover, and conditional/weak strength
+                                  # e.g. ["not for people with pre-existing diabetes", "conditional recommendation"]
+                                  # [] = checked, none stated · null = not checked
 identifiers:
   doi: null
   pmid: null
@@ -22,6 +32,9 @@ funding_conflicts: null           # short note: industry funding, author conflic
 verified:
   date: YYYY-MM-DD
   method: fetched-full-text       # fetched-full-text | fetched-abstract | resolved-doi | fetched-landing-page
+  scope: full                     # how much you actually read: full | partial | section | abstract | summary | landing-page
+  sections_read: null             # e.g. "§5 nutrition, Tables 5.1-5.3"; note truncation ("first 100k chars; read rest in parts")
+  read_via: null                  # source ID, if you only read this through another document (a summary, journal scan)
   by: null                        # agent/model name, or "human"
 findings:                         # paraphrased; never copied passages
   - claim: What the source found or recommends, in your own words

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scope threshold check",
+  "type": "object",
+  "required": [
+    "checked",
+    "thresholds"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "checked": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thresholds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ref",
+          "threshold",
+          "status",
+          "sources"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "ref": {
+            "type": "string",
+            "description": "SCOPE.md section and row, e.g. '§3 Lipids'"
+          },
+          "threshold": {
+            "type": "string",
+            "description": "The threshold exactly as SCOPE.md states it"
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "disagrees",
+              "unverified"
+            ]
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Proposed correction, if status is disagrees"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

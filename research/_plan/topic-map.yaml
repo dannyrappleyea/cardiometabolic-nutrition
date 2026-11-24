@@ -10,10 +10,11 @@ topics: []
 # - id: area-subject
 #   title: Plain-language title
 #   kind: pattern | food-group | food | nutrient | beverage | additive | supplement | medication-interaction | targets | behavior | situation | other
-#   priority: 1              # 1 foundational · 2 important · 3 useful
+#   priority: 1              # 1 foundational (others depend on it) or safety-critical (safety: true) · 2 important · 3 useful
+#   safety: false            # true if getting it wrong could harm (e.g., drug-food interactions)
 #   status: proposed         # proposed | approved | in-progress | published | rejected
 #   questions: [...]         # 3-8 concrete questions
 #   rationale: Why it matters for the cohort, citing discovery-log entries
-#   discovered_via: [D1, D4]
+#   discovered_via: [D1, D4]  # every D# in the rationale; ≥2 rows with opened access
 #   depends_on: []
 #   watch: false             # true for fast-moving or contested areas

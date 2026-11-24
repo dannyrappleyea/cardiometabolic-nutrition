@@ -1,0 +1,13 @@
+# Discovery coverage — produced by playbooks/01-discover.md step 9. Schema: schemas/coverage.schema.json.
+# Every item maps to topic IDs, or has a note saying why no topic is needed. Empty until the first discovery run.
+checked: null
+domains: []             # each SCOPE §3 domain
+adjacent_flags: []      # each SCOPE §4 flag
+medication_classes: []  # each class found in step 4
+food_groups: []         # each food group, beverage or food category named in opened guidelines' pattern recommendations
+gaps: []                # e.g. "no Australian guideline opened for lipids"
+# Entry shape (all four lists):
+# - item: name as found
+#   topics: [topic-id]
+#   named_in: [source-id]   # for food_groups: which opened sources name it
+#   note: null              # required when topics is empty
