@@ -38,6 +38,7 @@ Pick one topic the answer key covers well, one where the answer key is thin, and
 | **Corroboration** | Non-US-federal authority actually present for each rule |
 | **Depth at reading level** | Would a non-scientist in the cohort understand and act on it? |
 | **Verifier value** | Did the fresh verifier catch real problems the researcher missed? |
+| **Second-pass value** | Did Copilot's review catch real problems the verifier missed? What share of its must-fix comments were valid? Did it open external sources? Keep it only if it adds real catches at an acceptable noise level |
 
 ### 3. Personal layer (after a few topics merge)
 

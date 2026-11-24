@@ -16,7 +16,7 @@ Why the repository is shaped the way it is. For maintainers; agents follow `AGEN
 
 **Personalization hooks + a controlled field vocabulary.** Topics declare which profile fields change which rules (`schemas/profile-fields.yaml`). Personal guide builds become mostly mechanical: apply hooks to the profile's facts, then apply preferences, marked "(your choice)".
 
-**Fresh-context verification.** The agent that writes a topic never verifies it. The human reviewer at the PR is the final gate, with a checklist that includes spot-checking citations personally.
+**Fresh-context verification, then a second pass.** The agent that writes a topic never verifies it. GitHub Copilot code review then reviews each PR independently, with instructions limited to code review (`.github/instructions/review.instructions.md`). Its model mix isn't ours to choose and may not differ from the researcher's, so it adds a second opinion but doesn't replace the verifier. Because Copilot reads instructions from the PR's branch, CI blocks research PRs from changing process files. The human reviewer at the PR is the final gate, with a checklist that includes spot-checking citations personally. See `docs/REVIEW-PROCESS.md`.
 
 **Generated index.** `research/INDEX.md` is built from topic front matter (`description` fields), so agents get a one-page map of the research before starting work, and it can't drift from the files.
 

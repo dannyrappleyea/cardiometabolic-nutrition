@@ -24,7 +24,7 @@ This repository deliberately starts with **no research, no topic list and no see
 ## For maintainers and contributors
 
 1. Read [`AGENTS.md`](AGENTS.md), [`SCOPE.md`](SCOPE.md) and [`METHODS.md`](METHODS.md).
-2. Point an AI agent at [`playbooks/00-orchestrate.md`](playbooks/00-orchestrate.md). The pipeline is: **discover → research → verify → synthesize**, one pull request per step or topic.
+2. Point an AI agent at [`playbooks/00-orchestrate.md`](playbooks/00-orchestrate.md). The pipeline is: **discover → research → verify → synthesize**, one pull request per step or topic. Each research PR then gets an automatic second-pass review from GitHub Copilot, which the research agent answers ([`docs/REVIEW-PROCESS.md`](docs/REVIEW-PROCESS.md)).
 3. Review each pull request with the checklist in [`.github/pull_request_template.md`](.github/pull_request_template.md). Merging to `main` is the human gate.
 4. `python tools/check.py` validates sources, topics and the topic map; CI runs it on every pull request.
 

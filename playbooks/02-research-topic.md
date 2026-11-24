@@ -50,4 +50,4 @@ Follow `templates/topic.md` section by section.
 
 ## 6. Hand off
 
-Pass the draft to a fresh verifier (`03-verify.md`). Fix what it finds. Then add one line to `research/changelog.md`, set front matter `status: draft`, `version` (1 for new, +1 if any rule changed), and open the PR.
+Pass the draft to a fresh verifier (`03-verify.md`). Fix what it finds. Then add one line to `research/changelog.md`, set front matter `status: draft`, `version` (1 for new, +1 if any rule changed), and open the PR (ready for review, not draft). When the second-pass review arrives, respond with `06-respond-to-review.md`.
