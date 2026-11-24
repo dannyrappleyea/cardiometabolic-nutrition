@@ -7,6 +7,9 @@
 ## Rule changes (METHODS §8)
 <!-- For each changed Bottom-line rule: old → new → evidence that moved it. "None" if none. -->
 
+## Discovery runs only
+<!-- Scope-check table (threshold → status → source) from research/_plan/scope-check.yaml, coverage gaps from coverage.yaml, and check.py warnings left unfixed with reasons. -->
+
 ## Search log
 <!-- Searches run, what each turned up, sources rejected and why. -->
 

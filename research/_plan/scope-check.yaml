@@ -1,0 +1,13 @@
+# Scope threshold check — produced by playbooks/01-discover.md step 1.
+# One row per threshold in SCOPE.md §3–5, exactly as SCOPE states it. Schema: schemas/scope-check.schema.json.
+# Empty on purpose until the first discovery run.
+checked: null           # YYYY-MM-DD
+by: null                # agent/model
+thresholds: []
+# Entry shape:
+# - ref: "§3 Glycemia"
+#   threshold: "A1C 5.7–6.4%"
+#   status: verified        # verified | disagrees | unverified
+#   sources: [source-id]    # opened sources that define it (empty if unverified)
+#   proposed: null          # the correction, if status is disagrees
+#   note: null

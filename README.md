@@ -53,7 +53,7 @@ METHODS.md          Evidence hierarchy, corroboration, grading, citation rules (
 AGENTS.md           Rules for every AI agent, both tiers
 research/
   INDEX.md          Generated index of topics (tools/check.py --write-index)
-  _plan/            Topic map, discovery log
+  _plan/            Topic map, discovery log, scope check, coverage
   topics/           One in-depth analysis per topic
   changelog.md
 references/

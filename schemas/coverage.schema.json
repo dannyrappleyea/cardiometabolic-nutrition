@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Discovery coverage",
+  "type": "object",
+  "required": [
+    "domains",
+    "adjacent_flags",
+    "medication_classes",
+    "food_groups",
+    "gaps"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "checked": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "topics"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "named_in": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Source IDs that name this item"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Required when topics is empty: why no topic"
+          }
+        }
+      }
+    },
+    "adjacent_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "topics"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "named_in": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Source IDs that name this item"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Required when topics is empty: why no topic"
+          }
+        }
+      }
+    },
+    "medication_classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "topics"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "named_in": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Source IDs that name this item"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Required when topics is empty: why no topic"
+          }
+        }
+      }
+    },
+    "food_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "topics"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "named_in": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Source IDs that name this item"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Required when topics is empty: why no topic"
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Known gaps, e.g. jurisdictions with no guideline opened"
+    }
+  }
+}

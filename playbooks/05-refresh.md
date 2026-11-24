@@ -10,7 +10,7 @@ Branch: `refresh/<topic-id>-<YYYY-MM>`.
 2. For each topic: open the new evidence, record it as sources, and decide whether any Bottom-line rule changes.
 3. **No rule change:** update the source files, `reviewed` and `next_check` dates, and the watch list. Keep `version`.
 4. **Rule change:** follow `02-research-topic.md` §4–6 for the changed sections, increment `version`, and run `03-verify.md`. The PR description must state old rule → new rule → why (METHODS §8).
-5. Mark replaced sources `status: superseded` with `superseded_by`. Never delete source files.
+5. Mark replaced sources `status: superseded` with `superseded_by`, and update `edition_check` on the ones you re-checked. Never delete source files.
 6. Answer any Reviewer notes; log how in `research/changelog.md`.
 
 ## Standing calendar
