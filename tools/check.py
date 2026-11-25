@@ -71,7 +71,8 @@ LABEL_EVIDENCE_RE = re.compile(r"accessdata\.fda\.gov|dailymed\.nlm\.nih\.gov|nc
 LABEL_OLD_YEARS = 2                        # a label older than this needs listed_latest to stay "current"
 FAST_LABEL_DAYS = 30                       # recently revised labels: edition check this fresh
 DOUBT_PHRASES = ("may have newer", "may not be the latest", "may be outdated", "possibly outdated",
-                 "newer version", "not checked", "discontinued", "could not confirm", "couldn't confirm")
+                 "newer version", "not checked", "could not confirm", "couldn't confirm")
+GAP_DOUBT_PHRASES = DOUBT_PHRASES + ("discontinued",)   # in a gap, a product named before this is doubted
 SCOPE_LINE_RES = [  # SCOPE §6: medicine choice or dosing is out of scope
     re.compile(r"\bwhich (?:[\w-]+ ){0,3}(?:medicines?|medications?|drugs?)\b[^?]*\b(?:safe|safest|best|preferred|recommended|to use|to choose)\b", re.I),
     re.compile(r"\b(?:limit|lower|reduce|raise|increase|adjust|change|stop|start)\w*\b[^?]{0,40}"
@@ -475,16 +476,23 @@ def check_coverage(map_ids: dict, sources: dict, rep: Report) -> list[str]:
             check_canonical(section, it, map_ids, deps, where, rep)
 
     # gaps that doubt a source's currency while the source says "current"
+    # (a source named before a doubt phrase in the same clause)
     gaps = [str(g) for g in data.get("gaps") or []]
     for g in gaps:
-        gl = g.lower()
-        if not any(p in gl for p in DOUBT_PHRASES):
-            continue
-        for sid, s in sources.items():
-            if s.get("status") == "superseded" or (s.get("edition_check") or {}).get("result") != "current":
+        for clause in re.split(r";\s*|\.\s+", g.lower()):
+            hits = [clause.find(p) for p in GAP_DOUBT_PHRASES if p in clause]
+            if not hits:
                 continue
-            if sid in gl or (s.get("type") == "drug-label" and label_name(s) and re.search(rf"\b{re.escape(label_name(s))}\b", gl)):
-                rep.warn(where, f"gap says \"{g[:80]}…\" but '{sid}' records edition_check.result: current; make them agree")
+            cut = min(hits)
+            for sid, s in sources.items():
+                if s.get("status") == "superseded" or (s.get("edition_check") or {}).get("result") != "current":
+                    continue
+                name = label_name(s) if s.get("type") == "drug-label" else None
+                for n in filter(None, (sid, name)):
+                    m = re.search(rf"\b{re.escape(n)}\b", clause)
+                    if m and m.start() < cut:
+                        rep.warn(where, f"gap says \"{clause.strip()[:80]}…\" but '{sid}' records edition_check.result: current; make them agree")
+                        break
     return gaps
 
 
