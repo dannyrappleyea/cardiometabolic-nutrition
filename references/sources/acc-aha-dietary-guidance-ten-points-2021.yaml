@@ -16,8 +16,8 @@ identifiers:
   doi: null
   pmid: null
   url: https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/11/23/19/45/2021-dietary-guidance-to-improve
-status: background
-superseded_by: null
+status: superseded
+superseded_by: aha-dietary-guidance-cardiovascular-health-2026
 topics: []
 funding_conflicts: Not stated
 verified:
@@ -34,4 +34,4 @@ findings:
     grade: null
 limitations: Summary.
 reviewer_read: false
-notes: null
+notes: Summarizes the 2021 AHA statement, which the 2026 statement supersedes. Still the discovery source for the "not fried" fish wording (D81).

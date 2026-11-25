@@ -54,14 +54,18 @@ findings:
     locator: Recs 10.18, 10.20, 10.21
     population: Adults with diabetes aged 40-75
     grade: A-B
-  - claim: Triglycerides of 150 mg/dL or more (fasting; 175 non-fasting) or low HDL (under 40 men, under 50 women) call for intensified lifestyle therapy; fasting triglycerides of 500 or more call for evaluation of secondary causes and consideration of medicine to reduce pancreatitis risk; icosapent ethyl may be considered for people on statins with triglycerides 150-499 and ASCVD or risk factors, while other n-3 supplements, fibrates and niacin are not advised on top of statins for cardiovascular benefit.
-    locator: Recs 10.15, 10.29-10.32
+  - claim: High triglycerides (150 mg/dL or more) or low HDL (under 40 men, under 50 women) call for intensified lifestyle therapy and better glucose control; with fasting triglycerides of 500 or more, secondary causes should be sought and medicine considered to cut pancreatitis risk; for high triglycerides (fasting over 150 or non-fasting over 175 mg/dL), lifestyle factors, secondary causes and triglyceride-raising drugs should be addressed.
+    locator: Recs 10.15, 10.29, 10.30; narrative under "Treatment of Other Lipoprotein Fractions or Goals"
     population: Adults with diabetes
-    grade: B-C
+    grade: C
+  - claim: Icosapent ethyl may be considered for people on statins with controlled LDL-C, triglycerides 150-499 and ASCVD or other risk factors (B); adding a fibrate, niacin or other n-3 supplement to a statin is not recommended because it does not further lower cardiovascular risk (A).
+    locator: Recs 10.31, 10.32
+    population: Adults with diabetes
+    grade: B (10.31); A (10.32)
   - claim: Established ASCVD is defined as a history of acute coronary syndrome, heart attack, angina, coronary or other arterial revascularization, stroke or peripheral artery disease.
     locator: Section introduction
     population: null
     grade: null
 limitations: Text after the start of the antiplatelet section not read.
 reviewer_read: false
-notes: null
+notes: Grades for Recs 10.15 and 10.29-10.32 and the location of the non-fasting 175 mg/dL cut-off (Rec 10.30, not 10.15) re-checked against PMC12690187 on 2026-11-25.

@@ -13,17 +13,17 @@ domains:
 - medicines
 edition: SUPPL-42 (revised 2023-07)
 edition_check:
-  date: '2026-11-24'
-  searched: Drugs@FDA label files in web search (s033 2012, s042 2023); s042 is the newest found
-  result: current
-  newer: null
+  date: 2026-11-25
+  searched: 'Drugs@FDA label files in web search (s033 2012, s042 2023); s042 is the newest found; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-zetia-ezetimibe-2024
 population_limits: []
 identifiers:
   doi: null
   pmid: null
   url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021445s042lbl.pdf
-status: background
-superseded_by: null
+status: superseded
+superseded_by: fda-label-zetia-ezetimibe-2024
 topics: []
 funding_conflicts: Manufacturer label (regulator-approved)
 verified:
@@ -44,4 +44,4 @@ findings:
   grade: null
 limitations: null
 reviewer_read: false
-notes: null
+notes: Superseded 2026-11-25 by the Organon label revised 2/2024. Food and bile acid sequestrant findings are unchanged.

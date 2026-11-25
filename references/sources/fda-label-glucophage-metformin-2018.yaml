@@ -11,18 +11,18 @@ authority: fda
 domains: [glycemia, medicines]
 edition: SUPPL-34/SUPPL-18 (2018-05-30)
 edition_check:
-  date: 2026-11-24
-  searched: Drugs@FDA overview for NDA 020357 (latest labeling supplement 2018-05-30; brand marked discontinued); generic SPLs on FDALabel not compared
-  result: current
-  newer: null
+  date: 2026-11-25
+  searched: 'Drugs@FDA overview for NDA 020357 (latest labeling supplement 2018-05-30; brand marked discontinued); generic SPLs on FDALabel not compared; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-fortamet-metformin-er-2026
 population_limits:
   - "Brand now discontinued in the US; generic metformin labels follow this RLD text but may carry later safety updates (not checked)"
 identifiers:
   doi: null
   pmid: null
   url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/020357s034,021202s018lbl.pdf
-status: background
-superseded_by: null
+status: superseded
+superseded_by: fda-label-fortamet-metformin-er-2026
 topics: []
 funding_conflicts: Manufacturer label (regulator-approved)
 verified:
@@ -51,4 +51,4 @@ findings:
     grade: null
 limitations: Label dated 2018 and brand discontinued.
 reviewer_read: false
-notes: null
+notes: Superseded 2026-11-25. Glucophage is discontinued and this 2018 text predates the 8/2026 Boxed Warning and §5.1 revision carried by current metformin labels; fda-label-fortamet-metformin-er-2026 is used as the current class label. The immediate-release administration text here (take with meals) is the last RLD text for immediate release and still describes how that formulation is taken.

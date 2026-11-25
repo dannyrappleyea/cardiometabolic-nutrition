@@ -13,18 +13,18 @@ domains:
 - medicines
 edition: SUPPL-35 (revised 2019-12)
 edition_check:
-  date: '2026-11-24'
-  searched: Drugs@FDA label files in web search (s000 2012, s035 2019); no later label surfaced in results
-  result: current
-  newer: null
+  date: 2026-11-25
+  searched: 'Drugs@FDA label files in web search (s000 2012, s035 2019); no later label surfaced in results; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-vascepa-icosapent-ethyl-2026
 population_limits:
 - CV indication limited to adults on statins with TG 150 or more and established CVD or diabetes plus 2 risk factors
 identifiers:
   doi: null
   pmid: null
   url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/202057s035lbl.pdf
-status: background
-superseded_by: null
+status: superseded
+superseded_by: fda-label-vascepa-icosapent-ethyl-2026
 topics: []
 funding_conflicts: Manufacturer label (regulator-approved)
 verified:
@@ -49,4 +49,4 @@ findings:
   grade: null
 limitations: null
 reviewer_read: false
-notes: null
+notes: Superseded 2026-11-25 by the 03/2026 label (Drugs@FDA S-058). The 2026-11-24 edition check, based on search listings, was wrong.

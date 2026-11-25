@@ -1,0 +1,37 @@
+id: esc-cvd-ckd-guideline-press-release-2026
+title: New ESC Guidelines recommend all patients with heart disease are tested for kidney disease (ESC press release)
+authors: []
+organization: European Society of Cardiology
+year: 2026
+publication: escardio.org press release, 2026-08-28
+type: expert-explainer
+tier: "6"
+jurisdiction: eu
+authority: esc
+domains: [kidney, medicines]
+edition: null
+edition_check: null
+population_limits: []
+identifiers:
+  doi: null
+  pmid: null
+  url: https://escardio.org/news/press/press-releases/new-esc-guidelines-recommend-all-patients-with-heart-disease-are-tested-for-kidney-disease/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole release
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Announces the first ESC guideline on cardiovascular disease and CKD, developed with the European Renal Association, and lists its key messages - CKD screening in everyone with CVD (eGFR and UACR), risk triage, early RAS and SGLT2 inhibitors with statin-based therapy, adapting CVD treatment to kidney function, and joined-up cardiology and nephrology services.
+    locator: Whole release
+    population: null
+    grade: null
+limitations: Press release only; no diet content.
+reviewer_read: false
+notes: null

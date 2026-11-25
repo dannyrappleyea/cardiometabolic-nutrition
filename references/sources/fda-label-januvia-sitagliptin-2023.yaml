@@ -13,10 +13,10 @@ domains:
 - medicines
 edition: SUPPL-53 (revised 2023-12; posted 2024)
 edition_check:
-  date: '2026-11-24'
-  searched: Drugs@FDA label files (s019 2012, s053 2024) and DailyMed listings in web search; s053 is the newest Drugs@FDA file found
-  result: current
-  newer: null
+  date: 2026-11-25
+  searched: Drugs@FDA label files in search results (s019 2012, s053 2024; no later file found); DailyMed set IDs 4a758211-8af1-449b-9a10-f3d67d7ec8b6 and 194c3718-5eb5-4cf5-85d0-2bb1ed8293b8 (A-S Medication Solutions repackager copies, highlights revised 7/2026) and FDALabel set ID 9d558f96-24a5-4788-8933-38256c17384b (Cardinal Health repackager, SPL v15, 2025-11-05) opened; Merck's own SPL was not found
+  result: newer-not-recorded
+  newer: "JANUVIA brand text revised 7/2026, seen only in repackager SPLs; Merck's SPL and the matching Drugs@FDA supplement could not be found, so it is not recorded as a source. In the 7/2026 copies, with-or-without-food dosing (§2) and the pancreatitis and hypoglycemia warnings (§5) read the same as below; the Medication Guide was not reached."
 population_limits:
 - Type 2 diabetes only
 identifiers:
@@ -45,4 +45,4 @@ findings:
   grade: null
 limitations: null
 reviewer_read: false
-notes: null
+notes: Re-verified 2026-11-25 after review. Not current - a 7/2026 revision exists - but kept unsuperseded because no reference-listed-drug copy of it could be opened (METHODS §5 prefers the RLD label over repackager copies). Topic research must open Merck's current SPL before relying on this record.

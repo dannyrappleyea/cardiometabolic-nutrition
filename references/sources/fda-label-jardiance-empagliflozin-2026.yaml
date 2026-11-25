@@ -14,18 +14,18 @@ domains:
 - medicines
 edition: Revised 2026-01 (DailyMed updated 2026-02-17)
 edition_check:
-  date: '2026-11-24'
-  searched: DailyMed and FDALabel listings for Jardiance in web search (several set IDs; Drugs@FDA 2016 s012 and 2023 s041 labels); the DailyMed copy revised 2026-01 is the newest found, but it is a repackager listing of the brand text
-  result: current
-  newer: null
+  date: 2026-11-25
+  searched: 'DailyMed and FDALabel listings for Jardiance in web search (several set IDs; Drugs@FDA 2016 s012 and 2023 s041 labels); the DailyMed copy revised 2026-01 is the newest found, but it is a repackager listing of the brand text; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-jardiance-empagliflozin-boehringer-2026
 population_limits:
 - Repackager listing of the brand label text; confirm against the Boehringer Ingelheim SPL in topic research
 identifiers:
   doi: null
   pmid: null
   url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5777b8a8-ada6-4950-8548-43a1de11f075
-status: background
-superseded_by: null
+status: superseded
+superseded_by: fda-label-jardiance-empagliflozin-boehringer-2026
 topics: []
 funding_conflicts: Manufacturer label (regulator-approved)
 verified:
@@ -50,4 +50,4 @@ findings:
   grade: null
 limitations: null
 reviewer_read: false
-notes: null
+notes: Superseded 2026-11-25 by the Boehringer Ingelheim SPL (reference listed drug labeler) of the same brand text; this record was a repackager copy.

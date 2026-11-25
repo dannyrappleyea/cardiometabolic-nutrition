@@ -10,7 +10,11 @@ jurisdiction: us-professional
 authority: aha-acc
 domains: [general-nutrition, lipids, blood-pressure, weight]
 edition: "2021"
-edition_check: null
+edition_check:
+  date: 2026-11-25
+  searched: AHA professional statement pages and AHA news release for the 2026 statement
+  result: newer-recorded
+  newer: aha-dietary-guidance-cardiovascular-health-2026
 population_limits:
   - "General adult population for cardiovascular health; not condition-specific"
   - "Not checked in the statement itself (read through a summary)"
@@ -18,8 +22,8 @@ identifiers:
   doi: null
   pmid: "34724806"
   url: https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/11/23/19/45/2021-dietary-guidance-to-improve
-status: background
-superseded_by: null
+status: superseded
+superseded_by: aha-dietary-guidance-cardiovascular-health-2026
 topics: []
 funding_conflicts: Not checked
 verified:
@@ -40,4 +44,4 @@ findings:
     grade: null
 limitations: Known through a summary only.
 reviewer_read: false
-notes: null
+notes: Superseded by the 2026 AHA dietary statement (pointed out in Copilot review of PR #5). Kept as the record of what discovery rows D80-D81 saw.

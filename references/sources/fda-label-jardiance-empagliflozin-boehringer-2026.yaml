@@ -1,0 +1,50 @@
+id: fda-label-jardiance-empagliflozin-boehringer-2026
+title: JARDIANCE (empagliflozin) tablets - US prescribing information (Boehringer Ingelheim SPL version 31)
+authors: []
+organization: Boehringer Ingelheim Pharmaceuticals Inc (label approved by US FDA)
+year: 2026
+publication: FDALabel SPL, set ID faf3dd6a-9cd0-39c2-0d2e-232cb3f67565, NDA 204629
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [glycemia, kidney, medicines]
+edition: SPL version 31 (effective 2026-01-30); Recent Major Change §5.3 dated 10/2025
+edition_check:
+  date: 2026-11-25
+  searched: DailyMed and FDALabel listings for Jardiance in search results (Boehringer set ID plus several repackager set IDs; Drugs@FDA files s012 2016 and s041 2023); Boehringer's own SPL opened
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug label (brand labeler). Glycemic indication for type 2 diabetes; also labeled for heart failure and CKD indications outside this cohort's core"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/faf3dd6a-9cd0-39c2-0d2e-232cb3f67565/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: partial
+  sections_read: "First 100k of 318k characters: highlights, §1-§6 and the start of §7; §8-§17 (including §12.3 food effect and §17 counseling) not read"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Taken once daily in the morning with or without food; it should be withheld at least 3 days before surgery or procedures needing prolonged fasting where possible, and restarted once the person is stable and eating.
+    locator: §2
+    population: null
+    grade: null
+  - claim: Ketoacidosis can occur even without marked high glucose; precipitating factors include reduced caloric intake, ketogenic diet, surgery, acute illness, volume depletion and alcohol abuse.
+    locator: §5.1
+    population: null
+    grade: null
+  - claim: Can cause volume depletion and low blood pressure, more so with eGFR under 60, in older adults and with loop diuretics; urinary and genital infections are more common; urine glucose tests turn positive and should not be used for monitoring; hypoglycemia risk rises with insulin or secretagogues.
+    locator: §5.2; §5.3; §7
+    population: null
+    grade: null
+limitations: §12.3 (food effect) and §17 not read in this version; the repackager copy recorded earlier reported a modest, clinically unimportant high-fat meal effect.
+reviewer_read: false
+notes: Supersedes fda-label-jardiance-empagliflozin-2026 (Cardinal Health repackager copy of the same brand text).

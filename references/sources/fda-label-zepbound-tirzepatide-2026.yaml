@@ -11,18 +11,18 @@ authority: fda
 domains: [weight, glycemia, medicines]
 edition: SUPPL-50 (revised 2026-04)
 edition_check:
-  date: 2026-11-24
-  searched: Drugs@FDA label files for NDA 217806 in web search (s000 2023 through s041, s042 and s050 in 2026); s050 is the highest supplement listed; DailyMed and Lilly links also in results
-  result: current
-  newer: null
+  date: 2026-11-25
+  searched: 'Drugs@FDA label files for NDA 217806 in web search (s000 2023 through s041, s042 and s050 in 2026); s050 is the highest supplement listed; DailyMed and Lilly links also in results; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-zepbound-tirzepatide-dailymed-2026
 population_limits:
   - "Adults with obesity, or overweight plus a weight-related condition; OSA with obesity. Mounjaro (same molecule, type 2 diabetes) has a separate label not opened"
 identifiers:
   doi: null
   pmid: null
   url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806Orig1s050lbl.pdf
-status: background
-superseded_by: null
+status: superseded
+superseded_by: fda-label-zepbound-tirzepatide-dailymed-2026
 topics: []
 funding_conflicts: Manufacturer label (regulator-approved)
 verified:
@@ -51,4 +51,4 @@ findings:
     grade: null
 limitations: null
 reviewer_read: false
-notes: null
+notes: Superseded 2026-11-25 by the Lilly label revised 11/2026 (DailyMed). Weight-loss size and regain-after-withdrawal findings here are from SUPPL-50 and were not re-read in the newer version.

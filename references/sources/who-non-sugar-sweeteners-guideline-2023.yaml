@@ -26,12 +26,12 @@ identifiers:
 status: background
 superseded_by: null
 topics: []
-funding_conflicts: Not checked
+funding_conflicts: Not stated on the WHO pages read
 verified:
-  date: 2026-11-24
-  method: fetched-full-text
+  date: 2026-11-25
+  method: fetched-landing-page
   scope: summary
-  sections_read: WHO news release announcing the guideline (the NCBI Bookshelf copy returned a reCAPTCHA page)
+  sections_read: WHO publication landing page (opened 2026-11-25; overview only, recommendation text not on the page) and WHO news release announcing the guideline (opened 2026-11-24); the NCBI Bookshelf copy returned a reCAPTCHA page and the downloadable guideline was not opened
   read_via: null
   by: Claude Opus 5.5 (claude-opus-5-5)
 findings:
@@ -43,6 +43,10 @@ findings:
     locator: News release
     population: null
     grade: null
-limitations: Known through WHO's own release; guideline text not read. Population limit matters - ADA and EASD (written for people with diabetes) allow sweeteners as sugar replacements, which is not a direct contradiction.
+  - claim: The guideline is aimed at policymakers, does not assess the safety of individual sweeteners and does not replace intake limits set by JECFA or other food-safety bodies.
+    locator: WHO publication page, overview
+    population: null
+    grade: null
+limitations: Known through WHO's own release and publication page; guideline text not read. Population limit matters - ADA and EASD (written for people with diabetes) allow sweeteners as sugar replacements, which is not a direct contradiction.
 reviewer_read: false
-notes: null
+notes: verified.method corrected 2026-11-25 from fetched-full-text (the item read was a news release, not the guideline).

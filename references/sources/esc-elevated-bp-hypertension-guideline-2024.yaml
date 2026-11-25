@@ -28,10 +28,10 @@ superseded_by: null
 topics: []
 funding_conflicts: Declarations of interest are published by ESC as a supplementary document; not read in this run
 verified:
-  date: 2026-11-24
+  date: 2026-11-25
   method: fetched-full-text
   scope: partial
-  sections_read: "Contents; §2 Introduction; §7.5 onward through §8.7.1 (incl. §8.2 lifestyle, Recommendation Table 15, §8.4 categories, Tables 17-18 targets); §8.5.3-§9.13 (special groups incl. CKD, resistant hypertension); §10 acute BP lowering; §14 what-to-do messages. Not read: §3-§6 body, §7.1-7.4, §11-13 and appendix. Publisher PDF read from an institutional repository copy (first 460k of 720k characters, in parts)."
+  sections_read: "Contents; §2 Introduction; §7.5 onward through §8.7.1 (incl. §8.2 lifestyle, Recommendation Table 15, §8.4 categories, Tables 17-18 targets); §8.5.3-§9.13 (special groups incl. CKD, resistant hypertension); §10 acute BP lowering; §14 what-to-do messages; re-read 2026-11-25: §7.5-§7.6 and Table 11 (chars 100k-200k), §8.3.4, §9.13.1-§9.13.3 and §10.1.1 (chars 200k-400k). Not read: §3-§6 body, §7.1-7.4, §11-13 and appendix. Publisher PDF read from an institutional repository copy (first 460k of 720k characters, in parts)."
   read_via: null
   by: Claude Opus 5.5 (claude-opus-5-5)
 findings:
@@ -51,8 +51,12 @@ findings:
     locator: §8.2 text pp. 3956-3957
     population: null
     grade: null
-  - claim: Resistant hypertension is BP above goal despite three or more drugs of different classes at maximally tolerated doses, one being a diuretic; a hypertensive emergency is BP of 180/110 or higher with acute organ damage.
-    locator: §9.13.1 (p. 3980), Table 11; §10.1.1 (p. 3983)
+  - claim: Resistant hypertension is office BP of 140/90 mmHg or more, confirmed by home or ambulatory monitoring, despite lifestyle measures and maximum or maximally tolerated doses of three drug classes - a thiazide or thiazide-like diuretic, a RAS blocker and a calcium channel blocker (an up-titrated loop diuretic if eGFR is under 30) - after pseudo-resistance is excluded (poor adherence, white-coat effect, poor measurement technique, arterial calcification, clinician inertia); excess sodium and alcohol are listed among behavioural causes of true resistance.
+    locator: §7.5 (pp. 3948-3950) and Table 11; §8.3.4 (p. 3959); §9.13.1 (p. 3980) and Figure 22
+    population: Adults with hypertension
+    grade: null
+  - claim: A hypertensive emergency is BP of 180/110 mmHg or more with acute hypertension-mediated organ damage (for example aortic dissection, myocardial ischaemia, acute heart failure or malignant hypertension), often with symptoms; at that level an emergency should be excluded.
+    locator: §10.1.1 (p. 3983); Table 15 what-to-do messages
     population: Adults
     grade: null
   - claim: Systolic treatment target of 120-129 mmHg for most treated adults (I/A), with lenient targets for age 85 or older, frailty or symptomatic orthostatic hypotension.
