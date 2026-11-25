@@ -49,6 +49,20 @@
               "null"
             ],
             "description": "Required when topics is empty: why no topic"
+          },
+          "canonical_topic": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The one topic that asks the questions about this item; other topics that mention it must depend on it"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Other names for this item as they appear in topic questions (used to find questions that mention it)"
           }
         }
       }
@@ -85,6 +99,20 @@
               "null"
             ],
             "description": "Required when topics is empty: why no topic"
+          },
+          "canonical_topic": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The one topic that asks the questions about this item; other topics that mention it must depend on it"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Other names for this item as they appear in topic questions (used to find questions that mention it)"
           }
         }
       }
@@ -121,6 +149,20 @@
               "null"
             ],
             "description": "Required when topics is empty: why no topic"
+          },
+          "canonical_topic": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The one topic that asks the questions about this item; other topics that mention it must depend on it"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Other names for this item as they appear in topic questions (used to find questions that mention it)"
           }
         }
       }
@@ -157,6 +199,20 @@
               "null"
             ],
             "description": "Required when topics is empty: why no topic"
+          },
+          "canonical_topic": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The one topic that asks the questions about this item; other topics that mention it must depend on it"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Other names for this item as they appear in topic questions (used to find questions that mention it)"
           }
         }
       }

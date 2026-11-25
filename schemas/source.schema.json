@@ -22,11 +22,14 @@
       "properties": {
         "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
         "searched": {"type": "string", "minLength": 3},
-        "result": {"enum": ["current", "newer-recorded", "newer-not-recorded"]},
-        "newer": {"type": ["string", "null"]}
+        "result": {"enum": ["current", "newer-recorded", "newer-not-recorded", "not-determined"]},
+        "newer": {"type": ["string", "null"]},
+        "evidence_url": {"type": ["string", "null"], "pattern": "^https?://", "description": "Page that lists the latest edition: for drug labels, the Drugs@FDA application overview or the DailyMed SPL of the label used"},
+        "listed_latest": {"type": ["string", "null"], "description": "Latest edition as that page lists it, e.g. 'SUPPL-58 (2026-03-16)' or 'Revised 3/2026'"}
       },
       "additionalProperties": false
     },
+    "label_role": {"enum": ["rld", "reference-standard", "manufacturer-site", "repackager", "other", null], "description": "Drug labels only: which copy of the label this is (playbooks/01-discover.md step 4)"},
     "population_limits": {"type": ["array", "null"], "items": {"type": "string"}},
     "identifiers": {
       "type": "object",
