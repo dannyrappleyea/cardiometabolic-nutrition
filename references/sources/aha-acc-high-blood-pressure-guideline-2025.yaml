@@ -16,7 +16,7 @@ edition_check:
   result: current
   newer: null
 population_limits:
-  - "Not checked in the guideline text: full text could not be opened (publisher sites refused the request; not open access in Europe PMC)"
+  - "Not checked in the guideline text: full text could not be fetched in this session (publisher sites refused the request; Europe PMC did not offer a free full text)"
 identifiers:
   doi: 10.1161/HYP.0000000000000249
   pmid: "40811516"

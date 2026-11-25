@@ -16,7 +16,7 @@ edition_check:
   result: current
   newer: null
 population_limits:
-  - "Not checked in the guideline text (full text not open access; publisher site refused earlier fetches of ACC/AHA guideline full texts)"
+  - "Not checked in the guideline text (full text could not be fetched in this session; publisher sites refused the fetch)"
   - "Per the AHA news release, the PREVENT-ASCVD risk equations apply to adults 30-79 without known ASCVD"
 identifiers:
   doi: 10.1016/j.jacc.2025.11.016
