@@ -1,7 +1,7 @@
 # Scope threshold check — produced by playbooks/01-discover.md step 1.
 # One row per threshold in SCOPE.md §3–5, exactly as SCOPE states it. Schema: schemas/scope-check.schema.json.
 # Categorical items (conditions with no number) are listed too, so every line of §3–5 has a row.
-checked: "2026-11-24"
+checked: "2026-11-25"
 by: Claude Opus 5.5 (claude-opus-5-5)
 thresholds:
   # ---------------- §3 Inclusion ----------------
@@ -24,7 +24,7 @@ thresholds:
   - ref: "§3 Blood pressure"
     threshold: "Elevated through stage 2: systolic 120–179 and/or diastolic 80–119 mmHg (office or home average), treated or untreated"
     status: disagrees
-    sources: [aha-high-bp-top-10-2025, esc-elevated-bp-hypertension-guideline-2024, ada-standards-cvd-risk-management-2026]
+    sources: [aha-high-bp-top-10-2025, esc-elevated-bp-hypertension-guideline-2024, ada-standards-cvd-risk-management-2026, hypertension-canada-primary-care-guideline-2025, nice-hypertension-ng136-2026]
     proposed: >-
       Keep the range but name its basis: "systolic 120–179 and/or diastolic 80–119 mmHg (ACC/AHA 2025 categories:
       elevated 120–129/<80, stage 1 130–139 or 80–89, stage 2 ≥140 or ≥90). Under ESC 2024 'elevated BP' is
@@ -34,6 +34,10 @@ thresholds:
       confirmed: ESC 2024 full text §2 and §8.4; ADA 2026 Rec 10.1 (diabetes uses 130/80). The ACC/AHA 2025 categories
       come from AHA's own public summary page; the guideline full text could not be opened (publisher refused), so the
       US side rests on the issuing body's summary. The disagreement is only the diastolic lower bound (ESC 70 vs SCOPE 80).
+      Added in review: Hypertension Canada 2025 (full text) also defines hypertension as 130/80 or more, confirmed out of
+      office; NICE NG136 (UK) uses clinic 140/90 confirmed by home or ambulatory 135/85. So the 130/80 cut-off is shared by
+      the US and Canada, and the 140/90 cut-off by ESC and NICE. This is mainly a clarification of which classification
+      SCOPE uses, not a change to the range.
   - ref: "§3 Glycemia"
     threshold: "Prediabetes (A1C 5.7–6.4%, or the fasting/OGTT equivalent)"
     status: verified
@@ -46,21 +50,23 @@ thresholds:
   - ref: "§3 Glycemia"
     threshold: "type 2 diabetes with A1C below ~9.0%"
     status: unverified
-    sources: [ada-standards-diagnosis-classification-2026]
+    sources: [ada-standards-diagnosis-classification-2026, ada-standards-pharmacologic-glycemic-2026]
     proposed: null
     note: >-
       Diabetes itself is verified (A1C ≥6.5%, ADA Table 2.1). No opened source defines 9.0% as a boundary for diet
-      advice; ADA §9 (pharmacologic approaches), where A1C-based treatment-intensification thresholds would sit, was
-      not opened, and a drug-intensification threshold would serve a different purpose anyway.
+      advice. ADA §9, opened in the review round, uses different numbers for a different purpose (drug treatment):
+      insulin is considered at A1C above 10% or with symptoms (Rec 9.20), and starting two drugs at 1.5-2.0 points above
+      the person's goal. Treat 9.0% as a design choice unless the maintainer has a defining source.
   - ref: "§3 Glycemia notes"
     threshold: "Not using insulin or medicines that commonly cause hypoglycemia (see §5)"
     status: verified
-    sources: [ada-standards-positive-health-behaviors-2026, fda-label-jardiance-empagliflozin-2026, fda-label-januvia-sitagliptin-2023, fda-label-glucophage-metformin-2018]
+    sources: [ada-standards-positive-health-behaviors-2026, ada-standards-pharmacologic-glycemic-2026, fda-label-jardiance-empagliflozin-boehringer-2026, fda-label-januvia-sitagliptin-2023, fda-label-fortamet-metformin-er-2026]
     proposed: null
     note: >-
       ADA Recs 5.19 and 5.27-5.28 give insulin/secretagogue users distinct advice (delayed hypoglycemia after alcohol,
-      carbohydrate counting, consistent carbohydrate with fixed insulin); several labels say hypoglycemia risk rises
-      when combined with insulin or sulfonylureas.
+      carbohydrate counting, consistent carbohydrate with fixed insulin); ADA Rec 9.17 names sulfonylureas, meglitinides
+      and insulin as the agents with higher hypoglycemia risk; several labels say hypoglycemia risk rises when combined
+      with insulin or sulfonylureas.
   - ref: "§3 Lipids"
     threshold: "LDL-C 100–189 mg/dL"
     status: unverified
@@ -74,10 +80,10 @@ thresholds:
   - ref: "§3 Lipids"
     threshold: "triglycerides 150–499 mg/dL"
     status: verified
-    sources: [ada-standards-cvd-risk-management-2026, esc-eas-dyslipidaemias-guideline-2019, fda-label-vascepa-icosapent-ethyl-2019]
+    sources: [ada-standards-cvd-risk-management-2026, esc-eas-dyslipidaemias-guideline-2019, fda-label-vascepa-icosapent-ethyl-2026]
     proposed: null
     note: >-
-      ADA Recs 10.15/10.30: fasting TG ≥150 mg/dL (non-fasting >175) is hypertriglyceridemia; ≥500 handled separately
+      ADA Rec 10.15 (TG ≥150 mg/dL) and Rec 10.30 (fasting >150 or non-fasting >175 mg/dL; locator re-checked in review); ≥500 handled separately
       (Rec 10.29). ESC/EAS 2019: fasting TG >1.7 mmol/L (150 mg/dL) raises risk and uses a 135-499 mg/dL band for
       icosapent ethyl. Topics should note the non-fasting 175 mg/dL cut-off.
   - ref: "§3 Lipids"
@@ -119,11 +125,13 @@ thresholds:
       diabetes screening in Asian Americans (a different purpose). SCOPE's wording covers only "Asian ancestry".
   - ref: "§3 Body size"
     threshold: "or a waist above the sex-specific cut-off"
-    status: verified
+    status: unverified
     sources: [esc-elevated-bp-hypertension-guideline-2024, nice-overweight-obesity-management-ng246-2025]
     proposed: null
     note: >-
-      ESC 2024 Rec Table 15 uses waist <94 cm (men) and <80 cm (women) as targets. For the reviewer: NICE NG246 uses a
+      Downgraded from verified in review: ESC 2024 Rec Table 15 gives waist <94 cm (men) and <80 cm (women) as lifestyle
+      targets, which is a different purpose from an inclusion cut-off, and no source that defines a sex-specific waist
+      cut-off for diagnosis was opened. For the reviewer: NICE NG246 uses a
       waist-to-height ratio (≥0.5 increased, ≥0.6 high) instead of sex-specific waist cut-offs; SCOPE could allow either.
       The harmonized metabolic-syndrome waist definitions were not opened.
   - ref: "§3 Body size"
@@ -134,10 +142,19 @@ thresholds:
     note: Cohort-design rule; nothing to verify.
   - ref: "§3 Kidneys"
     threshold: "eGFR ≥60 and UACR <30 mg/g, or not yet tested"
-    status: verified
-    sources: [kdigo-ckd-guideline-2024]
-    proposed: null
-    note: KDIGO 2024 Tables 1-3 - CKD is eGFR <60 or ACR ≥30 mg/g for >3 months; G1-G2 ≥60 and A1 <30 mg/g define the no-CKD range. ACC/AHA 2025 now recommends UACR testing for everyone with high blood pressure (via journal scan), which supports SCOPE's "find out" step.
+    status: disagrees
+    sources: [kdigo-ckd-guideline-2024, esc-era-cvd-ckd-guideline-2026, acc-hbp-guideline-journal-scan-2025]
+    proposed: >-
+      "eGFR ≥60 and UACR <30 mg/g with no other known marker of kidney damage (KDIGO 2024 Table 1: urine sediment
+      abnormalities, persistent hematuria, tubular disorders, abnormal histology or imaging, kidney transplant), or not
+      yet tested. 'Not yet tested' means kidney status is unknown, not that CKD is absent." Wording is for the maintainer.
+    note: >-
+      Corrected in review (Copilot). The numeric categories are right: KDIGO G1-G2 is eGFR ≥60 and A1 is ACR <30 mg/g
+      (Tables 2-3). But KDIGO defines CKD as eGFR <60 or any persistent marker of kidney damage for more than 3 months
+      (Table 1, p. S137), so eGFR ≥60 with UACR <30 does not by itself rule CKD out, and an untested person's status is
+      unknown. ACC/AHA 2025 (via journal scan) recommends UACR testing for everyone with high blood pressure, and the 2026
+      ESC/ERA guideline (via press release) recommends eGFR and UACR testing in everyone with CVD, which supports SCOPE's
+      "find out" step.
   - ref: "§3 Medications"
     threshold: "any combination of medicines commonly prescribed for these conditions, except those in §5"
     status: unverified
@@ -184,9 +201,20 @@ thresholds:
   - ref: "§4 Resistant hypertension"
     threshold: "Resistant hypertension (above goal on three or more drug classes)."
     status: disagrees
-    sources: [esc-elevated-bp-hypertension-guideline-2024, ada-standards-cvd-risk-management-2026]
-    proposed: "Resistant hypertension (above goal despite three or more drug classes at maximally tolerated doses, one of which is a diuretic)."
-    note: ESC 2024 §9.13.1 and Table 11 require one of the three to be a diuretic at maximally tolerated doses. The ACC/AHA 2025 definition was not seen (full text not opened).
+    sources: [esc-elevated-bp-hypertension-guideline-2024, hypertension-canada-primary-care-guideline-2025, nice-hypertension-ng136-2026, ada-standards-cvd-risk-management-2026]
+    proposed: >-
+      "Resistant hypertension: office BP ≥140/90 mmHg, confirmed by home or ambulatory monitoring, despite lifestyle
+      measures and maximally tolerated doses of three or more drug classes including a diuretic, after pseudo-resistance
+      (non-adherence, white-coat effect, poor measurement technique) has been excluded (ESC 2024 §7.5, Table 11,
+      §9.13.1)." The maintainer should choose between this threshold-based wording and the target-based wording below.
+    note: >-
+      Re-read in review (Copilot). ESC 2024 defines resistant hypertension as office BP ≥140/90 confirmed out of office
+      on maximum or maximally tolerated doses of a thiazide or thiazide-like diuretic, a RAS blocker and a calcium channel
+      blocker, after pseudo-resistance is excluded (§7.5, Table 11, p. 3948-3950; §9.13.1 and Figure 22). SCOPE's "above
+      goal" is broader than ESC's when a person's goal is below 140/90. Authorities differ: Hypertension Canada 2025 uses
+      "above target" (its systolic target is <130) despite adherence to triple therapy at maximally tolerated doses, and
+      NICE NG136 uses "uncontrolled" on optimal tolerated ACEi/ARB, CCB and thiazide-like diuretic, confirmed by ABPM or
+      HBPM with adherence discussed. The ACC/AHA 2025 definition was not seen (full text not fetched).
   - ref: "§4 Liver"
     threshold: "Fatty liver disease without cirrhosis."
     status: verified
@@ -214,14 +242,18 @@ thresholds:
     note: Categorical. Supporting context only - statin and ACE-inhibitor labels advise stopping when pregnancy is recognized, and the ESC/AHA pages use separate pregnancy BP categories.
   - ref: "§5 Diabetes type and treatment"
     threshold: "Type 1 diabetes, LADA, or any diabetes treated with insulin, sulfonylureas or meglitinides (hypoglycemia risk changes the dietary advice)."
-    status: verified
-    sources: [ada-standards-positive-health-behaviors-2026, fda-label-zepbound-tirzepatide-2026, fda-label-actos-pioglitazone-2025]
+    status: unverified
+    sources: [ada-standards-positive-health-behaviors-2026, ada-standards-pharmacologic-glycemic-2026, fda-label-zepbound-tirzepatide-dailymed-2026, fda-label-actos-pioglitazone-2025]
     proposed: null
-    note: Rationale confirmed (ADA Recs 5.19, 5.27-5.28; labels report higher hypoglycemia rates with sulfonylureas or insulin). LADA and meglitinides are not named in the parts read.
+    note: >-
+      Downgraded from verified in review: this is a categorical exclusion and no source defines it as such. The stated
+      rationale is supported - ADA Recs 5.19 and 5.27-5.28 give insulin and secretagogue users different dietary advice,
+      ADA Rec 9.17 names sulfonylureas, meglitinides and insulin as higher-hypoglycemia-risk agents, and labels report
+      more hypoglycemia with insulin or sulfonylureas. Type 1 diabetes and LADA were not checked against a defining source.
   - ref: "§5 Triglycerides"
     threshold: "Triglycerides ≥500 mg/dL (a distinct dietary approach applies)."
     status: verified
-    sources: [ada-standards-cvd-risk-management-2026, fda-label-tricor-fenofibrate-2025, fda-label-vascepa-icosapent-ethyl-2019, acc-dyslipidemia-guideline-journal-scan-2026]
+    sources: [ada-standards-cvd-risk-management-2026, fda-label-tricor-fenofibrate-2025, fda-label-vascepa-icosapent-ethyl-2026, acc-dyslipidemia-guideline-journal-scan-2026]
     proposed: null
     note: >-
       ADA Rec 10.29 and the fenofibrate and icosapent ethyl labels use ≥500 mg/dL for severe hypertriglyceridemia; ADA
@@ -254,13 +286,17 @@ thresholds:
     note: Categorical; not checked.
   - ref: "§5 Blood pressure"
     threshold: "Hypertensive crisis (≥180/120 mmHg) at any time without a clinician's plan."
-    status: disagrees
-    sources: [aha-high-bp-top-10-2025, esc-elevated-bp-hypertension-guideline-2024]
+    status: unverified
+    sources: [aha-high-bp-top-10-2025, esc-elevated-bp-hypertension-guideline-2024, nice-hypertension-ng136-2026]
     proposed: >-
-      "Severe hypertension (systolic above 180 and/or diastolic above 120 mmHg; a hypertensive emergency if symptoms
-      or organ damage) at any time without a clinician's plan", citing ACC/AHA 2025; note ESC 2024 defines a
-      hypertensive emergency at ≥180/110 with acute organ damage.
+      Suggestion only; the maintainer decides the wording. Exclude (a) severe hypertension of about 180/120 mmHg or more
+      at any time without a clinician's plan, and (b) any hypertensive emergency, defined independently of that cut-off -
+      ESC 2024 uses 180/110 mmHg or more with acute organ damage, so someone at 180/110-119 with organ damage would be
+      excluded even though they are below 120 diastolic.
     note: >-
-      AHA's 2025 summary uses "severe hypertension" and "hypertensive emergency" (>180 and/or >120) rather than
-      "crisis"; ESC uses ≥180/110 for emergencies. The US numbers come from the issuing body's summary page because the
-      guideline full text could not be opened, so this proposal should be confirmed against the full text.
+      Downgraded from disagrees in review. The US terms ("severe hypertension" and "hypertensive emergency", >180 and/or
+      >120) come only from AHA's summary page because the 2025 guideline text could not be fetched, so the US side is
+      unverified. NICE NG136 (UK, full recommendations) calls clinic BP of 180/120 or more "severe hypertension" and
+      sends it for same-day assessment when there are retinal changes or life-threatening symptoms. ESC 2024 defines a
+      hypertensive emergency as 180/110 or more with acute hypertension-mediated organ damage (§10.1.1), a different
+      construct from SCOPE's "crisis without a clinician's plan". None of these uses the word "crisis".
