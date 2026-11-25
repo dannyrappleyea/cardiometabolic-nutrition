@@ -1,5 +1,6 @@
 # Topic map — produced by playbooks/01-discover.md, approved by a human reviewer.
-# Schema: schemas/topic-map.schema.json. First discovery run 2026-11-24 (branch discover/2026-11-24).
+# Schema: schemas/topic-map.schema.json. Second discovery run 2026-11-24 (branch discover/2026-11-24; the first
+# run was PR #2), revised 2026-11-25 after Copilot review and an independent evaluation of PR #5.
 # Every topic lists questions, not answers. D# refers to rows in research/_plan/discovery-log.md.
 version: 1
 generated: "2026-11-24"
@@ -7,8 +8,15 @@ generated_by: Claude Opus 5.5 (claude-opus-5-5)
 approved: null
 calendar:
   - {source_or_authority: ada, next_edition: "2026-12", note: "Standards of Care are issued yearly; the 2026 edition appeared online in December 2025, so a 2027 edition is expected around December 2026 (inference from the edition pattern)."}
-  - {source_or_authority: aha-acc, next_edition: null, note: "2025 BP and 2026 dyslipidemia guidelines are new; their full texts still need to be read (not opened in this run)."}
+  - {source_or_authority: aha-acc, next_edition: null, note: "2025 BP and 2026 dyslipidemia guidelines are new; their full texts still need to be read. AHA dietary guidance was replaced in March 2026 (2021 -> 2026 statement); check AHA's statements index, not only same-title searches, for newer statements on the same subject."}
   - {source_or_authority: usda-hhs, next_edition: "2030-12", note: "Dietary Guidelines for Americans run on five-year cycles (2025-2030 edition current)."}
+  - {source_or_authority: kdigo, next_edition: null, note: "CKD guideline 2024; KDIGO re-posted its summary in May 2026. Check kdigo.org before each kidney topic update."}
+  - {source_or_authority: esc, next_edition: null, note: "Hypertension 2024, dyslipidaemia 2019 plus 2025 focused update, CVD-CKD (with ERA) 2026. ESC publishes new guidelines each August at its Congress; check after each Congress."}
+  - {source_or_authority: easd, next_edition: null, note: "DNSG dietary recommendations 2023; no update schedule found. Check before the pattern and carbohydrate topics."}
+  - {source_or_authority: nice, next_edition: null, note: "NG136 last updated February 2026, NG246 amended 2026, PH38 2017. NICE amends guidelines in place; check each guideline's Update information page."}
+  - {source_or_authority: who, next_edition: null, note: "Non-sugar sweeteners 2023 and salt substitutes 2025; other WHO nutrient guidelines not yet opened. Check WHO's nutrition guideline list."}
+  - {source_or_authority: hypertension-canada, next_edition: null, note: "2025 primary care guideline says a comprehensive guideline will follow; check hypertension.ca."}
+  - {source_or_authority: fda, next_edition: null, note: "Fast-moving labels: GLP-1 and GIP/GLP-1 drugs (Zepbound revised four times in 2026), SGLT2 inhibitors, metformin (boxed warning revised 8/2026) and any newly approved drug. Re-check these on Drugs@FDA or DailyMed within a week of each medication topic PR."}
 topics:
   # ---------------- Foundations ----------------
   - id: targets-clinical-goals
@@ -23,15 +31,19 @@ topics:
       - Roughly how much can diet and weight change alone move each number, according to the guidelines' own effect estimates?
       - How should home blood pressure, A1C and lipid results be measured and interpreted (fasting vs non-fasting lipids, A1C limitations) when judging whether diet is working?
       - How long after a diet change should each number be rechecked?
-      - Which numbers (for example kidney function, potassium, vitamin B12) need monitoring because of medicines the cohort commonly takes?
+      - Which numbers (for example kidney function and potassium) need monitoring because of medicines the cohort commonly takes?
+      - How much energy do adults in this cohort need by age, sex and activity, and which reference intakes (such as dietary reference intakes for sodium and potassium) do the nutrient topics build on?
     rationale: >-
       Every other topic needs a shared statement of targets. Opened guidelines set categories and goals that differ by
       jurisdiction and population: BP categories and targets (D5, D9, D14), prediabetes and diabetes criteria with A1C
       limitations (D11, D100), LDL-C/non-HDL-C goals reinstated in the 2026 US guideline and ESC goals (D18, D22), BMI and
       waist-to-height cut-offs (D26), and CKD staging (D28). ESC and ESC/EAS give effect sizes for diet levers (D9 weight
       and BP; D22 Table 8 for lipids). Labels require potassium and B12 monitoring (D50, D56). The US 2025 BP guideline
-      full text could not be opened (D2), so this topic must retry it.
-    discovered_via: [D2, D5, D9, D11, D14, D18, D22, D26, D28, D50, D56, D100]
+      full text could not be fetched (D2), so this topic must retry it. Energy and reference intakes: NASEM sets sodium
+      and potassium reference intakes (D94), NICE frames weight loss as an energy deficit (D26), AHA's 2026 statement
+      starts from energy balance (D103), and Hypertension Canada and NICE confirm diagnosis with out-of-office readings
+      (D115, D116). Vitamin B12 monitoring with metformin is asked in supplement-vitamins-minerals.
+    discovered_via: [D2, D5, D9, D11, D14, D18, D22, D26, D28, D50, D56, D94, D100, D103, D115, D116]
     depends_on: []
     watch: true
   - id: pattern-overall-eating-pattern
@@ -51,9 +63,10 @@ topics:
       Every domain guideline opened recommends an overall pattern rather than single foods: ESC names Mediterranean or
       DASH for blood pressure (D9) and ESC/EAS gives a food-choice table for lipids (D22); ADA lists several acceptable
       patterns and a Mediterranean-style pattern (D13, D14); EASD grades Mediterranean, Nordic and vegetarian patterns
-      and declines to recommend DASH and Portfolio specifically (D30); AHA's statement lists ten features (D81); MASLD
+      and declines to recommend DASH and Portfolio specifically (D30); AHA's 2026 statement lists nine features, replacing
+      the ten of its superseded 2021 statement (D81, D103); MASLD
       guidance favors a Mediterranean-like pattern (D83); Canada and the Heart Foundation describe whole-food patterns (D37, D96).
-    discovered_via: [D9, D13, D14, D22, D30, D37, D81, D83, D96]
+    discovered_via: [D9, D13, D14, D22, D30, D37, D81, D83, D96, D103]
     depends_on: [targets-clinical-goals]
     watch: false
   - id: weight-loss-and-maintenance
@@ -63,7 +76,7 @@ topics:
     safety: false
     status: proposed
     questions:
-      - How much weight loss (percentage) do guidelines target for blood pressure, prediabetes, type 2 diabetes, lipids and fatty liver, and what does each amount achieve?
+      - How much weight loss (percentage) do guidelines target for blood pressure, prediabetes, type 2 diabetes and lipids, and what does each amount achieve?
       - Which dietary approaches to an energy deficit (calorie targets, low-fat, lower-carbohydrate, meal replacements) are supported, and do they differ in results?
       - When are low-energy (800-1,200 kcal) or very-low-energy diets and total diet replacement appropriate, for how long, and with what supervision?
       - What helps maintain weight loss over years, and what happens to the numbers when weight is regained?
@@ -72,7 +85,8 @@ topics:
     rationale: >-
       Weight loss targets appear in every domain: ADA ≥5-7% (D13), ESC 5-10% with 4.4/3.6 mmHg per 5 kg (D9), ESC/EAS
       lipid effects (D22), EASD ≥5% for prevention, meal replacements and remission (D30), NICE limits on low- and
-      very-low-energy diets (D26) and 5-10% in prevention programmes (D100), MASLD 5/7-10/≥10% (D83). The tirzepatide label
+      very-low-energy diets (D26) and 5-10% in prevention programmes (D100). Liver-specific targets (MASLD 5/7-10/≥10%,
+      D83) are asked in condition-fatty-liver-diet. The tirzepatide label
       shows regain after withdrawal (D61). Scope boundary: bariatric surgery and eating disorders are excluded (SCOPE §5);
       NICE requires eating-disorder screening before restrictive diets (D26).
     discovered_via: [D9, D13, D22, D26, D30, D61, D83, D100]
@@ -89,13 +103,15 @@ topics:
       - How much does lowering sodium lower blood pressure in people with elevated BP or hypertension, and does the effect continue below 1,500 mg?
       - Is there evidence of harm from very low sodium intake (the J-curve question) relevant to this cohort?
       - Which foods supply most sodium (processed, packaged and restaurant foods), and which practical changes cut the most?
-      - Does sodium advice change for people taking diuretics, for older adults, or for people with reduced kidney function?
+      - Does sodium advice change for people taking diuretics or for older adults?
     rationale: >-
       Sodium limits are named by every BP and kidney source and differ: ESC about 2 g/day with discussion of the J-curve
       and benefit below 1.5 g (D9), AHA ≤2,300 mg ideally <1,500 (D5), ADA <2,300 (D13, D14), KDIGO <2 g (D28), Canada
-      <2,300 (D37), NASEM CDRR 2,300 and AI 1,500 (D94), Heart Foundation 5 g salt (D96). Lisinopril's label links salt and
-      volume depletion to low blood pressure (D46).
-    discovered_via: [D5, D9, D13, D14, D28, D37, D46, D94, D96]
+      <2,300 (D37), NASEM CDRR 2,300 and AI 1,500 (D94), Heart Foundation 5 g salt (D96), Hypertension Canada <2 g (D115),
+      NICE salt reduction (D116), AHA 2026 low-sodium choices (D103). ESC lists excess sodium among causes of resistant
+      hypertension (D112). Lisinopril's label links salt and volume depletion to low blood pressure (D46). Sodium limits
+      in reduced kidney function are asked in condition-kidney-function-diet.
+    discovered_via: [D5, D9, D13, D14, D28, D37, D46, D94, D96, D103, D112, D115, D116]
     depends_on: [targets-clinical-goals]
     watch: false
   - id: nutrient-potassium-salt-substitutes
@@ -116,9 +132,14 @@ topics:
       for kidney disease (D39, D40); NASEM set no potassium upper limit and urges caution in reduced kidney function (D94);
       KDIGO gives dietary potassium advice in hyperkalemia (D28); ADA asks for potassium monitoring with ACE inhibitors,
       ARBs and MRAs (D14). Labels for lisinopril, losartan, spironolactone and finerenone warn about potassium supplements
-      or salt substitutes (D46, D48, D50, D71). Getting this wrong can cause dangerous hyperkalemia.
-    discovered_via: [D9, D14, D28, D39, D40, D46, D48, D50, D71, D94]
-    depends_on: [nutrient-sodium]
+      or salt substitutes (D46, D48, D50, D71); what each label says is asked in medication-blood-pressure-interactions,
+      while this topic owns guideline advice on who should avoid potassium-enriched products and at what kidney function
+      or potassium level. Hypertension Canada advises potassium above 3.5 g a day from fruit and vegetables with monitoring
+      in CKD or on RAS or MRA drugs (D115); NICE says older people, people with diabetes or kidney disease and some
+      ACE-inhibitor or ARB users should avoid potassium-based salt substitutes (D116). Getting this wrong can cause
+      dangerous hyperkalemia.
+    discovered_via: [D9, D14, D28, D39, D40, D46, D48, D50, D71, D94, D115, D116]
+    depends_on: [nutrient-sodium, medication-blood-pressure-interactions]
     watch: true
   - id: pattern-carbohydrate-reduction
     title: Lower-carbohydrate and ketogenic eating - benefits, limits and medicine safety
@@ -129,38 +150,41 @@ topics:
     questions:
       - What do trials show for reduced-carbohydrate and very-low-carbohydrate (ketogenic) diets on A1C, weight, triglycerides and LDL-C, in the short and long term?
       - How do guidelines define low- and very-low-carbohydrate intake, and which bodies endorse or advise against each level?
-      - Which commonly used medicines (SGLT2 inhibitors in particular) make ketogenic or very-low-calorie eating risky, and what do their labels say?
       - Does the evidence on glycemic index or load add anything once carbohydrate amount and fiber are accounted for?
-      - Which groups should not follow very-low-carbohydrate diets according to the guidelines?
+      - Which groups, including people taking medicines whose labels list ketogenic or reduced-calorie eating as a ketoacidosis risk, should not follow very-low-carbohydrate diets according to the guidelines?
     rationale: >-
       ADA suggests reducing carbohydrate for some adults while discouraging ketogenic eating with SGLT2 inhibitors (D13);
-      the empagliflozin label lists ketogenic diets, reduced calorie intake and fasting among ketoacidosis triggers (D63);
+      the empagliflozin label lists ketogenic diets and reduced caloric intake among ketoacidosis triggers (D63, D111;
+      label wording is asked in medication-glucose-lowering-interactions);
       EASD advises against very-low-carbohydrate ketogenic diets and accepts low glycemic index diets (D30); ESC/EAS rates
       cutting total carbohydrate as lowering triglycerides (D22); a provincial stone guideline notes ketogenic diets
       affect stone risk (D88). Safety-critical because of euglycemic ketoacidosis on SGLT2 inhibitors.
-    discovered_via: [D13, D22, D30, D63, D88]
-    depends_on: [pattern-overall-eating-pattern, weight-loss-and-maintenance]
+    discovered_via: [D13, D22, D30, D63, D88, D111]
+    depends_on: [pattern-overall-eating-pattern, weight-loss-and-maintenance, medication-glucose-lowering-interactions]
     watch: true
   # ---------------- Nutrients and food groups ----------------
   - id: nutrient-dietary-fats
     title: Dietary fats and cooking oils - saturated, trans and unsaturated fats
     kind: nutrient
-    priority: 2
+    priority: 1
     safety: false
     status: proposed
     questions:
       - How much does replacing saturated fat with unsaturated fat (and with which foods) lower LDL-C and cardiovascular events?
       - What saturated and trans fat limits do the opened guidelines set (for example under 10% or under 7% of energy), and for whom?
       - How do butter, beef tallow, lard and tropical oils (coconut, palm) compare with liquid plant oils such as olive or canola?
-      - Why do the 2025-2030 Dietary Guidelines for Americans and US professional societies disagree on animal fats, and what evidence does each side cite?
+      - Where do the 2025-2030 Dietary Guidelines for Americans and US professional societies agree and disagree on animal fats such as butter and beef tallow, and what evidence does each side cite?
       - Does total fat intake matter once fat type is accounted for?
     rationale: >-
       ESC/EAS sets saturated fat under 10% (under 7% with high cholesterol) and rates trans-fat avoidance and saturated-fat
-      reduction as moderate LDL-lowering levers (D22); EASD grades plant unsaturated fats (low certainty) (D30); AHA favors
-      liquid plant oils over tropical oils and animal fats (D81); ADA limits foods high in saturated fat (D13); Canada and
+      reduction as moderate LDL-lowering levers (D22); EASD grades plant unsaturated fats (low certainty) (D30); AHA's 2026
+      statement favors unsaturated fats from nuts, seeds, avocado and nontropical plant oils over saturated sources and
+      says its pattern is unlikely to exceed 10% saturated fat, in line with the US federal guidelines (D103; its 2021
+      statement named tropical oils, butter and lard, D81); ADA limits foods high in saturated fat (D13); Canada and
       NICE advise swapping saturated for unsaturated fats (D37, D100). The 2025-2030 US federal guidelines list butter and
-      beef tallow as options while keeping a 10% limit, which an ACC work group disputes (D34, D35).
-    discovered_via: [D13, D22, D30, D34, D35, D37, D81, D100]
+      beef tallow as options while keeping a 10% limit, which an ACC work group disputes (D34, D35). Priority 1 because it
+      anchors the LDL domain and four topics depend on it, including the safety topic supplement-cholesterol-lowering.
+    discovered_via: [D13, D22, D30, D34, D35, D37, D81, D100, D103]
     depends_on: [pattern-overall-eating-pattern]
     watch: true
   - id: foodgroup-whole-grains-fiber
@@ -176,9 +200,9 @@ topics:
       - When, if ever, are fiber-enriched foods or fiber supplements useful for this cohort?
     rationale: >-
       Fiber targets differ: ADA ≥14 g per 1,000 kcal (D13), EASD ≥35 g/day (D30), ESC/EAS 25-40 g with 7-13 g soluble and
-      beta-glucan 3-10 g/day (D22); ADA lists soluble fiber as a lipid lever (D14); AHA, Canada and NICE emphasize whole
-      grains (D37, D81, D100).
-    discovered_via: [D13, D14, D22, D30, D37, D81, D100]
+      beta-glucan 3-10 g/day (D22); ADA lists soluble fiber as a lipid lever (D14); AHA (2026), Canada and NICE emphasize
+      whole grains (D37, D100, D103).
+    discovered_via: [D13, D14, D22, D30, D37, D100, D103]
     depends_on: [pattern-overall-eating-pattern]
     watch: false
   - id: nutrient-sugars-sweetened-drinks
@@ -196,8 +220,10 @@ topics:
       Sugar limits appear across sources: ESC ≤10% free sugar and limiting sugar-sweetened drinks (D9), ESC/EAS <10% added
       sugar with fructose raising triglycerides (D22), EASD <10% and juice about 150 ml (D30), ADA replacing sugary drinks
       (D13), Canada counting 100% juice as a sugary drink (D37), the US federal guidelines' per-meal limit (D34), Heart
-      Foundation 125 ml juice (D96), MASLD avoiding sugary drinks (D83).
-    discovered_via: [D9, D13, D22, D30, D34, D37, D83, D96]
+      Foundation 125 ml juice (D96), MASLD avoiding sugary drinks (D83), AHA 2026 limiting sugary drinks and added sugars
+      (D103). Priority 2: its dependents (sweeteners, coffee-tea-water, gout) are all priority 2-3, so researching it at
+      priority 2 still precedes them.
+    discovered_via: [D9, D13, D22, D30, D34, D37, D83, D96, D103]
     depends_on: [pattern-overall-eating-pattern]
     watch: false
   - id: additive-non-nutritive-sweeteners
@@ -215,28 +241,31 @@ topics:
       Authorities differ and cover different people: WHO conditionally advises against non-sugar sweeteners for everyone
       except people with diabetes (D90); ADA and EASD accept them as sugar replacements for people with diabetes (D13, D30);
       Canada says they are unnecessary (D37); the 2025-2030 US federal guidelines advise avoiding them (D34); ESC/EAS lists
-      non-caloric sweeteners as preferred over sugar (D22). Population limits must be checked before calling this a disagreement.
-    discovered_via: [D13, D22, D30, D34, D37, D90]
+      non-caloric sweeteners as preferred over sugar (D22). WHO's guideline is aimed at policymakers and does not assess
+      the safety of individual sweeteners (D120). Population limits must be checked before calling this a disagreement.
+    discovered_via: [D13, D22, D30, D34, D37, D90, D120]
     depends_on: [nutrient-sugars-sweetened-drinks]
     watch: true
   - id: nutrient-protein-amount
     title: How much protein - general, during weight loss, and with reduced kidney function
     kind: nutrient
-    priority: 2
+    priority: 1
     safety: false
     status: proposed
     questions:
       - What daily protein amounts (grams per kilogram) do the opened guidelines set for adults, older adults and people losing weight?
       - Why did the 2025-2030 US federal guidelines raise their protein target, and what evidence supports or contests it?
-      - What upper limits on protein do kidney guidelines set, and at what eGFR do they start to apply?
       - Do higher-protein diets help or harm glucose control, cholesterol or blood pressure compared with usual intakes?
       - How should protein be prioritized to protect muscle during large weight loss?
     rationale: >-
       Protein advice conflicts across sources: ADA finds no benefit outside 0.8-1.5 g/kg (D13), the 2025-2030 US federal
       guidelines set 1.2-1.6 g/kg (D34), which an ACC group notes was not in the advisory committee report (D35), KDIGO
-      keeps about 0.8 g/kg in CKD G3-G5 and avoids >1.3 (D28), EASD sets percent-energy ranges by age and eGFR (D30), and
-      the GLP-1 nutrition advisory prioritizes muscle preservation (D92).
-    discovered_via: [D13, D28, D30, D34, D35, D92]
+      keeps about 0.8 g/kg in CKD G3-G5 and avoids >1.3 (D28), EASD sets percent-energy ranges by age and eGFR (D30), AHA's
+      2026 statement calls the evidence on total protein amount uncertain (D103), and the GLP-1 nutrition advisory
+      prioritizes muscle preservation (D92). Protein limits by kidney function are asked in condition-kidney-function-diet,
+      which builds on this topic. Priority 1 because two safety topics (medication-incretin-weight-drugs-nutrition and
+      condition-kidney-function-diet) depend on it.
+    discovered_via: [D13, D28, D30, D34, D35, D92, D103]
     depends_on: [weight-loss-and-maintenance]
     watch: true
   - id: foodgroup-protein-foods
@@ -247,19 +276,40 @@ topics:
     status: proposed
     questions:
       - How do legumes, nuts and seeds, fish, poultry, eggs, red meat and processed meat compare in their links to cardiovascular disease and diabetes?
-      - How much red and processed meat, fish and eggs do the opened guidelines suggest per week, and for whom do limits differ (for example, eggs with high LDL-C)?
+      - How much red and processed meat and how many eggs do the opened guidelines suggest per week, and for whom do limits differ (for example, eggs with high LDL-C)?
       - Does dietary cholesterol (for example from eggs) raise LDL-C enough to matter for this cohort?
       - Does replacing animal with plant protein change A1C, LDL-C or blood pressure?
-      - Which kinds of fish and preparation methods matter (for example, fried fish)?
     rationale: >-
       Guidelines rank protein foods: ESC/EAS food-choice table and dietary cholesterol (D22), EASD minimizing red and
-      processed meat with fatty fish (D30), AHA legumes, nuts, at least two fish meals and lean unprocessed meat (D81), ADA
-      plant protein (D13), Canada plant proteins more often (D37), Heart Foundation red meat 1-3 times a week and eggs up
+      processed meat (D30), AHA's 2026 statement shifting protein toward legumes, nuts and seeds while accepting several
+      plant and animal sources and limiting red meat to lean unprocessed cuts (D103), ADA plant protein (D13), Canada plant proteins more often (D37), Heart Foundation red meat 1-3 times a week and eggs up
       to 7 a week for people with high LDL-C or type 2 diabetes (D96); the US federal guidelines' emphasis on animal protein
-      is disputed (D34, D35).
-    discovered_via: [D13, D22, D30, D34, D35, D37, D81, D96]
-    depends_on: [pattern-overall-eating-pattern, nutrient-dietary-fats]
+      is disputed (D34, D35). Fish has its own topic (foodgroup-fish-seafood).
+    discovered_via: [D13, D22, D30, D34, D35, D37, D96, D103]
+    depends_on: [pattern-overall-eating-pattern, nutrient-dietary-fats, foodgroup-fish-seafood]
     watch: true
+  - id: foodgroup-fish-seafood
+    title: Fish and seafood - how often, which kinds, how cooked, and mercury
+    kind: food-group
+    priority: 2
+    safety: false
+    status: proposed
+    questions:
+      - How often and how much fish and seafood do the opened guidelines suggest, and is the evidence about fish itself or about what it replaces?
+      - Do oily and lean fish differ in their links to cardiovascular events, triglycerides and diabetes?
+      - Which preparation methods (for example frying) do guidelines advise against, and why?
+      - Which fish are higher in mercury, how much of them do food-safety authorities say adults can eat, and how do they weigh this against the benefits?
+    rationale: >-
+      Every pattern source names fish, but with different amounts and kinds: AHA's 2021 statement (via the ACC summary)
+      asked for at least two fish meals a week, not fried (D81), and its 2026 update says to eat fish and seafood
+      regularly (D103); ESC/EAS lists lean and oily fish among preferred foods (D22); EASD recommends fatty fish (D30); the
+      Heart Foundation suggests fish two to three times a week (D96). Health Canada limits fresh or frozen tuna, shark,
+      swordfish, marlin, orange roughy and escolar to about 150 g a week for adults because of mercury and lists
+      lower-mercury, omega-3-rich fish (D119). Split out of foodgroup-protein-foods so type, frequency, cooking and
+      contaminants are answered in one place. Omega-3 supplements stay in supplement-cholesterol-lowering.
+    discovered_via: [D22, D30, D81, D96, D103, D119]
+    depends_on: [pattern-overall-eating-pattern, nutrient-dietary-fats]
+    watch: false
   - id: foodgroup-dairy
     title: Milk, yogurt and cheese - full-fat or reduced-fat
     kind: food-group
@@ -272,11 +322,12 @@ topics:
       - Which guidelines recommend reduced-fat dairy, for which people, and which accept full-fat?
       - How many servings of dairy, if any, do guidelines suggest for this cohort?
     rationale: >-
-      Advice differs: AHA favors low-fat or fat-free dairy (D81); ESC/EAS ranks skimmed milk and yogurt as preferred and
+      Advice differs: AHA's 2026 statement still prefers low-fat or fat-free dairy but calls its advantage over full-fat
+      dairy debated (D103); ESC/EAS ranks skimmed milk and yogurt as preferred and
       regular cheese as occasional (D22); the Heart Foundation recommends reduced-fat for people with heart disease or high
       cholesterol but allows either for others (D96); ADA's BP section counts low-fat dairy servings (D14); the 2025-2030
       US federal guidelines recommend three servings of full-fat dairy (D34), which the ACC group questions (D35).
-    discovered_via: [D14, D22, D34, D35, D81, D96]
+    discovered_via: [D14, D22, D34, D35, D96, D103]
     depends_on: [nutrient-dietary-fats]
     watch: true
   - id: food-ultra-processed
@@ -289,13 +340,14 @@ topics:
       - How do authorities define ultra-processed or highly processed food, and why is the definition disputed?
       - How strong is the evidence linking these foods to diabetes, cardiovascular death, hypertension and weight, and is any of it causal?
       - Is the risk explained by sodium, sugar and saturated fat content, or is processing itself implicated?
-      - Which processed foods (for example canned vegetables, wholemeal bread) fit a healthy pattern?
+      - Which processed foods do authorities say can still fit a healthy pattern, and how do they tell them apart from ultra-processed foods?
     rationale: >-
       Many opened guidelines now name processed food: ADA minimizes processed and ultra-processed foods (D13), KDIGO limits
       ultra-processed foods (D28), MASLD guidance limits them (D83), Canada and the US federal guidelines target highly
-      processed foods (D32, D37), AHA notes the lack of an agreed definition (D81), the Heart Foundation says not all
+      processed foods (D32, D37), AHA's 2021 statement noted the lack of an agreed definition (D81) and its 2026 update
+      favors minimally processed foods (D103), the Heart Foundation says not all
       processed foods need avoiding (D96). A 2024 umbrella review finds associations of mostly low certainty (D98).
-    discovered_via: [D13, D28, D32, D37, D81, D83, D96, D98]
+    discovered_via: [D13, D28, D32, D37, D81, D83, D96, D98, D103]
     depends_on: [pattern-overall-eating-pattern, nutrient-sodium]
     watch: true
   # ---------------- Beverages ----------------
@@ -308,16 +360,19 @@ topics:
     questions:
       - How do drinking amounts relate to blood pressure, triglycerides, weight and cardiovascular events, and is there any level without added risk?
       - What drink limits do US, European, Canadian and Australian sources now give, and how have they changed?
-      - Which medicines common in this cohort carry alcohol warnings on their labels (for example metformin, statins, thiazides), and what do the warnings say?
+      - Which medicines common in this cohort carry alcohol warnings on their labels (for example metformin, statins, thiazides and SGLT2 inhibitors), and what do the warnings say?
       - Is alcohol advice stricter for people whose triglycerides are raised?
       - What should people who do not drink be told?
     rationale: >-
       Alcohol advice is shifting: ESC sets under about 100 g a week with not drinking preferred (D9), ADA keeps daily
       limits but says no amount is known to be safe (D13, D14), ESC/EAS rates alcohol reduction as the largest triglyceride
-      lever (D22), Canada's 2023 guidance uses a weekly risk continuum (D93), AHA advises non-drinkers not to start (D81),
-      the Heart Foundation does not recommend alcohol for heart health (D96), MASLD guidance discourages it (D83). Labels
-      warn about alcohol with metformin (lactic acidosis), statins (liver) and thiazides (low BP on standing) (D42, D54, D56).
-    discovered_via: [D9, D13, D14, D22, D42, D54, D56, D81, D83, D93, D96]
+      lever (D22), Canada's 2023 guidance uses a weekly risk continuum (D93), AHA's 2026 statement keeps "don't start, or
+      limit" and cites HHS and WHO cancer statements (D103), Hypertension Canada advises drinking less (D115), ESC lists
+      alcohol among causes of resistant hypertension (D112), the Heart Foundation does not recommend alcohol for heart
+      health (D96), MASLD guidance discourages it (D83). Labels warn about alcohol with metformin (lactic acidosis),
+      statins (liver), thiazides (low BP on standing) and SGLT2 inhibitors (ketoacidosis) (D42, D54, D56, D108, D111).
+      This topic is the one home for alcohol warnings on medicine labels; the medication topics depend on it.
+    discovered_via: [D9, D13, D14, D22, D42, D54, D56, D83, D93, D96, D103, D108, D111, D112, D115]
     depends_on: [targets-clinical-goals]
     watch: true
   - id: beverage-coffee-tea-water
@@ -334,8 +389,9 @@ topics:
     rationale: >-
       ESC reviews coffee, tea and energy drinks for blood pressure (D9); ADA and Canada name water as the preferred drink
       (D13, D37); the Heart Foundation lists tea and coffee among acceptable drinks (D96); MASLD guidance notes coffee's
-      association with better liver outcomes (D83); a stone guideline sets fluid targets (D88).
-    discovered_via: [D9, D13, D37, D83, D88, D96]
+      association with better liver outcomes (D83); NICE advises against excessive caffeine in hypertension (D116); a
+      stone guideline sets fluid targets (D88).
+    discovered_via: [D9, D13, D37, D83, D88, D96, D116]
     depends_on: [nutrient-sugars-sweetened-drinks]
     watch: false
   # ---------------- Supplements ----------------
@@ -355,29 +411,34 @@ topics:
       ESC/EAS 2019 grades plant sterols, red yeast rice and other nutraceuticals (D22), but its 2025 focused update reports no
       supplement as both safe and effective and notes the EU restriction on red yeast rice (D23, D24). ADA advises against
       adding n-3 supplements to statins while allowing icosapent ethyl in a defined group (D14), whose label lists fish
-      allergy and bleeding cautions (D67). Statin labels warn about niacin and ask about supplements (D42, D44). Red yeast
+      allergy and bleeding cautions (D67, D105). Statin labels warn about niacin and ask about supplements (D42, D44). Red yeast
       rice contains a statin-like compound, so this is a safety topic.
-    discovered_via: [D14, D22, D23, D24, D42, D44, D67]
+    discovered_via: [D14, D22, D23, D24, D42, D44, D67, D105]
     depends_on: [nutrient-dietary-fats, medication-lipid-lowering-interactions]
     watch: true
   - id: supplement-vitamins-minerals
     title: Vitamin and mineral supplements the cohort may be offered or need
     kind: supplement
-    priority: 2
-    safety: false
+    priority: 1
+    safety: true
     status: proposed
     questions:
       - Do any vitamin, mineral or herbal supplements improve blood pressure, glucose or lipids, according to the guidelines?
-      - When do medicines (metformin for vitamin B12, orlistat for fat-soluble vitamins) create a need for testing or supplements?
+      - When do medicines create a need for vitamin testing or supplements (vitamin B12 with metformin; fat-soluble vitamins with orlistat), and what do labels and guidelines say about timing and monitoring?
       - Which supplements carry specific risks for this cohort (for example beta-carotene, high-dose vitamin C with kidney stones)?
       - Is a multivitamin advisable during substantial weight loss, and what do guidelines say?
     rationale: >-
       ADA recommends against supplements for glycemic benefit and against beta-carotene, and suggests B12 testing with
-      metformin (D13); the metformin label reports B12 falls (D56); the orlistat label requires a multivitamin (D65); MASLD
-      guidance rejects nutraceuticals (D83); gout guidance finds vitamin C supplements ineffective (D85); a stone guideline
-      caps vitamin C supplements (D88).
-    discovered_via: [D13, D56, D65, D83, D85, D88]
-    depends_on: [medication-glucose-lowering-interactions, medication-incretin-weight-drugs-nutrition]
+      metformin (D13); metformin labels report B12 falls and ask for B12 checks every 2-3 years (D56, D108); the orlistat
+      label calls for a multivitamin taken 2 hours apart from the dose because fat-soluble vitamin absorption falls (D65,
+      D104); NICE says not to offer calcium, magnesium or potassium supplements to lower blood pressure (D116); AHA's 2026
+      statement says most people following a healthy pattern need no supplements (D103); MASLD guidance rejects
+      nutraceuticals (D83); gout guidance finds vitamin C supplements ineffective (D85); a stone guideline caps vitamin C
+      supplements (D88). This topic is the one home for medicine-related vitamin needs; the glucose-lowering and
+      weight-medicine topics depend on it. Safety-critical (playbook step 8): beta-carotene and high-dose vitamin C carry
+      specific risks, and missed B12 or fat-soluble vitamin needs can cause deficiency.
+    discovered_via: [D13, D56, D65, D83, D85, D88, D103, D104, D108, D116]
+    depends_on: [weight-loss-and-maintenance]
     watch: false
   # ---------------- Medication interactions ----------------
   - id: medication-lipid-lowering-interactions
@@ -388,20 +449,22 @@ topics:
     status: proposed
     questions:
       - Which statins have grapefruit warnings on their labels, and how do the warnings differ (avoid versus large amounts)?
-      - What do labels say about alcohol, niacin and other supplements with statins?
-      - What food timing rules apply to ezetimibe, bempedoic acid, fenofibrate and icosapent ethyl?
-      - Which label effects of these medicines have dietary relevance (for example raised uric acid with bempedoic acid, gallstones with fenofibrate)?
-      - Which other drugs commonly taken in this cohort limit statin doses in ways a person should know about?
+      - What do statin labels say about niacin and other supplements?
+      - What food timing rules apply to ezetimibe, bempedoic acid, fenofibrate and icosapent ethyl, and how must ezetimibe be spaced from bile acid sequestrants?
+      - Which other label effects of these medicines have dietary relevance (for example gallstones with fenofibrate, or fish allergy with icosapent ethyl)?
     rationale: >-
       Statins are first-line in every lipid source (D14, D18). Labels differ on grapefruit: avoid with simvastatin, avoid
-      more than 1.2 L a day with atorvastatin (D42, D44); amlodipine caps simvastatin dose (D52). Labels give food timing
-      and effects for ezetimibe, bempedoic acid (uric acid, gout), fenofibrate (gallstones; diet before starting) and icosapent
-      ethyl (with food) (D67, D69, D73, D77). Scope boundary: triglycerides ≥500 mg/dL are excluded (SCOPE §5).
-    discovered_via: [D14, D18, D42, D44, D52, D67, D69, D73, D77]
-    depends_on: []
+      more than 1.2 L a day with atorvastatin (D42, D44). Labels give food timing and effects for ezetimibe (bile acid
+      sequestrant spacing), bempedoic acid, fenofibrate (gallstones; diet before starting) and icosapent ethyl (with food;
+      fish or shellfish allergy) (D67, D69, D73, D77, D105, D106). Alcohol warnings on statin labels are asked in
+      beverage-alcohol, and the uric-acid and gout effects of bempedoic acid in condition-gout-kidney-stones-diet. Scope
+      boundaries: triglycerides ≥500 mg/dL are excluded (SCOPE §5), and drug-drug dose limits (for example amlodipine
+      with simvastatin, D52) are medication decisions outside SCOPE §6, left to prescribers.
+    discovered_via: [D14, D18, D42, D44, D52, D67, D69, D73, D77, D105, D106]
+    depends_on: [beverage-alcohol]
     watch: false
   - id: medication-blood-pressure-interactions
-    title: Food, salt-substitute and alcohol interactions with blood pressure medicines
+    title: Food, salt-substitute and fluid interactions with blood pressure medicines
     kind: medication-interaction
     priority: 1
     safety: true
@@ -409,38 +472,45 @@ topics:
     questions:
       - What do ACE inhibitor, ARB, spironolactone and finerenone labels say about potassium supplements, salt substitutes and potassium-rich diets?
       - Which blood pressure medicines have grapefruit warnings, and which do not?
-      - How do thiazide diuretics affect potassium, magnesium, glucose, uric acid and lipids, and what dietary implications follow?
+      - How do thiazide diuretics affect potassium, magnesium, glucose and lipids, and what dietary implications follow?
       - What do labels say about dehydration, heavy sweating, vomiting or diarrhea with these medicines?
       - Do any blood pressure medicines need to be taken with or without food?
     rationale: >-
-      First-line BP classes are named by ESC and ADA (D9, D14). Labels for lisinopril, losartan, spironolactone and
-      finerenone warn about potassium supplements and salt substitutes, and spironolactone about potassium-rich diets and
-      consistent dosing with food (D46, D48, D50, D71); finerenone requires avoiding grapefruit, amlodipine has no
-      grapefruit effect (D52, D71); hydrochlorothiazide affects potassium, magnesium, glucose, uric acid and lipids (D54);
-      KDIGO asks for potassium checks after starting RAS blockers (D28). Scope boundary: heart failure is excluded (SCOPE §5)
+      First-line BP classes are named by ESC, ADA and Hypertension Canada (D9, D14, D115). Labels for lisinopril, losartan,
+      spironolactone and finerenone warn about potassium supplements and salt substitutes, and spironolactone about
+      potassium-rich diets and consistent dosing with food (D46, D48, D50, D71); this topic is the one home for what the
+      labels say, while guideline thresholds for potassium sit in nutrient-potassium-salt-substitutes. NICE considers
+      spironolactone for resistant hypertension only if potassium is 4.5 mmol/L or lower (D116). Finerenone requires
+      avoiding grapefruit; amlodipine has no grapefruit effect (D52, D71; the newer Viatris amlodipine label was seen only
+      via a third-party index, D110). Hydrochlorothiazide affects potassium, magnesium, glucose, uric acid and lipids (D54);
+      its uric-acid effect is asked in condition-gout-kidney-stones-diet and its alcohol warning in beverage-alcohol. KDIGO
+      asks for potassium checks after starting RAS blockers (D28). Scope boundary: heart failure is excluded (SCOPE §5)
       though some of these labels address it.
-    discovered_via: [D9, D14, D28, D46, D48, D50, D52, D54, D71]
-    depends_on: [nutrient-potassium-salt-substitutes]
+    discovered_via: [D9, D14, D28, D46, D48, D50, D52, D54, D71, D110, D115, D116]
+    depends_on: [beverage-alcohol]
     watch: false
   - id: medication-glucose-lowering-interactions
-    title: Food, alcohol and fasting interactions with glucose-lowering medicines
+    title: Food and fasting-related label warnings for glucose-lowering medicines
     kind: medication-interaction
     priority: 1
     safety: true
     status: proposed
     questions:
-      - What do metformin labels say about taking it with meals, alcohol, and vitamin B12?
-      - What do SGLT2 inhibitor labels say about ketoacidosis triggers (low-calorie or ketogenic eating, fasting, alcohol), hydration and urine glucose tests?
+      - What do metformin labels say about taking it with meals and about gastrointestinal effects, and how do immediate- and extended-release forms differ?
+      - What do SGLT2 inhibitor labels say about ketoacidosis triggers (reduced-calorie or ketogenic eating, fasting before procedures), hydration and urine glucose tests?
       - How must oral semaglutide be taken relative to food, water and other medicines?
       - What dietary implications follow from pioglitazone's fluid retention and weight effects and from DPP-4 inhibitor labels?
-      - When does a person on these medicines need to discuss planned fasting or a major diet change with their prescriber?
     rationale: >-
-      ADA lists the classes and diet cautions (D13). Labels: metformin with meals, alcohol and B12 (D56); empagliflozin
-      ketoacidosis triggers and volume depletion (D63); oral semaglutide on an empty stomach with limited water (D59);
-      pioglitazone fluid retention and weight gain (D75); sitagliptin with or without food and pancreatitis questions (D79).
-      Scope boundary: insulin, sulfonylureas and meglitinides are excluded (SCOPE §5) because of hypoglycemia risk.
-    discovered_via: [D13, D56, D59, D63, D75, D79]
-    depends_on: [pattern-carbohydrate-reduction, beverage-alcohol]
+      ADA lists the classes and diet cautions (D13) and names sulfonylureas, meglitinides and insulin as the higher
+      hypoglycemia-risk agents (D117). Labels: metformin with meals or the evening meal, food effects and GI effects (D56,
+      D108); empagliflozin ketoacidosis triggers, withholding before procedures with prolonged fasting, and volume
+      depletion (D63, D111); oral semaglutide on an empty stomach with limited water (D59); pioglitazone fluid retention
+      and weight gain (D75); sitagliptin with or without food and pancreatitis questions (D79, D109). One home per
+      question: alcohol warnings are asked in beverage-alcohol, vitamin B12 in supplement-vitamins-minerals, and what to
+      do about planned fasting in behavior-meal-timing-fasting. Scope boundary: insulin, sulfonylureas and meglitinides
+      are excluded (SCOPE §5) because of hypoglycemia risk.
+    discovered_via: [D13, D56, D59, D63, D75, D79, D108, D109, D111, D117]
+    depends_on: [beverage-alcohol, supplement-vitamins-minerals]
     watch: false
   - id: medication-incretin-weight-drugs-nutrition
     title: Eating well on GLP-1-based and other weight-loss medicines
@@ -452,70 +522,66 @@ topics:
       - What gastrointestinal effects, dehydration and kidney risks do semaglutide and tirzepatide labels describe, and what eating and drinking advice follows?
       - What nutrition priorities (protein, micronutrients, muscle and bone preservation) do professional advisories set for people on these medicines?
       - What do labels say about gallbladder disease and delayed stomach emptying, including before procedures?
-      - What does the orlistat label require about dietary fat and vitamin supplements?
+      - What does the orlistat label require about fat in meals, and what happens when meals are high in fat?
       - What happens to weight and diet needs when these medicines are stopped?
     rationale: >-
       GLP-1 medicines now appear in BP guidance for people with overweight (D3) and ESC discusses semaglutide and orlistat
       (D9). Labels describe GI effects, dehydration-related kidney injury, gallbladder disease and delayed gastric emptying
-      (D58, D61), weight regain after withdrawal (D61), and orlistat's fat and vitamin rules (D65). A 2025 joint advisory sets
-      nutrition priorities (D92). Fast-moving: labels were revised in 2025-2026.
-    discovered_via: [D3, D9, D58, D61, D65, D92]
-    depends_on: [weight-loss-and-maintenance, nutrient-protein-amount]
+      (D58, D61, D107), weight regain after withdrawal (D61), and orlistat's rules on fat in meals (D65, D104); orlistat's
+      vitamin rules are asked in supplement-vitamins-minerals. A 2025 joint advisory sets nutrition priorities (D92).
+      Fast-moving: the tirzepatide label was revised four times in 2026 (D107).
+    discovered_via: [D3, D9, D58, D61, D65, D92, D104, D107]
+    depends_on: [weight-loss-and-maintenance, nutrient-protein-amount, supplement-vitamins-minerals]
     watch: true
   # ---------------- Behavior and situations ----------------
   - id: behavior-meal-timing-fasting
-    title: Meal timing, intermittent fasting and religious fasts
+    title: Meal timing, intermittent fasting, and fasting safely while on medicines
     kind: behavior
-    priority: 2
-    safety: false
+    priority: 1
+    safety: true
     status: proposed
     questions:
       - Do intermittent fasting or time-restricted eating improve weight, glucose, blood pressure or lipids more than ordinary calorie reduction?
       - Is there evidence that the timing of meals (chrononutrition) matters for this cohort?
-      - Which commonly used medicines need extra care during prolonged or religious fasting, and what do guidelines advise?
+      - What do guidelines advise for people taking commonly used medicines who plan prolonged, intermittent or religious fasting?
       - Does eating consistent amounts at regular times matter for people not using insulin?
     rationale: >-
       ADA reviews intermittent fasting and time-restricted eating, finds meal-timing evidence inconclusive, and gives
-      religious-fasting recommendations (D13); the empagliflozin label lists fasting as a ketoacidosis trigger and advises
-      stopping before prolonged fasting for procedures (D63); oral semaglutide has fixed fasting rules (D59); NICE advises
-      against restrictive, unbalanced diets (D26).
-    discovered_via: [D13, D26, D59, D63]
+      religious-fasting recommendations (D13); the empagliflozin label lists reduced caloric intake as a ketoacidosis
+      trigger and advises withholding it before procedures with prolonged fasting (D63, D111); metformin labels advise
+      pausing it when food and fluid intake is restricted (D108); oral semaglutide has fixed fasting rules (D59); NICE
+      advises against restrictive, unbalanced diets (D26). Religious fasting is kept only as a medicine-safety point
+      (fasting while taking glucose-lowering medicines); the religious rules themselves are handled through the personal
+      profile (SCOPE §4). Label wording is asked in medication-glucose-lowering-interactions; this topic is the one home
+      for what to do about planned fasting. Safety-critical because fasting on SGLT2 inhibitors can trigger ketoacidosis.
+    discovered_via: [D13, D26, D59, D63, D108, D111]
     depends_on: [weight-loss-and-maintenance, medication-glucose-lowering-interactions]
     watch: true
-  - id: situation-eating-out
-    title: Eating out, takeaway and social occasions
-    kind: situation
-    priority: 3
-    safety: false
-    status: proposed
-    questions:
-      - How do restaurant and takeaway meals differ in calories, sodium, sugar and saturated fat from home-cooked meals?
-      - Which menu choices and requests do authorities suggest for people managing blood pressure, glucose and lipids?
-      - How should alcohol and portion sizes be handled at social occasions?
-    rationale: >-
-      Canada notes restaurant meals are higher in calories, sodium, sugars and saturated fat (D37); AHA advises applying its
-      guidance wherever food is prepared and notes much US sodium comes from food prepared away from home (D81); the Heart
-      Foundation addresses takeaway (D96); the US federal guidelines ask people to replace highly processed foods when
-      dining out (D34). No opened source gave detailed eating-out guidance, so research should look for patient-education material.
-    discovered_via: [D34, D37, D81, D96]
-    depends_on: [nutrient-sodium, food-ultra-processed]
-    watch: false
-  - id: situation-shopping-cooking-labels
-    title: Shopping, food labels and cooking methods
+  - id: situation-shopping-cooking-eating-out
+    title: Shopping, food labels, cooking, eating out and social occasions
     kind: situation
     priority: 3
     safety: false
     status: proposed
     questions:
       - Which parts of a nutrition label matter most for sodium, sugar, saturated fat and fiber, and how should they be read?
-      - Which cooking methods do guidelines favor or advise limiting, and why?
       - Are frozen, canned and dried foods acceptable substitutes for fresh, and what should people check on their labels?
+      - Which cooking methods do guidelines favor or advise limiting, and why?
       - What practical plate or portion models do authorities use?
+      - How do restaurant and takeaway meals differ in calories, sodium, sugar and saturated fat from home-cooked meals?
+      - Which menu choices and requests do authorities suggest for people managing blood pressure, glucose and lipids?
+      - How do authorities suggest handling portions, drinks and special-occasion foods at social events?
     rationale: >-
-      Canada promotes cooking skills and label reading and accepts frozen, canned and dried foods (D37); ESC/EAS and NICE
-      grade cooking methods (D22, D100); the Heart Foundation gives a plate model and label tools (D96).
-    discovered_via: [D22, D37, D96, D100]
-    depends_on: [nutrient-sodium, food-ultra-processed]
+      Merged in review from situation-eating-out and situation-shopping-cooking-labels: the same sources cover both, and
+      authorities treat them together. Canada's guidelines cover cooking skills, label reading, frozen, canned and dried
+      foods and restaurant meals (higher in calories, sodium, sugars and saturated fat) in one section (D37); AHA applies
+      its guidance wherever food is eaten (D103) and its 2021 statement noted that much US sodium comes from food prepared
+      away from home (D81); the Heart Foundation gives a plate model, label tools and takeaway advice (D96); ESC/EAS and
+      NICE grade cooking methods (D22, D100); the US federal guidelines ask people to replace highly processed foods when
+      dining out (D34). No opened source gave detailed eating-out guidance, so research should look for patient-education
+      material.
+    discovered_via: [D22, D34, D37, D81, D96, D100, D103]
+    depends_on: [nutrient-sodium, food-ultra-processed, beverage-alcohol]
     watch: false
   # ---------------- Adjacent conditions ----------------
   - id: condition-kidney-function-diet
@@ -525,17 +591,23 @@ topics:
     safety: true
     status: proposed
     questions:
-      - Which dietary rules (protein, sodium, potassium, phosphorus) change at eGFR 45-59 or with urine albumin 30-300 mg/g, according to kidney guidelines?
-      - How should people in this range balance potassium-rich eating patterns with medicines that raise potassium?
+      - Which dietary rules on protein, sodium and phosphorus change at eGFR 45-59 or urine albumin 30-300 mg/g, according to kidney guidelines?
+      - Which markers besides eGFR and urine albumin define kidney damage, and how should advice treat people whose kidney status is unknown or not yet tested?
       - What do kidney guidelines say about plant-based eating and ultra-processed foods?
+      - Does the 2026 ESC/ERA guideline on cardiovascular disease and CKD change dietary advice for people with both?
       - When should a person be referred to a kidney dietitian?
     rationale: >-
       SCOPE asks personal guides to find out kidney status (SCOPE §3) and flags eGFR 45-59 and UACR 30-300 (SCOPE §4).
-      KDIGO sets protein, sodium and potassium advice by CKD stage and favors plant-based foods (D28); ESC limits potassium
-      advice in moderate-to-advanced CKD (D9); EASD lowers protein with nephropathy (D30); finerenone and RAS-blocker labels
-      add potassium cautions (D46, D71). Safety-critical because of hyperkalemia. Scope boundary: eGFR below 45 is excluded.
-    discovered_via: [D9, D28, D30, D46, D71]
-    depends_on: [nutrient-protein-amount, nutrient-potassium-salt-substitutes]
+      KDIGO sets protein and sodium advice by CKD stage and favors plant-based foods (D28), and defines CKD by eGFR or any
+      persistent marker of kidney damage, so normal eGFR and UACR do not by themselves rule CKD out (D113); EASD lowers
+      protein with nephropathy (D30); the 2026 ESC/ERA guideline asks for eGFR and UACR testing in everyone with CVD (D114,
+      press release only). This topic is the one home for protein and sodium limits by kidney function; potassium
+      thresholds are asked in nutrient-potassium-salt-substitutes and label potassium warnings in
+      medication-blood-pressure-interactions (ESC limits potassium advice in moderate-to-advanced CKD, D9; finerenone and
+      RAS-blocker labels, D46, D71). Safety-critical because of hyperkalemia and protein limits. Scope boundary: eGFR
+      below 45 is excluded.
+    discovered_via: [D9, D28, D30, D46, D71, D113, D114]
+    depends_on: [nutrient-protein-amount, nutrient-potassium-salt-substitutes, nutrient-sodium, medication-blood-pressure-interactions]
     watch: false
   - id: condition-fatty-liver-diet
     title: Diet with fatty liver disease (MASLD) alongside the cardiometabolic cluster
@@ -547,12 +619,13 @@ topics:
       - How much weight loss improves liver fat, inflammation and fibrosis, and how do these targets compare with cardiometabolic ones?
       - Which dietary pattern and specific limits (sugary drinks, ultra-processed foods, alcohol) do liver guidelines recommend?
       - What is the evidence on coffee and liver outcomes?
-      - Which commonly used medicines are considered safe in fatty liver disease, and does that change diet advice?
+      - Do medicines used in fatty liver disease (for example pioglitazone or GLP-1 receptor agonists) change dietary advice, according to their labels and the liver guideline?
     rationale: >-
       Fatty liver is a SCOPE §4 flag. The 2024 EASL-EASD-EASO guideline sets weight targets, a Mediterranean-like pattern,
       limits on ultra-processed foods and sugary drinks, alcohol advice and a coffee statement (D83); ADA's pattern advice
-      overlaps (D13); pioglitazone's label is relevant because the drug is discussed for MASH (D75). Scope boundary:
-      cirrhosis is excluded (SCOPE §5).
+      overlaps (D13); pioglitazone's label is relevant because the drug is discussed for MASH (D75). This topic is the one
+      home for liver-specific weight-loss targets. Which medicine to use is a prescriber's decision (SCOPE §6), so the
+      question asks only whether those medicines change dietary advice. Scope boundary: cirrhosis is excluded (SCOPE §5).
     discovered_via: [D13, D75, D83]
     depends_on: [weight-loss-and-maintenance, beverage-alcohol]
     watch: false
@@ -571,7 +644,8 @@ topics:
       Gout and kidney stones are SCOPE §4 flags. The 2020 ACR gout guideline (read via summary) finds limited evidence for
       diet restriction and suggests losartan over hydrochlorothiazide (D84, D85); a provincial stone nutrition guideline gives
       fluid, sodium, calcium and oxalate advice (D88), while the 2026 AUA stone guideline could not be used (D87). Labels:
-      thiazides raise uric acid (D54), bempedoic acid raises uric acid and gout (D73), orlistat raises urinary oxalate (D65).
-    discovered_via: [D54, D65, D73, D84, D85, D87, D88]
+      thiazides raise uric acid (D54), bempedoic acid raises uric acid and gout (D73), orlistat raises urinary oxalate and can
+      cause oxalate nephropathy (D65, D104). This topic is the one home for these uric-acid and stone effects of medicines.
+    discovered_via: [D54, D65, D73, D84, D85, D87, D88, D104]
     depends_on: [beverage-alcohol, nutrient-sugars-sweetened-drinks]
     watch: false
