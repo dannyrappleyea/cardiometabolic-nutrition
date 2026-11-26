@@ -8,7 +8,8 @@ confidence: moderate             # high | moderate | low | very-low (overall)
 reviewed: YYYY-MM                # last agent review
 next_check: YYYY-MM
 human_review: not-yet            # not-yet | YYYY-MM (set by the reviewer)
-depends_on: []                   # topic IDs
+depends_on: []                   # topic IDs whose Bottom line this topic needs (gates research order)
+refers_to: []                    # topic IDs that are the home of a question this topic mentions (doesn't gate order)
 personalization_inputs: []       # field keys from schemas/profile-fields.yaml
 sources_decisive: []             # ≤15 source IDs
 sources_background: []
