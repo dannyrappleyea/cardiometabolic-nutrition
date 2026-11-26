@@ -19,7 +19,7 @@ population_limits:
   - "Mainly people with diabetes, evidence largely from type 2; prevention recommendations cover people with overweight or at risk"
   - "Protein recommendations limited by age, eGFR (above 60, or 45-60 for nephropathy) and weight status"
   - "Fat recommendations graded low certainty; DASH and Portfolio patterns given no specific recommendation"
-  - "Sodium, coffee/tea and intermittent fasting not addressed"
+  - "No numeric sodium target (the abstract lists sodium among foods and nutrients to minimise); coffee/tea and intermittent fasting not addressed"
 identifiers:
   doi: 10.1007/s00125-023-05894-8
   pmid: null
@@ -52,9 +52,9 @@ findings:
     locator: Dietary fat section
     population: null
     grade: Low
-  - claim: Protein 10-20% of energy for adults under 65 with eGFR above 60 (15-20% at 65 or older); 23-32% may be used short term in weight-loss diets; 10-15% with moderate diabetic kidney disease.
+  - claim: Protein recommendations are conditional on age, kidney function, weight status and whether the diet is for weight loss - 10-20% of energy (15-20% at 65 or older), 23-32% within weight-loss diets, and 10-15% with moderate diabetic kidney disease; each figure applies only to its stated group (see notes).
     locator: Protein section
-    population: As stated
+    population: Different for each figure; see notes
     grade: Low
   - claim: Recommended foods and patterns emphasize minimally processed whole grains, vegetables, fruit, legumes, nuts and seeds; red and processed meat, sugar-sweetened beverages, sweets and refined grains should be minimized; fruit juice benefit is limited to about 150 ml; fried potatoes are associated with diabetes; ultra-processed food evidence is observational; no level of alcohol is recommended.
     locator: Food-based approaches and dietary patterns sections
@@ -62,4 +62,10 @@ findings:
     grade: Moderate (foods); commentary (others)
 limitations: Industry ties of authors and funders noted above.
 reviewer_read: false
-notes: null
+notes: >-
+  Second-pass review (PR #5, Copilot) says the 10-20% figure is for weight-stable, normal-weight people with
+  diabetes and the 23-32% figure for people with type 2 diabetes, overweight or obesity and eGFR above 60, for
+  up to 12 months. The full text could not be re-opened on 2026-11-26 (publisher site blocked; repository
+  records give the abstract only), so these conditions are not yet verified here. Re-read the protein section
+  before any topic relies on this finding. Sodium wording corrected against the abstract (University of
+  Adelaide repository record, opened 2026-11-26).

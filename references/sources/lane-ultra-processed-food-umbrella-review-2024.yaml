@@ -31,7 +31,7 @@ verified:
   read_via: null
   by: Claude Opus 5.5 (claude-opus-5-5)
 findings:
-  - claim: Across 45 pooled analyses (about 9.9 million people), higher ultra-processed food exposure was associated with higher risk in 71% of outcomes; the strongest evidence classes were for cardiovascular death (risk ratio about 1.5, class I but very-low GRADE) and type 2 diabetes (about 12% higher risk per dose increment, class I, moderate GRADE).
+  - claim: Across 45 pooled analyses (about 9.9 million people), higher ultra-processed food exposure was associated with higher risk in 71% of outcomes; the strongest evidence classes were for cardiovascular death (risk ratio about 1.5 comparing highest with lowest intake, class I but very-low GRADE; the dose-response estimate was about 1.05, class IV) and type 2 diabetes (dose-response risk ratio about 1.12 per 10% increase in ultra-processed food intake, class I, moderate GRADE).
     locator: Results; Table/Figure summaries
     population: General populations (observational)
     grade: Credibility class I-V; GRADE very low to moderate

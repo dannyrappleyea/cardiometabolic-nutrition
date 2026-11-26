@@ -16,7 +16,7 @@ edition_check:
   result: current
   newer: null
 population_limits:
-  - "General population guidance; per the AAFP summary it gives no specific guidance for people with chronic disease"
+  - "General population guidance. Whether it gives guidance for people with chronic disease is unassessed: the AAFP summary does not report any, and the guideline text has not been read"
   - "Not checked in the document itself (official PDF not opened)"
 identifiers:
   doi: null

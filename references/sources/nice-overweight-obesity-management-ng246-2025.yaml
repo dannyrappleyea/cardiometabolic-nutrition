@@ -19,7 +19,8 @@ population_limits:
   - "Excludes pregnancy"
   - "Lower BMI thresholds apply to people of South Asian, Chinese, other Asian, Middle Eastern, Black African or African-Caribbean family background"
   - "Waist-to-height ratio bands given for adults with BMI under 35"
-  - "Low- and very-low-energy diets only within specialist or long-term-condition services, not for long-term management"
+  - "Low-energy diets only within a specialist overweight and obesity service or another long-term-condition service (such as type 2 diabetes care), for the groups listed in rec 1.16.8"
+  - "Very-low-energy diets only within a specialist overweight and obesity service, for adults with obesity and a clinically assessed need to lose weight rapidly"
 identifiers:
   doi: null
   pmid: null
@@ -52,9 +53,9 @@ findings:
     locator: Recs 1.16.1-1.16.6
     population: Adults
     grade: null
-  - claim: Low-energy (800-1,200 kcal/day) and very-low-energy (under 800 kcal/day) diets are only for specific groups in specialist or long-term-condition services, for up to 12 weeks, nutritionally complete, after reviewing medicines and screening for eating disorders, and not for long-term management.
-    locator: Recs 1.16.8-1.16.12
-    population: Adults with obesity
+  - claim: Low-energy diets (800-1,200 kcal/day) are considered only as part of a multicomponent strategy with long-term support in a specialist overweight and obesity service or another long-term-condition service such as type 2 diabetes care, for the groups listed in rec 1.16.8 (list not captured in this read). Very-low-energy diets (under 800 kcal/day) are considered only within a specialist overweight and obesity service, for adults with obesity who have a clinically assessed need to lose weight rapidly (for example before surgery). Either diet is nutritionally complete, lasts no more than 12 weeks, has clinical supervision and dietitian support, follows a medicines review and an offer of assessment for possible eating disorders, and is not a long-term strategy.
+    locator: Recs 1.16.8-1.16.12 (re-read 2026-11-26)
+    population: Different for each diet; see claim
     grade: null
 limitations: Medicines and surgery chapters not read. NICE does not grade recommendations by letter; strength is conveyed by wording.
 reviewer_read: false
