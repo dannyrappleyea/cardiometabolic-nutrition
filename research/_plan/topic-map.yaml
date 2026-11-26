@@ -7,7 +7,7 @@
 version: 1
 generated: "2026-11-24"
 generated_by: Claude Opus 5.5 (claude-opus-5-5)
-approved: null
+approved: "2026-11-26, maintainer, by merging the topic-approval PR (all 28 topics as proposed in PR #5, with PR #8's depends_on/refers_to links)"
 calendar:
   - {source_or_authority: ada, next_edition: "2026-12", note: "Standards of Care are issued yearly; the 2026 edition appeared online in December 2025, so a 2027 edition is expected around December 2026 (inference from the edition pattern)."}
   - {source_or_authority: aha-acc, next_edition: null, note: "2025 BP and 2026 dyslipidemia guidelines are new; their full texts still need to be read. AHA dietary guidance was replaced in March 2026 (2021 -> 2026 statement); check AHA's statements index, not only same-title searches, for newer statements on the same subject."}
@@ -26,7 +26,7 @@ topics:
     kind: targets
     priority: 1
     safety: false
-    status: proposed
+    status: approved
     questions:
       - Which blood pressure, A1C, LDL-C, non-HDL-C, triglyceride and body-size categories and goals do current US and non-US guidelines set for this cohort, and where do they differ?
       - How do the newer US risk tools (PREVENT) and European tools (SCORE2) change which goal applies to a person in primary prevention?
@@ -53,7 +53,7 @@ topics:
     kind: pattern
     priority: 1
     safety: false
-    status: proposed
+    status: approved
     questions:
       - Which named eating patterns (DASH, Mediterranean, Nordic, vegetarian or vegan, Portfolio, low-fat) have trial evidence for blood pressure, glycemia and lipids in this cohort, and how large are the effects?
       - What core features do the patterns recommended by the opened guidelines share, and where do they diverge?
@@ -76,7 +76,7 @@ topics:
     kind: other
     priority: 1
     safety: false
-    status: proposed
+    status: approved
     questions:
       - How much weight loss (percentage) do guidelines target for blood pressure, prediabetes, type 2 diabetes and lipids, and what does each amount achieve?
       - Which dietary approaches to an energy deficit (calorie targets, low-fat, lower-carbohydrate, meal replacements) are supported, and do they differ in results?
@@ -99,7 +99,7 @@ topics:
     kind: nutrient
     priority: 1
     safety: false
-    status: proposed
+    status: approved
     questions:
       - What daily sodium limits do US, European, WHO and kidney guidelines set (for example 2,300 mg, 2,000 mg, 1,500 mg), and why do they differ?
       - How much does lowering sodium lower blood pressure in people with elevated BP or hypertension, and does the effect continue below 1,500 mg?
@@ -121,7 +121,7 @@ topics:
     kind: nutrient
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - How much does raising dietary potassium lower blood pressure, and what intake ranges do guidelines suggest?
       - What did WHO recommend about lower-sodium, potassium-enriched salt substitutes in 2025, for whom, and with what exclusions?
@@ -148,7 +148,7 @@ topics:
     kind: pattern
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - What do trials show for reduced-carbohydrate and very-low-carbohydrate (ketogenic) diets on A1C, weight, triglycerides and LDL-C, in the short and long term?
       - How do guidelines define low- and very-low-carbohydrate intake, and which bodies endorse or advise against each level?
@@ -171,7 +171,7 @@ topics:
     kind: nutrient
     priority: 1
     safety: false
-    status: proposed
+    status: approved
     questions:
       - How much does replacing saturated fat with unsaturated fat (and with which foods) lower LDL-C and cardiovascular events?
       - What saturated and trans fat limits do the opened guidelines set (for example under 10% or under 7% of energy), and for whom?
@@ -196,7 +196,7 @@ topics:
     kind: food-group
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - What fiber intakes do guidelines name (grams per day or per 1,000 kcal), and what evidence links them to glucose, lipids and blood pressure?
       - How much do soluble fibers such as oat and barley beta-glucan lower LDL-C, and at what dose?
@@ -215,7 +215,7 @@ topics:
     kind: nutrient
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - What limits on added or free sugars do guidelines set (percentage of energy, grams per meal), and how do they compare?
       - How strongly are sugar-sweetened drinks linked to blood pressure, weight, diabetes and triglycerides?
@@ -237,7 +237,7 @@ topics:
     kind: additive
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - What does each authority say about non-sugar sweeteners, and whom does each recommendation cover (for example, people with or without diabetes)?
       - What evidence underlies WHO's conditional recommendation against them for weight control, and how strong is it?
@@ -258,7 +258,7 @@ topics:
     kind: nutrient
     priority: 1
     safety: false
-    status: proposed
+    status: approved
     questions:
       - What daily protein amounts (grams per kilogram) do the opened guidelines set for adults, older adults and people losing weight?
       - Why did the 2025-2030 US federal guidelines raise their protein target, and what evidence supports or contests it?
@@ -281,7 +281,7 @@ topics:
     kind: food-group
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - How do legumes, nuts and seeds, fish, poultry, eggs, red meat and processed meat compare in their links to cardiovascular disease and diabetes?
       - How much red and processed meat and how many eggs do the opened guidelines suggest per week, and for whom do limits differ (for example, eggs with high LDL-C)?
@@ -302,7 +302,7 @@ topics:
     kind: food-group
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - How often and how much fish and seafood do the opened guidelines suggest, and is the evidence about fish itself or about what it replaces?
       - Do oily and lean fish differ in their links to cardiovascular events, triglycerides and diabetes?
@@ -325,7 +325,7 @@ topics:
     kind: food-group
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - Do full-fat and reduced-fat dairy differ in their effects on LDL-C, blood pressure, weight and diabetes risk?
       - Do cheese, yogurt and milk differ from each other and from butter?
@@ -345,7 +345,7 @@ topics:
     kind: food
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - How do authorities define ultra-processed or highly processed food, and why is the definition disputed?
       - How strong is the evidence linking these foods to diabetes, cardiovascular death, hypertension and weight, and is any of it causal?
@@ -367,7 +367,7 @@ topics:
     kind: beverage
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - How do drinking amounts relate to blood pressure, triglycerides, weight and cardiovascular events, and is there any level without added risk?
       - What drink limits do US, European, Canadian and Australian sources now give, and how have they changed?
@@ -391,7 +391,7 @@ topics:
     kind: beverage
     priority: 3
     safety: false
-    status: proposed
+    status: approved
     questions:
       - Does coffee raise blood pressure or hypertension risk in regular drinkers, and does it affect glucose or lipids?
       - What does the evidence say about tea and blood pressure?
@@ -412,7 +412,7 @@ topics:
     kind: supplement
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - How much do plant sterol or stanol foods lower LDL-C, and is there any outcome evidence?
       - What is red yeast rice, why has the EU restricted it, and what risks arise when it is combined with a statin?
@@ -434,7 +434,7 @@ topics:
     kind: supplement
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - Do any vitamin, mineral or herbal supplements improve blood pressure, glucose or lipids, according to the guidelines?
       - When do medicines create a need for vitamin testing or supplements (vitamin B12 with metformin; fat-soluble vitamins with orlistat), and what do labels and guidelines say about timing and monitoring?
@@ -460,7 +460,7 @@ topics:
     kind: medication-interaction
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - Which statins have grapefruit warnings on their labels, and how do the warnings differ (avoid versus large amounts)?
       - What do statin labels say about niacin and other supplements?
@@ -483,7 +483,7 @@ topics:
     kind: medication-interaction
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - What do ACE inhibitor, ARB, spironolactone and finerenone labels say about potassium supplements, salt substitutes and potassium-rich diets?
       - Which blood pressure medicines have grapefruit warnings, and which do not?
@@ -510,7 +510,7 @@ topics:
     kind: medication-interaction
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - What do metformin labels say about taking it with meals and about gastrointestinal effects, and how do immediate- and extended-release forms differ?
       - What do SGLT2 inhibitor labels say about ketoacidosis triggers (reduced-calorie or ketogenic eating, fasting before procedures), hydration and urine glucose tests?
@@ -534,7 +534,7 @@ topics:
     kind: medication-interaction
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - What gastrointestinal effects, dehydration and kidney risks do semaglutide and tirzepatide labels describe, and what eating and drinking advice follows?
       - What nutrition priorities (protein, micronutrients, muscle and bone preservation) do professional advisories set for people on these medicines?
@@ -557,7 +557,7 @@ topics:
     kind: behavior
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - Do intermittent fasting or time-restricted eating improve weight, glucose, blood pressure or lipids more than ordinary calorie reduction?
       - Is there evidence that the timing of meals (chrononutrition) matters for this cohort?
@@ -581,7 +581,7 @@ topics:
     kind: situation
     priority: 3
     safety: false
-    status: proposed
+    status: approved
     questions:
       - Which parts of a nutrition label matter most for sodium, sugar, saturated fat and fiber, and how should they be read?
       - Are frozen, canned and dried foods acceptable substitutes for fresh, and what should people check on their labels?
@@ -609,7 +609,7 @@ topics:
     kind: other
     priority: 1
     safety: true
-    status: proposed
+    status: approved
     questions:
       - Which dietary rules on protein, sodium and phosphorus change at eGFR 45-59 or urine albumin 30-300 mg/g, according to kidney guidelines?
       - Which markers besides eGFR and urine albumin define kidney damage, and how should advice treat people whose kidney status is unknown or not yet tested?
@@ -635,7 +635,7 @@ topics:
     kind: other
     priority: 2
     safety: false
-    status: proposed
+    status: approved
     questions:
       - How much weight loss improves liver fat, inflammation and fibrosis, and how do these targets compare with cardiometabolic ones?
       - Which dietary pattern and specific limits (sugary drinks, ultra-processed foods, alcohol) do liver guidelines recommend?
@@ -656,7 +656,7 @@ topics:
     kind: other
     priority: 3
     safety: false
-    status: proposed
+    status: approved
     questions:
       - What do gout guidelines say about alcohol, purine-rich foods, fructose-sweetened drinks, vitamin C and weight loss, and how strong is the evidence?
       - What fluid, sodium, calcium, oxalate and animal-protein advice applies to people with kidney stones?
