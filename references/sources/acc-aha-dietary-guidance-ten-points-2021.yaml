@@ -1,0 +1,37 @@
+id: acc-aha-dietary-guidance-ten-points-2021
+title: "2021 AHA Dietary Guidance for Cardiovascular Health: Ten Points to Remember"
+authors: [Webb SR]
+organization: American College of Cardiology
+year: 2021
+publication: acc.org Latest in Cardiology, 2021-11-23
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [general-nutrition]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/11/23/19/45/2021-dietary-guidance-to-improve
+status: superseded
+superseded_by: aha-dietary-guidance-cardiovascular-health-2026
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Summarizes the AHA 2021 statement's ten features of a heart-healthy dietary pattern, including at least two fish meals a week (not fried), low-fat over full-fat dairy, avoiding processed meat, choosing liquid plant oils over tropical oils and butter or lard, and that calorie needs fall by roughly 70-100 a day per adult decade.
+    locator: Points 1-10
+    population: General adults
+    grade: null
+limitations: Summary.
+reviewer_read: false
+notes: Summarizes the 2021 AHA statement, which the 2026 statement supersedes. Still the discovery source for the "not fried" fish wording (D81).

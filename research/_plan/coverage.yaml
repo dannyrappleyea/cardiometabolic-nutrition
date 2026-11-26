@@ -1,13 +1,266 @@
 # Discovery coverage — produced by playbooks/01-discover.md step 9. Schema: schemas/coverage.schema.json.
-# Every item maps to topic IDs, or has a note saying why no topic is needed. Empty until the first discovery run.
-checked: null
-domains: []             # each SCOPE §3 domain
-adjacent_flags: []      # each SCOPE §4 flag
-medication_classes: []  # each class found in step 4
-food_groups: []         # each food group, beverage or food category named in opened guidelines' pattern recommendations
-gaps: []                # e.g. "no Australian guideline opened for lipids"
-# Entry shape (all four lists):
-# - item: name as found
-#   topics: [topic-id]
-#   named_in: [source-id]   # for food_groups: which opened sources name it
-#   note: null              # required when topics is empty
+# Every item maps to topic IDs, or has a note saying why no topic is needed.
+checked: "2026-11-25"
+domains:
+  - item: Blood pressure (SCOPE §3)
+    topics: [targets-clinical-goals, pattern-overall-eating-pattern, nutrient-sodium, nutrient-potassium-salt-substitutes, beverage-alcohol, weight-loss-and-maintenance, medication-blood-pressure-interactions]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, aha-high-bp-top-10-2025, ada-standards-cvd-risk-management-2026, hypertension-canada-primary-care-guideline-2025, nice-hypertension-ng136-2026]
+    note: Non-US guidelines opened (ESC 2024 partial; Hypertension Canada 2025 full; NICE NG136 recommendations). US 2025 guideline known only through abstract and summaries.
+  - item: Glycemia (SCOPE §3)
+    topics: [targets-clinical-goals, pattern-overall-eating-pattern, pattern-carbohydrate-reduction, foodgroup-whole-grains-fiber, nutrient-sugars-sweetened-drinks, additive-non-nutritive-sweeteners, weight-loss-and-maintenance, behavior-meal-timing-fasting, medication-glucose-lowering-interactions]
+    named_in: [ada-standards-positive-health-behaviors-2026, ada-standards-diagnosis-classification-2026, easd-dnsg-dietary-management-diabetes-2023, nice-type-2-diabetes-prevention-ph38-2017]
+    note: Non-US guidelines opened (EASD 2023 full; NICE PH38 section).
+  - item: Lipids (SCOPE §3)
+    topics: [targets-clinical-goals, nutrient-dietary-fats, foodgroup-whole-grains-fiber, foodgroup-protein-foods, foodgroup-dairy, supplement-cholesterol-lowering, medication-lipid-lowering-interactions]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, ada-standards-cvd-risk-management-2026, aha-acc-dyslipidemia-guideline-2026]
+    note: Non-US guideline opened (ESC/EAS 2019 §7 in full). US 2026 guideline known only through summaries; ESC/EAS 2025 focused update only through its record and press release.
+  - item: Body size - BMI and waist (SCOPE §3)
+    topics: [weight-loss-and-maintenance, targets-clinical-goals, medication-incretin-weight-drugs-nutrition]
+    named_in: [nice-overweight-obesity-management-ng246-2025, esc-elevated-bp-hypertension-guideline-2024]
+    note: Non-US guideline opened (NICE NG246 sections).
+  - item: Kidneys (SCOPE §3)
+    topics: [condition-kidney-function-diet, nutrient-potassium-salt-substitutes, nutrient-protein-amount, nutrient-sodium]
+    named_in: [kdigo-ckd-guideline-2024, esc-era-cvd-ckd-guideline-2026]
+    note: International guideline opened (KDIGO 2024, partial). The 2026 ESC/ERA guideline on CVD and CKD is known only through its press release.
+  - item: Medications (SCOPE §3)
+    topics: [medication-lipid-lowering-interactions, medication-blood-pressure-interactions, medication-glucose-lowering-interactions, medication-incretin-weight-drugs-nutrition]
+    named_in: [ada-standards-cvd-risk-management-2026, esc-elevated-bp-hypertension-guideline-2024, kdigo-ckd-guideline-2024]
+    note: Classes listed under medication_classes.
+adjacent_flags:
+  - item: Age 30–39 or 76–79
+    topics: [targets-clinical-goals]
+    note: Age changes goals and risk tools (PREVENT 30-79, SCORE2-OP); each topic's adjacent-cohort section carries age cautions (for example protein for older adults).
+  - item: BMI ≥40
+    topics: [weight-loss-and-maintenance, medication-incretin-weight-drugs-nutrition]
+    named_in: [nice-overweight-obesity-management-ng246-2025]
+  - item: eGFR 45–59, or UACR 30–300 mg/g
+    topics: [condition-kidney-function-diet]
+    named_in: [kdigo-ckd-guideline-2024]
+  - item: Type 2 diabetes with A1C 9.0% or higher
+    topics: [medication-glucose-lowering-interactions, pattern-carbohydrate-reduction]
+    named_in: [ada-standards-pharmacologic-glycemic-2026]
+    note: >-
+      No source opened defines a diet boundary at 9.0%. ADA §9 considers insulin at A1C above 10% or with symptoms
+      (Rec 9.20), a drug-treatment threshold. Open question for topic research - does any guideline change dietary
+      advice for people with A1C of 9.0% or more who are not using insulin or secretagogues? The exclusion itself rests
+      on actual medicine use (SCOPE §5), not on A1C.
+  - item: LDL-C ≥190 mg/dL or suspected familial hypercholesterolemia
+    topics: [targets-clinical-goals, medication-lipid-lowering-interactions]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019]
+    note: Diet alone cannot be expected to reach goals here; topics carry the caution.
+  - item: Established cardiovascular disease (secondary prevention)
+    topics: [targets-clinical-goals]
+    named_in: [ada-standards-cvd-risk-management-2026, esc-eas-dyslipidaemias-guideline-2019]
+  - item: Resistant hypertension
+    topics: [nutrient-sodium, beverage-alcohol, medication-blood-pressure-interactions, nutrient-potassium-salt-substitutes]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, hypertension-canada-primary-care-guideline-2025, nice-hypertension-ng136-2026]
+    note: >-
+      ESC Table 11 lists excess sodium and alcohol among behavioural causes of true resistance. Hypertension Canada and
+      NICE suggest spironolactone as the add-on drug (NICE only if potassium is 4.5 mmol/L or lower), so potassium
+      cautions apply.
+  - item: Fatty liver disease without cirrhosis (MASLD)
+    topics: [condition-fatty-liver-diet]
+    named_in: [easl-easd-easo-masld-guideline-2024]
+  - item: Gout, or kidney stones
+    topics: [condition-gout-kidney-stones-diet]
+    named_in: [acr-gout-guideline-2020, ahs-nutrition-guideline-kidney-stones-2024]
+  - item: Food allergies, celiac disease, or religious, cultural or ethical dietary rules
+    topics: [behavior-meal-timing-fasting]
+    named_in: [ada-standards-positive-health-behaviors-2026]
+    note: Handled through the personal profile per SCOPE §4; the research covers religious fasting only as a medicine-safety point (fasting while taking glucose-lowering medicines). Fish/shellfish allergy appears as a caution on the icosapent ethyl label (medication-lipid-lowering-interactions).
+medication_classes:
+  - item: Statins (atorvastatin, simvastatin)
+    topics: [medication-lipid-lowering-interactions, supplement-cholesterol-lowering]
+    named_in: [fda-label-lipitor-atorvastatin-2024, fda-label-zocor-simvastatin-2023, ada-standards-cvd-risk-management-2026]
+  - item: Cholesterol absorption inhibitor (ezetimibe)
+    topics: [medication-lipid-lowering-interactions]
+    named_in: [fda-label-zetia-ezetimibe-2024]
+  - item: Bile acid sequestrants (e.g. cholestyramine)
+    topics: [medication-lipid-lowering-interactions]
+    named_in: [fda-label-zetia-ezetimibe-2024]
+    note: >-
+      Surfaced through the ezetimibe label, which requires spacing ezetimibe at least 2 hours before or 4 hours after a
+      sequestrant. No sequestrant label was opened in this run (gap); topic research must open one and check its
+      timing rules for other medicines and any effect on vitamin or nutrient absorption.
+  - item: ACL inhibitor (bempedoic acid)
+    topics: [medication-lipid-lowering-interactions, condition-gout-kidney-stones-diet]
+    named_in: [fda-label-nexletol-bempedoic-acid-2025]
+  - item: PCSK9 monoclonal antibodies (evolocumab, alirocumab) and inclisiran
+    topics: [medication-lipid-lowering-interactions]
+    named_in: [acc-dyslipidemia-guideline-journal-scan-2026, ada-standards-cvd-risk-management-2026]
+    note: No label opened in this run (gap); injectable add-on therapies with no food interaction surfaced in the opened sources. Topic research must open one label.
+  - item: Fibrates (fenofibrate)
+    topics: [medication-lipid-lowering-interactions]
+    named_in: [fda-label-tricor-fenofibrate-2025]
+  - item: Prescription omega-3 (icosapent ethyl)
+    topics: [medication-lipid-lowering-interactions, supplement-cholesterol-lowering]
+    named_in: [fda-label-vascepa-icosapent-ethyl-2026]
+  - item: ACE inhibitors (lisinopril)
+    topics: [medication-blood-pressure-interactions, nutrient-potassium-salt-substitutes]
+    named_in: [fda-label-zestril-lisinopril-2025]
+  - item: Angiotensin receptor blockers (losartan)
+    topics: [medication-blood-pressure-interactions, nutrient-potassium-salt-substitutes, condition-gout-kidney-stones-diet]
+    named_in: [fda-label-cozaar-losartan-2026]
+  - item: Thiazide and thiazide-like diuretics (hydrochlorothiazide, chlorthalidone)
+    topics: [medication-blood-pressure-interactions, condition-gout-kidney-stones-diet]
+    named_in: [fda-label-hydrochlorothiazide-tablets-2026, ada-standards-cvd-risk-management-2026]
+    note: Only a repackager generic label was opened; the reference listed drug label must be found in topic research.
+  - item: Dihydropyridine calcium channel blockers (amlodipine)
+    topics: [medication-blood-pressure-interactions]
+    named_in: [fda-label-norvasc-amlodipine-2019, hypertension-canada-primary-care-guideline-2025]
+    note: The recorded label is Pfizer's 2019 text; a newer Viatris label (revised 2/2023) exists but was seen only via a third-party index (newer-not-recorded). Topic research must open it.
+  - item: Mineralocorticoid receptor antagonists (spironolactone)
+    topics: [medication-blood-pressure-interactions, nutrient-potassium-salt-substitutes]
+    named_in: [fda-label-aldactone-spironolactone-2025]
+  - item: Nonsteroidal MRA (finerenone)
+    topics: [medication-blood-pressure-interactions, condition-kidney-function-diet]
+    named_in: [fda-label-kerendia-finerenone-2026, kdigo-ckd-guideline-2024]
+  - item: Beta-blockers
+    topics: [medication-blood-pressure-interactions]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, ada-standards-cvd-risk-management-2026]
+    note: Not first-line for uncomplicated hypertension per ADA (used after MI, angina, HFrEF); no label opened in this run (gap).
+  - item: Metformin
+    topics: [medication-glucose-lowering-interactions, supplement-vitamins-minerals, beverage-alcohol]
+    named_in: [fda-label-fortamet-metformin-er-2026]
+    note: The Glucophage RLD is discontinued; Fortamet (NDA metformin ER, revised 8/2026) is the recorded class label. No current immediate-release label was opened.
+  - item: GLP-1 receptor agonists (semaglutide injection and tablets)
+    topics: [medication-incretin-weight-drugs-nutrition, medication-glucose-lowering-interactions]
+    named_in: [fda-label-ozempic-semaglutide-2026, fda-label-rybelsus-oral-semaglutide-2026]
+  - item: Dual GIP/GLP-1 receptor agonist (tirzepatide)
+    topics: [medication-incretin-weight-drugs-nutrition]
+    named_in: [fda-label-zepbound-tirzepatide-dailymed-2026]
+  - item: SGLT2 inhibitors (empagliflozin)
+    topics: [medication-glucose-lowering-interactions, pattern-carbohydrate-reduction, behavior-meal-timing-fasting]
+    named_in: [fda-label-jardiance-empagliflozin-boehringer-2026, kdigo-ckd-guideline-2024, esc-era-cvd-ckd-guideline-2026]
+  - item: DPP-4 inhibitors (sitagliptin)
+    topics: [medication-glucose-lowering-interactions]
+    named_in: [fda-label-januvia-sitagliptin-2023]
+    note: The recorded label is the Drugs@FDA S-053 text (12/2023); the brand text was revised 7/2026 but only repackager copies were seen (newer-not-recorded). Topic research must open Merck's current SPL.
+  - item: Thiazolidinediones (pioglitazone)
+    topics: [medication-glucose-lowering-interactions, condition-fatty-liver-diet]
+    named_in: [fda-label-actos-pioglitazone-2025]
+  - item: Lipase inhibitor (orlistat)
+    topics: [medication-incretin-weight-drugs-nutrition, supplement-vitamins-minerals, condition-gout-kidney-stones-diet]
+    named_in: [fda-label-xenical-orlistat-2024, esc-elevated-bp-hypertension-guideline-2024]
+    note: Recorded label is SPL version 9 (2024); S-039 was approved 2026-09-30 but its text was not obtained (newer-not-recorded).
+  - item: Insulin, sulfonylureas and meglitinides
+    topics: []
+    named_in: [ada-standards-positive-health-behaviors-2026]
+    note: Out of scope (SCOPE §5) because hypoglycemia risk changes dietary advice; stated as a scope boundary in medication-glucose-lowering-interactions.
+  - item: Resmetirom (MASH)
+    topics: []
+    named_in: [easl-easd-easo-masld-guideline-2024]
+    note: Liver-specific drug for MASH with fibrosis; not commonly used across the cohort. No label opened; revisit if condition-fatty-liver-diet research finds diet-relevant label content.
+  - item: Low-dose aspirin
+    topics: []
+    named_in: [acr-gout-guideline-2020]
+    note: Mentioned only in gout guidance (raises urate); no dietary interaction surfaced in opened sources. Not a topic.
+food_groups:
+  - item: Vegetables and fruit (fresh, frozen, canned, dried)
+    topics: [pattern-overall-eating-pattern, situation-shopping-cooking-eating-out]
+    named_in: [aha-dietary-guidance-cardiovascular-health-2026, health-canada-dietary-guidelines-2019, esc-eas-dyslipidaemias-guideline-2019, easd-dnsg-dietary-management-diabetes-2023, heart-foundation-au-healthy-eating-2024, ada-standards-positive-health-behaviors-2026]
+  - item: Potatoes (including fried)
+    topics: [pattern-overall-eating-pattern]
+    named_in: [acc-aha-dietary-guidance-ten-points-2021, easd-dnsg-dietary-management-diabetes-2023, esc-eas-dyslipidaemias-guideline-2019]
+    note: The potato wording came from the (now superseded) 2021 AHA statement's summary; AHA's 2026 release does not mention potatoes, but EASD and ESC/EAS still do.
+  - item: Whole grains vs refined grains (bread, rice, pasta, cereals, pastries)
+    topics: [foodgroup-whole-grains-fiber]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, ada-standards-positive-health-behaviors-2026, aha-dietary-guidance-cardiovascular-health-2026, health-canada-dietary-guidelines-2019]
+  - item: Legumes (beans, lentils, peas, chickpeas, soybeans, tofu)
+    topics: [foodgroup-protein-foods]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, easd-dnsg-dietary-management-diabetes-2023, health-canada-dietary-guidelines-2019, nice-type-2-diabetes-prevention-ph38-2017]
+  - item: Nuts and seeds
+    topics: [foodgroup-protein-foods, nutrient-dietary-fats]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, easd-dnsg-dietary-management-diabetes-2023, aha-dietary-guidance-cardiovascular-health-2026]
+  - item: Fish and seafood (oily and lean fish; fried fish; mercury)
+    topics: [foodgroup-fish-seafood]
+    named_in: [aha-dietary-guidance-cardiovascular-health-2026, acc-aha-dietary-guidance-ten-points-2021, esc-eas-dyslipidaemias-guideline-2019, heart-foundation-au-healthy-eating-2024, easd-dnsg-dietary-management-diabetes-2023, health-canada-mercury-in-fish-2024]
+    note: The fried-fish wording comes from the ACC summary of the 2021 AHA statement (at least two fish meals a week, not fried); mercury limits from Health Canada.
+  - item: Poultry
+    topics: [foodgroup-protein-foods]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, heart-foundation-au-healthy-eating-2024]
+  - item: Red meat (lean beef, lamb, pork)
+    topics: [foodgroup-protein-foods]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, heart-foundation-au-healthy-eating-2024, easd-dnsg-dietary-management-diabetes-2023, acc-dga-cardiovascular-commentary-2026]
+  - item: Processed meat (sausages, salami, bacon)
+    topics: [foodgroup-protein-foods, food-ultra-processed]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, aha-dietary-guidance-cardiovascular-health-2026, health-canada-dietary-guidelines-2019]
+  - item: Eggs
+    topics: [foodgroup-protein-foods]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, heart-foundation-au-healthy-eating-2024, health-canada-dietary-guidelines-2019]
+  - item: Dairy (milk, yogurt, kefir, cheese; low-fat vs full-fat)
+    topics: [foodgroup-dairy]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, aha-dietary-guidance-cardiovascular-health-2026, heart-foundation-au-healthy-eating-2024, usda-hhs-dietary-guidelines-americans-2025, ada-standards-cvd-risk-management-2026]
+  - item: Fortified plant-based beverages (soy beverage, plant milks)
+    topics: [foodgroup-dairy]
+    named_in: [health-canada-dietary-guidelines-2019, heart-foundation-au-healthy-eating-2024]
+  - item: Liquid plant oils (olive, canola, sunflower, soybean) and soft margarine
+    topics: [nutrient-dietary-fats]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, aha-dietary-guidance-cardiovascular-health-2026, heart-foundation-au-healthy-eating-2024]
+  - item: Butter, lard, beef tallow, ghee, palm and coconut oil, hard margarine
+    topics: [nutrient-dietary-fats]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, acc-aha-dietary-guidance-ten-points-2021, usda-hhs-dietary-guidelines-americans-2025, nice-type-2-diabetes-prevention-ph38-2017, acc-dga-cardiovascular-commentary-2026]
+  - item: Avocado and olives
+    topics: [nutrient-dietary-fats]
+    named_in: [heart-foundation-au-healthy-eating-2024, aafp-dietary-guidelines-summary-2026]
+  - item: Sweets, confectionery, cakes, biscuits, pastries
+    topics: [nutrient-sugars-sweetened-drinks, food-ultra-processed]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, health-canada-dietary-guidelines-2019, heart-foundation-au-healthy-eating-2024]
+  - item: Sugar-sweetened beverages (soft drinks, fruit drinks, sweetened teas and coffees)
+    topics: [nutrient-sugars-sweetened-drinks]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, ada-standards-positive-health-behaviors-2026, health-canada-dietary-guidelines-2019, easl-easd-easo-masld-guideline-2024]
+  - item: 100% fruit juice
+    topics: [nutrient-sugars-sweetened-drinks]
+    named_in: [easd-dnsg-dietary-management-diabetes-2023, health-canada-dietary-guidelines-2019, heart-foundation-au-healthy-eating-2024]
+  - item: Non-sugar sweeteners and sweetened drinks
+    topics: [additive-non-nutritive-sweeteners]
+    named_in: [who-non-sugar-sweeteners-guideline-2023, ada-standards-positive-health-behaviors-2026, easd-dnsg-dietary-management-diabetes-2023]
+  - item: Water
+    topics: [beverage-coffee-tea-water]
+    named_in: [ada-standards-positive-health-behaviors-2026, health-canada-dietary-guidelines-2019, heart-foundation-au-healthy-eating-2024]
+  - item: Coffee and tea
+    topics: [beverage-coffee-tea-water]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, easl-easd-easo-masld-guideline-2024, heart-foundation-au-healthy-eating-2024, nice-hypertension-ng136-2026]
+  - item: Energy drinks
+    topics: [beverage-coffee-tea-water]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, health-canada-dietary-guidelines-2019]
+  - item: Alcoholic drinks
+    topics: [beverage-alcohol]
+    named_in: [esc-elevated-bp-hypertension-guideline-2024, ccsa-canada-guidance-alcohol-health-2023, ada-standards-positive-health-behaviors-2026, esc-eas-dyslipidaemias-guideline-2019, aha-dietary-guidance-cardiovascular-health-2026, hypertension-canada-primary-care-guideline-2025]
+  - item: Ultra-processed / highly processed foods and ready meals
+    topics: [food-ultra-processed]
+    named_in: [ada-standards-positive-health-behaviors-2026, kdigo-ckd-guideline-2024, lane-ultra-processed-food-umbrella-review-2024, health-canada-dietary-guidelines-2019]
+  - item: Restaurant and takeaway food
+    topics: [situation-shopping-cooking-eating-out]
+    named_in: [health-canada-dietary-guidelines-2019, heart-foundation-au-healthy-eating-2024, aha-dietary-guidance-cardiovascular-health-2026]
+  - item: Salt, salt substitutes, herbs and spices
+    topics: [nutrient-sodium, nutrient-potassium-salt-substitutes]
+    named_in: [who-lower-sodium-salt-substitutes-guideline-2025, heart-foundation-au-healthy-eating-2024, esc-elevated-bp-hypertension-guideline-2024, nice-hypertension-ng136-2026]
+  - item: Plant sterol/stanol-enriched foods; red yeast rice; soy protein
+    topics: [supplement-cholesterol-lowering]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, ada-standards-cvd-risk-management-2026]
+  - item: Grapefruit and grapefruit juice
+    topics: [medication-lipid-lowering-interactions, medication-blood-pressure-interactions]
+    named_in: [fda-label-zocor-simvastatin-2023, fda-label-lipitor-atorvastatin-2024, fda-label-kerendia-finerenone-2026, fda-label-norvasc-amlodipine-2019]
+  - item: Cooking methods (grilling, steaming, frying)
+    topics: [situation-shopping-cooking-eating-out]
+    named_in: [esc-eas-dyslipidaemias-guideline-2019, nice-type-2-diabetes-prevention-ph38-2017]
+gaps:
+  - "US 2025 ACC/AHA high blood pressure guideline: full text could not be fetched in this session (publisher pages refused the fetch); known through abstract and AHA/ACC summaries."
+  - "US 2026 ACC/AHA dyslipidemia guideline: full text could not be fetched; its dietary recommendations, triglyceride categories and non-HDL-C goals are unknown to this run."
+  - "AHA 2026 dietary guidance statement (supersedes the 2021 statement): statement text not fetched; known only through AHA's news release and landing page."
+  - "2025 ESC/EAS dyslipidaemia focused update: recommendation text not read (repository PDF restricted)."
+  - "2026 ESC/ERA guideline on cardiovascular disease and CKD: known only through its press release and a repository record (PDF restricted); its dietary content, if any, is unknown."
+  - "Dietary Guidelines for Americans 2025-2030: official PDF could not be opened; known through ODPHP page, AAFP summary and ACC commentary."
+  - "WHO 2025 salt-substitute and WHO 2023 non-sugar sweetener guidelines: read only through WHO pages and an overview; WHO sodium, potassium, sugars, saturated/trans fat and carbohydrate guidelines not opened."
+  - "Canada: Hypertension Canada 2025 opened in the review round; Diabetes Canada nutrition chapter and Canadian Cardiovascular Society lipid guideline not opened."
+  - "UK: NICE NG136 (hypertension) opened in the review round; NICE type 2 diabetes (NG28) and lipid modification (NG238) guidelines not opened."
+  - "Australia-New Zealand: no clinical guideline opened (Heart Foundation public page only; Australian Dietary Guidelines and hypertension guideline not opened)."
+  - "No Asian, Latin American or African guideline opened, despite SCOPE naming lower BMI thresholds for people of Asian ancestry."
+  - "Drug labels not current or not reference-listed-drug copies (these match the source files' edition_check): Xenical - SPL version 9 (2024) recorded, S-039 (approved 2026-09-30) text not obtained; Januvia - brand text revised 7/2026 seen only in repackager SPLs, Drugs@FDA S-053 (2023) recorded; Norvasc - Viatris label revised 2/2023 seen only via a third-party index, Pfizer 2019 text recorded; hydrochlorothiazide - repackager copy only (RLD not identified); metformin - Glucophage RLD discontinued, Fortamet ER (NDA, 8/2026) used and no current immediate-release label opened. Updated and current: Vascepa 03/2026, Zetia 2/2024, Zepbound 11/2026, Jardiance (Boehringer SPL, 2026-01)."
+  - "Drug labels not opened: any PCSK9 inhibitor, bile acid sequestrant or beta-blocker label; Mounjaro and Wegovy labels; non-US labels (EMA, Health Canada)."
+  - "Kidney stones: 2026 AUA guideline unusable (login and AI-use restriction); Canadian Urological Association 2022 guideline not opened."
+  - "Gout: 2020 ACR guideline read only via summary; EULAR gout guidance not opened."
+  - "ADA Standards: §9 opened in the review round (first 100k characters); §8 (obesity) not read (PMC served reCAPTCHA pages); §11 (CKD) not opened."
+  - "Patient-education material on eating out, special occasions and holidays was thin; no source gave detailed restaurant guidance."
+  - "SCOPE thresholds left unverified: non-HDL-C ≥130 mg/dL, LDL-C 100 mg/dL lower bound, A1C ~9.0% boundary, waist cut-off, the hypertensive-crisis wording and the §5 diabetes-treatment exclusion (see scope-check.yaml)."

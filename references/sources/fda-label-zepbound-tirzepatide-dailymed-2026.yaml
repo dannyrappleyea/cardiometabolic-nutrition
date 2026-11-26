@@ -1,0 +1,55 @@
+id: fda-label-zepbound-tirzepatide-dailymed-2026
+title: ZEPBOUND (tirzepatide) injection - US prescribing information (revised 11/2026)
+authors: []
+organization: Eli Lilly and Company (label approved by US FDA)
+year: 2026
+publication: DailyMed, SPL set ID 487cd7e7-434c-4925-99fa-aa80b1cc776b (NDA 217806)
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [weight, glycemia, medicines]
+edition: Revised 2026-11 (DailyMed updated 2026-11-16; Recent Major Changes dated 01/2026, 02/2026, 08/2026 and 11/2026)
+edition_check:
+  date: 2026-11-25
+  searched: DailyMed Lilly SPL for Zepbound opened; Drugs@FDA label files for NDA 217806 in search results (s041, s042, s050 in 2026)
+  result: current
+  newer: null
+population_limits:
+  - "Adults with obesity, or overweight plus a weight-related condition; obstructive sleep apnea with obesity. Mounjaro (same molecule, type 2 diabetes) has a separate label (not opened)"
+  - "Not recommended in severe gastroparesis"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: partial
+  sections_read: "Characters 0-100k and 200k-300k of 329k: highlights, boxed warning, §1-§8, §10-§14 (start), §17 and the Medication Guide; §14 tables, §15-§16 and instructions for use not read"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Used with a reduced-calorie diet and more physical activity for long-term weight reduction; injected once weekly at any time of day, with or without meals.
+    locator: §1; §2
+    population: Adults with obesity or overweight plus a weight-related condition
+    grade: null
+  - claim: Gastrointestinal reactions can be severe; vomiting, diarrhea or nausea can cause fluid loss and acute kidney injury, so patients should take steps to avoid dehydration, drink fluids and report persistent symptoms.
+    locator: §5; §17; Medication Guide
+    population: null
+    grade: null
+  - claim: Warnings also cover gallbladder disease, pancreatitis, pulmonary aspiration during anesthesia linked to delayed stomach emptying, worsening diabetic retinopathy with rapid glucose improvement (08/2026), sudden one-eye vision loss (NAION, 11/2026), and hypoglycemia with insulin or sulfonylureas.
+    locator: §5 (Recent Major Changes)
+    population: null
+    grade: null
+  - claim: Delayed stomach emptying can change absorption of oral medicines; people using oral hormonal contraceptives should switch to a non-oral method or add a barrier method for 4 weeks after starting and after each dose increase. Section 17 and the Medication Guide give no portion-size, meal or alcohol advice.
+    locator: §7; §17; Medication Guide
+    population: null
+    grade: null
+limitations: The weight-loss size and the regain-after-withdrawal results recorded from SUPPL-50 were not re-read in this version.
+reviewer_read: false
+notes: Supersedes fda-label-zepbound-tirzepatide-2026 (SUPPL-50, 04/2026). Fast-moving label (four 2026 revisions); re-check within a week of any topic PR.

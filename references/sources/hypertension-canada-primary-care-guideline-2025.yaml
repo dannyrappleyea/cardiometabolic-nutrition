@@ -1,0 +1,55 @@
+id: hypertension-canada-primary-care-guideline-2025
+title: Hypertension Canada guideline for the diagnosis and treatment of hypertension in adults in primary care
+authors: []
+organization: Hypertension Canada Guidelines Committee
+year: 2025
+publication: CMAJ 2025;197(20):E549
+type: guideline
+tier: "1"
+jurisdiction: canada
+authority: hypertension-canada
+domains: [blood-pressure, medicines, general-nutrition]
+edition: 2025 primary care guideline (the article says a comprehensive guideline will follow)
+edition_check:
+  date: 2026-11-25
+  searched: CMAJ article, PubMed record 40527605, Hypertension Canada guideline PDF (2025-05) and a 2026 AAFP summary in search results; no newer edition found
+  result: current
+  newer: null
+population_limits:
+  - "Adults 18 and older in primary care; excludes children and people who are pregnant or planning pregnancy"
+  - "Detailed resistant-hypertension management deferred to the forthcoming comprehensive guideline"
+identifiers:
+  doi: 10.1503/cmaj.241770
+  pmid: "40527605"
+  url: https://www.cmaj.ca/content/197/20/E549
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Funded by Hypertension Canada (revenue mainly from device endorsement, investments and certification); no pharmaceutical funding or sponsorship. Several authors disclose industry payments; two members with pharmaceutical ties did not vote on drug topics.
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: full
+  sections_read: Full article as served by cmaj.ca (diagnosis, targets, health behaviours, drug treatment, algorithm, competing interests and funding)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Hypertension is defined as blood pressure of 130/80 mmHg or higher, confirmed with home or ambulatory monitoring (or a repeat office visit if those are not feasible); drug treatment is recommended from 140/90, or from systolic 130-139 at high cardiovascular risk, with a systolic target below 130 for most adults.
+    locator: Diagnosis; treatment thresholds and targets
+    population: Adults in primary care
+    grade: null
+  - claim: Health-behaviour advice is sodium under 2 g a day (most comes from processed foods), potassium above 3.5 g a day from fruit and vegetables with potassium monitoring for people with CKD or on ACE inhibitors, ARBs or mineralocorticoid antagonists, weight loss for people with obesity, 150-300 minutes of moderate activity a week, less alcohol (especially above two drinks a day) and stopping smoking.
+    locator: Health behaviours section
+    population: null
+    grade: null
+  - claim: First-line drugs are ACE inhibitors or ARBs, thiazide or thiazide-like diuretics and long-acting dihydropyridine calcium channel blockers, preferably as low-dose single-pill combinations; resistant hypertension is blood pressure above target despite adherence to all three at maximally tolerated doses, with spironolactone suggested as the add-on.
+    locator: Drug treatment; algorithm
+    population: null
+    grade: null
+  - claim: No numeric threshold is given for severe hypertension, urgency or emergency; severe or malignant hypertension appears only as a reason to look for secondary causes.
+    locator: Algorithm
+    population: null
+    grade: null
+limitations: The guideline does not discuss potassium-enriched salt substitutes directly.
+reviewer_read: false
+notes: Missed by the first pass of this run (no Canadian condition guideline was attempted); opened after the independent evaluation of PR #5.

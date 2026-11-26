@@ -1,0 +1,47 @@
+id: fda-label-zetia-ezetimibe-2023
+title: ZETIA (ezetimibe) tablets - US prescribing information
+authors: []
+organization: Organon LLC (label approved by US FDA)
+year: 2023
+publication: Drugs@FDA, NDA 021445
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- lipids
+- medicines
+edition: SUPPL-42 (revised 2023-07)
+edition_check:
+  date: 2026-11-25
+  searched: 'Drugs@FDA label files in web search (s033 2012, s042 2023); s042 is the newest found; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-zetia-ezetimibe-2024
+population_limits: []
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021445s042lbl.pdf
+status: superseded
+superseded_by: fda-label-zetia-ezetimibe-2024
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: full
+  sections_read: §1, §2, §5.2, §6.1, §7, §8.4, §8.7, §12.3, §14
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: An adjunct to diet to lower LDL-C, alone or with a statin; also lowers plant sterols (sitosterol, campesterol) in homozygous sitosterolemia.
+  locator: §1; §14
+  population: null
+  grade: null
+- claim: Taken with or without food (meals did not change the extent of absorption); should be taken at least 2 hours before or 4 hours after a bile acid sequestrant.
+  locator: §2; §7; §12.3
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: Superseded 2026-11-25 by the Organon label revised 2/2024. Food and bile acid sequestrant findings are unchanged.

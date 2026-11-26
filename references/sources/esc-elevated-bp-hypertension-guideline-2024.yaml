@@ -1,0 +1,68 @@
+id: esc-elevated-bp-hypertension-guideline-2024
+title: 2024 ESC Guidelines for the management of elevated blood pressure and hypertension
+authors: [McEvoy JW, McCarthy CP, Bruno RM]
+organization: European Society of Cardiology (endorsed by the European Society of Endocrinology and the European Stroke Organisation)
+year: 2024
+publication: European Heart Journal 2024;45(38):3912-4018
+type: guideline
+tier: "1"
+jurisdiction: eu
+authority: esc
+domains: [blood-pressure, weight, kidney]
+edition: 2024 (replaces the 2018 ESC/ESH guideline)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for ESC hypertension guidelines and focused updates; ESC guideline listing in search results; PubMed
+  result: current
+  newer: null
+population_limits:
+  - "Separate rules for pregnancy, people aged 85 or older, frailty and limited life expectancy (lenient targets)"
+  - "Potassium recommendation excludes moderate-to-advanced CKD and is conditional (IIa)"
+  - "Lifestyle recommendations hold Class I without outcome RCTs by design (stated in the section)"
+identifiers:
+  doi: 10.1093/eurheartj/ehae178
+  pmid: null
+  url: https://repisalud.isciii.es/bitstreams/4fe1933e-3844-454d-9cef-4a64b5debafe/download
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Declarations of interest are published by ESC as a supplementary document; not read in this run
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: partial
+  sections_read: "Contents; §2 Introduction; §7.5 onward through §8.7.1 (incl. §8.2 lifestyle, Recommendation Table 15, §8.4 categories, Tables 17-18 targets); §8.5.3-§9.13 (special groups incl. CKD, resistant hypertension); §10 acute BP lowering; §14 what-to-do messages; re-read 2026-11-25: §7.5-§7.6 and Table 11 (chars 100k-200k), §8.3.4, §9.13.1-§9.13.3 and §10.1.1 (chars 200k-400k). Not read: §3-§6 body, §7.1-7.4, §11-13 and appendix. Publisher PDF read from an institutional repository copy (first 460k of 720k characters, in parts)."
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Office blood pressure is classified as non-elevated (below 120/70), elevated (120-139 systolic or 70-89 diastolic) and hypertension (140/90 or higher).
+    locator: §2 point 2; §8.4; Figure 19
+    population: Adults
+    grade: null
+  - claim: Lifestyle recommendations include sodium of about 2 g a day (about 5 g salt) (I/A); a Mediterranean or DASH diet (I/A); BMI about 20-25 with waist under 94 cm (men) or 80 cm (women) (I/A); alcohol below about 100 g of pure alcohol a week, with not drinking preferred (I/B); free sugar at most 10% of energy and limiting sugar-sweetened drinks (I/B); and regular aerobic plus resistance exercise (I/A).
+    locator: §8.2, Recommendation Table 15 (p. 3958)
+    population: Adults with elevated BP or hypertension
+    grade: Class I, Level A or B as listed
+  - claim: Raising potassium intake by 0.5-1.0 g a day is suggested for people with high sodium intake who do not have moderate-to-advanced kidney disease, and serum potassium should be monitored when dietary potassium is raised in people with CKD or taking potassium-sparing drugs; potassium-enriched salt substitutes are described (75% sodium chloride, 25% potassium chloride).
+    locator: §8.2, Recommendation Table 15; text p. 3955
+    population: Excludes moderate-to-advanced CKD
+    grade: IIa/A and IIa/C
+  - claim: The text discusses weight loss (about 4.4/3.6 mmHg lower per 5 kg lost; 5-10% loss suggested), coffee (not linked to higher hypertension risk), tea (inconclusive), energy drinks (raise BP) and sugar-sweetened soft drinks.
+    locator: §8.2 text pp. 3956-3957
+    population: null
+    grade: null
+  - claim: Resistant hypertension is office BP of 140/90 mmHg or more, confirmed by home or ambulatory monitoring, despite lifestyle measures and maximum or maximally tolerated doses of three drug classes - a thiazide or thiazide-like diuretic, a RAS blocker and a calcium channel blocker (an up-titrated loop diuretic if eGFR is under 30) - after pseudo-resistance is excluded (poor adherence, white-coat effect, poor measurement technique, arterial calcification, clinician inertia); excess sodium and alcohol are listed among behavioural causes of true resistance.
+    locator: §7.5 (pp. 3948-3950) and Table 11; §8.3.4 (p. 3959); §9.13.1 (p. 3980) and Figure 22
+    population: Adults with hypertension
+    grade: null
+  - claim: A hypertensive emergency is BP of 180/110 mmHg or more with acute hypertension-mediated organ damage (for example aortic dissection, myocardial ischaemia, acute heart failure or malignant hypertension), often with symptoms; at that level an emergency should be excluded.
+    locator: §10.1.1 (p. 3983); Table 15 what-to-do messages
+    population: Adults
+    grade: null
+  - claim: Systolic treatment target of 120-129 mmHg for most treated adults (I/A), with lenient targets for age 85 or older, frailty or symptomatic orthostatic hypotension.
+    locator: Recommendation Table 18 (p. 3966)
+    population: Treated adults
+    grade: I/A
+limitations: Body of §3-6 and supplementary evidence tables not read. Repository copy carries the ESC "personal and educational use" notice.
+reviewer_read: false
+notes: Publisher pages (escardio.org, academic.oup.com) did not serve the guideline text in this session; the copy read is the publisher PDF deposited in a Spanish public research institute repository.

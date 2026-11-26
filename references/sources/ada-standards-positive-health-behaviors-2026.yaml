@@ -1,0 +1,72 @@
+id: ada-standards-positive-health-behaviors-2026
+title: "5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes—2026"
+authors: []
+organization: American Diabetes Association Professional Practice Committee
+year: 2026
+publication: Diabetes Care 2026;49(Suppl 1):S89-S131 (published online 2025-12-08)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: ada
+domains: [glycemia, weight, general-nutrition]
+edition: Standards of Care in Diabetes—2026
+edition_check:
+  date: 2026-11-24
+  searched: PMC and PubMed search for Standards of Care in Diabetes 2026; ADA newsroom in results; no 2027 edition found
+  result: current
+  newer: null
+population_limits:
+  - "Written for people with diabetes or prediabetes; several recommendations (carbohydrate counting, fixed insulin doses, hypoglycemia after alcohol) apply only to people on insulin or secretagogues"
+  - "Very-low-carbohydrate eating not recommended in pregnancy, lactation, kidney disease, disordered eating, or with SGLT2 inhibitors"
+  - "Many nutrition recommendations are grade B, C or E (expert consensus), not A"
+identifiers:
+  doi: 10.2337/dc26-S005
+  pmid: "41358898"
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12690188
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: ADA Professional Practice Committee; disclosures published with the Standards (not read in this run)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: section
+  sections_read: "First 100k of 644k characters: Recommendation Table 5.1 recs 5.10-5.33 and the Nutrition Therapy narrative (eating patterns, carbohydrate, protein, fats, sodium, micronutrients, alcohol, sweeteners, weight loss, meal timing); stopped in Religious Fasting. Self-management education, physical activity, sleep, smoking and psychosocial parts not read."
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: People with prediabetes or diabetes and overweight should have a weight plan aiming for at least 5-7% loss; at least 5% is needed for metabolic benefit in type 2 diabetes and up to 15% may be appropriate.
+    locator: Rec 5.12; Nutrition Therapy text (weight)
+    population: Prediabetes or type 2 diabetes with overweight/obesity
+    grade: A
+  - claim: Eating plans should emphasize non-starchy vegetables, whole fruit, legumes, lean protein, whole grains, nuts and seeds and low-fat or non-dairy alternatives, and minimize red meat, sugary drinks, sweets, refined grains and processed and ultra-processed foods; no single eating pattern is ideal, with Mediterranean, DASH, low-fat, carbohydrate-restricted, vegetarian and vegan patterns all listed.
+    locator: Rec 5.14; Nutrition Therapy text (eating patterns)
+    population: null
+    grade: B
+  - claim: Reducing overall carbohydrate may be considered for some adults; very-low-carbohydrate plans improve A1C in the short term with smaller differences after a year, and ketogenic eating should be discouraged with SGLT2 inhibitors because of ketoacidosis risk.
+    locator: Recs 5.15, 5.26; text (carbohydrate)
+    population: Adults with diabetes
+    grade: B; E
+  - claim: Recommendations also cover fiber (at least 14 g per 1,000 kcal from minimally processed carbohydrate), sodium under 2,300 mg a day, water in place of other drinks, replacing sugar-sweetened beverages, non-nutritive sweeteners in moderation, more plant protein, a Mediterranean-style pattern, and limiting foods high in saturated fat.
+    locator: Recs 5.20-5.22, 5.24, 5.25, 5.29-5.31
+    population: null
+    grade: A or B as listed
+  - claim: Supplements are not recommended for glycemic benefit without deficiency; beta-carotene supplementation should be avoided; periodic vitamin B12 testing should be considered with metformin; protein and micronutrient intake should be monitored during intentional weight loss.
+    locator: Recs 5.16, 5.17, 5.23; text (micronutrients)
+    population: null
+    grade: C, B, E
+  - claim: Adults who drink should stay within daily limits and non-drinkers should not start; the text says there is no known safe amount of alcohol and warns of delayed hypoglycemia for people on insulin or secretagogues.
+    locator: Recs 5.18-5.19; text (alcohol)
+    population: null
+    grade: B
+  - claim: Intermittent fasting and time-restricted eating produce mild to moderate weight loss over 8-12 weeks but are not better than continuous calorie restriction; evidence on meal timing (chrononutrition) is inconclusive.
+    locator: Text (meal timing)
+    population: null
+    grade: null
+  - claim: Protein intakes above or below 0.8-1.5 g/kg/day are not shown to improve outcomes, and intake below 0.8 g/kg/day is not recommended.
+    locator: Text (protein)
+    population: Adults with diabetes
+    grade: null
+limitations: Only the nutrition part was read.
+reviewer_read: false
+notes: null

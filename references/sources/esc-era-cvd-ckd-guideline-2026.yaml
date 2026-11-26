@@ -1,0 +1,46 @@
+id: esc-era-cvd-ckd-guideline-2026
+title: 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA)
+authors: [Damman K, ter Maaten JM, Mayne KJ, Herrington WG]
+organization: European Society of Cardiology with the European Renal Association
+year: 2026
+publication: European Heart Journal 2026 (published online 2026-08-28)
+type: guideline
+tier: "1"
+jurisdiction: eu
+authority: esc
+domains: [kidney, blood-pressure, lipids, glycemia, medicines]
+edition: "2026 (first ESC guideline on this subject)"
+edition_check:
+  date: 2026-11-25
+  searched: University of Glasgow repository record and ESC press release (both 2026); ESC guideline listing in search results
+  result: current
+  newer: null
+population_limits:
+  - "Not checked: only the repository record and ESC's press release were read; the press release does not say whether dialysis or transplant patients are covered"
+identifiers:
+  doi: 10.1093/eurheartj/ehag098
+  pmid: null
+  url: https://eprints.gla.ac.uk/394103/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated in the pages read
+verified:
+  date: 2026-11-25
+  method: fetched-landing-page
+  scope: summary
+  sections_read: Repository record (bibliographic data; PDF restricted to repository staff) and ESC press release
+  read_via: esc-cvd-ckd-guideline-press-release-2026
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Recommends testing everyone with cardiovascular disease for CKD at diagnosis with eGFR and urine albumin-to-creatinine ratio, assessing kidney and cardiovascular risk with tools that include kidney function, and starting RAS inhibitors and SGLT2 inhibitors early alongside statin-based therapy.
+    locator: Via ESC press release
+    population: People with CVD and/or CKD
+    grade: null
+  - claim: The press release names no diet, sodium, potassium or protein recommendations; whether the guideline contains any is unknown.
+    locator: Via ESC press release
+    population: null
+    grade: null
+limitations: Recommendation text not read (journal not fetched; repository PDF restricted). Must be read before condition-kidney-function-diet relies on it.
+reviewer_read: false
+notes: Missed in the first pass of this run; recorded after the independent evaluation of PR #5.

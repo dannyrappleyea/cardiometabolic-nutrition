@@ -1,0 +1,54 @@
+id: fda-label-zestril-lisinopril-2025
+title: ZESTRIL (lisinopril) tablets - US prescribing information
+authors: []
+organization: Upsher-Smith Laboratories LLC (label approved by US FDA)
+year: 2025
+publication: FDALabel (FDA), SPL set ID 838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8, NDA 019777
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [blood-pressure, medicines]
+edition: SPL version 2, effective 2025-01-02
+edition_check:
+  date: 2026-11-24
+  searched: FDALabel SPL for the brand NDA 019777 found by web search (also older Drugs@FDA 2014 s064 label and DailyMed generic listings in results); the FDALabel SPL is the newest found
+  result: current
+  newer: null
+population_limits:
+  - "Reference listed drug (brand) label"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole SPL read in two parts (boxed warning, §2, §4, §5, §6.1, §7, §12.3, §17)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Risk factors for high potassium include kidney impairment, diabetes, potassium-sparing diuretics, potassium supplements and potassium-containing salt substitutes; patients are told not to use potassium-containing salt substitutes without consulting their physician.
+    locator: §5.5; §17
+    population: null
+    grade: null
+  - claim: Food does not change lisinopril bioavailability.
+    locator: §12.3
+    population: null
+    grade: null
+  - claim: Heavy sweating, dehydration, vomiting or diarrhea can cause an excessive fall in blood pressure; severe salt or volume depletion raises hypotension risk.
+    locator: §5.4; §17
+    population: null
+    grade: null
+  - claim: NSAIDs may worsen kidney function and blunt the blood pressure effect; contraindicated with a history of ACE-inhibitor angioedema; must be stopped when pregnancy is detected (boxed warning).
+    locator: §7.3; §4; §5.1
+    population: null
+    grade: null
+limitations: null
+reviewer_read: false
+notes: null

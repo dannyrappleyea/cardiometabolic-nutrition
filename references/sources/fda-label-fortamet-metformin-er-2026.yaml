@@ -1,0 +1,59 @@
+id: fda-label-fortamet-metformin-er-2026
+title: FORTAMET (metformin hydrochloride) extended-release tablets - US prescribing information (revised 8/2026)
+authors: []
+organization: Shionogi Inc (distributor) / Actavis Laboratories FL (manufacturer); label approved by US FDA
+year: 2026
+publication: Drugs@FDA, NDA 021574 SUPPL-32
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [glycemia, medicines]
+edition: SUPPL-32 (revised 2026-08; Boxed Warning and §5.1 revised 8/2026)
+edition_check:
+  date: 2026-11-25
+  searched: Drugs@FDA label file and approval letter for NDA 021574 S-032 (2026) in search results, label opened; Drugs@FDA overview for NDA 020357 (Glucophage, discontinued; last label 2018) from the 2026-11-24 check; DailyMed generic metformin extended-release listings in search results not compared
+  result: current
+  newer: null
+population_limits:
+  - "Extended-release formulation taken with the evening meal; immediate-release metformin is dosed differently (with meals, usually twice daily)"
+  - "Adults with type 2 diabetes"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/021574s032lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole label as served, including Boxed Warning, §2, §5, §6, §7, §12.3, §14, §17 and patient information
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The 8/2026 Boxed Warning lists lactic acidosis risk factors including kidney impairment, age 65 or older, contrast imaging, surgery and other procedures, low-oxygen states, excessive alcohol intake, liver impairment and (newly) mitochondrial disease.
+    locator: Boxed Warning; Recent Major Changes
+    population: null
+    grade: null
+  - claim: Alcohol strengthens metformin's effect on lactate, so patients are warned against excessive intake. The label calls for temporary discontinuation while food and fluid intake is restricted (as around surgery or other procedures) and at or before iodinated contrast imaging; patients are told to inform their doctor before any surgical or radiological procedure, as a temporary stop may be required. Whether to stop is the prescriber's decision.
+    locator: §5.1; §7; §17
+    population: null
+    grade: null
+  - claim: About 7% of trial patients developed low vitamin B12, usually reversible with stopping or supplementation; blood counts should be checked yearly and B12 every 2-3 years.
+    locator: §5.2
+    population: null
+    grade: null
+  - claim: Taken once daily with the evening meal and swallowed whole; food raises total absorption by about 60%; diarrhea and nausea or vomiting are the most common effects; hypoglycemia risk rises mainly with insulin or sulfonylureas.
+    locator: §2; §5.3; §6; §12.3; §17
+    population: null
+    grade: null
+limitations: Extended-release product. Immediate-release administration text (taken with meals) was last seen in the discontinued Glucophage label; a current immediate-release metformin label (FDA reference standard or an ANDA) was not opened.
+reviewer_read: false
+notes: >-
+  Why this label - Glucophage/Glucophage XR (NDA 020357/021202), the original metformin reference listed drug,
+  is discontinued and its last label is from 2018. Fortamet is a currently listed NDA metformin label that carries
+  the 8/2026 Boxed Warning and §5.1 revision, so it is used as the current class label. Supersedes
+  fda-label-glucophage-metformin-2018.

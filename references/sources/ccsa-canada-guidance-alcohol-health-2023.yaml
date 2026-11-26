@@ -1,0 +1,47 @@
+id: ccsa-canada-guidance-alcohol-health-2023
+title: Canada's Guidance on Alcohol and Health
+authors: []
+organization: Canadian Centre on Substance Use and Addiction (CCSA)
+year: 2023
+publication: ccsa.ca (final report January 2023)
+type: guideline
+tier: "1"
+jurisdiction: canada
+authority: ccsa
+domains: [general-nutrition]
+edition: 2023 (replaces Canada's Low-Risk Alcohol Drinking Guidelines, 2011)
+edition_check:
+  date: 2026-11-24
+  searched: CCSA guidance page and search results for the final report; no newer edition found
+  result: current
+  newer: null
+population_limits:
+  - "General adult population; separate advice for pregnancy and breastfeeding"
+  - "Not checked in the final report itself (guidance web page read)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://ccsa.ca/canadas-guidance-alcohol-and-health
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Funded by Health Canada; CCSA states its views are not necessarily Health Canada's
+verified:
+  date: 2026-11-24
+  method: fetched-landing-page
+  scope: summary
+  sections_read: CCSA guidance web page (risk continuum and key messages); final report PDF not opened
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Health risk rises along a continuum - 1-2 standard drinks a week low risk, 3-6 moderate (higher risk of several cancers), 7 or more increasingly high (significantly higher heart disease and stroke risk) - and less is better at any level.
+    locator: Risk continuum
+    population: Adults
+    grade: null
+  - claim: The guidance states evidence no longer supports alcohol being good for health and that no healthy amount has been identified; more than 2 drinks on one occasion raises injury risk.
+    locator: Key messages
+    population: Adults
+    grade: null
+limitations: Summary page only.
+reviewer_read: false
+notes: Replaces the 2011 guidelines that Canada's Dietary Guidelines (2019) still cite.

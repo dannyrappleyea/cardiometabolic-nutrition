@@ -1,0 +1,47 @@
+id: nasem-dri-sodium-potassium-2019
+title: Dietary Reference Intakes for Sodium and Potassium
+authors: []
+organization: National Academies of Sciences, Engineering, and Medicine
+year: 2019
+publication: National Academies Press, 2019 (news release 2019-03-05)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: nasem
+domains: [blood-pressure, general-nutrition, kidney]
+edition: 2019 (replaces the 2005 sodium and potassium DRIs)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for the NASEM sodium and potassium DRI report (NAP, PubMed 30844154, NASEM news); no newer DRI review found
+  result: current
+  newer: null
+population_limits:
+  - "Reference values for apparently healthy people in the US and Canada"
+  - "Potassium has no CDRR or UL because evidence is insufficient; people with or at risk of reduced kidney function should be cautious with supplemental potassium"
+identifiers:
+  doi: null
+  pmid: "30844154"
+  url: https://www.nationalacademies.org/news/2019/03/sodium-and-potassium-dietary-reference-intake-values-updated-in-new-report
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Sponsored by Health Canada, PHAC, NIH, CDC, USDA and FDA
+verified:
+  date: 2026-11-24
+  method: fetched-landing-page
+  scope: summary
+  sections_read: NASEM news release summarizing the report; report chapters not opened
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The sodium Chronic Disease Risk Reduction Intake for adults is 2,300 mg a day (intakes above it should be reduced) and the sodium Adequate Intake is 1,500 mg a day; benefits apply to adults with and without hypertension.
+    locator: News release
+    population: Adults 14+
+    grade: null
+  - claim: Potassium Adequate Intakes range from 2,300 to 3,400 mg a day by sex and life stage; no potassium CDRR or upper limit was set for lack of evidence.
+    locator: News release
+    population: Healthy people
+    grade: null
+limitations: Read through the issuing body's release only.
+reviewer_read: false
+notes: Independent academy (not a federal agency) though sponsored by US and Canadian federal bodies; treat its independence carefully for METHODS §3.

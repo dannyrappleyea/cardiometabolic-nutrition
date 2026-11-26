@@ -1,0 +1,42 @@
+id: health-canada-mercury-in-fish-2024
+title: Mercury in Fish (Health Canada consumption advice)
+authors: []
+organization: Health Canada
+year: 2024
+publication: canada.ca, page modified 2024-07-25 (first issued 2007)
+type: expert-explainer
+tier: "6"
+jurisdiction: canada
+authority: health-canada
+domains: [food-safety, general-nutrition]
+edition: Page modified 2024-07-25
+edition_check: null
+population_limits:
+  - "General population advice plus stricter limits for people who are or may become pregnant, are breastfeeding, and for children"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/chemical-contaminants/environmental-contaminants/mercury/mercury-fish.html
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Government food-safety advice; none declared
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Most people need not worry about mercury from fish, but adults should limit fresh or frozen tuna, shark, swordfish, marlin, orange roughy and escolar to about 150 g a week, with other fish making up the rest; canned light tuna is not covered by this limit.
+    locator: Consumption advice
+    population: General adult population
+    grade: null
+  - claim: Fish such as anchovy, char, hake, herring, Atlantic mackerel, pollock, salmon, smelt, rainbow trout, shrimp, clams, mussels and oysters are lower in mercury and higher in omega-3 fats; the page links fish to a healthy eating pattern and its omega-3 fats to lower risk of sudden cardiac death.
+    locator: Lower-mercury fish; benefits
+    population: null
+    grade: null
+limitations: Covers mercury only; no other contaminants discussed. Tier 6 (food-safety explainer), so useful for data, not rules.
+reviewer_read: false
+notes: Opened to give fish its own question set (contaminants), per the independent evaluation of PR #5.

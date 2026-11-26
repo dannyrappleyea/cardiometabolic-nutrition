@@ -1,0 +1,54 @@
+id: ada-standards-diagnosis-classification-2026
+title: "2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026"
+authors: []
+organization: American Diabetes Association Professional Practice Committee
+year: 2026
+publication: Diabetes Care 2026;49(Suppl 1):S27-S49 (published online December 2025)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: ada
+domains: [glycemia]
+edition: Standards of Care in Diabetes—2026 (annual; replaces the 2025 edition)
+edition_check:
+  date: 2026-11-24
+  searched: PMC and PubMed search for Standards of Care in Diabetes 2026 sections; ADA newsroom press release in results; the 2027 Standards had not appeared in search results
+  result: current
+  newer: null
+population_limits:
+  - "Diagnostic criteria are for nonpregnant adults; plasma glucose criteria replace A1C in pregnancy, anemia, hemodialysis, erythropoietin or HIV treatment and some hemoglobin variants"
+identifiers:
+  doi: 10.2337/dc26-S002
+  pmid: null
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12690183
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: ADA Professional Practice Committee; committee disclosures are published with the Standards (not read in this run)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: section
+  sections_read: "First 100k of 293k characters: diagnostic criteria (Tables 2.1-2.3), prediabetes (Table 2.2), adult screening (Table 2.5, Recs 2.11-2.12)"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Prediabetes is defined by A1C 5.7-6.4%, fasting plasma glucose 100-125 mg/dL, or 2-hour glucose 140-199 mg/dL on a 75 g oral glucose tolerance test.
+    locator: Table 2.2
+    population: Nonpregnant adults
+    grade: null
+  - claim: Diabetes is diagnosed at A1C 6.5% or higher, fasting glucose 126 mg/dL or higher, 2-hour OGTT glucose 200 mg/dL or higher, or random glucose 200 mg/dL or higher with symptoms; without clear hyperglycemia two abnormal results are needed.
+    locator: Table 2.1; Rec 2.1b
+    population: Nonpregnant adults
+    grade: null
+  - claim: Screening is advised for adults with overweight or obesity (BMI 25 or higher, or 23 or higher in people of Asian ancestry) plus a risk factor, and for everyone from age 35; people with prediabetes should be retested yearly.
+    locator: Table 2.5; Recs 2.11-2.12
+    population: Adults
+    grade: null
+  - claim: A1C may be unreliable with anemia, hemodialysis, erythropoietin or HIV treatment, some hemoglobin variants and G6PD deficiency; glucose criteria should then be used.
+    locator: Table 2.3; Recs 2.2b-2.4
+    population: null
+    grade: null
+limitations: Read diagnostic and screening parts only.
+reviewer_read: false
+notes: null

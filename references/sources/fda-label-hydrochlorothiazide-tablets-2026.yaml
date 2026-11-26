@@ -1,0 +1,46 @@
+id: fda-label-hydrochlorothiazide-tablets-2026
+title: Hydrochlorothiazide Tablets USP 25 mg - US prescribing information (repackager SPL, ANDA 040907)
+authors: []
+organization: A-S Medication Solutions (repackager; label approved by US FDA under ANDA 040907)
+year: 2026
+publication: FDALabel (FDA), SPL set ID f1f99065-04d2-48ac-b25d-9595237c869c
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [blood-pressure, medicines]
+edition: SPL version 11, effective 2026-02-06
+edition_check:
+  date: 2026-11-24
+  searched: FDALabel and drugs.com listings for hydrochlorothiazide tablets in web search; no brand reference listed drug label surfaced
+  result: current
+  newer: null
+population_limits:
+  - "Repackager copy of a generic (ANDA) label; the reference listed drug label was not identified (METHODS §5 prefers the RLD label)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/f1f99065-04d2-48ac-b25d-9595237c869c/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Generic label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Warnings, Precautions (general, information for patients, laboratory tests, drug interactions), Adverse Reactions, Dosage
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Thiazides can lower potassium (especially at higher doses or with prolonged use) and magnesium, raise calcium, blood glucose, uric acid (possibly triggering gout), cholesterol and triglycerides, and cause dilutional low sodium in hot weather.
+    locator: Precautions - General
+    population: null
+    grade: null
+  - claim: Alcohol may worsen orthostatic (standing) low blood pressure; diuretics raise lithium toxicity risk; patients should protect skin from the sun because of a non-melanoma skin cancer association.
+    locator: Drug Interactions; Information for Patients
+    population: null
+    grade: null
+limitations: Not the reference listed drug label; replace with the RLD label in topic research.
+reviewer_read: false
+notes: null

@@ -1,0 +1,54 @@
+id: fda-label-ozempic-semaglutide-2026
+title: OZEMPIC (semaglutide) injection - US prescribing information
+authors: []
+organization: Novo Nordisk (label approved by US FDA)
+year: 2026
+publication: FDALabel (FDA), SPL set ID adec4fd2-6858-4c99-91d4-531f5f2a2d79, NDA 209637
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [glycemia, kidney, medicines]
+edition: SPL version 20, effective 2026-06-01 (Drugs@FDA lists SUPPL-38 label, 2026, and an approval letter for SUPPL-39)
+edition_check:
+  date: 2026-11-24
+  searched: Drugs@FDA label files for NDA 209637 in web search (s012 2022, s025 and s035/s037 2025, s038 2026; s039 approval letter 2026); FDALabel SPL v20 (2026-06-01) read as the current text
+  result: current
+  newer: null
+population_limits:
+  - "Type 2 diabetes indications only (the obesity product Wegovy has a separate label, not opened)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/adec4fd2-6858-4c99-91d4-531f5f2a2d79/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: partial
+  sections_read: "Highlights, §1-§5 and start of §6 (first 100k of 541k characters); §6.1 onward, §7, §12, §17 not read"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Indicated as an adjunct to diet and exercise in type 2 diabetes, and to reduce cardiovascular events and kidney outcomes in specified groups; injected weekly with or without meals.
+    locator: §1; §2.2
+    population: Adults with type 2 diabetes
+    grade: null
+  - claim: Nausea, vomiting, diarrhea, abdominal pain and constipation are the most common side effects; acute kidney injury has been reported, mostly after dehydration from these effects; severe GI reactions are more frequent than with placebo and use is not recommended with severe gastroparesis.
+    locator: §5.6-5.7; §6
+    population: null
+    grade: null
+  - claim: Gallbladder disease (gallstones) was more common than with placebo; acute pancreatitis is a warning; hypoglycemia risk rises with insulin or sulfonylureas.
+    locator: §5.2; §5.5; §5.9
+    population: null
+    grade: null
+  - claim: Delayed gastric emptying has been linked to rare pulmonary aspiration during anesthesia even after recommended fasting; patients should tell providers before procedures.
+    locator: §5.10
+    population: null
+    grade: null
+limitations: Later sections not read.
+reviewer_read: false
+notes: null

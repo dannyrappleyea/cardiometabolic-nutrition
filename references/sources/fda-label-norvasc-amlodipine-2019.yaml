@@ -1,0 +1,46 @@
+id: fda-label-norvasc-amlodipine-2019
+title: NORVASC (amlodipine besylate) tablets - US prescribing information
+authors: []
+organization: Pfizer Inc (label approved by US FDA)
+year: 2019
+publication: Pfizer labeling site (SPL version 18), NDA 019787
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [blood-pressure, medicines]
+edition: SPL version 18 (revised 2019-01; effective 2019-01-10)
+edition_check:
+  date: 2026-11-24
+  searched: Pfizer labeling page re-opened 2026-11-25 (still SPL v18, revised 1/2019, labeler Pfizer); web search for the NDA 019787 brand label now held by Viatris; the Viatris Specialty LLC NORVASC label text (revised 2/2023) was seen only through a third-party SPL index (ndclist.com, NDC 58151-353); no FDA, DailyMed or Viatris copy was opened
+  result: newer-not-recorded
+  newer: "NORVASC label from Viatris Specialty LLC, revised 2/2023 (NDA 019787). Not recorded because only a third-party copy was seen; in that copy the grapefruit-juice (no impact on exposure) and simvastatin (limit 20 mg) statements read the same as below."
+population_limits:
+  - "Reference listed drug (brand) label"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://labeling.pfizer.com/showlabeling.aspx?id=562
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Highlights, §2.1, §6.1, §7.1-7.2, §12.3
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Grapefruit juice had no impact on amlodipine exposure, and food does not alter its bioavailability.
+    locator: §12.3
+    population: null
+    grade: null
+  - claim: Moderate and strong CYP3A inhibitors raise amlodipine levels; simvastatin should be limited to 20 mg a day with amlodipine; dose-related ankle swelling (edema) is the most common side effect.
+    locator: §7.1-7.2; §6.1
+    population: null
+    grade: null
+limitations: Not the current brand label - Viatris now distributes NORVASC under NDA 019787 with a label revised 2/2023 (seen only via a third-party index). The two findings below were checked against that text and are unchanged.
+reviewer_read: false
+notes: Edition check corrected 2026-11-25 after Copilot review of PR #5. Topic research must open the Viatris SPL on DailyMed or FDALabel and record it as a new source before relying on amlodipine label facts.

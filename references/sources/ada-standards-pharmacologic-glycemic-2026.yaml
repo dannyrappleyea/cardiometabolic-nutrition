@@ -1,0 +1,46 @@
+id: ada-standards-pharmacologic-glycemic-2026
+title: "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes-2026"
+authors: []
+organization: American Diabetes Association Professional Practice Committee
+year: 2026
+publication: Diabetes Care 2026;49(Suppl 1) (PMC12690185)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: ada
+domains: [glycemia, medicines]
+edition: Standards of Care in Diabetes 2026 (published December 2025)
+edition_check:
+  date: 2026-11-25
+  searched: PMC record for Section 9 (2026) and PubMed record for the 2025 edition in search results; the 2027 edition is expected around December 2026
+  result: current
+  newer: null
+population_limits:
+  - "People with diabetes; drug-treatment recommendations, not diet thresholds"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12690185
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked (ADA committee disclosures are published separately)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: section
+  sections_read: "First 100k of 379k characters (recommendations and the start of the type 2 diabetes drug-treatment text)"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Insulin should be considered, whatever other medicines are used, when there are symptoms of high glucose or when A1C is above 10% or glucose 300 mg/dL or more; starting two glucose-lowering drugs together may be considered when A1C is 1.5-2.0 percentage points above the person's goal.
+    locator: Rec 9.20; type 2 diabetes treatment text
+    population: Adults with type 2 diabetes
+    grade: null
+  - claim: When a new glucose-lowering drug is added, the need for and dose of agents with higher hypoglycemia risk - sulfonylureas, meglitinides and insulin - should be reassessed; metformin used alone does not cause hypoglycemia.
+    locator: Rec 9.17; metformin text
+    population: Adults with type 2 diabetes
+    grade: null
+limitations: Grades were not captured from the fetched text; rest of the section not read. No 9.0% A1C boundary appears in the part read.
+reviewer_read: false
+notes: First opened in this fix round (PMC served a reCAPTCHA page in the first pass).

@@ -1,0 +1,37 @@
+id: ambrosetti-esc-hypertension-commentary-2024
+title: Innovation, simplification, and adherence to real life, 2024 ESC guidelines of elevated blood pressure and hypertension claimed for
+authors: [Ambrosetti M, Loguercio M, Maresca L, Meloni C, Zaniboni D]
+organization: null
+year: 2024
+publication: International Journal of Cardiology. Cardiovascular Risk and Prevention 2024;23:200335
+type: expert-explainer
+tier: "6"
+jurisdiction: eu
+authority: null
+domains: [blood-pressure]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: 10.1016/j.ijcrp.2024.200335
+  pmid: null
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11440316
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole commentary (about two pages)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Commentary restating the 2024 ESC categories (non-elevated below 120/70, elevated 120-139/70-89, hypertension 140/90 or higher) and the ESC exercise recommendations.
+    locator: Main text
+    population: null
+    grade: null
+limitations: Commentary only; opened while looking for the guideline. Not to be cited for rules.
+reviewer_read: false
+notes: null

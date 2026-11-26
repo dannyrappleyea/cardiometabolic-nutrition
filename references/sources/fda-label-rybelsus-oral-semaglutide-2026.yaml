@@ -1,0 +1,50 @@
+id: fda-label-rybelsus-oral-semaglutide-2026
+title: RYBELSUS (semaglutide) tablets - US prescribing information
+authors: []
+organization: Novo Nordisk Inc (label approved by US FDA)
+year: 2026
+publication: Drugs@FDA, NDA 213051
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [glycemia, medicines]
+edition: SUPPL-30 (revised 2026-01)
+edition_check:
+  date: 2026-11-24
+  searched: Drugs@FDA label files for NDA 213051 in web search (s030 2026 is the latest listed)
+  result: current
+  newer: null
+population_limits:
+  - "Adults with type 2 diabetes"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/213051s030lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole label (first 100k of 102k characters)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Taken once daily on an empty stomach in the morning with no more than 4 ounces of plain water, waiting at least 30 minutes before eating, drinking or other oral medicines; absorption is better with less water and longer post-dose fasting.
+    locator: §2.1; §12.3
+    population: null
+    grade: null
+  - claim: Delays gastric emptying, which can change absorption of other oral drugs (levothyroxine exposure rose by a third).
+    locator: §7.2; §12.3
+    population: null
+    grade: null
+  - claim: Patients should take precautions to avoid fluid loss and report persistent nausea, vomiting or diarrhea because dehydration has led to acute kidney injury.
+    locator: §5.5; §17
+    population: null
+    grade: null
+limitations: null
+reviewer_read: false
+notes: null

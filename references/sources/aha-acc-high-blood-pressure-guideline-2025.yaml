@@ -1,0 +1,50 @@
+id: aha-acc-high-blood-pressure-guideline-2025
+title: 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults
+authors: [Jones DW, Ferdinand KC, Taler SJ]
+organization: American Heart Association / American College of Cardiology Joint Committee on Clinical Practice Guidelines
+year: 2025
+publication: Hypertension 2025;82(10):e212-e316 (also published in Circulation and JACC)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [blood-pressure]
+edition: 2025 (replaces the 2017 ACC/AHA high blood pressure guideline)
+edition_check:
+  date: 2026-11-24
+  searched: PubMed (PMIDs 40811516, 40811497, 40815242), Europe PMC, ACC press release and journal scan, heart.org; no later edition or focused update found
+  result: current
+  newer: null
+population_limits:
+  - "Not checked in the guideline text: full text could not be fetched in this session (publisher sites refused the request; Europe PMC did not offer a free full text)"
+identifiers:
+  doi: 10.1161/HYP.0000000000000249
+  pmid: "40811516"
+  url: https://pubmed.ncbi.nlm.nih.gov/40811516/
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked (relationships-with-industry tables are in the full text, which could not be opened)
+verified:
+  date: 2026-11-24
+  method: fetched-abstract
+  scope: summary
+  sections_read: PubMed abstract only; content known through the AHA public summary page (aha-high-bp-top-10-2025) and an ACC journal scan (acc-hbp-guideline-journal-scan-2025). Full text at ahajournals.org and jacc.org refused the fetch.
+  read_via: aha-high-bp-top-10-2025
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The guideline replaces the 2017 ACC/AHA high blood pressure guideline; its literature search covered human studies published since February 2015 and ran from December 2023 to June 2024.
+    locator: Abstract (PubMed)
+    population: Adults
+    grade: null
+  - claim: According to the issuing body's own public summary, the guideline keeps the 2017 categories (normal under 120/80; elevated 120-129 systolic with diastolic under 80; stage 1 130-139 or 80-89; stage 2 140 or higher or 90 or higher) and calls readings above 180 systolic and/or above 120 diastolic severe hypertension, or a hypertensive emergency when symptoms are present.
+    locator: Via aha-high-bp-top-10-2025 (category table)
+    population: Non-pregnant adults
+    grade: null
+  - claim: Updated areas include lifestyle and psychosocial approaches, resistant hypertension, diabetes and chronic kidney disease; urine albumin-to-creatinine testing is now recommended for everyone with high blood pressure; GLP-1 medicines may be considered for some people with high blood pressure and overweight or obesity; the PREVENT calculator replaces the pooled cohort equations for risk estimation.
+    locator: Via acc-hbp-guideline-journal-scan-2025
+    population: Adults with high blood pressure
+    grade: null
+limitations: Read only through the abstract and two summaries by the issuing bodies; classes of recommendation, levels of evidence and the lifestyle section text were not seen. Cannot be decisive for a reviewed topic until the full text is read.
+reviewer_read: false
+notes: Retry full text via an institutional route or the ACC/AHA guideline hub in the topic phase.

@@ -1,0 +1,54 @@
+id: fda-label-vascepa-icosapent-ethyl-2026
+title: VASCEPA (icosapent ethyl) capsules - US prescribing information (revised 03/2026)
+authors: []
+organization: Amarin Pharma Inc (NDA holder's copy; label approved by US FDA)
+year: 2026
+publication: Amarin prescribing information PDF, NDA 202057
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [lipids, medicines]
+edition: Revised 2026-03 (Drugs@FDA S-058, approved 2026-03-16)
+edition_check:
+  date: 2026-11-25
+  searched: Drugs@FDA approval letter for NDA 202057/S-058 (2026-03-16; a changes-being-effected supplement adding a new NDC and capsule imprint) opened; Amarin's prescribing information revised 03/2026 opened; DailyMed listings in search showed generic icosapent ethyl labels but not Amarin's SPL
+  result: current
+  newer: null
+population_limits:
+  - "Cardiovascular indication limited to adults on statins with triglycerides 150 mg/dL or more and established CVD, or diabetes plus 2 or more risk factors; triglyceride-lowering indication for 500 mg/dL or more"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://investors.amarincorp.com/static-files/1b3f71b0-06ce-436f-ac8b-62678167ef9f
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: partial
+  sections_read: Highlights, §1, §2, §4-§7 and patient information as served; §8-§17 detail not confirmed. Also the S-058 approval letter.
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Indicated with statins to lower cardiovascular events in adults with triglycerides of 150 mg/dL or more and established heart disease or diabetes plus at least two risk factors, and as an adjunct to diet for triglycerides of 500 mg/dL or more; other causes of high triglycerides should be assessed first.
+    locator: §1; §2
+    population: null
+    grade: null
+  - claim: Taken as 4 g a day in two doses with food, capsules swallowed whole.
+    locator: §2
+    population: null
+    grade: null
+  - claim: Raises the risk of atrial fibrillation or flutter and of bleeding (more so with antithrombotic drugs); people allergic to fish or shellfish may react and should stop if they do; in the outcomes trial common reactions included musculoskeletal pain, swelling, constipation, gout and atrial fibrillation.
+    locator: §5; §6; §7
+    population: null
+    grade: null
+  - claim: The patient leaflet says a diet low in saturated fat, cholesterol, carbohydrate and added sugar may be recommended and asks patients to report all vitamins and dietary or herbal supplements.
+    locator: Patient information
+    population: null
+    grade: null
+limitations: Read from the NDA holder's own PDF, not DailyMed; the fetch did not confirm every later section.
+reviewer_read: false
+notes: Supersedes fda-label-vascepa-icosapent-ethyl-2019 (SUPPL-35). The diet-related findings match the 2019 record; gout among common reactions in the outcomes trial is newly recorded here.

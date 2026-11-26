@@ -1,0 +1,49 @@
+id: fda-label-zetia-ezetimibe-2024
+title: ZETIA (ezetimibe) tablets - US prescribing information (revised 2/2024)
+authors: []
+organization: Organon LLC (NDA holder's copy; label approved by US FDA)
+year: 2024
+publication: Organon US prescribing information PDF, NDA 021445
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [lipids, medicines]
+edition: Revised 2024-02 (Recent Major Changes to §1, §2, §4 and §5 dated 7/2023)
+edition_check:
+  date: 2026-11-25
+  searched: Organon US prescribing information (revised 2/2024) opened; Drugs@FDA files in search results list s042 (2023) as the newest label file and its approval letter, with no later label file found
+  result: current
+  newer: null
+population_limits: []
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.organon.com/product/usa/pi_circulars/z/zetia/zetia_pi.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: partial
+  sections_read: Highlights, §1, §2, §4, §5, §7, §12.3 (food effect and interaction table), §17; patient labeling not included in the PDF
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: An adjunct to diet to lower LDL-C, alone or with a statin (and with fenofibrate in mixed hyperlipidemia); also lowers plant sterols in homozygous sitosterolemia.
+    locator: §1
+    population: null
+    grade: null
+  - claim: Taken once daily with or without food - high-fat and non-fat meals did not change how much is absorbed, though a high-fat meal raised peak levels; it should be taken at least 2 hours before or 4 hours after a bile acid sequestrant, which lowers its exposure.
+    locator: §2; §7; §12.3
+    population: null
+    grade: null
+  - claim: The label gives no other diet or supplement advice; it notes liver-enzyme rises with statins, muscle problems mostly with statins or fibrates, and gallstone checks if suspected with fenofibrate.
+    locator: §5; §7; §17
+    population: null
+    grade: null
+limitations: Read from the NDA holder's own PDF; the Drugs@FDA supplement matching the 2/2024 revision was not identified.
+reviewer_read: false
+notes: Supersedes fda-label-zetia-ezetimibe-2023 (SUPPL-42, 07/2023). Diet-related findings are unchanged.

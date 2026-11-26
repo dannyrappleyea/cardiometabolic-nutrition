@@ -1,0 +1,55 @@
+id: fda-label-xenical-orlistat-2024
+title: XENICAL (orlistat) 120 mg capsules - US prescribing information (SPL version 9)
+authors: []
+organization: H2-Pharma LLC (labeler) for Cheplapharm Arzneimittel GmbH (NDA holder); label approved by US FDA
+year: 2024
+publication: FDALabel SPL, set ID 6240792b-9224-2d10-e053-2a91aa0a2c3e, NDA 020766
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [weight, medicines]
+edition: SPL version 9 (effective 2024-07-08); carries the S-038 change (Recent Major Change, §5.3, 11/2022)
+edition_check:
+  date: 2026-11-25
+  searched: Drugs@FDA approval letter for NDA 020766/S-039 (dated 2026-09-30) opened; S-038 letter (2022) listed in search results; FDALabel SPL for brand Xenical (version 9, the newest SPL listed) opened; searches for a 2026 Drugs@FDA label file (020766s039lbl) did not surface it
+  result: newer-not-recorded
+  newer: "NDA 020766/S-039 (approved 2026-09-30): per its approval letter, removes pregnancy from contraindications, revises the hypersensitivity contraindication, §6.2 and §8.1-8.2, and edits §5 and §7 for clarity. The S-039 labeling text was not obtained in this session."
+population_limits:
+  - "Prescription 120 mg product; the over-the-counter 60 mg product has separate labeling (not opened)"
+  - "Contraindication list (pregnancy) is changed by S-039"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/6240792b-9224-2d10-e053-2a91aa0a2c3e/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: partial
+  sections_read: "First 100k of 204k characters: highlights, §1-§11 and §12.3 up to Distribution; §12.3 remainder, §13-§17 and patient information not read. Also the S-039 approval letter (whole)."
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Taken as one capsule with each main meal containing fat (during or up to an hour after); the diet should supply about 30% of calories from fat with fat, carbohydrate and protein spread over three meals, and a dose can be skipped if a meal is missed or has no fat.
+    locator: §1; §2
+    population: Adults with BMI 30 or more, or 27 or more with risk factors
+    grade: null
+  - claim: Absorption of fat-soluble vitamins and beta-carotene falls, so a multivitamin is advised, taken at least 2 hours before or after a dose (for example at bedtime); gastrointestinal effects rise when the diet exceeds about 30% fat, especially with a very high-fat meal.
+    locator: §2; §5
+    population: null
+    grade: null
+  - claim: Warnings include oxalate kidney stones and oxalate nephropathy with kidney failure (monitor kidney function in people at risk), gallstones with substantial weight loss, and rare severe liver injury.
+    locator: §5 (incl. §5.3, revised 11/2022); §6.2
+    population: null
+    grade: null
+  - claim: Separate levothyroxine by at least 4 hours and give cyclosporine 3 hours after; reduced vitamin K absorption calls for close coagulation monitoring with warfarin; reduced amiodarone exposure, seizures with antiepileptics and loss of HIV control with antiretrovirals have been reported.
+    locator: §7
+    population: null
+    grade: null
+limitations: Not the newest approved text - S-039 (2026-09-30) was approved after this SPL version. The S-039 letter does not list §2 dosing among the changes, but topic research must open the S-039 labeling before relying on this record.
+reviewer_read: false
+notes: Supersedes fda-label-xenical-orlistat-2012 (SUPPL-29, 2012). Organization corrected from Genentech to the current labeler and NDA holder.

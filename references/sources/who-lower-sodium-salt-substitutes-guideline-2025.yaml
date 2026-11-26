@@ -1,0 +1,47 @@
+id: who-lower-sodium-salt-substitutes-guideline-2025
+title: "Use of lower-sodium salt substitutes: WHO guideline"
+authors: []
+organization: World Health Organization (Nutrition Guidance Expert Advisory Group)
+year: 2025
+publication: World Health Organization, 2025-01-27 (ISBN 978-92-4-010559-1); summary 2025-04-14 (ISBN 978-92-4-010836-3)
+type: guideline
+tier: "1"
+jurisdiction: who
+authority: who
+domains: [blood-pressure, kidney, general-nutrition]
+edition: 2025 (first WHO guideline on this question)
+edition_check:
+  date: 2026-11-24
+  searched: WHO publications pages for the guideline and its summary (search results)
+  result: current
+  newer: null
+population_limits:
+  - "Per the overview read, the recommendation is for adults; an advisory is advised for people with advanced kidney disease and others for whom extra potassium could be harmful"
+  - "Strength, certainty and the full exclusion list were not seen (guideline PDF not opened)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.who.int/publications/i/item/9789240105591
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked
+verified:
+  date: 2026-11-24
+  method: fetched-landing-page
+  scope: landing-page
+  sections_read: WHO publication pages for the guideline and the guideline summary; recommendation known via an overview by Resolve to Save Lives (rtsl-who-salt-substitutes-overview-2025)
+  read_via: rtsl-who-salt-substitutes-overview-2025
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: WHO issued its first guideline on lower-sodium salt substitutes in January 2025, aimed at reducing sodium intake and the risk of hypertension and related diseases.
+    locator: WHO publication page
+    population: null
+    grade: null
+  - claim: Per the overview, WHO suggests adults replace regular table salt with lower-sodium, potassium-enriched salt, with an advisory for people with advanced kidney disease and others for whom more potassium could be harmful.
+    locator: Via RTSL overview
+    population: Adults; caution for advanced kidney disease
+    grade: null
+limitations: Recommendation text, strength, certainty and exclusions not read; read the guideline PDF before relying on it, and check how it handles people taking potassium-raising medicines.
+reviewer_read: false
+notes: Search also surfaced published letters in Lancet Public Health debating the guideline (lead only).

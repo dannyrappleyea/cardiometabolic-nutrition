@@ -1,0 +1,55 @@
+id: nice-hypertension-ng136-2026
+title: "Hypertension in adults: diagnosis and management (NICE guideline NG136)"
+authors: []
+organization: National Institute for Health and Care Excellence
+year: 2026
+publication: nice.org.uk, NG136
+type: guideline
+tier: "1"
+jurisdiction: uk
+authority: nice
+domains: [blood-pressure, medicines, general-nutrition]
+edition: NG136, published August 2019; last updated February 2026 (recommendation 1.2.11 added)
+edition_check:
+  date: 2026-11-25
+  searched: NICE NG136 Recommendations and Update information chapters (updates listed through February 2026)
+  result: current
+  newer: null
+population_limits:
+  - "Adults, including those with type 2 diabetes; type 1 diabetes, chronic kidney disease and pregnancy are covered by separate NICE guidelines"
+  - "Different targets for people aged 80 or over; clinical judgement for frailty or multimorbidity"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.nice.org.uk/guidance/NG136/chapter/Recommendations
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated on the pages read (NICE is a UK public body)
+verified:
+  date: 2026-11-25
+  method: fetched-full-text
+  scope: section
+  sections_read: Recommendations chapter (whole, as served) and Update information chapter
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: A clinic reading of 140/90 mmHg or more is confirmed with ambulatory or home monitoring (average 135/85 or more); stage 2 is clinic 160/100 up to 180/120; severe hypertension is clinic 180/120 or more, and with retinal haemorrhage or papilloedema (accelerated hypertension) or life-threatening symptoms it needs same-day specialist assessment.
+    locator: Recommendations, diagnosis section
+    population: Adults
+    grade: null
+  - claim: Lifestyle advice covers diet, exercise, alcohol and smoking; salt intake should be cut, but potassium-based salt substitutes should be avoided by older people, people with diabetes or kidney disease, pregnant women and people taking some blood pressure medicines such as ACE inhibitors or ARBs; calcium, magnesium or potassium supplements should not be offered to lower blood pressure; excessive caffeine should be discouraged.
+    locator: Recommendations, lifestyle interventions section
+    population: null
+    grade: null
+  - claim: Resistant hypertension is blood pressure uncontrolled despite optimal tolerated doses of an ACE inhibitor or ARB, a calcium channel blocker and a thiazide-like diuretic; readings should first be confirmed by ambulatory or home monitoring and adherence discussed, and low-dose spironolactone is considered only if blood potassium is 4.5 mmol/L or lower.
+    locator: Recommendations, step 4 treatment
+    population: null
+    grade: null
+  - claim: Clinic targets are below 140/90 mmHg under age 80 and below 150/90 at 80 or over, with separate tables for CKD and type 1 diabetes.
+    locator: Recommendations, treatment targets
+    population: null
+    grade: null
+limitations: Recommendation numbers were not all visible in the fetched text; locators use section names.
+reviewer_read: false
+notes: Fills the UK hypertension gap listed in the first pass of this run.
