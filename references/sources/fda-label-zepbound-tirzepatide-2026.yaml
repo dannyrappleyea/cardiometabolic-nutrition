@@ -1,0 +1,54 @@
+id: fda-label-zepbound-tirzepatide-2026
+title: ZEPBOUND (tirzepatide) injection - US prescribing information
+authors: []
+organization: Eli Lilly and Company (label approved by US FDA)
+year: 2026
+publication: Drugs@FDA, NDA 217806
+type: drug-label
+tier: "R"
+jurisdiction: us-federal
+authority: fda
+domains: [weight, glycemia, medicines]
+edition: SUPPL-50 (revised 2026-04)
+edition_check:
+  date: 2026-11-25
+  searched: 'Drugs@FDA label files for NDA 217806 in web search (s000 2023 through s041, s042 and s050 in 2026); s050 is the highest supplement listed; DailyMed and Lilly links also in results; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-zepbound-tirzepatide-dailymed-2026
+population_limits:
+  - "Adults with obesity, or overweight plus a weight-related condition; OSA with obesity. Mounjaro (same molecule, type 2 diabetes) has a separate label not opened"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/217806Orig1s050lbl.pdf
+status: superseded
+superseded_by: fda-label-zepbound-tirzepatide-dailymed-2026
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: partial
+  sections_read: "First 100k of 176k characters: highlights, §1-§8, §12.2-12.3, §14, §17 as reported; remaining patient information not read"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Used with a reduced-calorie diet and increased physical activity for weight reduction and maintenance; mean weight change over 72 weeks was about -21% at the top dose versus -3% on placebo, and stopping the drug led to regain in a withdrawal study.
+    locator: §1; §14 Tables 2 and 6
+    population: Adults with obesity or overweight plus comorbidity
+    grade: null
+  - claim: Gastrointestinal side effects affected 56% versus 30% on placebo, mostly during dose increases; patients should avoid fluid depletion because dehydration has caused acute kidney injury.
+    locator: §5.2-5.3; §6.1; §17
+    population: null
+    grade: null
+  - claim: Gallbladder problems (gallstones, cholecystitis) were more common than with placebo; delayed gastric emptying lowers peak levels of oral drugs, and people using oral hormonal contraceptives should add or switch method for 4 weeks after starting and each dose increase.
+    locator: §5.4; §7.2; §8.3; §12.3
+    population: null
+    grade: null
+  - claim: Injected once weekly with or without meals; Section 17 gives hydration advice but no specific nutrition counseling.
+    locator: §2.4; §17
+    population: null
+    grade: null
+limitations: null
+reviewer_read: false
+notes: Superseded 2026-11-25 by the Lilly label revised 11/2026 (DailyMed). Weight-loss size and regain-after-withdrawal findings here are from SUPPL-50 and were not re-read in the newer version.

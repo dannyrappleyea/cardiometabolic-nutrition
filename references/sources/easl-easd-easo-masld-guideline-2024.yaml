@@ -1,0 +1,60 @@
+id: easl-easd-easo-masld-guideline-2024
+title: "EASL-EASD-EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic liver disease (MASLD): Executive Summary"
+authors: []
+organization: European Association for the Study of the Liver, European Association for the Study of Diabetes, European Association for the Study of Obesity
+year: 2024
+publication: Diabetologia 2024;67:2375-2392 (full guideline in J Hepatol and Obesity Facts)
+type: guideline
+tier: "1"
+jurisdiction: eu
+authority: easl-easd-easo
+domains: [liver, weight, glycemia]
+edition: 2024 (first joint MASLD guideline under the new nomenclature)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for EASL-EASD-EASO MASLD guidelines (PMC, Springer, repository copies); no later edition found
+  result: current
+  newer: null
+population_limits:
+  - "Adults with MASLD; advanced fibrosis/cirrhosis has separate alcohol advice (cirrhosis is out of scope per SCOPE §5)"
+  - "Evidence that weight loss improves liver histology is weaker than for cardiometabolic benefits; little histology evidence in normal-weight adults"
+  - "Coffee is a statement from observational data (LoE 4), not a recommendation"
+identifiers:
+  doi: 10.1007/s00125-024-06196-3
+  pmid: null
+  url: https://link.springer.com/doi/10.1007/s00125-024-06196-3
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Panel disclosures list speaking, consulting and grant ties with pharmaceutical and device companies for several members; no funding statement seen
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Executive summary full text (Springer, CC BY 4.0); ESM tables and figures not included
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Adults with MASLD and overweight should aim for sustained weight loss of about 5% to reduce liver fat, 7-10% to improve inflammation and at least 10% to improve fibrosis.
+    locator: Lifestyle recommendations
+    population: Adults with MASLD and overweight/obesity
+    grade: LoE 2, strong
+  - claim: Diet quality should improve toward a Mediterranean-like pattern, limiting ultra-processed foods high in sugar and saturated fat and avoiding sugar-sweetened beverages; nutraceuticals are not recommended.
+    locator: Lifestyle recommendations
+    population: Adults with MASLD
+    grade: LoE 2, strong (nutraceuticals open)
+  - claim: Alcohol should be discouraged in all people with steatotic liver disease and stopped completely with advanced fibrosis or cirrhosis; coffee intake is associated with better liver outcomes in observational studies.
+    locator: Lifestyle recommendations
+    population: Adults with MASLD
+    grade: LoE 3 strong; LoE 4
+  - claim: MASLD is steatotic liver disease with at least one cardiometabolic risk factor and no harmful alcohol intake; BMI cut-offs for Asian people are lower (overweight 23-24.9, obesity 25 or more).
+    locator: Definition; Figure 3 caption
+    population: null
+    grade: null
+  - claim: GLP-1 receptor agonists, pioglitazone, SGLT2 inhibitors, metformin and statins are safe in MASLD and used for their usual indications, but none except resmetirom (where approved) is recommended as liver-targeted therapy.
+    locator: Pharmacotherapy recommendations
+    population: Adults with MASLD/MASH
+    grade: LoE 1-5 as stated
+limitations: Executive summary; supplementary tables not read.
+reviewer_read: false
+notes: Its Asian BMI cut-offs (obesity 25 or more) differ from NICE NG246 (27.5 or more), which matters for SCOPE's body-size row.

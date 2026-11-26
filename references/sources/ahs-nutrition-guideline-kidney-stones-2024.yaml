@@ -1,0 +1,46 @@
+id: ahs-nutrition-guideline-kidney-stones-2024
+title: "Nutrition Guideline: Kidney Stones"
+authors: []
+organization: Alberta Health Services, Nutrition Services
+year: 2024
+publication: albertahealthservices.ca (July 2015, revised July 2024)
+type: expert-explainer
+tier: "6"
+jurisdiction: canada
+authority: null
+domains: [kidney, general-nutrition]
+edition: Revised July 2024
+edition_check: null
+population_limits:
+  - "Clinical nutrition guidance for adults with or at risk of kidney stones; provincial health-service document, not a national guideline"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.albertahealthservices.ca/assets/info/nutrition/if-nfs-ng-kidney-stones.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Public health service; none stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole document
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: For stone prevention, aim for about 2.5 L of urine a day, sodium around 1,500 mg (not above 2,300), calcium mainly from food at the recommended intake, protein not above the recommended intake with less animal protein, more fruit and vegetables, and fewer sugar-sweetened (especially fructose-sweetened) drinks.
+    locator: Recommendations
+    population: Adults with or at risk of kidney stones
+    grade: null
+  - claim: Routine oxalate restriction is not advised unless urinary oxalate is high or absorption is increased; vitamin C supplements over 1,000 mg/day are not advised for people with calcium oxalate stones; ketogenic diets may affect urine pH and stone risk.
+    locator: Oxalate, vitamin C and weight sections
+    population: Adults with stone history
+    grade: null
+  - claim: The document draws on the Canadian Urological Association 2022 and AUA 2014 kidney stone guidelines and on Canada's Guidance on Alcohol and Health (2023).
+    locator: References
+    population: null
+    grade: null
+limitations: Tier 6 explainer; use for leads to the CUA and AUA guidelines, not for rules.
+reviewer_read: false
+notes: null

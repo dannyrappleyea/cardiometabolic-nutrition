@@ -1,0 +1,53 @@
+id: fda-label-kerendia-finerenone-2026
+title: KERENDIA (finerenone) tablets - US prescribing information
+authors: []
+organization: Bayer HealthCare Pharmaceuticals (label approved by US FDA)
+year: 2026
+publication: Drugs@FDA, NDA 215341
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- kidney
+- glycemia
+- medicines
+edition: SUPPL-11 (revised 2026-09)
+edition_check:
+  date: '2026-11-24'
+  searched: Drugs@FDA label files in web search (s009 2025/2026, s011 2026) and the s011 approval letter; s011 is the newest found
+  result: current
+  newer: null
+population_limits:
+- CKD with type 2 or type 1 diabetes, and heart failure with LVEF 40% or more (heart failure is out of scope per SCOPE §5)
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215341s011lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: full
+  sections_read: Highlights, §1, §2.1-2.3, §4, §7.1-7.3, §17
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: Grapefruit and grapefruit juice should be avoided.
+  locator: §7.1; §17
+  population: null
+  grade: null
+- claim: Patients should consult their physician before using potassium supplements or potassium-containing salt substitutes; potassium is checked 4 weeks after starting and after dose changes, and treatment is not started above 5.0 mEq/L.
+  locator: §2.1-2.3; §7.3; §17
+  population: null
+  grade: null
+- claim: Taken with or without food; strong CYP3A4 inhibitors are contraindicated and inducers should be avoided.
+  locator: §2.2; §4; §7.1
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: null

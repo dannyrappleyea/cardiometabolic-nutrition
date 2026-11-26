@@ -1,0 +1,55 @@
+id: health-canada-dietary-guidelines-2019
+title: Canada's Dietary Guidelines for Health Professionals and Policy Makers
+authors: []
+organization: Health Canada
+year: 2019
+publication: Health Canada (Cat. H164-231/2019E-PDF), January 2019
+type: guideline
+tier: "1"
+jurisdiction: canada
+authority: health-canada
+domains: [general-nutrition]
+edition: 2019 (current Canada's Food Guide basis)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for Canada's Dietary Guidelines; food-guide.canada.ca pages in results (summary page now redirects); no newer edition found
+  result: current
+  newer: null
+population_limits:
+  - "General population aged 2 and over; people in clinical care may need individual dietitian advice"
+  - "Refers to Canada's Low-Risk Alcohol Drinking Guidelines, which have since been replaced (not opened in this run)"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://food-guide.canada.ca/sites/default/files/artifact-pdf/CDG-EN-2018.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Federal government guidance; Health Canada states industry did not participate in development (not verified in the part read)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: partial
+  sections_read: "Introduction, Sections 1-3 (Guidelines 1-3 with considerations); first 100k of 145k characters; Section 4 implementation, glossary and appendices not read"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Vegetables, fruit, whole grains and protein foods should be eaten regularly, with plant-based protein foods more often; foods high in saturated fat should be replaced with foods high in unsaturated fat; water is the drink of choice.
+    locator: Guideline 1 (Section 1)
+    population: Ages 2 and over
+    grade: null
+  - claim: Highly processed foods and drinks high in sodium, free sugars or saturated fat should not be consumed regularly, with limits of sodium under 2,300 mg a day (age 14+), free sugars under 10% of energy and saturated fat under 10% of energy.
+    locator: Guideline 2 (Section 2)
+    population: null
+    grade: null
+  - claim: Sugary drinks (including 100% fruit juice and sweetened plant beverages) should not be consumed regularly; sugar substitutes are not needed and have no well-established health benefit; alcohol carries risks including cancer and non-drinkers should not be encouraged to start.
+    locator: Section 2 considerations
+    population: null
+    grade: null
+  - claim: Cooking with nutritious foods and using food labels (Nutrition Facts table, ingredient list) are promoted as food skills; meals from restaurants and other outlets tend to be higher in calories, sodium, sugars and saturated fat.
+    locator: Guideline 3 (Section 3)
+    population: null
+    grade: null
+limitations: Population-wide guidance, not specific to cardiometabolic conditions.
+reviewer_read: false
+notes: null

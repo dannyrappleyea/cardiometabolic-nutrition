@@ -1,0 +1,71 @@
+id: ada-standards-cvd-risk-management-2026
+title: "10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026"
+authors: []
+organization: American Diabetes Association Professional Practice Committee
+year: 2026
+publication: Diabetes Care 2026;49(Suppl 1):S216-S245 (published online 2025-12-08)
+type: guideline
+tier: "1"
+jurisdiction: us-professional
+authority: ada
+domains: [blood-pressure, lipids, glycemia, medicines]
+edition: Standards of Care in Diabetes—2026
+edition_check:
+  date: 2026-11-24
+  searched: PMC and PubMed search for Standards of Care in Diabetes 2026; no 2027 edition found
+  result: current
+  newer: null
+population_limits:
+  - "People with diabetes only"
+  - "Several triglyceride recommendations are grade C"
+identifiers:
+  doi: 10.2337/dc26-S010
+  pmid: "41358899"
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12690187
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: ADA Professional Practice Committee; disclosures published with the Standards (not read in this run)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: section
+  sections_read: "First 100k of 373k characters: hypertension/BP management (Recs 10.1-10.13), lipid management (Recs 10.14-10.32), start of antiplatelet section"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: In diabetes, hypertension is defined as 130 systolic or 80 diastolic or higher, the usual target is under 130/80, and a systolic goal under 120 is encouraged for people at high cardiovascular or kidney risk.
+    locator: Recs 10.1, 10.4
+    population: Adults with diabetes
+    grade: A
+  - claim: For blood pressure above 120/80, lifestyle advice covers weight loss when indicated, a DASH-style pattern, sodium under 2,300 mg a day, limiting alcohol, and physical activity; the text mentions 8-10 servings of fruit and vegetables and 2-3 of low-fat dairy daily.
+    locator: Rec 10.5 and text
+    population: Adults with diabetes
+    grade: A
+  - claim: Serum potassium and eGFR should be monitored with ACE inhibitors, ARBs or mineralocorticoid receptor antagonists, and potassium should be watched for falls with diuretics; first-line drug classes are ACE inhibitors, ARBs, thiazide-like diuretics and dihydropyridine calcium channel blockers.
+    locator: Recs 10.7-10.13
+    population: Adults with diabetes
+    grade: A-B
+  - claim: Lifestyle for lipids covers weight loss if indicated, a Mediterranean or DASH pattern, less saturated and trans fat, more n-3 fatty acids, soluble fiber and plant stanols/sterols, and more physical activity.
+    locator: Rec 10.14
+    population: Adults with diabetes
+    grade: A
+  - claim: Adults 40-75 without ASCVD should take at least a moderate-intensity statin, with high-intensity and an LDL goal under 70 mg/dL for those at higher risk; ezetimibe or a PCSK9 inhibitor may be added.
+    locator: Recs 10.18, 10.20, 10.21
+    population: Adults with diabetes aged 40-75
+    grade: A-B
+  - claim: High triglycerides (150 mg/dL or more) or low HDL (under 40 men, under 50 women) call for intensified lifestyle therapy and better glucose control; with fasting triglycerides of 500 or more, secondary causes should be sought and medicine considered to cut pancreatitis risk; for high triglycerides (fasting over 150 or non-fasting over 175 mg/dL), lifestyle factors, secondary causes and triglyceride-raising drugs should be addressed.
+    locator: Recs 10.15, 10.29, 10.30; narrative under "Treatment of Other Lipoprotein Fractions or Goals"
+    population: Adults with diabetes
+    grade: C
+  - claim: Icosapent ethyl may be considered for people on statins with controlled LDL-C, triglycerides 150-499 and ASCVD or other risk factors (B); adding a fibrate, niacin or other n-3 supplement to a statin is not recommended because it does not further lower cardiovascular risk (A).
+    locator: Recs 10.31, 10.32
+    population: Adults with diabetes
+    grade: B (10.31); A (10.32)
+  - claim: Established ASCVD is defined as a history of acute coronary syndrome, heart attack, angina, coronary or other arterial revascularization, stroke or peripheral artery disease.
+    locator: Section introduction
+    population: null
+    grade: null
+limitations: Text after the start of the antiplatelet section not read.
+reviewer_read: false
+notes: Grades for Recs 10.15 and 10.29-10.32 and the location of the non-fasting 175 mg/dL cut-off (Rec 10.30, not 10.15) re-checked against PMC12690187 on 2026-11-25.

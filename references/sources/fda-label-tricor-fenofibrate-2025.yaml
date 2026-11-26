@@ -1,0 +1,52 @@
+id: fda-label-tricor-fenofibrate-2025
+title: TRICOR (fenofibrate) tablets - US prescribing information
+authors: []
+organization: AbbVie Inc (label approved by US FDA)
+year: 2025
+publication: DailyMed, SPL set ID b693e68d-f812-4993-54b6-852e3517c344
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- lipids
+- medicines
+edition: Revised 2025-06 (effective 2025-06-16)
+edition_check:
+  date: '2026-11-24'
+  searched: DailyMed, Drugs@FDA (2008, 2013) and generic listings in web search; the AbbVie DailyMed SPL revised 2025-06 is the newest found
+  result: current
+  newer: null
+population_limits:
+- Severe hypertriglyceridemia (500 or more) and LDL-C when other therapy is not possible
+identifiers:
+  doi: null
+  pmid: null
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b693e68d-f812-4993-54b6-852e3517c344
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: full
+  sections_read: §1, §2.1-2.3, §4, §5.1-5.5, §7, §8.6, §12.3, §14.4
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: Patients should be on an appropriate lipid-lowering diet before starting; it is an adjunct to diet for triglycerides of 500 or more; causes such as diabetes, hypothyroidism or medicines should be identified.
+  locator: §1; §2.1
+  population: null
+  grade: null
+- claim: Taken at any time with or without food.
+  locator: §2.2; §12.3
+  population: null
+  grade: null
+- claim: Did not reduce coronary events in two large type 2 diabetes trials; raises myopathy risk with statins; can cause gallstones; contraindicated with eGFR under 30.
+  locator: §1; §5.1; §5.3; §5.5; §4
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: null

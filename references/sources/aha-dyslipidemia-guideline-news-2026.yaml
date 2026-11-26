@@ -1,0 +1,41 @@
+id: aha-dyslipidemia-guideline-news-2026
+title: ACC/American Heart Association Issue Updated Guideline for Managing Lipids, Cholesterol (news release)
+authors: []
+organization: American Heart Association
+year: 2026
+publication: AHA Newsroom, 2026-03-13
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [lipids]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://newsroom.heart.org/news/accaha-issue-updated-guideline-for-managing-lipids-cholesterol
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The release lists healthy weight, physical activity, avoiding tobacco, healthy sleep and taking prescribed cholesterol medicine as lifestyle measures, and says lifestyle change and statins remain the mainstay for high triglycerides; it gives no numeric triglyceride categories or diet specifics.
+    locator: Whole page
+    population: Adults
+    grade: null
+  - claim: PREVENT-ASCVD is described for adults 30-79 without known ASCVD and with LDL-C 70-189 mg/dL.
+    locator: Risk assessment paragraph
+    population: null
+    grade: null
+limitations: Press release.
+reviewer_read: false
+notes: null

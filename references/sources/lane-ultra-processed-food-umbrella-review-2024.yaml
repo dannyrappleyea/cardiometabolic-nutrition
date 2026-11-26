@@ -1,0 +1,44 @@
+id: lane-ultra-processed-food-umbrella-review-2024
+title: "Ultra-processed food exposure and adverse health outcomes: umbrella review of epidemiological meta-analyses"
+authors: [Lane MM, Gamage E, Du S, Marx W, Touvier M]
+organization: null
+year: 2024
+publication: BMJ 2024;384:e077310
+type: umbrella-review
+tier: "2"
+jurisdiction: international
+authority: null
+domains: [general-nutrition, glycemia, blood-pressure, weight, lipids]
+edition: null
+edition_check: null
+population_limits:
+  - "Observational evidence only; causality not established"
+  - "Ultra-processed food defined by NOVA, a classification criticized as imprecise"
+  - "Seven of 14 meta-analyses rated low confidence on AMSTAR 2; heterogeneity moderate to high in about 45% of analyses"
+identifiers:
+  doi: 10.1136/bmj-2023-077310
+  pmid: null
+  url: https://researchonline.jcu.edu.au/87551/1/87551.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: No funding for the review; several authors' centre has received food-industry research funding (e.g., dairy and meal companies); included meta-analyses not funded by UPF makers
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Full article (James Cook University repository copy)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Across 45 pooled analyses (about 9.9 million people), higher ultra-processed food exposure was associated with higher risk in 71% of outcomes; the strongest evidence classes were for cardiovascular death (risk ratio about 1.5 comparing highest with lowest intake, class I but very-low GRADE; the dose-response estimate was about 1.05, class IV) and type 2 diabetes (dose-response risk ratio about 1.12 per 10% increase in ultra-processed food intake, class I, moderate GRADE).
+    locator: Results; Table/Figure summaries
+    population: General populations (observational)
+    grade: Credibility class I-V; GRADE very low to moderate
+  - claim: Associations with hypertension and obesity were weaker in credibility (class II-III, low or very-low GRADE), and evidence for dyslipidemia was weak or absent.
+    locator: Results
+    population: null
+    grade: Class II-V
+limitations: Observational; NOVA definition disputes; this is an association, not a cause.
+reviewer_read: false
+notes: Labels needed in any topic - "observational".

@@ -1,0 +1,64 @@
+id: esc-eas-dyslipidaemias-guideline-2019
+title: "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk"
+authors: [Mach F, Baigent C, Catapano AL]
+organization: European Society of Cardiology / European Atherosclerosis Society
+year: 2019
+publication: European Heart Journal 2020;41(1):111-188
+type: guideline
+tier: "1"
+jurisdiction: eu
+authority: esc
+domains: [lipids, weight]
+edition: 2019, partly updated by the 2025 Focused Update (esc-eas-dyslipidaemias-focused-update-2025)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for ESC/EAS dyslipidaemia guidelines; UCL Discovery record and ESC press release for the 2025 Focused Update
+  result: newer-recorded
+  newer: esc-eas-dyslipidaemias-focused-update-2025
+population_limits:
+  - "Plant sterol/stanol foods suggested only for specific groups (intermediate/low risk not eligible for drugs; not at goal on statins; FH); no CVD outcome trials"
+  - "Alcohol allowance applies only when triglycerides are not elevated"
+  - "Focused Update 2025 revised the dietary-supplement position (§10 of the update); the 2019 nutraceutical text (red yeast rice) should be read with that update"
+identifiers:
+  doi: 10.1093/eurheartj/ehz455
+  pmid: null
+  url: https://scholarlypublications.universiteitleiden.nl/access/item%3A3505334/view
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Declarations of interest published by ESC as supplementary material; not read in this run
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: partial
+  sections_read: "Contents and §1-§5.2 (first 100k chars); §7 Lifestyle modification in full (Tables 8-9, §7.1-7.5.6), §8 drugs through §9.1.2 (chars 140k-240k of 565k). Publisher version (CC BY 4.0) from Leiden University repository."
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Lifestyle measures with the largest LDL-C effect (5-10%) are avoiding trans fats, reducing saturated fat, more dietary fiber, plant-sterol-enriched foods, red yeast rice products and reducing excess weight; reducing dietary cholesterol has a smaller effect.
+    locator: Table 8 (p. 134)
+    population: Adults with dyslipidaemia
+    grade: Level A (cholesterol B)
+  - claim: For triglycerides, cutting alcohol has the largest effect (over 10%), with weight loss, physical activity, less total carbohydrate, n-3 supplements and fewer mono- and disaccharides also lowering levels.
+    locator: Table 8 (p. 134)
+    population: null
+    grade: Level A-B
+  - claim: Food-choice table grades foods into prefer, moderate and occasional across cereals, vegetables, legumes, fruit, sweets and sweeteners, meat and fish, dairy and eggs, cooking fats, nuts and seeds, and cooking methods.
+    locator: Table 9 (p. 135)
+    population: null
+    grade: null
+  - claim: Quantitative targets in the text include saturated fat under 10% of energy (under 7% with high cholesterol), dietary cholesterol under 300 mg/day, carbohydrate 45-55% of energy, fiber 25-40 g/day with 7-13 g soluble, added sugar under 10% of energy, and alcohol up to about 10 g/day only if triglycerides are not raised.
+    locator: §7.2-7.4.4 (pp. 135-137)
+    population: null
+    grade: null
+  - claim: About 2 g/day of plant sterols or stanols lowers LDL-C by roughly 7-10%; beta-glucan 3-10 g/day lowers LDL-C 3-5%; prescription-dose n-3 (2-3 g/day) lowers triglycerides about 30%; evidence for soy, policosanol and berberine is weak or absent.
+    locator: §7.5.1-7.5.6 (pp. 136-137)
+    population: null
+    grade: null
+  - claim: Weight loss of 5-10% improves lipids, with an energy deficit of 300-500 kcal/day suggested; triglycerides above 150 mg/dL (1.7 mmol/L) fasting mark raised CVD risk; LDL-C above 190 mg/dL (4.9 mmol/L) with suspected FH places people at least at high risk.
+    locator: §7.1; §8.13 (p. 145); §4 risk categories
+    population: null
+    grade: null
+limitations: §6, §9.2 onward and §13 not read in this run.
+reviewer_read: false
+notes: An earlier fetch of an Oxford ORA copy turned out to be the February 2019 external review draft; it was not used.

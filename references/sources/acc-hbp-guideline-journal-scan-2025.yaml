@@ -1,0 +1,41 @@
+id: acc-hbp-guideline-journal-scan-2025
+title: New ACC/AHA Guideline Addresses Prevention, Detection, Evaluation and Management of High Blood Pressure (journal scan)
+authors: []
+organization: American College of Cardiology
+year: 2025
+publication: acc.org Latest in Cardiology, 2025-08-14
+type: expert-explainer
+tier: "6"
+jurisdiction: us-professional
+authority: aha-acc
+domains: [blood-pressure]
+edition: null
+edition_check: null
+population_limits: null
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.acc.org/latest-in-cardiology/journal-scans/2025/08/14/15/36/new-acc-aha-guideline-addresses-prevention-detection-evaluation-and-management-of-hbp
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not stated
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: Whole page
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: Summarizes the 2025 guideline as updating lifestyle and psychosocial approaches, resistant hypertension, diabetes and chronic kidney disease, among other areas, and as replacing the 2017 guideline.
+    locator: Key points
+    population: null
+    grade: null
+  - claim: Notes that GLP-1 medicines may be considered for some people with high blood pressure and overweight or obesity, that starting with two medicines (preferably in one pill) is kept, and that urine albumin-to-creatinine testing is now recommended for all patients.
+    locator: Key points
+    population: Adults with high blood pressure
+    grade: null
+limitations: News-style summary; gives no category cut-offs, lifestyle numbers or grades.
+reviewer_read: false
+notes: null

@@ -1,0 +1,56 @@
+id: fda-label-xenical-orlistat-2012
+title: XENICAL (orlistat) 120 mg capsules - US prescribing information
+authors: []
+organization: Genentech (label approved by US FDA)
+year: 2012
+publication: Drugs@FDA, NDA 020766
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- weight
+- medicines
+edition: SUPPL-29 (revised 2012-01)
+edition_check:
+  date: 2026-11-25
+  searched: 'Drugs@FDA label file in web search (s029, 2012); the PDF itself notes it may not be the latest approved label; no newer US label surfaced; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-xenical-orlistat-2024
+population_limits:
+- Prescription 120 mg product; the over-the-counter 60 mg product has its own labeling (not opened)
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020766s029lbl.pdf
+status: superseded
+superseded_by: fda-label-xenical-orlistat-2024
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: full
+  sections_read: §1, §2, §4-§8, §12.3, §17
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: Taken with each main meal containing fat (skip the dose if a meal is missed or has no fat), alongside a reduced-calorie diet with about 30% of calories from fat spread over three meals.
+  locator: §2.1; §17.5
+  population: null
+  grade: null
+- claim: A daily multivitamin with vitamins A, D, E, K and beta-carotene should be taken at least 2 hours before or after the dose; vitamin K absorption may fall, which matters for people on warfarin.
+  locator: §2.1; §5.1; §7.4
+  population: null
+  grade: null
+- claim: Oily spotting, urgency and fatty stools are common and more likely with high-fat meals; urinary oxalate may rise, with oxalate kidney stones reported; rare severe liver injury has been reported.
+  locator: §5.2-5.5; §6.1-6.2
+  population: null
+  grade: null
+- claim: Separate levothyroxine by at least 4 hours and cyclosporine by 3 hours.
+  locator: §7.1; §7.3
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: Superseded 2026-11-25. The edition check of 2026-11-24 was wrong - SPL version 9 (2024, with S-038) and S-039 (2026-09-30) exist. The organization recorded (Genentech) is outdated; the current labeler is H2-Pharma for Cheplapharm.

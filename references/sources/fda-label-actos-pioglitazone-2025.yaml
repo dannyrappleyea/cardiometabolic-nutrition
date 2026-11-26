@@ -1,0 +1,49 @@
+id: fda-label-actos-pioglitazone-2025
+title: ACTOS (pioglitazone) tablets - US prescribing information
+authors: []
+organization: Takeda Pharmaceuticals America (label approved by US FDA)
+year: 2025
+publication: FDALabel (FDA), SPL set ID d2ddc491-88a9-4063-9150-443b4fa4330c, NDA 021073
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- glycemia
+- liver
+- medicines
+edition: SPL version 20, effective 2025-03-28
+edition_check:
+  date: '2026-11-24'
+  searched: FDALabel and Drugs@FDA listings for Actos in web search (2011 and 2024 Drugs@FDA files for related NDA 021842; brand SPL v20 2025 is the newest found)
+  result: current
+  newer: null
+population_limits:
+- 'Boxed warning: not recommended in symptomatic heart failure (out of scope per SCOPE §5)'
+identifiers:
+  doi: null
+  pmid: null
+  url: https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/d2ddc491-88a9-4063-9150-443b4fa4330c/spl-doc
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: partial
+  sections_read: Boxed warning, §2.1-2.2, §5.1-5.6, §6.1 (first 100k of 361k characters)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: Causes dose-related fluid retention and edema and can cause or worsen heart failure (boxed warning); weight increase was reported more often than with comparators.
+  locator: Boxed warning; §5.1; §5.5; §6.1
+  population: null
+  grade: null
+- claim: Can be taken without regard to meals; hypoglycemia risk rises with insulin or sulfonylureas; more fractures in women.
+  locator: §2.1; §5.2; §5.6
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: null

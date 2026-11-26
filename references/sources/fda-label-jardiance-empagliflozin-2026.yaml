@@ -1,0 +1,53 @@
+id: fda-label-jardiance-empagliflozin-2026
+title: JARDIANCE (empagliflozin) tablets - US prescribing information (repackaged copy of the brand label)
+authors: []
+organization: Boehringer Ingelheim Pharmaceuticals (brand label); repackaged by Cardinal Health 107 LLC
+year: 2026
+publication: DailyMed, SPL set ID 5777b8a8-ada6-4950-8548-43a1de11f075
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- glycemia
+- kidney
+- medicines
+edition: Revised 2026-01 (DailyMed updated 2026-02-17)
+edition_check:
+  date: 2026-11-25
+  searched: 'DailyMed and FDALabel listings for Jardiance in web search (several set IDs; Drugs@FDA 2016 s012 and 2023 s041 labels); the DailyMed copy revised 2026-01 is the newest found, but it is a repackager listing of the brand text; re-checked 2026-11-25 on Drugs@FDA letters and the labeler SPL or PI after review: a newer label exists and is recorded'
+  result: newer-recorded
+  newer: fda-label-jardiance-empagliflozin-boehringer-2026
+population_limits:
+- Repackager listing of the brand label text; confirm against the Boehringer Ingelheim SPL in topic research
+identifiers:
+  doi: null
+  pmid: null
+  url: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5777b8a8-ada6-4950-8548-43a1de11f075
+status: superseded
+superseded_by: fda-label-jardiance-empagliflozin-boehringer-2026
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: partial
+  sections_read: 'First 100k of 266k characters: §2.2-2.3, §5.1-5.4, §6.1, §7, §8.5, §12.2-12.3'
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: Ketoacidosis can occur even with near-normal glucose; precipitating factors include reduced caloric intake, ketogenic diet, surgery or prolonged fasting, volume depletion and alcohol abuse; the drug should be withheld at least 3 days before procedures with prolonged fasting where possible.
+  locator: §5.1; §2.3
+  population: null
+  grade: null
+- claim: Can cause volume depletion and low blood pressure, especially in older adults, people with eGFR under 60 or on loop diuretics; genital fungal infections are more common than with placebo.
+  locator: §5.2-5.3; §6.1; §8.5
+  population: null
+  grade: null
+- claim: Taken in the morning with or without food (a high-fat meal lowers exposure modestly, judged not clinically relevant); urine glucose tests are positive and should not be used for monitoring.
+  locator: §2.2; §12.3; §7
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: Superseded 2026-11-25 by the Boehringer Ingelheim SPL (reference listed drug labeler) of the same brand text; this record was a repackager copy.

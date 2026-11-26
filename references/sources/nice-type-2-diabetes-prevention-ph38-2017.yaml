@@ -1,0 +1,51 @@
+id: nice-type-2-diabetes-prevention-ph38-2017
+title: "Type 2 diabetes: prevention in people at high risk (NICE public health guideline PH38)"
+authors: []
+organization: National Institute for Health and Care Excellence (NICE)
+year: 2017
+publication: nice.org.uk (published 2012; recommendations tagged 2012 or 2017)
+type: guideline
+tier: "1"
+jurisdiction: uk
+authority: nice
+domains: [glycemia, weight, general-nutrition]
+edition: PH38, recommendations [2012] and [2017]
+edition_check:
+  date: 2026-11-24
+  searched: NICE PH38 pages and the related quality standard QS209 in web search; no replacement guideline surfaced
+  result: current
+  newer: null
+population_limits:
+  - "Adults at high risk of type 2 diabetes; excludes pregnant women from risk assessment"
+  - "Lower BMI thresholds for South Asian and Chinese people"
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.nice.org.uk/guidance/PH38/chapter/Recommendations
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: NICE is a UK public body; committee interests published separately (not read)
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: section
+  sections_read: Recommendations chapter (1.1-1.20)
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: High risk (non-diabetic hyperglycaemia) is defined as fasting plasma glucose 5.5-6.9 mmol/L or HbA1c 42-47 mmol/mol (6.0-6.4%); 48 mmol/mol (6.5%) or more suggests possible type 2 diabetes.
+    locator: Recs 1.4.1, 1.5.4, 1.5.7
+    population: Adults
+    grade: null
+  - claim: Risk assessment is encouraged from age 40, and from 25 in South Asian, Chinese, African-Caribbean, black African and other high-risk groups; for South Asian and Chinese people a healthy BMI is 18.5-22.9 and weight-loss programmes start at BMI 27.5.
+    locator: Recs 1.2.1, 1.13.3, 1.13.5
+    population: Adults
+    grade: null
+  - claim: Intensive lifestyle programmes aim for 5-10% weight loss in a year, more wholegrains, vegetables, fruit, beans and lentils, less total and saturated fat (swapping butter, ghee and coconut oil for unsaturated fats, lower-fat milk, lean meat and fish), healthier snacks and cooking methods.
+    locator: Recs 1.9.1, 1.13.1, 1.14.3
+    population: Adults at high risk
+    grade: null
+limitations: Recommendations date from 2012 and 2017.
+reviewer_read: false
+notes: Its prediabetes HbA1c range (6.0-6.4%) differs from ADA's (5.7-6.4%).

@@ -1,0 +1,46 @@
+id: esc-eas-dyslipidaemias-focused-update-2025
+title: 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias
+authors: [Mach F, Koskinas KC, Roeters van Lennep JE]
+organization: European Society of Cardiology / European Atherosclerosis Society
+year: 2025
+publication: European Heart Journal 2025;46(42):4359-4378
+type: guideline
+tier: "1"
+jurisdiction: eu
+authority: esc
+domains: [lipids]
+edition: 2025 Focused Update (amends parts of the 2019 guideline)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for ESC/EAS dyslipidaemia focused update; UCL Discovery record
+  result: current
+  newer: null
+population_limits:
+  - "Not checked: recommendation text not seen (repository PDF restricted)"
+identifiers:
+  doi: 10.1093/eurheartj/ehaf190
+  pmid: null
+  url: https://discovery.ucl.ac.uk/id/eprint/10219290
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Not checked
+verified:
+  date: 2026-11-24
+  method: fetched-landing-page
+  scope: landing-page
+  sections_read: Repository record (section headings only; PDF restricted); contents also known via the ESC press release (esc-dyslipidaemia-update-press-release-2025)
+  read_via: esc-dyslipidaemia-update-press-release-2025
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: The update has sections on risk estimation, new LDL-lowering therapies, lipoprotein(a), hypertriglyceridaemia and dietary supplements.
+    locator: Repository record, section headings
+    population: null
+    grade: null
+  - claim: Per the ESC's release, the update found no dietary supplement or vitamin that is both safe and effective for lowering LDL-C and does not support their use for cardiovascular risk reduction, noting EU restrictions on red yeast rice at LDL-lowering doses.
+    locator: Via ESC press release
+    population: null
+    grade: null
+limitations: Recommendation text not seen. Read the full text before using it for any rule (it may change the 2019 red yeast rice position).
+reviewer_read: false
+notes: null

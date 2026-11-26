@@ -1,0 +1,48 @@
+id: fda-label-januvia-sitagliptin-2023
+title: JANUVIA (sitagliptin) tablets - US prescribing information
+authors: []
+organization: Merck Sharp & Dohme LLC (label approved by US FDA)
+year: 2023
+publication: Drugs@FDA, NDA 021995
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- glycemia
+- medicines
+edition: SUPPL-53 (revised 2023-12; posted 2024)
+edition_check:
+  date: 2026-11-25
+  searched: Drugs@FDA label files in search results (s019 2012, s053 2024; no later file found); DailyMed set IDs 4a758211-8af1-449b-9a10-f3d67d7ec8b6 and 194c3718-5eb5-4cf5-85d0-2bb1ed8293b8 (A-S Medication Solutions repackager copies, highlights revised 7/2026) and FDALabel set ID 9d558f96-24a5-4788-8933-38256c17384b (Cardinal Health repackager, SPL v15, 2025-11-05) opened; Merck's own SPL was not found
+  result: newer-not-recorded
+  newer: "JANUVIA brand text revised 7/2026, seen only in repackager SPLs; Merck's SPL and the matching Drugs@FDA supplement could not be found, so it is not recorded as a source. In the 7/2026 copies, with-or-without-food dosing (§2) and the pancreatitis and hypoglycemia warnings (§5) read the same as below; the Medication Guide was not reached."
+population_limits:
+- Type 2 diabetes only
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021995Orig1s053lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: partial
+  sections_read: 'First 100k of 125k characters: §1, §2, §5, §6.1, §7.1, §8.6, §14'
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: An adjunct to diet and exercise, taken with or without food; weight-neutral in trials.
+  locator: §1; §2.1; §14
+  population: null
+  grade: null
+- claim: Pancreatitis has been reported; the medication guide asks about alcoholism, gallstones and high triglycerides; hypoglycemia risk rises with insulin or sulfonylureas.
+  locator: §5.1; §5.4; medication guide
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: Re-verified 2026-11-25 after review. Not current - a 7/2026 revision exists - but kept unsuperseded because no reference-listed-drug copy of it could be opened (METHODS §5 prefers the RLD label over repackager copies). Topic research must open Merck's current SPL before relying on this record.

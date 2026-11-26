@@ -1,0 +1,71 @@
+id: easd-dnsg-dietary-management-diabetes-2023
+title: Evidence-based European recommendations for the dietary management of diabetes
+authors: [Aas AM, Axelsen M, Churuangsuk C, Reynolds AN]
+organization: Diabetes and Nutrition Study Group (DNSG) of the European Association for the Study of Diabetes (EASD)
+year: 2023
+publication: Diabetologia 2023;66:965-985
+type: guideline
+tier: "1"
+jurisdiction: eu
+authority: easd
+domains: [glycemia, weight, lipids, general-nutrition]
+edition: 2023 (online 2023-04-17; a correction was published in 2023)
+edition_check:
+  date: 2026-11-24
+  searched: Web search for EASD DNSG dietary recommendations; Springer record; no later edition found in results
+  result: current
+  newer: null
+population_limits:
+  - "Mainly people with diabetes, evidence largely from type 2; prevention recommendations cover people with overweight or at risk"
+  - "Protein recommendations limited by age, eGFR (above 60, or 45-60 for nephropathy) and weight status"
+  - "Fat recommendations graded low certainty; DASH and Portfolio patterns given no specific recommendation"
+  - "No numeric sodium target (the abstract lists sodium among foods and nutrients to minimise); coffee/tea and intermittent fasting not addressed"
+identifiers:
+  doi: 10.1007/s00125-023-05894-8
+  pmid: null
+  url: https://link.springer.com/content/pdf/10.1007/s00125-023-05894-8.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Development supported by educational grants including from Novo Nordisk, MSD and Abbott Nutrition plus diabetes associations (funders stated to have no role); many authors declare grants, food donations, honoraria or consulting from food, nut, dairy, sweetener and pharmaceutical companies
+verified:
+  date: 2026-11-24
+  method: fetched-full-text
+  scope: full
+  sections_read: "Full text through reference 92 (100k of 128k characters; the rest is references and supplement)"
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+  - claim: For prevention of type 2 diabetes, at least 5% weight loss through an intensive lifestyle program is recommended, together with a healthy dietary pattern such as Mediterranean, Nordic or vegetarian.
+    locator: Prevention section
+    population: Adults with overweight/obesity or at risk
+    grade: High; Moderate
+  - claim: Several diet types and macronutrient mixes work for weight loss; formula meal replacements can be used; neither extreme high-carbohydrate nor very-low-carbohydrate ketogenic diets are recommended; remission (A1C under 6.5% off medication) is achievable with sustained weight loss.
+    locator: Energy balance and weight management section
+    population: Diabetes with overweight/obesity
+    grade: High/Moderate
+  - claim: Fiber at least 35 g a day from whole grains, vegetables, legumes, nuts, seeds and whole fruit; low glycemic index/load diets acceptable; free sugars under 10% of energy; non-nutritive sweeteners can replace sugars.
+    locator: Carbohydrate section
+    population: Adults with diabetes
+    grade: Moderate-High
+  - claim: Fats should be mainly plant mono- and polyunsaturated; saturated fat under 10% and trans fat under 1% of energy, replacing saturated fat mainly with plant unsaturated fats.
+    locator: Dietary fat section
+    population: null
+    grade: Low
+  - claim: Protein recommendations are conditional on age, kidney function, weight status and whether the diet is for weight loss - 10-20% of energy (15-20% at 65 or older), 23-32% within weight-loss diets, and 10-15% with moderate diabetic kidney disease; each figure applies only to its stated group (see notes).
+    locator: Protein section
+    population: Different for each figure; see notes
+    grade: Low
+  - claim: Recommended foods and patterns emphasize minimally processed whole grains, vegetables, fruit, legumes, nuts and seeds; red and processed meat, sugar-sweetened beverages, sweets and refined grains should be minimized; fruit juice benefit is limited to about 150 ml; fried potatoes are associated with diabetes; ultra-processed food evidence is observational; no level of alcohol is recommended.
+    locator: Food-based approaches and dietary patterns sections
+    population: null
+    grade: Moderate (foods); commentary (others)
+limitations: Industry ties of authors and funders noted above.
+reviewer_read: false
+notes: >-
+  Second-pass review (PR #5, Copilot) says the 10-20% figure is for weight-stable, normal-weight people with
+  diabetes and the 23-32% figure for people with type 2 diabetes, overweight or obesity and eGFR above 60, for
+  up to 12 months. The full text could not be re-opened on 2026-11-26 (publisher site blocked; repository
+  records give the abstract only), so these conditions are not yet verified here. Re-read the protein section
+  before any topic relies on this finding. Sodium wording corrected against the abstract (University of
+  Adelaide repository record, opened 2026-11-26).

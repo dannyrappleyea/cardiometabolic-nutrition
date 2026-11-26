@@ -1,0 +1,52 @@
+id: fda-label-nexletol-bempedoic-acid-2025
+title: NEXLETOL (bempedoic acid) tablets - US prescribing information
+authors: []
+organization: Esperion Therapeutics (label approved by US FDA)
+year: 2025
+publication: Drugs@FDA, NDA 211616
+type: drug-label
+tier: R
+jurisdiction: us-federal
+authority: fda
+domains:
+- lipids
+- medicines
+edition: SUPPL-24 (revised 2025-11)
+edition_check:
+  date: '2026-11-24'
+  searched: Drugs@FDA label files in web search (s012/013 2024, s014 2023, s024 2025 for NDA 211616; combination product NDA 211617 s031 2026 not opened)
+  result: current
+  newer: null
+population_limits:
+- Adults unable to take recommended statin therapy, or as add-on for LDL-C
+identifiers:
+  doi: null
+  pmid: null
+  url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/211616s024lbl.pdf
+status: background
+superseded_by: null
+topics: []
+funding_conflicts: Manufacturer label (regulator-approved)
+verified:
+  date: '2026-11-24'
+  method: fetched-full-text
+  scope: full
+  sections_read: §1, §2.1, §5.1-5.2, §6.1, §7, §12.3
+  read_via: null
+  by: Claude Opus 5.5 (claude-opus-5-5)
+findings:
+- claim: Raises uric acid (clinically significant hyperuricemia about 16% versus 8% in the outcomes trial) and gout (3.2% versus 2.2%), usually within the first 4 weeks.
+  locator: §5.1; §6.1
+  population: null
+  grade: null
+- claim: Tendon rupture was more frequent than with placebo, with higher risk over age 60 and with corticosteroids or fluoroquinolones.
+  locator: §5.2
+  population: null
+  grade: null
+- claim: Taken with or without food (no food effect); an adjunct to diet and exercise; simvastatin above 20 mg and pravastatin above 40 mg should be avoided with it.
+  locator: §1; §2.1; §12.3; §7
+  population: null
+  grade: null
+limitations: null
+reviewer_read: false
+notes: null
