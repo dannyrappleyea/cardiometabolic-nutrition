@@ -1,7 +1,7 @@
 # Scope — who this research is for
 
 > **Human-owned.** Agents may propose changes by pull request (for example, after checking a threshold against a newer guideline) but never edit this file on their own.
-> **Status: DRAFT v0.** The thresholds below are written from general knowledge of guideline definitions. The first discovery run must verify each against the current guideline that defines it and propose corrections (`playbooks/01-discover.md`, step 1).
+> **Status: v1 (2026-11-26).** Thresholds were checked in the 2026-11-24 discovery run (`research/_plan/scope-check.yaml`), and its proposed corrections for blood pressure, body size, kidneys, resistant hypertension and severe hypertension were adopted. Rows still marked `unverified` there are design choices (such as the age band) or wait on full guideline text. Each discovery run re-checks this file (`playbooks/01-discover.md`, step 1).
 
 This file defines the population, not the answers. It deliberately names no diets, foods or nutrients.
 
@@ -27,25 +27,25 @@ Research is written for the **core** cohort. Each topic must say where its concl
 
 | Domain | Core range | Notes |
 |---|---|---|
-| **Blood pressure** | Elevated through stage 2: systolic 120–179 and/or diastolic 80–119 mmHg (office or home average), treated or untreated | Categories per the current US and non-US hypertension guidelines; record which classification the topic uses |
+| **Blood pressure** | Elevated through stage 2: systolic 120–179 and/or diastolic 80–119 mmHg (office or home average), treated or untreated | The range follows the ACC/AHA 2025 categories: elevated 120–129/<80; stage 1 130–139 or 80–89; stage 2 ≥140 or ≥90. Hypertension Canada 2025 also uses 130/80; ESC 2024 and NICE use 140/90, and ESC calls 120–139/70–89 "elevated", so some people called elevated in Europe (systolic below 120, diastolic 70–79) are not core here. Topics name the classification they use |
 | **Glycemia** | Prediabetes (A1C 5.7–6.4%, or the fasting/OGTT equivalent) or type 2 diabetes with A1C below ~9.0% | Not using insulin or medicines that commonly cause hypoglycemia (see §5) |
 | **Lipids** | LDL-C 100–189 mg/dL, and/or triglycerides 150–499 mg/dL, and/or non-HDL-C ≥130 mg/dL, and/or low HDL-C | Treated or untreated. Includes mixed dyslipidemia |
 
-**Body size:** BMI 25–39.9 kg/m² (or the lower thresholds used for people of Asian ancestry), or a waist above the sex-specific cut-off. Normal-weight people meeting the domain rule are also core.
+**Body size:** BMI 25–39.9 kg/m² (or 23–37.4 for people of South Asian, Chinese, other Asian, Middle Eastern, Black African or African-Caribbean family background, per NICE NG246), or a waist above the sex-specific cut-off. Normal-weight people meeting the domain rule are also core.
 
-**Kidneys:** eGFR ≥60 and UACR <30 mg/g, or not yet tested (personal guides then ask the person to find out, because several rules can depend on it).
+**Kidneys:** eGFR ≥60 and UACR <30 mg/g with no other known marker of kidney damage (KDIGO 2024: urine sediment abnormalities, persistent hematuria, tubular disorders, abnormal histology or imaging, or a kidney transplant), or not yet tested. "Not yet tested" means kidney status is unknown, not that kidney disease is absent; personal guides then ask the person to find out, because several rules can depend on it.
 
 **Medications:** any combination of medicines commonly prescribed for these conditions, except those in §5. Discovery enumerates which medication classes are common in this cohort; topics cover food–drug interactions for those classes.
 
 ## 4. Adjacent flags (in scope with cautions)
 
 - Age 30–39 or 76–79.
-- BMI ≥40.
+- BMI ≥40 (≥37.5 for the groups with lower thresholds in §3).
 - eGFR 45–59, or UACR 30–300 mg/g.
 - Type 2 diabetes with A1C 9.0% or higher.
 - LDL-C ≥190 mg/dL or suspected familial hypercholesterolemia.
 - Established cardiovascular disease (prior heart attack, stroke, revascularization, peripheral artery disease): secondary prevention, where targets usually differ.
-- Resistant hypertension (above goal on three or more drug classes).
+- Resistant hypertension: blood pressure above the person's treatment goal despite three or more drug classes, one of them a diuretic, at maximally tolerated doses. This includes ESC 2024's narrower definition (office BP ≥140/90 confirmed out of office, after excluding pseudo-resistance such as missed doses or white-coat readings); the broader wording is used because this flag only adds caution.
 - Fatty liver disease without cirrhosis.
 - Gout, or kidney stones.
 - Food allergies, celiac disease, or religious, cultural or ethical dietary rules: handled through the personal profile, not by the research.
@@ -59,7 +59,7 @@ Research is written for the **core** cohort. Each topic must say where its concl
 - Heart failure, cirrhosis, or active cancer treatment.
 - Current or past eating disorder.
 - Bariatric surgery.
-- Hypertensive crisis (≥180/120 mmHg) at any time without a clinician's plan.
+- Severe hypertension (systolic above 180 and/or diastolic above 120 mmHg) at any time without a clinician's plan, or any hypertensive emergency: high blood pressure with symptoms or acute organ damage, whatever the reading (ESC 2024 uses ≥180/110 mmHg with acute organ damage).
 
 ## 6. What "evidence-based dietary management" covers
 
