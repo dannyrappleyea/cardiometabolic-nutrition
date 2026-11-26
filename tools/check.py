@@ -307,7 +307,7 @@ def check_label_currency(s: dict, ec: dict, where: str, rep: Report) -> None:
         rep.warn(where, f"label from {year} is marked current; record edition_check.listed_latest from the "
                         "Drugs@FDA or DailyMed page that shows it is still the latest")
     age = days_old(ec.get("date"))
-    if isinstance(year, int) and TODAY.year - year <= 1 and age is not None and age > FAST_LABEL_DAYS:
+    if isinstance(year, int) and TODAY.year - year <= LABEL_OLD_YEARS and age is not None and age > FAST_LABEL_DAYS:
         rep.warn(where, f"recently revised label (year {year}) checked {age} days ago; re-check its edition "
                         f"within {FAST_LABEL_DAYS} days of opening the PR")
 
@@ -537,7 +537,7 @@ def check_canonical(section: str, it: dict, map_ids: dict, deps: dict, where: st
     if not canon:
         return
     if canon not in map_ids:
-        rep.error(where, f"{section}: '{it.get('item')}' canonical_topic '{canon}' is not in the topic map")
+        rep.warn(where, f"{section}: '{it.get('item')}' canonical_topic '{canon}' is not in the topic map")
         return
     pats = [re.compile(rf"\b{re.escape(t)}\b", re.I) for t in item_terms(it)]
     for tid, m in map_ids.items():
@@ -705,6 +705,8 @@ def main() -> int:
             ec = s.get("edition_check") or {}
             if ec.get("result") == "newer-not-recorded":
                 rep.error(where, f"decisive source '{sid}' has a newer edition that isn't recorded")
+            if ec.get("result") == "not-determined":
+                (rep.error if strict else rep.warn)(where, f"decisive source '{sid}' has undetermined currency (edition_check.result: not-determined)")
             if s.get("type") in ("drug-label", "guideline") and not ec:
                 (rep.error if strict else rep.warn)(where, f"decisive {s.get('type')} '{sid}' has no edition_check")
 
