@@ -24,6 +24,7 @@
           "rationale": {"type": "string", "minLength": 20},
           "discovered_via": {"type": "array", "items": {"type": "string"}},
           "depends_on": {"type": "array", "items": {"type": "string"}},
+          "refers_to": {"type": "array", "items": {"type": "string"}},
           "watch": {"type": "boolean"},
           "safety": {"type": "boolean"}
         },

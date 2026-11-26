@@ -6,7 +6,7 @@ Branch: `topic/<id>`.
 
 ## 1. Prepare
 
-- Read `SCOPE.md`, `METHODS.md`, the topic's map entry, and every published topic in its `depends_on`. Don't contradict a published topic silently: if your evidence disagrees, say so in the PR and flag it for synthesis.
+- Read `SCOPE.md`, `METHODS.md`, the topic's map entry, and every published topic in its `depends_on`. For each topic in `refers_to`, don't answer the question that topic owns: point to it by ID (`see <topic-id>`), cite its rule IDs if it is published, and otherwise note under "Open questions" that the rule depends on it. Don't contradict a published topic silently: if your evidence disagrees, say so in the PR and flag it for synthesis.
 - If the topic file already exists (an update), start from its "Re-check when" list, its background sources and its **Reviewer notes**. Don't redo background research it lists.
 - Check `references/sources/` for sources already on file; reuse them.
 

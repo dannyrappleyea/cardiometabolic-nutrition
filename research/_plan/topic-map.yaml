@@ -2,6 +2,8 @@
 # Schema: schemas/topic-map.schema.json. Second discovery run 2026-11-24 (branch discover/2026-11-24; the first
 # run was PR #2), revised 2026-11-25 after Copilot review and an independent evaluation of PR #5.
 # Every topic lists questions, not answers. D# refers to rows in research/_plan/discovery-log.md.
+# depends_on: topics whose Bottom line this topic needs (gates research order).
+# refers_to: topics that are the home of a question this topic mentions (no ordering).
 version: 1
 generated: "2026-11-24"
 generated_by: Claude Opus 5.5 (claude-opus-5-5)
@@ -160,7 +162,8 @@ topics:
       cutting total carbohydrate as lowering triglycerides (D22); a provincial stone guideline notes ketogenic diets
       affect stone risk (D88). Safety-critical because of euglycemic ketoacidosis on SGLT2 inhibitors.
     discovered_via: [D13, D22, D30, D63, D88, D111]
-    depends_on: [pattern-overall-eating-pattern, weight-loss-and-maintenance, medication-glucose-lowering-interactions]
+    depends_on: [medication-glucose-lowering-interactions]
+    refers_to: [pattern-overall-eating-pattern, weight-loss-and-maintenance]
     watch: true
   # ---------------- Nutrients and food groups ----------------
   - id: nutrient-dietary-fats
@@ -185,7 +188,8 @@ topics:
       beef tallow as options while keeping a 10% limit, which an ACC work group disputes (D34, D35). Priority 1 because it
       anchors the LDL domain and four topics depend on it, including the safety topic supplement-cholesterol-lowering.
     discovered_via: [D13, D22, D30, D34, D35, D37, D81, D100, D103]
-    depends_on: [pattern-overall-eating-pattern]
+    depends_on: []
+    refers_to: [pattern-overall-eating-pattern]
     watch: true
   - id: foodgroup-whole-grains-fiber
     title: Whole grains, fiber and soluble fiber
@@ -203,7 +207,8 @@ topics:
       beta-glucan 3-10 g/day (D22); ADA lists soluble fiber as a lipid lever (D14); AHA (2026), Canada and NICE emphasize
       whole grains (D37, D100, D103).
     discovered_via: [D13, D14, D22, D30, D37, D100, D103]
-    depends_on: [pattern-overall-eating-pattern]
+    depends_on: []
+    refers_to: [pattern-overall-eating-pattern]
     watch: false
   - id: nutrient-sugars-sweetened-drinks
     title: Added and free sugars, sugar-sweetened drinks and fruit juice
@@ -224,7 +229,8 @@ topics:
       (D103). Priority 2: its dependents (sweeteners, coffee-tea-water, gout) are all priority 2-3, so researching it at
       priority 2 still precedes them.
     discovered_via: [D9, D13, D22, D30, D34, D37, D83, D96, D103]
-    depends_on: [pattern-overall-eating-pattern]
+    depends_on: []
+    refers_to: [pattern-overall-eating-pattern]
     watch: false
   - id: additive-non-nutritive-sweeteners
     title: Non-sugar (low- and no-calorie) sweeteners
@@ -244,7 +250,8 @@ topics:
       non-caloric sweeteners as preferred over sugar (D22). WHO's guideline is aimed at policymakers and does not assess
       the safety of individual sweeteners (D120). Population limits must be checked before calling this a disagreement.
     discovered_via: [D13, D22, D30, D34, D37, D90, D120]
-    depends_on: [nutrient-sugars-sweetened-drinks]
+    depends_on: []
+    refers_to: [nutrient-sugars-sweetened-drinks]
     watch: true
   - id: nutrient-protein-amount
     title: How much protein - general, during weight loss, and with reduced kidney function
@@ -266,7 +273,8 @@ topics:
       which builds on this topic. Priority 1 because two safety topics (medication-incretin-weight-drugs-nutrition and
       condition-kidney-function-diet) depend on it.
     discovered_via: [D13, D28, D30, D34, D35, D92, D103]
-    depends_on: [weight-loss-and-maintenance]
+    depends_on: []
+    refers_to: [weight-loss-and-maintenance]
     watch: true
   - id: foodgroup-protein-foods
     title: Protein foods - legumes, nuts, fish, poultry, eggs, and red and processed meat
@@ -286,7 +294,8 @@ topics:
       to 7 a week for people with high LDL-C or type 2 diabetes (D96); the US federal guidelines' emphasis on animal protein
       is disputed (D34, D35). Fish has its own topic (foodgroup-fish-seafood).
     discovered_via: [D13, D22, D30, D34, D35, D37, D96, D103]
-    depends_on: [pattern-overall-eating-pattern, nutrient-dietary-fats, foodgroup-fish-seafood]
+    depends_on: []
+    refers_to: [pattern-overall-eating-pattern, nutrient-dietary-fats, foodgroup-fish-seafood]
     watch: true
   - id: foodgroup-fish-seafood
     title: Fish and seafood - how often, which kinds, how cooked, and mercury
@@ -308,7 +317,8 @@ topics:
       lower-mercury, omega-3-rich fish (D119). Split out of foodgroup-protein-foods so type, frequency, cooking and
       contaminants are answered in one place. Omega-3 supplements stay in supplement-cholesterol-lowering.
     discovered_via: [D22, D30, D81, D96, D103, D119]
-    depends_on: [pattern-overall-eating-pattern, nutrient-dietary-fats]
+    depends_on: []
+    refers_to: [pattern-overall-eating-pattern, nutrient-dietary-fats]
     watch: false
   - id: foodgroup-dairy
     title: Milk, yogurt and cheese - full-fat or reduced-fat
@@ -348,7 +358,8 @@ topics:
       favors minimally processed foods (D103), the Heart Foundation says not all
       processed foods need avoiding (D96). A 2024 umbrella review finds associations of mostly low certainty (D98).
     discovered_via: [D13, D28, D32, D37, D81, D83, D96, D98, D103]
-    depends_on: [pattern-overall-eating-pattern, nutrient-sodium]
+    depends_on: []
+    refers_to: [pattern-overall-eating-pattern, nutrient-sodium]
     watch: true
   # ---------------- Beverages ----------------
   - id: beverage-alcohol
@@ -392,7 +403,8 @@ topics:
       association with better liver outcomes (D83); NICE advises against excessive caffeine in hypertension (D116); a
       stone guideline sets fluid targets (D88).
     discovered_via: [D9, D13, D37, D83, D88, D96, D116]
-    depends_on: [nutrient-sugars-sweetened-drinks]
+    depends_on: []
+    refers_to: [nutrient-sugars-sweetened-drinks]
     watch: false
   # ---------------- Supplements ----------------
   - id: supplement-cholesterol-lowering
@@ -414,7 +426,8 @@ topics:
       allergy and bleeding cautions (D67, D105). Statin labels warn about niacin and ask about supplements (D42, D44). Red yeast
       rice contains a statin-like compound, so this is a safety topic.
     discovered_via: [D14, D22, D23, D24, D42, D44, D67, D105]
-    depends_on: [nutrient-dietary-fats, medication-lipid-lowering-interactions]
+    depends_on: [medication-lipid-lowering-interactions]
+    refers_to: [nutrient-dietary-fats]
     watch: true
   - id: supplement-vitamins-minerals
     title: Vitamin and mineral supplements the cohort may be offered or need
@@ -438,7 +451,8 @@ topics:
       weight-medicine topics depend on it. Safety-critical (playbook step 8): beta-carotene and high-dose vitamin C carry
       specific risks, and missed B12 or fat-soluble vitamin needs can cause deficiency.
     discovered_via: [D13, D56, D65, D83, D85, D88, D103, D104, D108, D116]
-    depends_on: [weight-loss-and-maintenance]
+    depends_on: []
+    refers_to: [weight-loss-and-maintenance]
     watch: false
   # ---------------- Medication interactions ----------------
   - id: medication-lipid-lowering-interactions
@@ -461,7 +475,8 @@ topics:
       boundaries: triglycerides ≥500 mg/dL are excluded (SCOPE §5), and drug-drug dose limits (for example amlodipine
       with simvastatin, D52) are medication decisions outside SCOPE §6, left to prescribers.
     discovered_via: [D14, D18, D42, D44, D52, D67, D69, D73, D77, D105, D106]
-    depends_on: [beverage-alcohol]
+    depends_on: []
+    refers_to: [beverage-alcohol]
     watch: false
   - id: medication-blood-pressure-interactions
     title: Food, salt-substitute and fluid interactions with blood pressure medicines
@@ -487,7 +502,8 @@ topics:
       asks for potassium checks after starting RAS blockers (D28). Scope boundary: heart failure is excluded (SCOPE §5)
       though some of these labels address it.
     discovered_via: [D9, D14, D28, D46, D48, D50, D52, D54, D71, D110, D115, D116]
-    depends_on: [beverage-alcohol]
+    depends_on: []
+    refers_to: [beverage-alcohol]
     watch: false
   - id: medication-glucose-lowering-interactions
     title: Food and fasting-related label warnings for glucose-lowering medicines
@@ -510,7 +526,8 @@ topics:
       do about planned fasting in behavior-meal-timing-fasting. Scope boundary: insulin, sulfonylureas and meglitinides
       are excluded (SCOPE §5) because of hypoglycemia risk.
     discovered_via: [D13, D56, D59, D63, D75, D79, D108, D109, D111, D117]
-    depends_on: [beverage-alcohol, supplement-vitamins-minerals]
+    depends_on: []
+    refers_to: [beverage-alcohol, supplement-vitamins-minerals]
     watch: false
   - id: medication-incretin-weight-drugs-nutrition
     title: Eating well on GLP-1-based and other weight-loss medicines
@@ -531,7 +548,8 @@ topics:
       vitamin rules are asked in supplement-vitamins-minerals. A 2025 joint advisory sets nutrition priorities (D92).
       Fast-moving: the tirzepatide label was revised four times in 2026 (D107).
     discovered_via: [D3, D9, D58, D61, D65, D92, D104, D107]
-    depends_on: [weight-loss-and-maintenance, nutrient-protein-amount, supplement-vitamins-minerals]
+    depends_on: []
+    refers_to: [weight-loss-and-maintenance, nutrient-protein-amount, supplement-vitamins-minerals]
     watch: true
   # ---------------- Behavior and situations ----------------
   - id: behavior-meal-timing-fasting
@@ -555,7 +573,8 @@ topics:
       profile (SCOPE §4). Label wording is asked in medication-glucose-lowering-interactions; this topic is the one home
       for what to do about planned fasting. Safety-critical because fasting on SGLT2 inhibitors can trigger ketoacidosis.
     discovered_via: [D13, D26, D59, D63, D108, D111]
-    depends_on: [weight-loss-and-maintenance, medication-glucose-lowering-interactions]
+    depends_on: [medication-glucose-lowering-interactions]
+    refers_to: [weight-loss-and-maintenance]
     watch: true
   - id: situation-shopping-cooking-eating-out
     title: Shopping, food labels, cooking, eating out and social occasions
@@ -581,7 +600,8 @@ topics:
       dining out (D34). No opened source gave detailed eating-out guidance, so research should look for patient-education
       material.
     discovered_via: [D22, D34, D37, D81, D96, D100, D103]
-    depends_on: [nutrient-sodium, food-ultra-processed, beverage-alcohol]
+    depends_on: [nutrient-sodium, food-ultra-processed]
+    refers_to: [beverage-alcohol]
     watch: false
   # ---------------- Adjacent conditions ----------------
   - id: condition-kidney-function-diet
@@ -607,7 +627,8 @@ topics:
       RAS-blocker labels, D46, D71). Safety-critical because of hyperkalemia and protein limits. Scope boundary: eGFR
       below 45 is excluded.
     discovered_via: [D9, D28, D30, D46, D71, D113, D114]
-    depends_on: [nutrient-protein-amount, nutrient-potassium-salt-substitutes, nutrient-sodium, medication-blood-pressure-interactions]
+    depends_on: [nutrient-protein-amount, nutrient-sodium]
+    refers_to: [nutrient-potassium-salt-substitutes, medication-blood-pressure-interactions]
     watch: false
   - id: condition-fatty-liver-diet
     title: Diet with fatty liver disease (MASLD) alongside the cardiometabolic cluster
@@ -627,7 +648,8 @@ topics:
       home for liver-specific weight-loss targets. Which medicine to use is a prescriber's decision (SCOPE §6), so the
       question asks only whether those medicines change dietary advice. Scope boundary: cirrhosis is excluded (SCOPE §5).
     discovered_via: [D13, D75, D83]
-    depends_on: [weight-loss-and-maintenance, beverage-alcohol]
+    depends_on: []
+    refers_to: [weight-loss-and-maintenance, beverage-alcohol]
     watch: false
   - id: condition-gout-kidney-stones-diet
     title: Diet with gout or kidney stones alongside the cardiometabolic cluster
@@ -647,5 +669,6 @@ topics:
       thiazides raise uric acid (D54), bempedoic acid raises uric acid and gout (D73), orlistat raises urinary oxalate and can
       cause oxalate nephropathy (D65, D104). This topic is the one home for these uric-acid and stone effects of medicines.
     discovered_via: [D54, D65, D73, D84, D85, D87, D88, D104]
-    depends_on: [beverage-alcohol, nutrient-sugars-sweetened-drinks]
+    depends_on: []
+    refers_to: [beverage-alcohol, nutrient-sugars-sweetened-drinks]
     watch: false

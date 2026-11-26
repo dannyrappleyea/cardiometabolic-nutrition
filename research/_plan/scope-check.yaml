@@ -22,14 +22,12 @@ thresholds:
     proposed: null
     note: Cohort-design rule; no guideline defines it. Not checkable.
   - ref: "§3 Blood pressure"
-    threshold: "Elevated through stage 2: systolic 120–179 and/or diastolic 80–119 mmHg (office or home average), treated or untreated"
-    status: disagrees
+    threshold: "Elevated through stage 2: systolic 120–179 and/or diastolic 80–119 mmHg (office or home average), treated or untreated. Basis: ACC/AHA 2025 categories (elevated 120–129/<80; stage 1 130–139 or 80–89; stage 2 ≥140 or ≥90); ESC 2024 calls 120–139/70–89 elevated"
+    status: verified
     sources: [aha-high-bp-top-10-2025, esc-elevated-bp-hypertension-guideline-2024, ada-standards-cvd-risk-management-2026, hypertension-canada-primary-care-guideline-2025, nice-hypertension-ng136-2026]
-    proposed: >-
-      Keep the range but name its basis: "systolic 120–179 and/or diastolic 80–119 mmHg (ACC/AHA 2025 categories:
-      elevated 120–129/<80, stage 1 130–139 or 80–89, stage 2 ≥140 or ≥90). Under ESC 2024 'elevated BP' is
-      120–139/70–89, so people with systolic <120 and diastolic 70–79 are 'elevated' in Europe but not core here."
+    proposed: null
     note: >-
+      Adopted in SCOPE.md v1 (2026-11-26) by the maintainer. SCOPE now names the ACC/AHA 2025 basis and the ESC/NICE differences.
       The systolic lower bound (120) and the hypertension cut-offs (US 130/80; ESC and NICE-style 140/90) are
       confirmed: ESC 2024 full text §2 and §8.4; ADA 2026 Rec 10.1 (diabetes uses 130/80). The ACC/AHA 2025 categories
       come from AHA's own public summary page; the guideline full text could not be opened (publisher refused), so the
@@ -111,14 +109,12 @@ thresholds:
     proposed: null
     note: NICE NG246 Rec 1.9.10 - overweight 25-29.9, obesity class 1 30-34.9, class 2 35-39.9, class 3 ≥40.
   - ref: "§3 Body size"
-    threshold: "(or the lower thresholds used for people of Asian ancestry)"
-    status: disagrees
+    threshold: "(or 23–37.4 for people of South Asian, Chinese, other Asian, Middle Eastern, Black African or African-Caribbean family background, per NICE NG246)"
+    status: verified
     sources: [nice-overweight-obesity-management-ng246-2025, nice-type-2-diabetes-prevention-ph38-2017, easl-easd-easo-masld-guideline-2024, ada-standards-diagnosis-classification-2026]
-    proposed: >-
-      Name the thresholds and groups, e.g. "or BMI 23–37.4 for people of South Asian, Chinese, other Asian, Middle
-      Eastern, Black African or African-Caribbean family background (NICE NG246 Rec 1.9.11)", and state which source a
-      topic uses where they differ.
+    proposed: null
     note: >-
+      Adopted in SCOPE.md v1 (2026-11-26) by the maintainer.
       Lower thresholds differ in both cut-off and the groups covered. NICE NG246 applies overweight 23-27.4 and obesity
       ≥27.5 (classes 2.5 lower) to South Asian, Chinese, other Asian, Middle Eastern, Black African and African-Caribbean
       backgrounds; EASL-EASD-EASO 2024 uses overweight 23-24.9 and obesity ≥25 for Asian people; ADA 2026 uses ≥23 for
@@ -141,14 +137,12 @@ thresholds:
     proposed: null
     note: Cohort-design rule; nothing to verify.
   - ref: "§3 Kidneys"
-    threshold: "eGFR ≥60 and UACR <30 mg/g, or not yet tested"
-    status: disagrees
+    threshold: "eGFR ≥60 and UACR <30 mg/g with no other known marker of kidney damage (KDIGO 2024: urine sediment abnormalities, persistent hematuria, tubular disorders, abnormal histology or imaging, or a kidney transplant), or not yet tested"
+    status: verified
     sources: [kdigo-ckd-guideline-2024, esc-era-cvd-ckd-guideline-2026, acc-hbp-guideline-journal-scan-2025]
-    proposed: >-
-      "eGFR ≥60 and UACR <30 mg/g with no other known marker of kidney damage (KDIGO 2024 Table 1: urine sediment
-      abnormalities, persistent hematuria, tubular disorders, abnormal histology or imaging, kidney transplant), or not
-      yet tested. 'Not yet tested' means kidney status is unknown, not that CKD is absent." Wording is for the maintainer.
+    proposed: null
     note: >-
+      Adopted in SCOPE.md v1 (2026-11-26) by the maintainer.
       Corrected in review (Copilot). The numeric categories are right: KDIGO G1-G2 is eGFR ≥60 and A1 is ACR <30 mg/g
       (Tables 2-3). But KDIGO defines CKD as eGFR <60 or any persistent marker of kidney damage for more than 3 months
       (Table 1, p. S137), so eGFR ≥60 with UACR <30 does not by itself rule CKD out, and an untested person's status is
@@ -169,11 +163,11 @@ thresholds:
     proposed: null
     note: Cohort-design bands; no guideline defines them. (PREVENT risk equations cover 30-79 per ACC/AHA summaries, which may be why these bands were chosen.)
   - ref: "§4 BMI"
-    threshold: "BMI ≥40."
+    threshold: "BMI ≥40 (≥37.5 for the groups with lower thresholds in §3)."
     status: verified
     sources: [nice-overweight-obesity-management-ng246-2025]
     proposed: null
-    note: NICE obesity class 3 is BMI ≥40, but ≥37.5 for the ethnic groups in Rec 1.9.11 (see the "lower thresholds" row).
+    note: "Adopted in SCOPE.md v1 (2026-11-26) by the maintainer. NICE obesity class 3 is BMI ≥40, but ≥37.5 for the ethnic groups in Rec 1.9.11 (see the \"lower thresholds\" row)."
   - ref: "§4 Kidneys"
     threshold: "eGFR 45–59, or UACR 30–300 mg/g."
     status: verified
@@ -199,15 +193,12 @@ thresholds:
     proposed: null
     note: ADA 2026 defines ASCVD as ACS, MI, angina, coronary or other revascularization, stroke or PAD (incl. aortic aneurysm); LDL-C goals are lower in secondary prevention (<55 mg/dL in ESC/EAS 2019 and ADA Rec 10.27).
   - ref: "§4 Resistant hypertension"
-    threshold: "Resistant hypertension (above goal on three or more drug classes)."
-    status: disagrees
+    threshold: "Resistant hypertension: blood pressure above the person's treatment goal despite three or more drug classes, one of them a diuretic, at maximally tolerated doses. This includes ESC 2024's narrower definition (office BP ≥140/90 confirmed out of office, after excluding pseudo-resistance such as missed doses or white-coat readings); the broader wording is used because this flag only adds caution."
+    status: verified
     sources: [esc-elevated-bp-hypertension-guideline-2024, hypertension-canada-primary-care-guideline-2025, nice-hypertension-ng136-2026, ada-standards-cvd-risk-management-2026]
-    proposed: >-
-      "Resistant hypertension: office BP ≥140/90 mmHg, confirmed by home or ambulatory monitoring, despite lifestyle
-      measures and maximally tolerated doses of three or more drug classes including a diuretic, after pseudo-resistance
-      (non-adherence, white-coat effect, poor measurement technique) has been excluded (ESC 2024 §7.5, Table 11,
-      §9.13.1)." The maintainer should choose between this threshold-based wording and the target-based wording below.
+    proposed: null
     note: >-
+      Adopted in SCOPE.md v1 (2026-11-26) by the maintainer. The maintainer chose the goal-based wording, which includes the ESC criteria, because the flag only adds caution.
       Re-read in review (Copilot). ESC 2024 defines resistant hypertension as office BP ≥140/90 confirmed out of office
       on maximum or maximally tolerated doses of a thiazide or thiazide-like diuretic, a RAS blocker and a calcium channel
       blocker, after pseudo-resistance is excluded (§7.5, Table 11, p. 3948-3950; §9.13.1 and Figure 22). SCOPE's "above
@@ -285,15 +276,12 @@ thresholds:
     proposed: null
     note: Categorical; not checked.
   - ref: "§5 Blood pressure"
-    threshold: "Hypertensive crisis (≥180/120 mmHg) at any time without a clinician's plan."
+    threshold: "Severe hypertension (systolic above 180 and/or diastolic above 120 mmHg) at any time without a clinician's plan, or any hypertensive emergency: high blood pressure with symptoms or acute organ damage, whatever the reading (ESC 2024 uses ≥180/110 mmHg with acute organ damage)."
     status: unverified
     sources: [aha-high-bp-top-10-2025, esc-elevated-bp-hypertension-guideline-2024, nice-hypertension-ng136-2026]
-    proposed: >-
-      Suggestion only; the maintainer decides the wording. Exclude (a) severe hypertension of about 180/120 mmHg or more
-      at any time without a clinician's plan, and (b) any hypertensive emergency, defined independently of that cut-off -
-      ESC 2024 uses 180/110 mmHg or more with acute organ damage, so someone at 180/110-119 with organ damage would be
-      excluded even though they are below 120 diastolic.
+    proposed: null
     note: >-
+      Adopted in SCOPE.md v1 (2026-11-26) by the maintainer. Wording follows the review suggestion; still unverified because the US numbers come only from AHA's summary page.
       Downgraded from disagrees in review. The US terms ("severe hypertension" and "hypertensive emergency", >180 and/or
       >120) come only from AHA's summary page because the 2025 guideline text could not be fetched, so the US side is
       unverified. NICE NG136 (UK, full recommendations) calls clinic BP of 180/120 or more "severe hypertension" and

@@ -27,7 +27,7 @@ SCOPE.md + METHODS.md
 
 1. **Read state.** `research/_plan/topic-map.yaml`, `research/INDEX.md`, `research/changelog.md`, open PRs and issues labeled `topic-request`.
 2. **If the topic map is empty or older than 12 months**, run discovery (`01-discover.md`) and stop at its PR. Don't research topics until a human has approved the map (topics with `status: approved`).
-3. **Pick a batch.** Up to 5 approved topics whose `depends_on` topics are already published, highest priority first. Mark them `in-progress` on their branches, not on `main`.
+3. **Pick a batch.** Up to 5 approved topics whose `depends_on` topics are already published, highest priority first. `refers_to` links don't block a topic; research it in parallel with the topics it refers to. Mark them `in-progress` on their branches, not on `main`.
 4. **Delegate research.** One researcher per topic, each on branch `topic/<id>`, given: this repository, the topic's map entry, and `02-research-topic.md`. Researchers do not see each other's drafts.
 5. **Delegate verification.** For each finished draft, a fresh verifier with `03-verify.md`. Send failures back to the researcher with the verifier's report; at most two rounds, then open the PR as draft with the unresolved items listed.
 6. **Open one PR per topic** using the PR template, ready for review (not draft), so Copilot's automatic review starts. Include the researcher's search log and the verifier's report in the description.

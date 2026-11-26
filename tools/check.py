@@ -336,9 +336,11 @@ def check_discovery(map_ids: dict, sources: dict, authorities: dict, rep: Report
     for cyc in find_cycles({t: list(m.get("depends_on") or []) for t, m in map_ids.items()}):
         rep.error(tm, "depends_on cycle: " + " → ".join(cyc))
 
+    # Foundational = relied on by other topics, whether they need its bottom line (depends_on)
+    # or send a shared question to it (refers_to). Only depends_on gates research order.
     dependents = {t: 0 for t in map_ids}
     for m in map_ids.values():
-        for d in m.get("depends_on") or []:
+        for d in set(m.get("depends_on") or []) | set(m.get("refers_to") or []):
             if d in dependents:
                 dependents[d] += 1
 
@@ -362,7 +364,7 @@ def check_discovery(map_ids: dict, sources: dict, authorities: dict, rep: Report
         if m.get("priority") == 1 and not m.get("safety") and dependents.get(tid, 0) == 0:
             rep.warn(tm, f"'{tid}' is priority 1 but no topic depends on it and safety is not set")
         if m.get("priority") in (2, 3) and dependents.get(tid, 0) >= 2:
-            rep.warn(tm, f"'{tid}' is priority {m.get('priority')} but {dependents[tid]} topics depend on it; "
+            rep.warn(tm, f"'{tid}' is priority {m.get('priority')} but {dependents[tid]} topics rely on it; "
                          "foundational topics are priority 1 (step 8), or say why not in the rationale")
         for q in m.get("questions") or []:
             if any(rx.search(q) for rx in SCOPE_LINE_RES):
@@ -534,7 +536,8 @@ def item_terms(it: dict) -> list[str]:
 
 
 def check_canonical(section: str, it: dict, map_ids: dict, deps: dict, where: str, rep: Report) -> None:
-    """One canonical topic per item (step 8): other topics that ask about it must depend on the canonical one."""
+    """One canonical topic per item (step 8): other topics that ask about it must link to the canonical one
+    (refers_to, or depends_on if they need its bottom line)."""
     canon = it.get("canonical_topic")
     if not canon:
         return
@@ -543,12 +546,13 @@ def check_canonical(section: str, it: dict, map_ids: dict, deps: dict, where: st
         return
     pats = [re.compile(rf"\b{re.escape(t)}\b", re.I) for t in item_terms(it)]
     for tid, m in map_ids.items():
-        if tid == canon or m.get("status") == "rejected" or canon in deps.get(tid, set()):
+        if tid == canon or m.get("status") == "rejected" or canon in deps.get(tid, set()) \
+                or canon in (m.get("refers_to") or []):
             continue
         for q in m.get("questions") or []:
             if any(p.search(q) for p in pats):
                 rep.warn(where, f"{section}: '{it.get('item')}' is canonical in '{canon}', but '{tid}' asks about it "
-                                f"without depending on it: \"{q[:80]}…\"; move the question or add depends_on")
+                                f"without linking to it: \"{q[:80]}…\"; move the question or add refers_to")
                 break
 
 
@@ -589,6 +593,13 @@ def main() -> int:
         for dep in t.get("depends_on") or []:
             if dep not in map_ids:
                 rep.error(rel(TOPIC_MAP), f"'{tid}' depends on unknown topic '{dep}'")
+        for ref in t.get("refers_to") or []:
+            if ref not in map_ids:
+                rep.error(rel(TOPIC_MAP), f"'{tid}' refers to unknown topic '{ref}'")
+            if ref == tid:
+                rep.error(rel(TOPIC_MAP), f"'{tid}' refers to itself")
+        for both in sorted(set(t.get("depends_on") or []) & set(t.get("refers_to") or [])):
+            rep.warn(rel(TOPIC_MAP), f"'{tid}' lists '{both}' in both depends_on and refers_to; keep one")
 
     # --- sources ---
     sources: dict[str, dict] = {}
@@ -646,6 +657,9 @@ def main() -> int:
         for dep in fm.get("depends_on") or []:
             if not (TOPICS / f"{dep}.md").exists():
                 rep.warn(where, f"depends on '{dep}', which is not published yet")
+        for ref in fm.get("refers_to") or []:
+            if ref not in map_ids:
+                rep.warn(where, f"refers to '{ref}', which is not in the topic map")
         for field in fm.get("personalization_inputs") or []:
             if field not in profile_fields:
                 rep.error(where, f"personalization input '{field}' not in schemas/profile-fields.yaml")
