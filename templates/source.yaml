@@ -16,8 +16,11 @@ edition: null                     # as the publisher lists it, e.g. "2025 editio
 edition_check:                    # required for guidelines and drug labels (METHODS §5)
   date: YYYY-MM-DD
   searched: Where you looked for a newer edition (authority site, Drugs@FDA, DailyMed, PubMed)
-  result: current                 # current | newer-recorded | newer-not-recorded
+  result: current                 # current | newer-recorded | newer-not-recorded | not-determined (couldn't establish the latest; say why in notes)
   newer: null                     # source ID or citation of the newer edition, if any
+  evidence_url: null              # the page that lists the latest edition (drug labels: Drugs@FDA application overview or the label's DailyMed SPL)
+  listed_latest: null             # the latest edition as that page lists it, e.g. "SUPPL-58 (2026-03-16)"
+label_role: null                  # drug labels only: rld | reference-standard | manufacturer-site | repackager | other
 population_limits: null           # who the source excludes or doesn't cover, and conditional/weak strength
                                   # e.g. ["not for people with pre-existing diabetes", "conditional recommendation"]
                                   # [] = checked, none stated · null = not checked

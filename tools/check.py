@@ -44,6 +44,8 @@ COVERAGE = ROOT / "research" / "_plan" / "coverage.yaml"
 TODAY = date.today()
 STALE_DAYS = 365
 CORE_DOMAINS = ["blood-pressure", "glycemia", "lipids"]                   # SCOPE §3
+DOMAIN_WORDS = {"blood-pressure": ("blood pressure", "hypertension", "blood-pressure"),
+                "glycemia": ("glyc", "diabetes"), "lipids": ("lipid", "cholesterol")}
 READ_SCOPES = {"full", "partial", "section"}                              # actually read
 OPENED_ACCESS = {"full", "partial", "section", "abstract", "summary", "landing-page"}
 WEAK_SCOPES = {"summary", "landing-page"}
@@ -64,6 +66,19 @@ REQUIRED_HEADINGS = [
     "Where authorities agree and differ", "Putting it into practice",
     "Medication interactions", "Personalization hooks", "Adjacent cohort cautions",
     "Open questions and watch list", "Re-check when", "References", "Reviewer notes",
+]
+LABEL_EVIDENCE_RE = re.compile(r"accessdata\.fda\.gov|dailymed\.nlm\.nih\.gov|nctr-crs\.fda\.gov/fdalabel", re.I)
+LABEL_OLD_YEARS = 2                        # a label older than this needs listed_latest to stay "current"
+FAST_LABEL_DAYS = 30                       # recently revised labels: edition check this fresh
+DOUBT_PHRASES = ("may have newer", "may not be the latest", "may be outdated", "possibly outdated",
+                 "newer version", "not checked", "could not confirm", "couldn't confirm")
+GAP_DOUBT_PHRASES = DOUBT_PHRASES + ("discontinued",)   # in a gap, a product named before this is doubted
+SCOPE_LINE_RES = [  # SCOPE §6: medicine choice or dosing is out of scope
+    re.compile(r"\bwhich (?:[\w-]+ ){0,3}(?:medicines?|medications?|drugs?)\b[^?]*\b(?:safe|safest|best|preferred|recommended|to use|to choose)\b", re.I),
+    re.compile(r"\b(?:limit|lower|reduce|raise|increase|adjust|change|stop|start)\w*\b[^?]{0,40}"
+               r"\b(?:statins?|medicines?|medications?|drugs?|tablets?)\b[^?]{0,20}\bdos(?:e|es|ing|age)\b", re.I),
+    re.compile(r"\bdos(?:e|es|ing|age)\b[^?]{0,20}\bof (?:the |their |a |this |these )?(?:statins?|medicines?|medications?|drugs?)\b", re.I),
+    re.compile(r"\bdrug[- ](?:drug|interactions? with other (?:drugs|medicines))\b", re.I),
 ]
 CITE_RE = re.compile(r"\[@([a-z0-9]+(?:-[a-z0-9]+)*)\]")
 QUOTE_RE = re.compile(r"[\"“]([^\"”\n]{20,})[\"”]")
@@ -252,8 +267,49 @@ def check_sources_quality(sources: dict, rep: Report) -> None:
                     rep.warn(where, f"a newer edition exists but is not recorded: {ec.get('newer') or '(unnamed)'}")
                 if ec.get("result") == "newer-recorded" and ec.get("newer") and ec["newer"] not in sources:
                     rep.error(where, f"edition_check.newer '{ec['newer']}' is not a recorded source")
+                if ec.get("result") == "not-determined":
+                    rep.warn(where, "edition_check could not determine the latest edition; explain in the PR and re-check before relying on it")
+                if ec.get("result") == "current":
+                    hits = [p for p in DOUBT_PHRASES if p in source_text(s)]
+                    if hits:
+                        rep.warn(where, f"edition_check.result is 'current' but the source's own notes say \"{hits[0]}\"; "
+                                        "re-check, or use not-determined / newer-not-recorded")
+            if stype == "drug-label":
+                check_label_currency(s, ec or {}, where, rep)
+        method, scope_ = ver.get("method"), ver.get("scope")
+        if method == "fetched-full-text" and scope_ in WEAK_SCOPES | {"abstract"}:
+            rep.warn(where, f"verified.method is fetched-full-text but scope is '{scope_}'; record the method that matches what was opened")
         if stype in LIMIT_TYPES and s.get("population_limits") is None:
             rep.warn(where, "population_limits not checked (who it excludes; conditional strength). Use [] if none")
+
+
+def source_text(s: dict) -> str:
+    """Free-text fields of a source, lowercased, for consistency checks."""
+    ec = s.get("edition_check") or {}
+    parts = [s.get("limitations"), s.get("notes"), ec.get("searched")]
+    return " ".join(str(p) for p in parts if p).lower()
+
+
+def check_label_currency(s: dict, ec: dict, where: str, rep: Report) -> None:
+    """Drug-label edition evidence (METHODS §5; playbooks/01-discover.md step 4)."""
+    evidence = " ".join(str(x) for x in (ec.get("evidence_url"), ec.get("searched")) if x)
+    if ec and not LABEL_EVIDENCE_RE.search(evidence):
+        rep.warn(where, "drug-label edition_check has no Drugs@FDA or DailyMed URL; open the application overview or "
+                        "the label's SPL and record it in edition_check.evidence_url (a web search alone can't show currency)")
+    role = s.get("label_role")
+    if not role:
+        rep.warn(where, "drug label without label_role (rld | reference-standard | manufacturer-site | repackager | other)")
+    elif role == "repackager":
+        rep.warn(where, "label_role is repackager; METHODS §5 prefers the reference listed drug's label")
+    year = s.get("year")
+    if ec.get("result") == "current" and isinstance(year, int) and TODAY.year - year > LABEL_OLD_YEARS \
+            and not ec.get("listed_latest"):
+        rep.warn(where, f"label from {year} is marked current; record edition_check.listed_latest from the "
+                        "Drugs@FDA or DailyMed page that shows it is still the latest")
+    age = days_old(ec.get("date"))
+    if isinstance(year, int) and TODAY.year - year <= LABEL_OLD_YEARS and age is not None and age > FAST_LABEL_DAYS:
+        rep.warn(where, f"recently revised label (year {year}) checked {age} days ago; re-check its edition "
+                        f"within {FAST_LABEL_DAYS} days of opening the PR")
 
 
 def eff_scope(s: dict) -> str | None:
@@ -303,6 +359,13 @@ def check_discovery(map_ids: dict, sources: dict, authorities: dict, rep: Report
                 rep.warn(tm, f"'{tid}' traces to only {len(opened)} opened row ({opened[0]}); aim for ≥2")
         if m.get("priority") == 1 and not m.get("safety") and dependents.get(tid, 0) == 0:
             rep.warn(tm, f"'{tid}' is priority 1 but no topic depends on it and safety is not set")
+        if m.get("priority") in (2, 3) and dependents.get(tid, 0) >= 2:
+            rep.warn(tm, f"'{tid}' is priority {m.get('priority')} but {dependents[tid]} topics depend on it; "
+                         "foundational topics are priority 1 (step 8), or say why not in the rationale")
+        for q in m.get("questions") or []:
+            if any(rx.search(q) for rx in SCOPE_LINE_RES):
+                rep.warn(tm, f"'{tid}' question may cross SCOPE §6 (choosing or dosing medicines): \"{q[:90]}\"; "
+                             "ask only about food, drink and supplements")
 
     # near-duplicate questions across topics
     qs = [(tid, q, question_tokens(q)) for tid, m in map_ids.items() if m.get("status") != "rejected"
@@ -321,7 +384,8 @@ def check_discovery(map_ids: dict, sources: dict, authorities: dict, rep: Report
                      "give each question one canonical topic")
 
     check_scope_thresholds(sources, rep)
-    check_coverage(map_ids, sources, rep)
+    gaps = check_coverage(map_ids, sources, rep)
+    gaps_text = " ".join(gaps).lower()
 
     # guideline floors per core domain
     for dom in CORE_DOMAINS:
@@ -329,8 +393,22 @@ def check_discovery(map_ids: dict, sources: dict, authorities: dict, rep: Report
              and dom in source_domains(s, authorities)]
         if not any(eff_scope(s) in READ_SCOPES for s in g):
             rep.warn(tm, f"no tier-1 guideline for '{dom}' has been read beyond a summary (verified.scope full/partial/section)")
-        if not any(s.get("jurisdiction") in NON_US and eff_scope(s) in OPENED_ACCESS for s in g):
+        non_us = {s.get("jurisdiction") for s in g if s.get("jurisdiction") in NON_US and eff_scope(s) in OPENED_ACCESS}
+        if not non_us:
             rep.warn(tm, f"no non-US tier-1 guideline opened for '{dom}' (METHODS §3 jurisdiction floor)")
+        elif len(non_us) < 2 and not any(w in gaps_text for w in DOMAIN_WORDS[dom]):
+            rep.warn(tm, f"only one non-US jurisdiction opened for '{dom}' ({', '.join(sorted(non_us))}); search a second "
+                         "jurisdiction's current guideline and open it, or list what you tried under coverage gaps")
+
+    # calendar completeness: every authority with a current tier-1 source has a next-edition entry
+    tmap = load_yaml(TOPIC_MAP, rep) or {}
+    cal = {str(c.get("source_or_authority")) for c in tmap.get("calendar") or [] if isinstance(c, dict)}
+    cal_auth = cal | {sources[c].get("authority") for c in cal if c in sources}
+    tier1_auth = sorted({s.get("authority") for s in sources.values()
+                         if s.get("tier") == "1" and s.get("status") != "superseded" and s.get("authority")})
+    missing_cal = [a for a in tier1_auth if a not in cal_auth]
+    if missing_cal:
+        rep.warn(tm, "calendar has no next-edition entry for authorities with tier-1 sources: " + ", ".join(missing_cal))
 
 
 def scope_numbers() -> set[str]:
@@ -373,13 +451,15 @@ def check_scope_thresholds(sources: dict, rep: Report) -> None:
             rep.warn(where, f"'{r.get('threshold')}' disagrees but has no proposed correction")
 
 
-def check_coverage(map_ids: dict, sources: dict, rep: Report) -> None:
+def check_coverage(map_ids: dict, sources: dict, rep: Report) -> list[str]:
+    """Coverage checks (step 9). Returns the recorded gaps."""
     where = rel(COVERAGE)
     if not COVERAGE.exists():
         rep.warn(where, "missing: playbooks/01-discover.md step 9 records coverage here")
-        return
+        return []
     data = load_yaml(COVERAGE, rep) or {}
     schema_check(data, "coverage.schema.json", where, rep)
+    deps = transitive_deps(map_ids)
     for section in ("domains", "adjacent_flags", "medication_classes", "food_groups"):
         items = data.get(section) or []
         if not items:
@@ -393,6 +473,81 @@ def check_coverage(map_ids: dict, sources: dict, rep: Report) -> None:
             for sid in it.get("named_in") or []:
                 if sid not in sources:
                     rep.error(where, f"{section}: '{it.get('item')}' named_in unknown source '{sid}'")
+            check_canonical(section, it, map_ids, deps, where, rep)
+
+    # gaps that doubt a source's currency while the source says "current"
+    # (a source named before a doubt phrase in the same clause)
+    gaps = [str(g) for g in data.get("gaps") or []]
+    for g in gaps:
+        for clause in re.split(r";\s*|\.\s+", g.lower()):
+            hits = [clause.find(p) for p in GAP_DOUBT_PHRASES if p in clause]
+            if not hits:
+                continue
+            cut = min(hits)
+            for sid, s in sources.items():
+                if s.get("status") == "superseded" or (s.get("edition_check") or {}).get("result") != "current":
+                    continue
+                name = label_name(s) if s.get("type") == "drug-label" else None
+                for n in filter(None, (sid, name)):
+                    m = re.search(rf"\b{re.escape(n)}\b", clause)
+                    if m and m.start() < cut:
+                        rep.warn(where, f"gap says \"{clause.strip()[:80]}…\" but '{sid}' records edition_check.result: current; make them agree")
+                        break
+    return gaps
+
+
+def label_name(s: dict) -> str | None:
+    """Product name at the start of a drug label's title, e.g. 'xenical' from 'XENICAL (orlistat) capsules'."""
+    m = re.match(r"\s*([A-Za-z][A-Za-z0-9-]{3,})", str(s.get("title") or ""))
+    name = m.group(1).lower() if m else None
+    return None if name in {"label", "highlights", "prescribing", "full", "drug"} else name
+
+
+def transitive_deps(map_ids: dict) -> dict[str, set[str]]:
+    out: dict[str, set[str]] = {}
+
+    def walk(t: str, seen: set[str]) -> set[str]:
+        for d in map_ids.get(t, {}).get("depends_on") or []:
+            if d not in seen:
+                seen.add(d)
+                walk(d, seen)
+        return seen
+
+    for t in map_ids:
+        out[t] = walk(t, set())
+    return out
+
+
+def item_terms(it: dict) -> list[str]:
+    """Names of a coverage item to look for in questions: the item, its parentheticals and its aliases."""
+    raw = [str(it.get("item") or "")] + re.findall(r"\(([^)]+)\)", str(it.get("item") or "")) + list(it.get("aliases") or [])
+    terms = set()
+    for r in raw:
+        r = re.sub(r"\([^)]*\)", "", r)
+        for part in re.split(r"\s*/\s*|\s*;\s*|,\s+", r):
+            part = part.strip().lower()
+            if len(part) >= 4:
+                terms.add(part)
+    return sorted(terms)
+
+
+def check_canonical(section: str, it: dict, map_ids: dict, deps: dict, where: str, rep: Report) -> None:
+    """One canonical topic per item (step 8): other topics that ask about it must depend on the canonical one."""
+    canon = it.get("canonical_topic")
+    if not canon:
+        return
+    if canon not in map_ids:
+        rep.warn(where, f"{section}: '{it.get('item')}' canonical_topic '{canon}' is not in the topic map")
+        return
+    pats = [re.compile(rf"\b{re.escape(t)}\b", re.I) for t in item_terms(it)]
+    for tid, m in map_ids.items():
+        if tid == canon or m.get("status") == "rejected" or canon in deps.get(tid, set()):
+            continue
+        for q in m.get("questions") or []:
+            if any(p.search(q) for p in pats):
+                rep.warn(where, f"{section}: '{it.get('item')}' is canonical in '{canon}', but '{tid}' asks about it "
+                                f"without depending on it: \"{q[:80]}…\"; move the question or add depends_on")
+                break
 
 
 def main() -> int:
@@ -550,6 +705,8 @@ def main() -> int:
             ec = s.get("edition_check") or {}
             if ec.get("result") == "newer-not-recorded":
                 rep.error(where, f"decisive source '{sid}' has a newer edition that isn't recorded")
+            if ec.get("result") == "not-determined":
+                (rep.error if strict else rep.warn)(where, f"decisive source '{sid}' has undetermined currency (edition_check.result: not-determined)")
             if s.get("type") in ("drug-label", "guideline") and not ec:
                 (rep.error if strict else rep.warn)(where, f"decisive {s.get('type')} '{sid}' has no edition_check")
 
