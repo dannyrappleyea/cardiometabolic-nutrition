@@ -70,8 +70,10 @@ REQUIRED_HEADINGS = [
 LABEL_EVIDENCE_RE = re.compile(r"accessdata\.fda\.gov|dailymed\.nlm\.nih\.gov|nctr-crs\.fda\.gov/fdalabel", re.I)
 LABEL_OLD_YEARS = 2                        # a label older than this needs listed_latest to stay "current"
 FAST_LABEL_DAYS = 30                       # recently revised labels: edition check this fresh
+# Phrases that express doubt about currency. Kept narrow on purpose: neutral wording such as
+# "no newer version listed" or "not checked" (about something else) must not trigger a warning.
 DOUBT_PHRASES = ("may have newer", "may not be the latest", "may be outdated", "possibly outdated",
-                 "newer version", "not checked", "could not confirm", "couldn't confirm")
+                 "could not confirm", "couldn't confirm")
 GAP_DOUBT_PHRASES = DOUBT_PHRASES + ("discontinued",)   # in a gap, a product named before this is doubted
 SCOPE_LINE_RES = [  # SCOPE §6: medicine choice or dosing is out of scope
     re.compile(r"\bwhich (?:[\w-]+ ){0,3}(?:medicines?|medications?|drugs?)\b[^?]*\b(?:safe|safest|best|preferred|recommended|to use|to choose)\b", re.I),
@@ -284,7 +286,7 @@ def check_sources_quality(sources: dict, rep: Report) -> None:
 
 
 def source_text(s: dict) -> str:
-    """Free-text fields of a source, lowercased, for consistency checks."""
+    """Free-text fields of a source, lowercased, for consistency checks (only narrow doubt phrases are matched)."""
     ec = s.get("edition_check") or {}
     parts = [s.get("limitations"), s.get("notes"), ec.get("searched")]
     return " ".join(str(p) for p in parts if p).lower()
