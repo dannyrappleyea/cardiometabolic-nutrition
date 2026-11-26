@@ -7,7 +7,7 @@
 version: 1
 generated: "2026-11-24"
 generated_by: Claude Opus 5.5 (claude-opus-5-5)
-approved: "2026-11-26, maintainer, by merging the topic-approval PR (all 28 topics as proposed in PR #5, with PR #8's depends_on/refers_to links)"
+approved: "2026-11-26, maintainer, by merging the topic-approval PR (all 28 topics as proposed in PR #5)"
 calendar:
   - {source_or_authority: ada, next_edition: "2026-12", note: "Standards of Care are issued yearly; the 2026 edition appeared online in December 2025, so a 2027 edition is expected around December 2026 (inference from the edition pattern)."}
   - {source_or_authority: aha-acc, next_edition: null, note: "2025 BP and 2026 dyslipidemia guidelines are new; their full texts still need to be read. AHA dietary guidance was replaced in March 2026 (2021 -> 2026 statement); check AHA's statements index, not only same-title searches, for newer statements on the same subject."}
